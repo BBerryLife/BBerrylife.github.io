@@ -379,9 +379,19 @@
   }
   /* .modal-overlay.open handled by JS */
 
+  /* Outer table wrapper for vertical centering */
+  .modal-overlay-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+  }
+
   .modal-overlay-cell {
-    padding: 20px 0;
+    display: table-cell;
+    vertical-align: middle;
     text-align: center;
+    padding: 20px 10px;
   }
 
   .modal-box {
@@ -429,38 +439,45 @@
   }
   .modal-close:hover { background: rgba(255,255,255,0.35); }
 
-  /* Service picker */
+  /* === CẬP NHẬT SERVICE PICKER DÙNG GRID WRAPPER (KHÔNG DÙNG CALC) === */
   .modal-picker-wrap {
     margin: 14px 14px 6px;
-    overflow: hidden;
-    border: 2px solid transparent;
+  }
+  .modal-picker-wrap:after { content: ''; display: table; clear: both; }
+
+  .modal-picker {
+    margin: 0 -2px; /* Dãn margin âm để bù đắp phần padding 2 bên, tạo gap hoàn hảo */
+  }
+  .modal-picker:after { content: ''; display: table; clear: both; }
+
+  .service-card-wrap {
+    float: left;
+    width: 50%;
+    padding: 0 2px; /* Tạo gap 4px ở chính giữa */
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
-  .modal-picker { }
-  .modal-picker:after { content: ''; display: table; clear: both; }
+
   .service-card {
     border: 2px solid #d0eaf9;
     background: #f4faff;
-    padding: 16px 14px;
+    padding: 11px 14px;
     cursor: pointer;
     text-align: left;
-    float: left;
-    width: -webkit-calc(50% - 2px);
-    width: calc(50% - 2px);
     -ms-user-select: none;
     -webkit-user-select: none;
     user-select: none;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    width: 100%; /* Lấy toàn bộ diện tích của wrapper */
   }
-  .service-card + .service-card { margin-left: 4px; }
   .service-card:hover, .service-card.selected {
     border-color: #0e91e8;
     background: #e6f4ff;
   }
-  .service-card .sc-title { font-weight: bold; font-size: 0.92em; color: #1a3a5c; margin-bottom: 3px; }
+  .service-card .sc-title { font-weight: bold; font-size: 0.88em; color: #1a3a5c; margin-bottom: 3px; line-height: 1.3; }
   .service-card .sc-desc  { font-size: 0.78em; color: #4a6a8a; line-height: 1.4; }
+  /* ================================================================= */
 
   /* BerryBus accordion row */
   .bb-accordion {
@@ -470,15 +487,17 @@
   }
   .bb-accordion.bb-open { border-color: #667eea; }
   .bb-accordion-header {
-    padding: 13px 16px;
+    padding: 11px 14px;
     cursor: pointer;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
   }
   .bb-accordion-header:after { content: ''; display: table; clear: both; }
   .bb-accordion-header:hover { background: #ede8ff; }
   .bb-acc-info { float: left; }
-  .bb-acc-title { font-weight: bold; font-size: 0.9em; color: #3a2a7a; margin-bottom: 2px; }
+  .bb-acc-title { font-weight: bold; font-size: 0.88em; color: #3a2a7a; margin-bottom: 3px; line-height: 1.3; }
   .bb-acc-desc  { font-size: 0.78em; color: #6a5aaa; line-height: 1.4; }
-  .bb-acc-arrow { float: right; color: #667eea; font-size: 0.8em; line-height: 2.5; }
+  .bb-acc-arrow { float: right; color: #667eea; font-size: 0.8em; margin-top: 2px; }
 
   .bb-accordion-body {
     display: none;
@@ -519,12 +538,14 @@
     margin: 8px 14px 0;
     background: #e8f4ff;
     border: 2px solid #b3d8f6;
-    padding: 12px 16px;
+    padding: 11px 14px;
     overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
   }
   .mfb-info { overflow: hidden; }
-  .mfb-title { font-weight: bold; font-size: 0.88em; color: #1a3a5c; margin-bottom: 2px; }
-  .mfb-desc  { font-size: 0.77em; color: #3a6a9a; line-height: 1.4; }
+  .mfb-title { font-weight: bold; font-size: 0.88em; color: #1a3a5c; margin-bottom: 3px; line-height: 1.3; }
+  .mfb-desc  { font-size: 0.78em; color: #3a6a9a; line-height: 1.4; }
   .mfb-btn-wrap { float: right; margin-left: 12px; }
   .mfb-btn {
     background: #1877f2;
@@ -681,7 +702,10 @@
     .recent-body { padding: 12px; }
     .site-wrapper { padding: 0 12px; margin: 16px auto; }
 
-    .service-card { float: none; width: 100% !important; margin-left: 0 !important; margin-bottom: 10px; height: auto !important; }
+    .service-card-wrap { float: none; width: 100%; padding: 0; margin-bottom: 10px; }
+    .modal-picker { margin: 0; }
+    .service-card { height: auto !important; }
+
     .help-fab { bottom: 16px; right: 16px; padding: 12px 16px; font-size: 0.88em; }
   }
 
@@ -697,7 +721,6 @@
 </head>
 <body>
 
-<!-- ═══ HEADER ═══ -->
 <header class="site-header">
   <div class="header-inner">
     <div class="header-brand">
@@ -723,13 +746,10 @@
   </nav>
 </header>
 
-<!-- ═══ MAIN + SIDEBAR ═══ -->
 <div class="site-wrapper">
 
-  <!-- ── LEFT COLUMN (70%) ── -->
   <main>
 
-    <!-- FEATURED NEWS -->
     <section class="featured-section">
       <h2 class="section-title">Tin Tức Nổi Bật</h2>
       <div class="featured-grid">
@@ -768,7 +788,6 @@
       </div>
     </section>
 
-    <!-- LATEST POST -->
     <section class="latest-section">
       <h2 class="section-title">Bài Viết Mới Nhất</h2>
       <div class="latest-card">
@@ -787,7 +806,6 @@
       </div>
     </section>
 
-    <!-- RECENT POSTS -->
     <section class="recent-section">
       <h2 class="section-title">Bài Viết Gần Đây</h2>
       <div class="recent-list">
@@ -884,18 +902,15 @@
 
   </main>
 
-  <!-- ── RIGHT COLUMN (30%) ── -->
   <aside class="sidebar">
     <div class="sidebar-sticky">
 
-      <!-- Follow -->
       <div class="follow-box">
         <h3>Theo Dõi Chúng Tôi</h3>
         <p>Cập nhật tin tức mới nhất về BlackBerry trên Facebook</p>
         <a href="https://www.facebook.com/BBerryLife/" target="_blank">Theo Dõi Facebook</a>
       </div>
 
-      <!-- Categories -->
       <div class="sidebar-box sidebar-box-first">
         <h3 class="sidebar-title">Danh Mục</h3>
 
@@ -915,7 +930,6 @@
 
 </div>
 
-<!-- ═══ HELP FLOATING BUTTON ═══ -->
 <button class="help-fab" onclick="openHelpModal()">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
@@ -923,11 +937,9 @@
   Cần Trợ Giúp?
 </button>
 
-<!-- ═══ HELP MODAL ═══ -->
-<div class="modal-overlay" id="helpModal" style="display:none" onclick="onOverlayClick(event)"><div class="modal-overlay-cell">
+<div class="modal-overlay" id="helpModal" style="display:none" onclick="onOverlayClick(event)"><div class="modal-overlay-table"><div class="modal-overlay-cell">
   <div class="modal-box" id="helpModalBox" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
 
-    <!-- Header -->
     <div class="modal-header">
       <div class="modal-header-text">
         <h2 id="modalTitle">Yêu Cầu Trợ Giúp</h2>
@@ -936,22 +948,29 @@
       <button class="modal-close" onclick="closeHelpModal()" aria-label="Đóng">✕</button>
     </div>
 
-    <!-- Picker: 2 nút chính -->
     <div id="step-pick">
-      <div class="modal-picker-wrap" id="servicePickerWrap"><div class="modal-picker" id="servicePicker">
-        <div class="service-card" id="card-unlock" onclick="selectService('unlock')">
-          <div class="sc-title">Mở Khóa Nhà Mạng</div>
-          <div class="sc-desc">Carrier Unlock cho BlackBerry 10 — xóa khóa SIM để dùng mọi nhà mạng, trừ <strong>Sprint</strong></div>
-        </div>
-        <div class="service-card" id="card-rom" onclick="selectService('rom')">
-          <div class="sc-title">Tạo ROM Tùy Chỉnh</div>
-          <div class="sc-desc">Nhờ tạo Debloated / ROM Root bằng BB10 Tools thay bạn</div>
+      <div class="modal-picker-wrap" id="servicePickerWrap">
+        <div class="modal-picker" id="servicePicker">
+          
+          <div class="service-card-wrap">
+            <div class="service-card" id="card-unlock" onclick="selectService('unlock')">
+              <div class="sc-title">Mở Khóa Nhà Mạng</div>
+              <div class="sc-desc">Carrier Unlock BB10 — xóa khóa SIM dùng mọi nhà mạng, trừ <strong>Sprint</strong></div>
+            </div>
+          </div>
+          
+          <div class="service-card-wrap">
+            <div class="service-card" id="card-rom" onclick="selectService('rom')">
+              <div class="sc-title">Tạo ROM Tùy Chỉnh</div>
+              <div class="sc-desc">Nhờ tạo Debloated / ROM Root bằng BB10 Tools thay bạn</div>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <!-- BerryBus: ô dẹt có thể bấm để mở/đóng -->
       <div class="bb-accordion" id="bb-accordion">
-        <div class="bb-accordion-header" onclick="toggleBerryBus()">
+        <div class="bb-accordion-header" id="bbAccHeader" onclick="toggleBerryBus()">
           <span class="bb-acc-arrow" id="bb-arrow">▼</span>
           <div class="bb-acc-info">
             <div class="bb-acc-title">Đóng Góp Dữ Liệu BerryBus</div>
@@ -960,13 +979,11 @@
         </div>
         <div class="bb-accordion-body" id="bb-body">
 
-          <!-- BerryBus sub-tabs -->
           <div class="bb-subtab-bar">
             <button class="bb-subtab active" id="bbtab-route-btn" onclick="switchBBTab('route')">Tuyến Xe</button>
             <button class="bb-subtab" id="bbtab-place-btn" onclick="switchBBTab('place')">Địa Điểm</button>
           </div>
 
-          <!-- Tab: Tuyến xe -->
           <div id="bbtab-route" class="bb-subtab-panel active">
             <form id="form-berrybus-route" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-route')">
               <input type="hidden" name="_subject" value="[BerryBus] Đóng góp dữ liệu tuyến xe">
@@ -1014,7 +1031,6 @@
             </form>
           </div>
 
-          <!-- Tab: Địa điểm -->
           <div id="bbtab-place" class="bb-subtab-panel">
             <form id="form-berrybus-place" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-place')">
               <input type="hidden" name="_subject" value="[BerryBus] Đóng góp dữ liệu địa điểm">
@@ -1065,15 +1081,11 @@
             </form>
           </div>
 
-        </div><!-- /bb-accordion-body -->
-      </div><!-- /bb-accordion -->
-
-      <!-- Facebook quick-help -->
-      <div class="modal-fb-row">
+        </div></div><div class="modal-fb-row" id="modalFbRow">
         <div class="mfb-btn-wrap"><a href="https://www.facebook.com/BBerryLife/" target="_blank" class="mfb-btn">Nhắn Tin</a></div>
         <div class="mfb-info">
           <div class="mfb-title">Hỏi Nhanh Qua Facebook</div>
-          <div class="mfb-desc">Cần chỉ bảo vài bước nhỏ hoặc sửa lỗi nhanh? Nhắn tin trực tiếp!</div>
+          <div class="mfb-desc">Cần hỗ trợ nhanh? Nhắn tin trực tiếp!</div>
         </div>
       </div>
 
@@ -1082,11 +1094,9 @@
       </div>
     </div>
 
-    <!-- Step 2: Form sau khi chọn nút chính -->
     <div class="modal-form-area" id="step-form">
       <hr class="modal-divider">
 
-      <!-- Unlock form -->
       <div id="form-wrap-unlock" style="display:none">
         <div class="modal-note">
           <strong>Mở Khóa Nhà Mạng (Carrier Unlock)</strong> — Chúng tôi sẽ hỗ trợ bạn unlock SIM lock trên thiết bị BlackBerry 10 <strong>(Bạn sẽ phải gửi thiết bị đến chúng mình)</strong>. Ghi nhớ: <strong>Việc mở khóa SIM sẽ tốn 100.000đ. Cam kết hoàn tiền 100% nếu không thành công.</strong>
@@ -1129,7 +1139,6 @@
         </form>
       </div>
 
-      <!-- ROM form -->
       <div id="form-wrap-rom" style="display:none">
         <div class="modal-note">
           <strong>Tạo ROM Tùy Chỉnh bằng BB10 Tools</strong> — Chúng tôi sẽ tạo Debloated / ROM Root cho thiết bị của bạn thông qua <strong>BB10 Tools</strong>. Vui lòng điền thông tin bên dưới để chúng tôi liên hệ.
@@ -1182,7 +1191,7 @@
     </div>
 
   </div>
-</div></div>
+</div></div></div>
 
 <script>
 /* ── BB10/IE compatible JS — NO classList, NO querySelectorAll, NO arrow functions, NO fetch ── */
@@ -1205,7 +1214,7 @@ function clampModalWidth() {
   var box = byId('helpModalBox');
   if (box) {
     var vw = document.documentElement.clientWidth || window.innerWidth || 600;
-    box.style.width = Math.min(540, vw - 2) + 'px';
+    box.style.width = Math.min(540, vw - 20) + 'px';
   }
 }
 
@@ -1216,7 +1225,10 @@ function openHelpModal() {
   modal.style.display = 'block';
   clampModalWidth();
   document.body.style.overflow = 'hidden';
-  if (typeof equalizeServiceCards === 'function') setTimeout(equalizeServiceCards, 80);
+  if (typeof equalizeServiceCards === 'function') {
+    setTimeout(equalizeServiceCards, 80);
+    setTimeout(equalizeServiceCards, 400);
+  }
 }
 function closeHelpModal() {
   var modal = byId('helpModal');
@@ -1420,7 +1432,7 @@ window.onload = centerCardImages;
 
 
 <script>
-/* Equalize service-card heights */
+/* Equalize service-card heights, then set min-height on flat rows to match */
 function equalizeServiceCards() {
   var picker = document.getElementById ? document.getElementById('servicePicker') : null;
   if (!picker) return;
@@ -1429,12 +1441,12 @@ function equalizeServiceCards() {
   cards[0].style.height = '';
   cards[1].style.height = '';
   var h = Math.max(cards[0].offsetHeight, cards[1].offsetHeight);
+  if (h <= 0) return;
   cards[0].style.height = h + 'px';
   cards[1].style.height = h + 'px';
 }
 function runEqualize() {
   equalizeServiceCards();
-  // Run again after short delay to catch any reflow
   if (typeof setTimeout !== 'undefined') setTimeout(equalizeServiceCards, 200);
 }
 if (document.addEventListener) {
