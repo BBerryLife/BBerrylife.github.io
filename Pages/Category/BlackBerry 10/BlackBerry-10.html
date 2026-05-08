@@ -1,225 +1,191 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BlackBerry 10 – BerryLife</title>
-<style>/* === IE / BB10 WebKit Compatible — Category Pages ===
-   - No CSS variables, No flexbox, No grid, No object-fit
-   - Float-based layouts, table for nav
-   - BB Classic / BB10 WebKit mobile-first
-*/
+<style>
+  :root{--blue:#70cbff;--blue-dark:#4fa3d1;--orange:#ff5722;--pink:#ff66c4;--purple:#667eea;--green:#4caf50;--text-dark:#2c3e50;--text-muted:#666;--text-light:#999;--bg-light:#f8f9fa;--border:#e0e0e0}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#efefef;color:var(--text-dark)}
+  .site-header{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-dark) 100%);color:white}
+  .header-inner{max-width:1280px;margin:0 auto;padding:40px 30px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .header-brand h1{font-size:3em;font-weight:bold;letter-spacing:-1px;line-height:1}
+  .header-brand p{font-size:1em;opacity:.9;margin-top:6px}
+  .header-follow a{background:white;color:var(--blue);padding:10px 22px;font-weight:bold;font-size:.9em;text-decoration:none;display:inline-block;white-space:nowrap}
+  .header-follow a:hover{opacity:.85}
+  .site-nav{background:var(--blue-dark);border-top:2px solid rgba(255,255,255,.25)}
+  .nav-inner{max-width:1280px;margin:0 auto;padding:0 30px;display:flex;flex-wrap:wrap}
+  .nav-inner a{color:white;text-decoration:none;font-weight:bold;font-size:.85em;padding:12px 16px;display:inline-block;border-right:1px solid rgba(255,255,255,.15);transition:background .15s}
+  .nav-inner a:hover{background:rgba(255,255,255,.15)}
+  .site-wrapper{max-width:1280px;margin:30px auto;padding:0 20px;display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+  main{min-width:0}
+  .page-hero{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-dark) 100%);color:white;padding:48px 36px 40px;margin-bottom:24px;border:2px solid var(--border)}
+  .page-hero h1{font-size:2.2em;font-weight:bold;margin-bottom:10px}
+  .page-hero p{font-size:1em;opacity:.92;line-height:1.6}
+  .tabs-nav{display:flex;gap:0;margin-bottom:0;border-bottom:3px solid var(--blue)}
+  .tab-btn{background:white;border:2px solid var(--border);border-bottom:none;color:var(--text-muted);font-weight:bold;font-size:.92em;padding:11px 28px;cursor:pointer;margin-right:4px;transition:background .15s,color .15s}
+  .tab-btn.active{background:var(--blue);color:white;border-color:var(--blue)}
+  .tab-btn:hover:not(.active){background:var(--bg-light);color:var(--text-dark)}
+  .tab-panel{display:none}
+  .tab-panel.active{display:block}
+  .posts-section{background:var(--bg-light);padding:28px;margin-bottom:24px;border:2px solid var(--border)}
+  .section-title{color:var(--text-dark);font-size:1.4em;font-weight:bold;margin-bottom:20px;border-bottom:3px solid var(--blue);padding-bottom:10px}
+  .posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:white;box-shadow:0 4px 8px rgba(0,0,0,.08);overflow:hidden;border:2px solid var(--border);display:flex;flex-direction:column}
+  .card img{width:100%;height:180px;object-fit:cover;display:block}
+  .card-body{padding:18px;flex:1;display:flex;flex-direction:column}
+  .card-badge{display:inline-block;color:white;padding:4px 10px;font-size:.78em;font-weight:bold;margin-bottom:10px}
+  .card h3{font-size:1em;font-weight:bold;margin-bottom:8px;line-height:1.4}
+  .card h3 a{color:var(--text-dark);text-decoration:none}
+  .card h3 a:hover{color:var(--blue-dark)}
+  .card-date{color:var(--text-light);font-size:.82em;margin-top:auto;padding-top:8px}
+  .page-footer{padding:22px 0;display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
+  .page-footer a{flex:1;min-width:150px;text-align:center;padding:12px 18px;font-weight:bold;font-size:.9em;text-decoration:none}
+  .btn-outline{background:white;color:var(--blue);border:2px solid var(--blue)}
+  .btn-solid{background:var(--blue);color:white;border:2px solid var(--blue)}
+  .btn-outline:hover,.btn-solid:hover{opacity:.85}
+  .sidebar{display:flex;flex-direction:column;gap:22px}
+  .sidebar-sticky{position:sticky;top:20px}
+  .sidebar-box{background:var(--bg-light);border:2px solid var(--border);padding:22px}
+  .sidebar-title{color:var(--text-dark);font-size:1.1em;font-weight:bold;margin-bottom:16px;border-bottom:3px solid var(--blue);padding-bottom:8px}
+  .cat-group{margin-bottom:18px}
+  .cat-group-label{color:var(--blue-dark);font-size:.8em;font-weight:bold;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
+  .cat-links{display:flex;flex-wrap:wrap;gap:8px}
+  .cat-links a{background:white;padding:7px 14px;text-decoration:none;font-weight:bold;font-size:.82em;display:inline-block}
+  .follow-box{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-dark) 100%);color:white;text-align:center;padding:26px 20px;border:2px solid var(--blue-dark)}
+  .follow-box h3{font-size:1.2em;font-weight:bold;margin-bottom:10px}
+  .follow-box p{font-size:.88em;opacity:.92;margin-bottom:18px;line-height:1.5}
+  .follow-box a{background:white;color:var(--blue);padding:10px 22px;font-weight:bold;font-size:.88em;text-decoration:none;display:inline-block}
+  .berrybus-btn{display:block;background:#667eea;color:white;text-align:center;padding:16px 20px;font-weight:bold;font-size:1em;text-decoration:none;border:2px solid #5567d4}
+  .berrybus-btn:hover{opacity:.88}
 
-  * { -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #efefef; color: #2c3e50; }
-
-  /* ── HEADER ── */
-  .site-header {
-    background: #70cbff;
-    background: -webkit-linear-gradient(315deg, #70cbff 0%, #4fa3d1 100%);
-    background: linear-gradient(135deg, #70cbff 0%, #4fa3d1 100%);
-    color: white;
+  /* ── MOBILE RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .header-inner { flex-direction:column; align-items:flex-start; padding:20px 16px 16px; gap:12px; }
+    .header-brand h1 { font-size:2em; }
+    .header-follow a { width:100%; text-align:center; padding:10px 16px; }
+    .nav-inner { padding:0; flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+    .nav-inner::-webkit-scrollbar { display:none; }
+    .nav-inner a { white-space:nowrap; font-size:0.82em; padding:11px 13px; }
+    .site-wrapper { grid-template-columns:1fr; margin:16px auto; padding:0 12px; gap:16px; }
+    .sidebar-sticky { position:static; }
+    .sidebar { gap:14px; }
+    .sidebar-box { padding:16px; }
+    .follow-box { padding:20px 14px; }
+    .article-header { padding:18px 16px 14px; }
+    .article-header h1 { font-size:1.45em; }
+    .article-body { padding:16px 16px 28px; font-size:.93em; }
+    .article-footer { padding:16px; }
+    .article-footer a { min-width:100px; padding:10px 12px; font-size:.85em; }
+    .cover-img { max-height:240px; }
+    .game-card-imgs img { max-width:90%; width:90%; display:block; margin:8px auto; }
+    .help-fab { bottom:16px; right:16px; padding:12px 16px; font-size:.88em; }
   }
-  .header-inner { max-width: 1280px; margin: 0 auto; padding: 40px 30px 30px; }
-  .header-inner:after { content: ''; display: table; clear: both; }
-  .header-brand { float: left; }
-  .header-brand a { text-decoration: none; color: white; display: block; }
-  .header-brand a:hover { opacity: 0.88; }
-  .header-brand h1 { font-size: 3em; font-weight: bold; letter-spacing: -1px; line-height: 1; color: white; }
-  .header-brand p  { font-size: 1em; opacity: 0.9; margin-top: 6px; color: white; }
-  .header-follow { float: right; padding-top: 8px; }
-  .header-follow a { background: white; color: #4fa3d1; padding: 10px 22px; font-weight: bold; font-size: 0.9em; text-decoration: none; display: inline-block; white-space: nowrap; }
-  .header-follow a:hover { opacity: 0.85; }
-
-  /* ── NAV ── */
-  .site-nav { background: #4fa3d1; border-top: 2px solid rgba(255,255,255,0.25); overflow: hidden; }
-  .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0; display: table; width: 100%; table-layout: fixed; -webkit-box-sizing: border-box; box-sizing: border-box; }
-  .nav-inner a { display: table-cell; color: white; text-decoration: none; font-weight: bold; font-size: 0.78em; padding: 12px 6px; text-align: center; border-right: 1px solid rgba(255,255,255,0.15); white-space: nowrap; vertical-align: middle; }
-  .nav-inner a:last-child { border-right: none; }
-  .nav-inner a:hover { background: rgba(255,255,255,0.15); }
-
-  /* ── LAYOUT ── */
-  .site-wrapper { max-width: 1280px; margin: 30px auto; padding: 0 20px; }
-  .site-wrapper:after { content: ''; display: table; clear: both; }
-  main { float: left; width: 72%; min-width: 0; }
-  .sidebar { float: right; width: 26%; margin-left: 2%; }
-
-  /* ── PAGE HERO ── */
-  .page-hero {
-    background: #70cbff;
-    background: -webkit-linear-gradient(315deg, #70cbff 0%, #4fa3d1 100%);
-    background: linear-gradient(135deg, #70cbff 0%, #4fa3d1 100%);
-    color: white; padding: 36px 30px 32px; margin-bottom: 20px; border: 2px solid #e0e0e0;
+  @media (max-width: 520px) {
+    .modal-picker { grid-template-columns:1fr; }
+    .modal-header { padding:16px 18px 14px; }
+    .modal-form-area { padding:8px 18px 20px; }
+    .modal-picker { padding:16px 18px 8px; }
   }
-  .page-hero h1 { font-size: 2em; font-weight: bold; margin-bottom: 8px; color: white; }
-  .page-hero p  { font-size: 0.97em; opacity: 0.92; line-height: 1.6; color: white; }
-
-  /* ── TABS ── */
-  .tabs-nav { margin-bottom: 0; border-bottom: 3px solid #70cbff; overflow: hidden; }
-  .tab-btn {
-    background: white; border: 2px solid #e0e0e0; border-bottom: none;
-    color: #666; font-family: inherit; font-weight: bold; font-size: 0.92em;
-    padding: 11px 28px; cursor: pointer; margin-right: 4px; float: left;
-    -webkit-box-sizing: border-box; box-sizing: border-box;
-  }
-  .tab-btn.active { background: #70cbff; color: white; border-color: #70cbff; }
-  .tab-btn:hover  { background: #f8f9fa; color: #2c3e50; }
-  .tabs-nav:after { content: ''; display: table; clear: both; }
-  .tab-panel { display: none; }
-  .tab-panel.active { display: block; }
-
-  /* ── POSTS SECTION ── */
-  .posts-section { background: #f8f9fa; padding: 24px; margin-bottom: 20px; border: 2px solid #e0e0e0; }
-  .section-title { color: #2c3e50; font-size: 1.3em; font-weight: bold; margin-bottom: 18px; border-bottom: 3px solid #70cbff; padding-bottom: 8px; }
-
-  /* ── POSTS GRID: 3 col float ── */
-  .posts-grid:after { content: ''; display: table; clear: both; }
-  .posts-grid { margin: 0 -10px; }
-  .card { float: left; width: 33.333%; padding: 0 10px; margin-bottom: 20px; -webkit-box-sizing: border-box; box-sizing: border-box; }
-  .card-inner {
-    background: white;
-    border: 2px solid #e0e0e0;
-    overflow: hidden;
-    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-    /* Chiều cao cố định: img 180px + body 160px */
-    height: 330px;
-  }
-
-  /* ── CARD IMAGE: simulate object-fit via wrap + JS ── */
-  .card-img-wrap { width: 100%; height: 180px; overflow: hidden; position: relative; background: #e0e0e0; display: block; }
-  .card-img-wrap img { position: absolute; top: 0; left: 0; max-width: none; display: block; }
-
-  .card-body {
-    padding: 10px 13px 10px;
-    height: 150px;
-    overflow: hidden;
-    position: relative;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .card-badge { display: inline-block; color: white; padding: 3px 9px; font-size: 0.76em; font-weight: bold; margin-bottom: 7px; }
-  .card h3 { font-size: 0.9em; font-weight: bold; margin-bottom: 0; line-height: 1.38;
-    /* Giới hạn 4 dòng */
-    max-height: 5.5em;
-    overflow: hidden;
-  }
-  .card h3 a { color: #2c3e50; text-decoration: none; }
-  .card h3 a:hover { color: #4fa3d1; }
-  .card-date {
-    color: #999; font-size: 0.80em;
-    position: absolute;
-    bottom: 12px;
-    left: 14px;
-    border-top: 1px solid #f0f0f0;
-    padding-top: 5px;
-    width: calc(100% - 28px);
+  @media (max-width: 420px) {
+    .header-brand h1 { font-size:1.7em; }
   }
 
-  /* ── PAGINATION ── */
-  .pagination { text-align: center; margin: 20px 0; }
-  .pagination a, .pagination span { display: inline-block; padding: 10px 20px; font-weight: bold; font-size: 0.9em; text-decoration: none; border: 2px solid #70cbff; margin: 0 3px; }
-  .pagination a   { background: white; color: #70cbff; }
-  .pagination span { background: #70cbff; color: white; }
-  .pagination a:hover { background: #f8f9fa; }
-
-  /* ── PAGE FOOTER ── */
-  .page-footer { padding: 18px 0; text-align: center; margin-top: 8px; }
-  .page-footer:after { content: ''; display: table; clear: both; }
-  .page-footer a { display: inline-block; padding: 10px 0; width: 200px; font-weight: bold; font-size: 0.9em; text-decoration: none; border: 2px solid; margin: 4px 6px; text-align: center; -webkit-box-sizing: border-box; box-sizing: border-box; }
-  .btn-outline { background: white; color: #70cbff !important; border-color: #70cbff; }
-  .btn-solid   { background: #70cbff; color: white !important; border-color: #70cbff; }
-  .btn-outline:hover, .btn-solid:hover { opacity: 0.85; }
-
-  /* ── SIDEBAR ── */
-  .sidebar-sticky { }
-  .sidebar-box { background: #f8f9fa; border: 2px solid #e0e0e0; padding: 22px; margin-bottom: 22px; }
-  .sidebar-title { color: #2c3e50; font-size: 1.1em; font-weight: bold; margin-bottom: 16px; border-bottom: 3px solid #70cbff; padding-bottom: 8px; }
-  .cat-group { margin-bottom: 18px; }
-  .cat-group-label { color: #4fa3d1; font-size: 0.8em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
-  .cat-links:after { content: ''; display: table; clear: both; }
-  .cat-links a { background: white; padding: 7px 14px; text-decoration: none; font-weight: bold; font-size: 0.82em; display: inline-block; margin-right: 6px; margin-bottom: 6px; }
-  .cat-links a:hover { background: #e8f4ff; }
-  .follow-box {
-    background: #70cbff;
-    background: -webkit-linear-gradient(315deg, #70cbff 0%, #4fa3d1 100%);
-    background: linear-gradient(135deg, #70cbff 0%, #4fa3d1 100%);
-    color: white; text-align: center; padding: 26px 20px; border: 2px solid #4fa3d1; margin-bottom: 22px;
-  }
-  .follow-box h3 { font-size: 1.2em; font-weight: bold; margin-bottom: 10px; color: white; }
-  .follow-box p  { font-size: 0.88em; opacity: 0.92; margin-bottom: 18px; line-height: 1.5; color: white; }
-  .follow-box a  { background: white; color: #4fa3d1; padding: 10px 22px; font-weight: bold; font-size: 0.88em; text-decoration: none; display: inline-block; }
-  .follow-box a:hover { opacity: 0.85; }
-  .berrybus-btn { display: block; background: #667eea; color: white !important; text-align: center; padding: 16px 20px; font-weight: bold; font-size: 1em; text-decoration: none; border: 2px solid #5567d4; margin-bottom: 22px; }
-  .berrybus-btn:hover { opacity: 0.88; }
-
-  /* ── HELP FAB ── */
+  /* ── HELP BUTTON ── */
   .help-fab {
-    position: fixed; bottom: 28px; right: 28px; z-index: 999;
-    background: #0e91e8;
-    background: -webkit-linear-gradient(315deg, #0e91e8 0%, #1366a8 100%);
-    background: linear-gradient(135deg, #0e91e8 0%, #1366a8 100%);
-    color: white; border: none; padding: 14px 22px;
-    font-family: inherit; font-size: 0.95em; font-weight: bold; cursor: pointer;
-    -webkit-box-shadow: 0 4px 18px rgba(14,145,232,0.45);
-    box-shadow: 0 4px 18px rgba(14,145,232,0.45);
+    position:fixed; bottom:28px; right:28px; z-index:999;
+    background:linear-gradient(135deg,#0e91e8 0%,#1366a8 100%);
+    color:white; border:none; padding:14px 22px;
+    font-family:inherit; font-size:.95em; font-weight:bold;
+    cursor:pointer; box-shadow:0 4px 18px rgba(14,145,232,.45);
+    display:flex; align-items:center; gap:8px;
+    transition:transform .15s,box-shadow .15s; border-radius:2px;
   }
-  .help-fab:hover { opacity: 0.88; }
-  .help-fab svg { width: 18px; height: 18px; vertical-align: middle; margin-right: 6px; }
+  .help-fab:hover { transform:translateY(-2px); box-shadow:0 6px 24px rgba(14,145,232,.55); }
+  .help-fab svg { width:18px; height:18px; }
 
   /* ── MODAL ── */
-  .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 1000; overflow-y: auto; }
-  .modal-overlay-table { display: table; width: 100%; height: 100%; min-height: 100%; }
-  .modal-overlay-cell  { display: table-cell; vertical-align: middle; text-align: center; padding: 20px 10px; }
-  .modal-box { background: #fff; border-top: 4px solid #0e91e8; width: 540px; max-width: 540px; max-height: 80vh; overflow-x: hidden; overflow-y: auto; padding-bottom: 10px; -webkit-box-shadow: 0 12px 48px rgba(0,0,0,0.22); box-shadow: 0 12px 48px rgba(0,0,0,0.22); display: inline-block; text-align: left; margin: 0 auto; -webkit-box-sizing: border-box; box-sizing: border-box; }
-  .modal-header { background: #0e91e8; background: -webkit-linear-gradient(315deg,#0e91e8 0%,#1366a8 100%); background: linear-gradient(135deg,#0e91e8 0%,#1366a8 100%); color: white; padding: 20px 20px 16px; }
-  .modal-header:after { content: ''; display: table; clear: both; }
-  .modal-header-text { float: left; width: 85%; }
-  .modal-header-text h2 { font-size: 1.15em; font-weight: bold; margin-bottom: 4px; color: white; }
-  .modal-header-text p  { font-size: 0.83em; opacity: 0.88; line-height: 1.45; color: white; }
-  .modal-close { float: right; background: rgba(255,255,255,0.2); border: none; color: white; font-size: 1.3em; cursor: pointer; width: 32px; height: 32px; line-height: 30px; text-align: center; }
-  .modal-close:hover { background: rgba(255,255,255,0.35); }
-  .modal-picker-wrap { margin: 14px 14px 6px; }
-  .modal-picker-wrap:after { content: ''; display: table; clear: both; }
-  .modal-picker { margin: 0 -2px; }
-  .modal-picker:after { content: ''; display: table; clear: both; }
-  .service-card-wrap { float: left; width: 50%; padding: 0 2px; -webkit-box-sizing: border-box; box-sizing: border-box; }
-  .service-card { border: 2px solid #d0eaf9; background: #f4faff; padding: 11px 14px; cursor: pointer; text-align: left; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; }
-  .service-card:hover, .service-card.selected { border-color: #0e91e8; background: #e6f4ff; }
-  .service-card .sc-title { font-weight: bold; font-size: 0.88em; color: #1a3a5c; margin-bottom: 3px; line-height: 1.3; }
-  .service-card .sc-desc  { font-size: 0.78em; color: #4a6a8a; line-height: 1.4; }
-  .bb-accordion { margin: 8px 14px 0; border: 2px solid #c5b8f0; background: #f5f0ff; }
-  .bb-accordion.bb-open { border-color: #667eea; }
-  .bb-accordion-header { padding: 11px 14px; cursor: pointer; -webkit-box-sizing: border-box; box-sizing: border-box; }
-  .bb-accordion-header:after { content: ''; display: table; clear: both; }
-  .bb-accordion-header:hover { background: #ede8ff; }
-  .bb-acc-info { overflow: hidden; }
-  .bb-acc-arrow { float: right; color: #667eea; font-size: 0.8em; margin-top: 2px; }
-  .bb-acc-title { font-weight: bold; font-size: 0.88em; color: #3a2a7a; margin-bottom: 3px; line-height: 1.3; }
-  .bb-acc-desc  { font-size: 0.78em; color: #6a5aaa; line-height: 1.4; }
-  .bb-accordion-body { display: none; border-top: 2px solid #d5caff; padding: 16px 16px 18px; background: white; }
-  .bb-subtab-bar:after { content: ''; display: table; clear: both; }
-  .bb-subtab-bar { border-bottom: 2px solid #d0eaf9; margin-bottom: 16px; overflow: hidden; }
-  .bb-subtab { float: left; width: 50%; padding: 9px 14px; font-family: inherit; font-size: 0.86em; font-weight: bold; color: #4a6a8a; background: #f4faff; border: none; border-bottom: 3px solid transparent; cursor: pointer; -webkit-box-sizing: border-box; box-sizing: border-box; }
-  .bb-subtab:hover { color: #0e91e8; }
-  .bb-subtab.active { color: #0e60a0; border-bottom-color: #0e91e8; background: white; }
-  .bb-subtab-panel { display: none; }
-  .bb-subtab-panel.active { display: block; }
-  .modal-fb-row { margin: 8px 14px 0; background: #e8f4ff; border: 2px solid #b3d8f6; padding: 11px 14px; overflow: hidden; -webkit-box-sizing: border-box; box-sizing: border-box; }
-  .mfb-btn-wrap { float: right; margin-left: 12px; }
-  .mfb-info { overflow: hidden; }
-  .mfb-title { font-weight: bold; font-size: 0.88em; color: #1a3a5c; margin-bottom: 3px; line-height: 1.3; }
-  .mfb-desc  { font-size: 0.78em; color: #3a6a9a; line-height: 1.4; }
-  .mfb-btn { background: #1877f2; color: white !important; text-decoration: none; font-weight: bold; font-size: 0.82em; padding: 8px 16px; white-space: nowrap; border: 2px solid #1460c4; display: inline-block; }
-  .mfb-btn:hover { opacity: 0.88; }
-  .modal-form-area { padding: 8px 16px 24px; display: none; }
-  .modal-form-area.visible { display: block; }
-  .modal-divider { border: none; border-top: 2px dashed #d0eaf9; margin: 16px 0 18px; }
-  .modal-form-area label, .bb-accordion-body label { display: block; font-size: 0.83em; font-weight: bold; color: #1a3a5c; margin-bottom: 5px; }
-  .modal-form-area .req, .bb-accordion-body .req { color: #e74c3c; margin-left: 2px; }
-  .modal-form-area .opt, .bb-accordion-body .opt { color: #999; font-weight: normal; font-size: 0.88em; margin-left: 4px; }
-  .modal-form-area .mfg, .bb-accordion-body .mfg { margin-bottom: 14px; }
+  .modal-overlay {
+    display:none; position:fixed; inset:0;
+    background:rgba(0,0,0,.45); z-index:1000;
+    align-items:center; justify-content:center; padding:20px;
+  }
+  .modal-overlay.open { display:flex; }
+  .modal-box {
+    background:#fff; border-top:4px solid #0e91e8;
+    width:100%; max-width:560px; max-height:90vh; overflow-y:auto;
+    box-shadow:0 12px 48px rgba(0,0,0,.22); animation:modalIn .2s ease;
+  }
+  @keyframes modalIn { from{transform:translateY(16px);opacity:0} to{transform:translateY(0);opacity:1} }
+  .modal-header {
+    background:linear-gradient(135deg,#0e91e8 0%,#1366a8 100%);
+    color:white; padding:22px 26px 18px;
+    display:flex; align-items:flex-start; justify-content:space-between; gap:12px;
+  }
+  .modal-header-text h2 { font-size:1.15em; font-weight:bold; margin-bottom:4px; }
+  .modal-header-text p  { font-size:.83em; opacity:.88; line-height:1.45; }
+  .modal-close {
+    background:rgba(255,255,255,.2); border:none; color:white;
+    font-size:1.3em; cursor:pointer; width:32px; height:32px;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0; border-radius:2px; transition:background .15s;
+  }
+  .modal-close:hover { background:rgba(255,255,255,.35); }
+  .modal-picker {
+    padding:22px 26px 8px; display:grid;
+    grid-template-columns:1fr 1fr; gap:12px;
+  }
+  .service-card {
+    border:2px solid #d0eaf9; background:#f4faff;
+    padding:16px 14px; cursor:pointer;
+    transition:border-color .15s,background .15s; text-align:left;
+  }
+  .service-card:hover,.service-card.selected { border-color:#0e91e8; background:#e6f4ff; }
+  .service-card .sc-title { font-weight:bold; font-size:.92em; color:#1a3a5c; margin-bottom:3px; }
+  .service-card .sc-desc  { font-size:.78em; color:#4a6a8a; line-height:1.4; }
+  .bb-accordion { margin:10px 26px 0; border:2px solid #c5b8f0; background:#f5f0ff; }
+  .bb-accordion.bb-open { border-color:#667eea; }
+  .bb-accordion-header {
+    display:flex; align-items:center; justify-content:space-between;
+    padding:13px 16px; cursor:pointer; gap:12px;
+    user-select:none; transition:background .15s;
+  }
+  .bb-accordion-header:hover { background:#ede8ff; }
+  .bb-acc-title { font-weight:bold; font-size:.9em; color:#3a2a7a; margin-bottom:2px; }
+  .bb-acc-desc  { font-size:.78em; color:#6a5aaa; line-height:1.4; }
+  .bb-acc-arrow { color:#667eea; font-size:.8em; flex-shrink:0; }
+  .bb-accordion-body { display:none; border-top:2px solid #d5caff; padding:16px 16px 18px; background:white; }
+  .bb-subtab-bar { display:flex; border-bottom:2px solid #d0eaf9; margin-bottom:16px; }
+  .bb-subtab {
+    flex:1; padding:9px 14px; font-family:inherit; font-size:.86em;
+    font-weight:bold; color:#4a6a8a; background:#f4faff; border:none;
+    border-bottom:3px solid transparent; cursor:pointer; transition:color .15s,border-color .15s;
+  }
+  .bb-subtab:hover { color:#0e91e8; }
+  .bb-subtab.active { color:#0e60a0; border-bottom-color:#0e91e8; background:white; }
+  .bb-subtab-panel { display:none; }
+  .bb-subtab-panel.active { display:block; }
+  .modal-fb-row {
+    margin:10px 26px 0; background:#e8f4ff; border:2px solid #b3d8f6;
+    padding:12px 16px; display:flex; align-items:center;
+    justify-content:space-between; gap:12px;
+  }
+  .mfb-title { font-weight:bold; font-size:.88em; color:#1a3a5c; margin-bottom:2px; }
+  .mfb-desc  { font-size:.77em; color:#3a6a9a; line-height:1.4; }
+  .mfb-btn {
+    background:#1877f2; color:white; text-decoration:none;
+    font-weight:bold; font-size:.82em; padding:8px 16px;
+    white-space:nowrap; border:2px solid #1460c4; flex-shrink:0; transition:opacity .15s;
+  }
+  .mfb-btn:hover { opacity:.88; }
+  .modal-form-area { padding:8px 26px 24px; display:none; }
+  .modal-form-area.visible { display:block; }
+  .modal-divider { border:none; border-top:2px dashed #d0eaf9; margin:16px 0 18px; }
+  .modal-form-area label { display:block; font-size:.83em; font-weight:bold; color:#1a3a5c; margin-bottom:5px; }
+  .modal-form-area .req { color:#e74c3c; margin-left:2px; }
+  .modal-form-area .opt { color:#999; font-weight:normal; font-size:.88em; margin-left:4px; }
+  .modal-form-area .mfg { margin-bottom:14px; }
   .modal-form-area input[type="text"],
   .modal-form-area input[type="email"],
   .modal-form-area select,
@@ -227,66 +193,45 @@
   .bb-accordion-body input[type="text"],
   .bb-accordion-body input[type="email"],
   .bb-accordion-body select,
-  .bb-accordion-body textarea { width: 100%; padding: 9px 12px; border: 2px solid #cde5f6; font-family: inherit; font-size: 0.88em; color: #2c3e50; background: white; outline: none; -webkit-box-sizing: border-box; box-sizing: border-box; }
-  .modal-form-area input:focus, .modal-form-area select:focus, .modal-form-area textarea:focus,
-  .bb-accordion-body input:focus, .bb-accordion-body select:focus, .bb-accordion-body textarea:focus { border-color: #0e91e8; }
-  .modal-form-area textarea, .bb-accordion-body textarea { min-height: 88px; resize: vertical; }
-  .modal-note { background: #e6f4ff; border-left: 4px solid #0e91e8; padding: 10px 14px; font-size: 0.82em; color: #1a3a5c; line-height: 1.55; margin-bottom: 16px; }
-  .modal-note strong { color: #0e60a0; }
-  .btn-modal-submit { width: 100%; background: #0e91e8; background: -webkit-linear-gradient(315deg,#0e91e8 0%,#1366a8 100%); background: linear-gradient(135deg,#0e91e8 0%,#1366a8 100%); color: white; border: none; padding: 13px 20px; font-family: inherit; font-size: 0.95em; font-weight: bold; cursor: pointer; margin-top: 6px; }
-  .btn-modal-submit:hover { opacity: 0.88; }
-  .btn-modal-submit:disabled { opacity: 0.6; cursor: not-allowed; }
-  .modal-success { display: none; background: #eaf7ec; border-left: 5px solid #28a745; padding: 14px 18px; font-size: 0.9em; color: #155724; margin-top: 14px; line-height: 1.5; }
-  .modal-back-btn { background: none; border: none; color: #0e91e8; font-size: 0.83em; font-weight: bold; cursor: pointer; padding: 4px 0 0; display: block; text-decoration: underline; }
-  .modal-back-btn:hover { color: #1366a8; }
-
-  /* ══ RESPONSIVE — BB Classic (480px) + Mobile ══ */
-  @media (max-width: 900px) {
-    main { float: none; width: 100%; }
-    .sidebar { float: none; width: 100%; margin-left: 0; }
-    .header-inner { padding: 20px 16px 16px; }
-    .header-brand { float: none; }
-    .header-follow { float: none; padding-top: 10px; }
-    .header-follow a { display: block; text-align: center; padding: 10px 16px; }
-    .header-brand h1 { font-size: 2em; }
-    .site-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    .nav-inner { display: block; white-space: nowrap; width: auto; }
-    .nav-inner a { display: inline-block; padding: 11px 13px; font-size: 0.82em; }
-    .site-wrapper { padding: 0 12px; margin: 14px auto; }
-    .page-hero { padding: 22px 18px 20px; }
-    .page-hero h1 { font-size: 1.5em; }
-    .posts-grid { margin: 0 -6px; }
-    .card { width: 50%; padding: 0 6px; }
-    .card-inner { height: 290px; }
-    .card-img-wrap { height: 150px; }
-    .card-body { height: 140px; }
-    .help-fab { bottom: 14px; right: 14px; padding: 11px 15px; font-size: 0.88em; }
-    .service-card-wrap { float: none; width: 100%; padding: 0; margin-bottom: 8px; }
-    .modal-box { width: auto; max-width: none; }
-    .page-footer a { width: 160px; font-size: 0.85em; }
+  .bb-accordion-body textarea {
+    width:100%; padding:9px 12px; border:2px solid #cde5f6; border-radius:0;
+    font-family:inherit; font-size:.88em; color:#2c3e50; background:white;
+    outline:none; transition:border-color .2s; box-sizing:border-box;
   }
-  @media (max-width: 520px) {
-    /* BB Classic / BB Passport / small phone */
-    .card { width: 100%; padding: 0; margin-bottom: 14px; }
-    .card-inner { height: 350px; }
-    .card-img-wrap { height: 200px; }
-    .card-body { height: 150px; }
-    .posts-grid { margin: 0; }
-    .tab-btn { padding: 9px 16px; font-size: 0.85em; }
-    .page-hero { padding: 18px 14px; }
-    .page-hero h1 { font-size: 1.35em; }
-    .posts-section { padding: 16px 12px; }
-    .page-footer a { width: 140px; padding: 9px 0; font-size: 0.82em; margin: 3px 4px; }
-    .follow-box { padding: 20px 14px; }
-    .sidebar-box { padding: 14px; }
-    .header-brand h1 { font-size: 1.7em; }
-    .modal-box { max-height: 90vh; }
-  }</style>
+  .modal-form-area input:focus,.modal-form-area select:focus,.modal-form-area textarea:focus,
+  .bb-accordion-body input:focus,.bb-accordion-body select:focus,.bb-accordion-body textarea:focus { border-color:#0e91e8; }
+  .modal-form-area textarea { min-height:88px; resize:vertical; }
+  .bb-accordion-body label { display:block; font-size:.83em; font-weight:bold; color:#1a3a5c; margin-bottom:5px; }
+  .bb-accordion-body .req { color:#e74c3c; margin-left:2px; }
+  .bb-accordion-body .opt { color:#999; font-weight:normal; font-size:.88em; margin-left:4px; }
+  .bb-accordion-body .mfg { margin-bottom:14px; }
+  .bb-accordion-body textarea { min-height:88px; resize:vertical; }
+  .modal-note { background:#e6f4ff; border-left:4px solid #0e91e8; padding:10px 14px; font-size:.82em; color:#1a3a5c; line-height:1.55; margin-bottom:16px; }
+  .modal-note strong { color:#0e60a0; }
+  .btn-modal-submit {
+    width:100%; background:linear-gradient(135deg,#0e91e8 0%,#1366a8 100%);
+    color:white; border:none; padding:13px 20px; font-family:inherit;
+    font-size:.95em; font-weight:bold; cursor:pointer; transition:opacity .15s; margin-top:6px;
+  }
+  .btn-modal-submit:hover { opacity:.88; }
+  .btn-modal-submit:disabled { opacity:.6; cursor:not-allowed; }
+  .modal-success {
+    display:none; background:#eaf7ec; border-left:5px solid #28a745;
+    padding:14px 18px; font-size:.9em; color:#155724; margin-top:14px; line-height:1.5;
+  }
+  .modal-back-btn {
+    background:none; border:none; color:#0e91e8; font-size:.83em;
+    font-weight:bold; cursor:pointer; padding:6px 0 0;
+    display:block; text-decoration:underline;
+  }
+  .modal-back-btn:hover { color:#1366a8; }
+
+</style>
 </head>
 <body>
 <header class="site-header">
   <div class="header-inner">
-    <div class="header-brand"><a href="/index.html"><h1>BerryLife</h1><p>Everything for BlackBerry Users</p></a></div>
+    <div class="header-brand"><h1>BerryLife</h1><p>Everything for BlackBerry Users</p></div>
     <div class="header-follow"><a href="https://www.facebook.com/BBerryLife/" target="_blank">Theo Dõi Facebook</a></div>
   </div>
   <nav class="site-nav">
@@ -319,75 +264,51 @@
         <h2 class="section-title"></h2>
         <div class="posts-grid">
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/Bypass-Setup-QNX.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/thumbnail.jpg" alt="Hạ Cấp BB10 Và Vượt Initial Setup Cho PlayBook" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/Bypass-Setup-QNX.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/thumbnail.jpg" alt="Hạ Cấp BB10 Và Vượt Initial Setup Cho PlayBook"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#4fa3d1">HƯỚNG DẪN</span>
-              <h3><a href="/Pages/Bypass-Setup-QNX.html">Hạ Cấp BB10 & Xóa Initial Setup Cho PlayBook / Làm Debloated ROM</a></h3>
+              <h3><a href="/Pages/Bypass-Setup-QNX.html">Hạ Cấp BB10 Và Vượt Initial Setup Cho PlayBook / Làm Debloated ROM</a></h3>
               <div class="card-date">04/05/2026</div>
-            </div>
             </div>
           </article>
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/BerryBus.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BerryBus/IMG_20260423_195722.png" alt="BerryBus – Ứng dụng tra cứu xe buýt Hà Nội Native cho BB10" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/BerryBus.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BerryBus/IMG_20260423_195722.png" alt="BerryBus – Ứng dụng tra cứu xe buýt Hà Nội Native cho BB10"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#17a2b8">ỨNG DỤNG</span>
               <h3><a href="/Pages/BerryBus.html">BerryBus – Ứng dụng tra cứu xe buýt Hà Nội Native cho BB10</a></h3>
               <div class="card-date">23/04/2026</div>
             </div>
-            </div>
           </article>
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/Bar-Installer.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bar%20Installer/4.png" alt="Bar Installer – Cài Đặt File .BAR Trực Tiếp Trên BB10" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/Bar-Installer.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bar%20Installer/4.png" alt="Bar Installer – Cài Đặt File .BAR Trực Tiếp Trên BB10"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#667eea">ỨNG DỤNG</span>
               <h3><a href="/Pages/Bar-Installer.html">Bar Installer – Cài Đặt File .BAR Trực Tiếp Trên BB10</a></h3>
               <div class="card-date">08/04/2026</div>
             </div>
-            </div>
           </article>
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/BB10-Tools-10.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Tools%2010/BB10-Tools-10.png" alt="BlackBerry 10 Tools – Cập Nhật Thứ 10" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/BB10-Tools-10.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Tools%2010/BB10-Tools-10.png" alt="BlackBerry 10 Tools – Cập Nhật Thứ 10"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#ff5722">TIN TỨC</span>
               <h3><a href="/Pages/BB10-Tools-10.html">BlackBerry 10 Tools – Cập Nhật Thứ 10</a></h3>
               <div class="card-date">06/04/2026</div>
             </div>
-            </div>
           </article>
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/BB10-Tools-9.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Tools%209/copy-of-blackberry-10-toolse381aee382b3e38394e383bc.png" alt="BlackBerry 10 Tools – Cập Nhật Thứ 9 [10-3-2026]" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/BB10-Tools-9.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Tools%209/copy-of-blackberry-10-toolse381aee382b3e38394e383bc.png" alt="BlackBerry 10 Tools – Cập Nhật Thứ 9 [10-3-2026]"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#ff5722">TIN TỨC</span>
               <h3><a href="/Pages/BB10-Tools-9.html">BlackBerry 10 Tools – Cập Nhật Thứ 9 [10-3-2026]</a></h3>
               <div class="card-date">10/03/2026</div>
             </div>
-            </div>
           </article>
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/TBBX.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/TBBX/img_20260308_112038.png" alt="TBBX - Telegram Native Cho BlackBerry 10" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/TBBX.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/TBBX/img_20260308_112038.png" alt="TBBX - Telegram Native Cho BlackBerry 10"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#667eea">ỨNG DỤNG</span>
               <h3><a href="/Pages/TBBX.html">TBBX - Telegram Native Cho BlackBerry 10</a></h3>
               <div class="card-date">08/03/2026</div>
-            </div>
             </div>
           </article>
         </div>
@@ -396,75 +317,51 @@
         <h2 class="section-title"></h2>
         <div class="posts-grid">
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/BB10-Development.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Development/5939119_037_blackberry_q20.jpg" alt="Phát Triển Ứng Dụng BB10 Trong Năm 2026" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/BB10-Development.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Development/5939119_037_blackberry_q20.jpg" alt="Phát Triển Ứng Dụng BB10 Trong Năm 2026"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#4fa3d1">HƯỚNG DẪN</span>
               <h3><a href="/Pages/BB10-Development.html">Phát Triển Ứng Dụng BB10 Trong Năm 2026</a></h3>
               <div class="card-date">04/03/2026</div>
             </div>
-            </div>
           </article>
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/BBID-Patch.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BBID%20Patch/3309249_tinhte_bb_bb10_z10_bbz10_205-1.jpg" alt="Duy Trì Patch &amp; Xóa Thông Báo BBID trên BB10" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/BBID-Patch.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BBID%20Patch/3309249_tinhte_bb_bb10_z10_bbz10_205-1.jpg" alt="Duy Trì Patch &amp; Xóa Thông Báo BBID trên BB10"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#4fa3d1">HƯỚNG DẪN</span>
               <h3><a href="/Pages/BBID-Patch.html">Duy Trì Patch &amp; Xóa Thông Báo BBID trên BB10</a></h3>
               <div class="card-date">22/02/2026</div>
             </div>
-            </div>
           </article>
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/Unsigned-Bars.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Unsigned%20Bars/rn_image_picker_lib_temp_5f588acb-0778-4147-bba6-287f2cf5d565.webp" alt="Unsigned Apps Chạy Trên BlackBerry 10!" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/Unsigned-Bars.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Unsigned%20Bars/rn_image_picker_lib_temp_5f588acb-0778-4147-bba6-287f2cf5d565.webp" alt="Unsigned Apps Chạy Trên BlackBerry 10!"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#ff5722">TIN TỨC</span>
               <h3><a href="/Pages/Unsigned-Bars.html">Unsigned Apps Chạy Trên BlackBerry 10!</a></h3>
               <div class="card-date">12/02/2026</div>
             </div>
-            </div>
           </article>
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/BB10-Tools-8.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Tools%208/copy-of-blackberry-10-toolse381aee382b3e38394e383bc.png" alt="Root và Cài Đặt Unsigned Bars trên BB10" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/BB10-Tools-8.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Tools%208/copy-of-blackberry-10-toolse381aee382b3e38394e383bc.png" alt="Root và Cài Đặt Unsigned Bars trên BB10"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#4fa3d1">HƯỚNG DẪN</span>
               <h3><a href="/Pages/BB10-Tools-8.html">Root và Cài Đặt Unsigned Bars trên BB10</a></h3>
               <div class="card-date">11/02/2026</div>
             </div>
-            </div>
           </article>
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/BB10-Games.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Games/berrylife.png" alt="10 Games Native Dành Cho BB10" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/BB10-Games.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Games/berrylife.png" alt="10 Games Native Dành Cho BB10"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#ff66c4">GAMES</span>
               <h3><a href="/Pages/BB10-Games.html">10 Games Native Dành Cho BB10</a></h3>
               <div class="card-date">09/02/2026</div>
             </div>
-            </div>
           </article>
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/BB10-Root.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Root/download.png" alt="Đột Phá Lịch Sử: BB10 Chính Thức Được Root!" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/BB10-Root.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Root/download.png" alt="Đột Phá Lịch Sử: BB10 Chính Thức Được Root!"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#ff5722">TIN TỨC</span>
               <h3><a href="/Pages/BB10-Root.html">Đột Phá Lịch Sử: BB10 Chính Thức Được Root!</a></h3>
               <div class="card-date">05/02/2026</div>
-            </div>
             </div>
           </article>
         </div>
@@ -477,75 +374,51 @@
         <h2 class="section-title"></h2>
         <div class="posts-grid">
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/Weather.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Weather/weather.waitberry.com_blackberry_q20_7.webp" alt="WaitBerry Weather Đổi Giao Diện Mới" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/Weather.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Weather/weather.waitberry.com_blackberry_q20_7.webp" alt="WaitBerry Weather Đổi Giao Diện Mới"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#667eea">ỨNG DỤNG</span>
               <h3><a href="/Pages/Weather.html">WaitBerry Weather Đổi Giao Diện Mới</a></h3>
               <div class="card-date">04/02/2026</div>
             </div>
-            </div>
           </article>
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/Reddit-2.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/reddit.waitberry.com_blackberry_q20_1.webp" alt="Waitberry Reddit Chính Thức Ra Mắt" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/Reddit-2.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/reddit.waitberry.com_blackberry_q20_1.webp" alt="Waitberry Reddit Chính Thức Ra Mắt"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#ff5722">TIN TỨC</span>
               <h3><a href="/Pages/Reddit-2.html">Waitberry Reddit Chính Thức Ra Mắt</a></h3>
               <div class="card-date">31/01/2026</div>
             </div>
-            </div>
           </article>
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/Reddit.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/app-waitberry-reddit-for-blackberry-10-v0-ternv4movigg1.webp" alt="CHÚNG TA SẮP CÓ 1 ỨNG DỤNG REDDIT DÀNH CHO BB10" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/Reddit.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/app-waitberry-reddit-for-blackberry-10-v0-ternv4movigg1.webp" alt="CHÚNG TA SẮP CÓ 1 ỨNG DỤNG REDDIT DÀNH CHO BB10"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#ff5722">TIN TỨC</span>
               <h3><a href="/Pages/Reddit.html">CHÚNG TA SẮP CÓ 1 ỨNG DỤNG REDDIT DÀNH CHO BB10</a></h3>
               <div class="card-date">30/01/2026</div>
             </div>
-            </div>
           </article>
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/BB10-Blend.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB%20Blend/blackberry_blend1.webp" alt="Kết Nối BB10 Với PC Qua BlackBerry Blend Không Dây" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/BB10-Blend.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB%20Blend/blackberry_blend1.webp" alt="Kết Nối BB10 Với PC Qua BlackBerry Blend Không Dây"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#4fa3d1">HƯỚNG DẪN</span>
               <h3><a href="/Pages/BB10-Blend.html">Kết Nối BB10 Với PC Qua BlackBerry Blend Không Dây</a></h3>
               <div class="card-date">29/01/2026</div>
             </div>
-            </div>
           </article>
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/S60Tube.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/S60tube/blackberry-10-toolse381aee382b3e38394e383bc-2.png" alt="S60Tube – Giải Pháp Thay Thế Cho Jtube Trên BBOS 7" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/S60Tube.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/S60tube/blackberry-10-toolse381aee382b3e38394e383bc-2.png" alt="S60Tube – Giải Pháp Thay Thế Cho Jtube Trên BBOS 7"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#667eea">ỨNG DỤNG</span>
               <h3><a href="/Pages/S60Tube.html">S60Tube – Giải Pháp Thay Thế Cho Jtube Trên BBOS 7</a></h3>
               <div class="card-date">27/01/2026</div>
             </div>
-            </div>
           </article>
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/BB10-Apps.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Apps/untitled-design.png" alt="11 Ứng Dụng Hữu Ích Dành Cho BB10" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/BB10-Apps.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Apps/untitled-design.png" alt="11 Ứng Dụng Hữu Ích Dành Cho BB10"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#9c27b0">ỨNG DỤNG</span>
               <h3><a href="/Pages/BB10-Apps.html">11 Ứng Dụng Hữu Ích Dành Cho BB10</a></h3>
               <div class="card-date">25/01/2026</div>
-            </div>
             </div>
           </article>
         </div>
@@ -554,15 +427,11 @@
         <h2 class="section-title"></h2>
         <div class="posts-grid">
           <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
-                <a href="/Pages/BerryCore.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BerryCore/BerryCore.png" alt="Hướng Dẫn Cài Đặt &amp; Sử Dụng BerryCore Trên BB10" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
+            <a href="/Pages/BerryCore.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BerryCore/BerryCore.png" alt="Hướng Dẫn Cài Đặt &amp; Sử Dụng BerryCore Trên BB10"></a>
+            <div class="card-body">
               <span class="card-badge" style="background:#4fa3d1">HƯỚNG DẪN</span>
               <h3><a href="/Pages/BerryCore.html">Hướng Dẫn Cài Đặt &amp; Sử Dụng BerryCore Trên BB10</a></h3>
               <div class="card-date">28/12/2025</div>
-            </div>
             </div>
           </article>
         </div>
@@ -603,7 +472,14 @@
     </div>
   </aside>
 </div>
+<script>
+function switchTab(n) {
+  document.querySelectorAll('.tab-btn').forEach((btn, i) => btn.classList.toggle('active', i+1===n));
+  document.querySelectorAll('.tab-panel').forEach((p, i) => p.classList.toggle('active', i+1===n));
+}
+</script>
 
+<!-- ═══ HELP FLOATING BUTTON ═══ -->
 <button class="help-fab" onclick="openHelpModal()">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
@@ -611,250 +487,189 @@
   Cần Trợ Giúp?
 </button>
 
+<!-- ═══ HELP MODAL ═══ -->
 <div class="modal-overlay" id="helpModal" onclick="onOverlayClick(event)">
-<div class="modal-overlay-table"><div class="modal-overlay-cell">
-  <div class="modal-box" id="helpModalBox" role="dialog">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-header">
       <div class="modal-header-text">
-        <h2>Yêu Cầu Trợ Giúp</h2>
+        <h2 id="modalTitle">Yêu Cầu Trợ Giúp</h2>
         <p>Không có thời gian hoặc gặp khó khăn khi tự làm? Chúng tôi có thể hỗ trợ bạn trực tiếp!</p>
       </div>
-      <button class="modal-close" onclick="closeHelpModal()">&#10005;</button>
+      <button class="modal-close" onclick="closeHelpModal()" aria-label="Đóng">✕</button>
     </div>
     <div id="step-pick">
-      <div class="modal-picker-wrap"><div class="modal-picker" id="servicePicker">
-        <div class="service-card-wrap"><div class="service-card" id="card-unlock" onclick="selectService('unlock')">
+      <div class="modal-picker">
+        <div class="service-card" id="card-unlock" onclick="selectService('unlock')">
           <div class="sc-title">Mở Khóa Nhà Mạng</div>
-          <div class="sc-desc">Carrier Unlock BB10 &#8212; xóa khóa SIM dùng mọi nhà mạng, trừ <strong>Sprint</strong></div>
-        </div></div>
-        <div class="service-card-wrap"><div class="service-card" id="card-rom" onclick="selectService('rom')">
+          <div class="sc-desc">Carrier Unlock cho BlackBerry 10 — xóa khóa SIM để dùng mọi nhà mạng, trừ <strong>Sprint</strong></div>
+        </div>
+        <div class="service-card" id="card-rom" onclick="selectService('rom')">
           <div class="sc-title">Tạo ROM Tùy Chỉnh</div>
           <div class="sc-desc">Nhờ tạo Debloated / ROM Root bằng BB10 Tools thay bạn</div>
-        </div></div>
-      </div></div>
+        </div>
+      </div>
       <div class="bb-accordion" id="bb-accordion">
         <div class="bb-accordion-header" onclick="toggleBerryBus()">
-          <span class="bb-acc-arrow" id="bb-arrow">&#9660;</span>
-          <div class="bb-acc-info">
+          <div>
             <div class="bb-acc-title">Đóng Góp Dữ Liệu BerryBus</div>
             <div class="bb-acc-desc">Bổ sung tuyến xe buýt hoặc địa điểm cho ứng dụng BB10</div>
           </div>
+          <span class="bb-acc-arrow" id="bb-arrow">▼</span>
         </div>
         <div class="bb-accordion-body" id="bb-body">
           <div class="bb-subtab-bar">
             <button class="bb-subtab active" id="bbtab-route-btn" onclick="switchBBTab('route')">Tuyến Xe</button>
-            <button class="bb-subtab" id="bbtab-stop-btn" onclick="switchBBTab('stop')">Địa Điểm</button>
+            <button class="bb-subtab" id="bbtab-place-btn" onclick="switchBBTab('place')">Địa Điểm</button>
           </div>
           <div id="bbtab-route" class="bb-subtab-panel active">
             <form id="form-berrybus-route" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-route')">
-              <input type="hidden" name="_subject" value="[BerryBus] Đóng góp tuyến xe">
-              <div class="mfg"><label>Số / Tên tuyến <span class="req">*</span></label><input type="text" name="so_tuyen" placeholder="Ví dụ: 01, 150..." required></div>
+              <input type="hidden" name="_subject" value="[BerryBus] Đóng góp dữ liệu tuyến xe">
+              <input type="hidden" name="loai_dong_gop" value="Tuyến Xe">
+              <div class="mfg"><label>Số / Tên tuyến <span class="req">*</span></label><input type="text" name="so_tuyen" placeholder="Ví dụ: 01, 150, Metro số 1..." required></div>
               <div class="mfg"><label>Điểm đầu <span class="req">*</span></label><input type="text" name="diem_dau" placeholder="Tên bến/trạm đầu" required></div>
               <div class="mfg"><label>Điểm cuối <span class="req">*</span></label><input type="text" name="diem_cuoi" placeholder="Tên bến/trạm cuối" required></div>
-              <div class="mfg"><label>Khu vực <span class="req">*</span></label><input type="text" name="khu_vuc" placeholder="Ví dụ: Hà Nội..." required></div>
-              <div class="mfg"><label>Email <span class="opt">(tùy chọn)</span></label><input type="email" name="email" placeholder="email@example.com"></div>
-              <button type="submit" class="btn-modal-submit" id="btn-berrybus-route">Gửi Đóng Góp</button>
-              <div id="success-berrybus-route" class="modal-success"><strong>Cảm ơn!</strong> Đã nhận đóng góp tuyến xe.</div>
+              <div class="mfg"><label>Giờ hoạt động <span class="opt">(tùy chọn)</span></label><input type="text" name="gio_hoat_dong" placeholder="Ví dụ: 5:00 – 21:30"></div>
+              <div class="mfg"><label>Tần suất (phút/chuyến) <span class="opt">(tùy chọn)</span></label><input type="text" name="tan_suat" placeholder="Ví dụ: 10-15 phút"></div>
+              <div class="mfg"><label>Giá vé <span class="opt">(tùy chọn)</span></label><input type="text" name="gia_ve" placeholder="Ví dụ: 10.000đ / 12.000đ"></div>
+              <div class="mfg"><label>Khu vực / Thành phố <span class="req">*</span></label><input type="text" name="khu_vuc" placeholder="Ví dụ: Hà Nội, TP. Hồ Chí Minh..." required></div>
+              <div class="mfg"><label>Ghi chú thêm <span class="opt">(tùy chọn)</span></label><textarea name="ghi_chu" placeholder="Biến thể tuyến, chỉ chạy ngày thường, v.v..."></textarea></div>
+              <div class="mfg"><label>Email của bạn <span class="opt">(tùy chọn)</span></label><input type="email" name="email" placeholder="email@example.com"></div>
+              <button type="submit" class="btn-modal-submit" id="btn-berrybus-route">Gửi Đóng Góp Tuyến Xe</button>
+              <div id="success-berrybus-route" class="modal-success"><strong>Cảm ơn bạn!</strong> Thông tin tuyến xe đã được gửi. Chúng tôi sẽ xem xét và cập nhật vào BerryBus.</div>
             </form>
           </div>
-          <div id="bbtab-stop" class="bb-subtab-panel">
-            <form id="form-berrybus-stop" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-stop')">
-              <input type="hidden" name="_subject" value="[BerryBus] Đóng góp địa điểm">
-              <div class="mfg"><label>Tên địa điểm <span class="req">*</span></label><input type="text" name="ten_dia_diem" placeholder="Tên địa điểm" required></div>
-              <div class="mfg"><label>Địa chỉ <span class="req">*</span></label><input type="text" name="dia_chi" placeholder="Địa chỉ đầy đủ" required></div>
-              <div class="mfg"><label>Khu vực <span class="req">*</span></label><input type="text" name="khu_vuc" placeholder="Hà Nội, TP. HCM..." required></div>
-              <div class="mfg"><label>Email <span class="opt">(tùy chọn)</span></label><input type="email" name="email" placeholder="email@example.com"></div>
-              <button type="submit" class="btn-modal-submit" id="btn-berrybus-stop">Gửi Đóng Góp</button>
-              <div id="success-berrybus-stop" class="modal-success"><strong>Cảm ơn!</strong> Đã nhận đóng góp địa điểm.</div>
+          <div id="bbtab-place" class="bb-subtab-panel">
+            <form id="form-berrybus-place" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-place')">
+              <input type="hidden" name="_subject" value="[BerryBus] Đóng góp dữ liệu địa điểm">
+              <input type="hidden" name="loai_dong_gop" value="Địa Điểm">
+              <div class="mfg"><label>Tên địa điểm <span class="req">*</span></label><input type="text" name="ten_dia_diem" placeholder="Tên chính xác của địa điểm" required></div>
+              <div class="mfg"><label>Loại địa điểm <span class="req">*</span></label>
+                <select name="loai_dia_diem" required>
+                  <option value="">-- Chọn loại --</option>
+                  <option>Bến xe / Nhà ga</option><option>Trạm dừng xe buýt</option>
+                  <option>Trạm metro / Tàu điện</option><option>Bệnh viện</option>
+                  <option>Trường học / Đại học</option><option>Trung tâm thương mại</option>
+                  <option>Điểm tham quan</option><option>Chợ / Siêu thị</option><option>Khác</option>
+                </select>
+              </div>
+              <div class="mfg"><label>Địa chỉ <span class="req">*</span></label><input type="text" name="dia_chi" placeholder="Số nhà, tên đường, phường/xã, quận/huyện" required></div>
+              <div class="mfg"><label>Khu vực / Thành phố <span class="req">*</span></label><input type="text" name="khu_vuc" placeholder="Hà Nội, TP. Hồ Chí Minh..." required></div>
+              <div class="mfg"><label>Các tuyến xe đi qua <span class="opt">(tùy chọn)</span></label><input type="text" name="tuyen_di_qua" placeholder="Ví dụ: 01, 02, 150, Metro số 1..."></div>
+              <div class="mfg"><label>Mô tả / Ghi chú <span class="opt">(tùy chọn)</span></label><textarea name="mo_ta" placeholder="Giờ mở cửa, thông tin đặc biệt, v.v..."></textarea></div>
+              <div class="mfg"><label>Email của bạn <span class="opt">(tùy chọn)</span></label><input type="email" name="email" placeholder="email@example.com"></div>
+              <button type="submit" class="btn-modal-submit" id="btn-berrybus-place">Gửi Đóng Góp Địa Điểm</button>
+              <div id="success-berrybus-place" class="modal-success"><strong>Cảm ơn bạn!</strong> Thông tin địa điểm đã được gửi. Chúng tôi sẽ xem xét và cập nhật vào BerryBus.</div>
             </form>
           </div>
         </div>
       </div>
       <div class="modal-fb-row">
-        <div class="mfb-btn-wrap"><a href="https://www.facebook.com/BBerryLife/" target="_blank" class="mfb-btn">Nhắn Tin</a></div>
-        <div class="mfb-info">
+        <div>
           <div class="mfb-title">Hỏi Nhanh Qua Facebook</div>
           <div class="mfb-desc">Cần chỉ bảo vài bước nhỏ hoặc sửa lỗi nhanh? Nhắn tin trực tiếp!</div>
         </div>
+        <a href="https://www.facebook.com/BBerryLife/" target="_blank" class="mfb-btn">Nhắn Tin</a>
       </div>
       <div style="padding:8px 26px 20px;text-align:center;color:#4a6a8a;font-size:.82em">Chọn dịch vụ bạn cần để tiếp tục</div>
     </div>
     <div class="modal-form-area" id="step-form">
       <hr class="modal-divider">
       <div id="form-wrap-unlock" style="display:none">
-        <div class="modal-note"><strong>Mở Khóa Nhà Mạng</strong> — Hỗ trợ unlock SIM lock BB10. <strong>Phí: 100.000đ. Hoàn tiền 100% nếu không thành công.</strong></div>
+        <div class="modal-note"><strong>Mở Khóa Nhà Mạng (Carrier Unlock)</strong> — Chúng tôi sẽ hỗ trợ bạn unlock SIM lock trên thiết bị BlackBerry 10 <strong>(Bạn sẽ phải gửi thiết bị đến chúng mình)</strong>. Ghi nhớ: <strong>Việc mở khóa SIM sẽ tốn 100.000đ. Cam kết hoàn tiền 100% nếu không thành công.</strong></div>
         <form id="form-unlock" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'unlock')">
-          <input type="hidden" name="_subject" value="[BerryLife] Mở Khóa Nhà Mạng BB10">
-          <div class="mfg"><label>Họ tên <span class="req">*</span></label><input type="text" name="ten" required placeholder="Tên của bạn"></div>
-          <div class="mfg"><label>Email <span class="req">*</span></label><input type="email" name="email" required placeholder="email@example.com"></div>
-          <div class="mfg"><label>Facebook <span class="req">*</span></label><input type="text" name="facebook" required placeholder="www.facebook.com/..."></div>
-          <div class="mfg"><label>Model máy <span class="req">*</span></label><input type="text" name="model_may" required placeholder="Q10, Z30, Passport..."></div>
-          <div class="mfg"><label>Nhà mạng bị khóa <span class="req">*</span></label><input type="text" name="nha_mang" required placeholder="Verizon, AT&amp;T..."></div>
-          <div class="mfg"><label>Ghi chú <span class="opt">(tùy chọn)</span></label><textarea name="mo_ta" placeholder="Thông tin thêm..."></textarea></div>
-          <button type="submit" class="btn-modal-submit" id="btn-unlock">Gửi Yêu Cầu</button>
-          <div id="success-unlock" class="modal-success"><strong>Đã nhận!</strong> Chúng tôi sẽ liên hệ sớm.</div>
+          <input type="hidden" name="_subject" value="[BerryLife] Yêu cầu trợ giúp – Mở Khóa Nhà Mạng BB10">
+          <input type="hidden" name="loai_yeu_cau" value="Mở Khóa Nhà Mạng (Carrier Unlock BB10)">
+          <div class="mfg"><label>Họ tên / Nickname <span class="req">*</span></label><input type="text" name="ten" placeholder="Tên của bạn" required></div>
+          <div class="mfg"><label>Email liên hệ <span class="req">*</span></label><input type="email" name="email" placeholder="email@example.com" required></div>
+          <div class="mfg"><label>Facebook của bạn <span class="req">*</span></label><input type="text" name="facebook" placeholder="www.facebook.com/example/" required></div>
+          <div class="mfg"><label>Máy BlackBerry của bạn <span class="req">*</span></label><input type="text" name="model_may" placeholder="Ví dụ: BlackBerry Q10, Z30, Passport..." required></div>
+          <div class="mfg"><label>Phiên bản OS hiện tại <span class="opt">(tùy chọn)</span></label><input type="text" name="phien_ban_os" placeholder="Ví dụ: 10.3.3.3216"></div>
+          <div class="mfg"><label>Nhà mạng đang bị khóa <span class="req">*</span></label><input type="text" name="nha_mang" placeholder="Ví dụ: Verizon, AT&amp;T, Rogers..." required></div>
+          <div class="mfg"><label>Mô tả thêm / Câu hỏi <span class="opt">(tùy chọn)</span></label><textarea name="mo_ta" placeholder="Bạn đã thử cách nào chưa? Thiết bị hiện trạng thế nào?..."></textarea></div>
+          <button type="submit" class="btn-modal-submit" id="btn-unlock">Gửi Yêu Cầu Mở Khóa</button>
+          <div id="success-unlock" class="modal-success"><strong>Đã nhận yêu cầu!</strong> Chúng tôi sẽ liên hệ với bạn qua email sớm nhất có thể để sắp xếp hỗ trợ. Trong khoảng thời gian tới, hãy chấp nhận kết bạn Facebook để được hỗ trợ.</div>
         </form>
       </div>
       <div id="form-wrap-rom" style="display:none">
-        <div class="modal-note"><strong>Tạo ROM Tùy Chỉnh</strong> — Tạo Debloated / ROM Root bằng BB10 Tools.</div>
+        <div class="modal-note"><strong>Tạo ROM Tùy Chỉnh bằng BB10 Tools</strong> — Chúng tôi sẽ tạo Debloated / ROM Root cho thiết bị của bạn thông qua <strong>BB10 Tools</strong>. Vui lòng điền thông tin bên dưới để chúng tôi liên hệ.</div>
         <form id="form-rom" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'rom')">
-          <input type="hidden" name="_subject" value="[BerryLife] Tạo ROM BB10 Tools">
-          <div class="mfg"><label>Họ tên <span class="req">*</span></label><input type="text" name="ten" required placeholder="Tên của bạn"></div>
-          <div class="mfg"><label>Email <span class="req">*</span></label><input type="email" name="email" required placeholder="email@example.com"></div>
-          <div class="mfg"><label>Facebook <span class="req">*</span></label><input type="text" name="facebook" required placeholder="www.facebook.com/..."></div>
-          <div class="mfg"><label>Model máy <span class="req">*</span></label><input type="text" name="model_may" required placeholder="Q10, Z10, Classic..."></div>
-          <div class="mfg"><label>OS gốc <span class="req">*</span></label><input type="text" name="phien_ban_os" required placeholder="10.3.3.3216"></div>
-          <div class="mfg"><label>Loại ROM <span class="req">*</span></label>
+          <input type="hidden" name="_subject" value="[BerryLife] Yêu cầu trợ giúp – Tạo ROM BB10 Tools">
+          <input type="hidden" name="loai_yeu_cau" value="Tạo ROM Tùy Chỉnh bằng BB10 Tools">
+          <div class="mfg"><label>Họ tên / Nickname <span class="req">*</span></label><input type="text" name="ten" placeholder="Tên của bạn" required></div>
+          <div class="mfg"><label>Email liên hệ <span class="req">*</span></label><input type="email" name="email" placeholder="email@example.com" required></div>
+          <div class="mfg"><label>Facebook của bạn <span class="req">*</span></label><input type="text" name="facebook" placeholder="www.facebook.com/example/" required></div>
+          <div class="mfg"><label>Model máy BlackBerry <span class="req">*</span></label><input type="text" name="model_may" placeholder="Ví dụ: Q10, Z10, Passport, Classic..." required></div>
+          <div class="mfg"><label>Phiên bản OS gốc (autoloader) <span class="req">*</span></label><input type="text" name="phien_ban_os" placeholder="Ví dụ: 10.3.3.3216" required></div>
+          <div class="mfg"><label>Loại ROM muốn tạo <span class="req">*</span> <span class="opt">— Ghi thêm tùy chọn Root vào ô bên dưới (trừ lựa chọn 3)</span></label>
             <select name="loai_rom" required>
               <option value="">-- Chọn loại --</option>
-              <option>1. Debloated + Bypass Initial Setup</option>
-              <option>2. Hạ cấp 10.3.1 / 10.3.2</option>
-              <option>3. Hạ cấp 10.2 / 10.1 / 10.0</option>
+              <option>1. Debloated ROM (xóa app cũ) + Bypass Initial Setup</option>
+              <option>2. Hạ cấp xuống 10.3.1 hoặc 10.3.2 (dành cho Classic và Passport)</option>
+              <option>3. Hạ cấp xuống 10.2, 10.1 hoặc 10.0</option>
               <option>Chưa biết – cần tư vấn</option>
             </select>
           </div>
-          <div class="mfg"><label>Yêu cầu đặc biệt <span class="opt">(tùy chọn)</span></label><textarea name="yeu_cau" placeholder="Ứng dụng giữ lại, loại bỏ..."></textarea></div>
-          <button type="submit" class="btn-modal-submit" id="btn-rom">Gửi Yêu Cầu</button>
-          <div id="success-rom" class="modal-success"><strong>Đã nhận!</strong> Chúng tôi sẽ liên hệ để xác nhận.</div>
+          <div class="mfg"><label>Yêu cầu đặc biệt <span class="opt">(tùy chọn)</span></label><textarea name="yeu_cau" placeholder="Các ứng dụng muốn giữ lại, loại bỏ, hoặc cấu hình đặc biệt..."></textarea></div>
+          <button type="submit" class="btn-modal-submit" id="btn-rom">Gửi Yêu Cầu Tạo ROM</button>
+          <div id="success-rom" class="modal-success"><strong>Đã nhận yêu cầu!</strong> Chúng tôi sẽ liên hệ với bạn qua email để xác nhận thông tin và tiến hành tạo ROM.</div>
         </form>
       </div>
-      <button class="modal-back-btn" onclick="resetToStep1()">&#8592; Chọn dịch vụ khác</button>
+      <button class="modal-back-btn" onclick="resetToStep1()">← Chọn dịch vụ khác</button>
     </div>
   </div>
-</div></div></div>
+</div>
 
 <script>
-/* IE/BB10 Compatible JS */
-function hasClass(el, cls) { return el && (' ' + el.className + ' ').indexOf(' ' + cls + ' ') >= 0; }
-function addClass(el, cls) { if (el && !hasClass(el, cls)) el.className = el.className ? el.className + ' ' + cls : cls; }
-function removeClass(el, cls) { if (el) el.className = (' ' + el.className + ' ').replace(' ' + cls + ' ', ' ').replace(/^\s+|\s+$/g, ''); }
-function byId(id) { return document.getElementById(id); }
-
-/* Tab switching */
-function switchTab(n) {
-  var btns   = document.getElementsByClassName ? document.getElementsByClassName('tab-btn')   : [];
-  var panels = document.getElementsByClassName ? document.getElementsByClassName('tab-panel') : [];
-  for (var i = 0; i < btns.length; i++) {
-    if (i + 1 === n) { addClass(btns[i], 'active'); }
-    else { removeClass(btns[i], 'active'); }
+  function openHelpModal(){document.getElementById('helpModal').classList.add('open');document.body.style.overflow='hidden';}
+  function closeHelpModal(){document.getElementById('helpModal').classList.remove('open');document.body.style.overflow='';}
+  function onOverlayClick(e){if(e.target===document.getElementById('helpModal'))closeHelpModal();}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeHelpModal();});
+  function selectService(type){
+    document.querySelectorAll('.service-card').forEach(c=>c.classList.remove('selected'));
+    document.getElementById('card-'+type).classList.add('selected');
+    document.getElementById('step-form').classList.add('visible');
+    document.getElementById('form-wrap-unlock').style.display='none';
+    document.getElementById('form-wrap-rom').style.display='none';
+    document.getElementById('form-wrap-'+type).style.display='block';
+    setTimeout(function(){document.getElementById('step-form').scrollIntoView({behavior:'smooth',block:'nearest'});},60);
   }
-  for (var j = 0; j < panels.length; j++) {
-    if (j + 1 === n) { addClass(panels[j], 'active'); }
-    else { removeClass(panels[j], 'active'); }
+  function resetToStep1(){
+    document.getElementById('step-form').classList.remove('visible');
+    document.querySelectorAll('.service-card').forEach(c=>c.classList.remove('selected'));
+    document.getElementById('form-wrap-unlock').style.display='none';
+    document.getElementById('form-wrap-rom').style.display='none';
+    document.querySelectorAll('.modal-success').forEach(el=>el.style.display='none');
   }
-}
-
-/* Modal */
-function openHelpModal() {
-  var m = byId('helpModal');
-  if (m) { m.style.display = 'block'; document.body.style.overflow = 'hidden'; clampModal(); }
-}
-function closeHelpModal() {
-  var m = byId('helpModal');
-  if (m) { m.style.display = 'none'; document.body.style.overflow = ''; }
-}
-function onOverlayClick(e) { var t = e.target || e.srcElement; if (t && t.id === 'helpModal') closeHelpModal(); }
-function clampModal() { var b = byId('helpModalBox'); if (b) { var vw = document.documentElement.clientWidth || 600; b.style.width = Math.min(540, vw - 20) + 'px'; } }
-if (window.addEventListener) { window.addEventListener('resize', clampModal); }
-else if (window.attachEvent) { window.attachEvent('onresize', clampModal); }
-if (document.addEventListener) { document.addEventListener('keydown', function(e) { if ((e.key === 'Escape') || (e.keyCode === 27)) closeHelpModal(); }); }
-else if (document.attachEvent) { document.attachEvent('onkeydown', function() { var e = window.event; if (e && e.keyCode === 27) closeHelpModal(); }); }
-
-/* Service selection */
-function selectService(type) {
-  var cards = ['unlock', 'rom'];
-  for (var i = 0; i < cards.length; i++) { removeClass(byId('card-' + cards[i]), 'selected'); }
-  addClass(byId('card-' + type), 'selected');
-  var sf = byId('step-form');
-  if (sf) addClass(sf, 'visible');
-  var fmts = ['unlock', 'rom'];
-  for (var j = 0; j < fmts.length; j++) { var fw = byId('form-wrap-' + fmts[j]); if (fw) fw.style.display = 'none'; }
-  var t = byId('form-wrap-' + type);
-  if (t) t.style.display = 'block';
-  setTimeout(function() { var s = byId('step-form'); if (s && s.scrollIntoView) s.scrollIntoView(false); }, 80);
-}
-function resetToStep1() {
-  var sf = byId('step-form');
-  if (sf) removeClass(sf, 'visible');
-  var cards = ['unlock', 'rom'];
-  for (var i = 0; i < cards.length; i++) { removeClass(byId('card-' + cards[i]), 'selected'); }
-  var fmts = ['unlock', 'rom'];
-  for (var j = 0; j < fmts.length; j++) {
-    var fw = byId('form-wrap-' + fmts[j]); if (fw) fw.style.display = 'none';
-    var sc = byId('success-' + fmts[j]); if (sc) sc.style.display = 'none';
+  var bbOpen=false;
+  function toggleBerryBus(){
+    bbOpen=!bbOpen;
+    var body=document.getElementById('bb-body');
+    var arrow=document.getElementById('bb-arrow');
+    var acc=document.getElementById('bb-accordion');
+    body.style.display=bbOpen?'block':'none';
+    arrow.textContent=bbOpen?'▲':'▼';
+    acc.classList.toggle('bb-open',bbOpen);
   }
-}
-
-/* BerryBus accordion */
-var bbOpen = false;
-function toggleBerryBus() {
-  bbOpen = !bbOpen;
-  var body = byId('bb-body'), arrow = byId('bb-arrow'), acc = byId('bb-accordion');
-  if (body) body.style.display = bbOpen ? 'block' : 'none';
-  if (arrow) arrow.innerHTML = bbOpen ? '&#9650;' : '&#9660;';
-  if (acc) { if (bbOpen) addClass(acc, 'bb-open'); else removeClass(acc, 'bb-open'); }
-}
-function switchBBTab(tab) {
-  var tabs = ['route', 'stop'];
-  for (var i = 0; i < tabs.length; i++) {
-    var btn = byId('bbtab-' + tabs[i] + '-btn');
-    var panel = byId('bbtab-' + tabs[i]);
-    if (btn) removeClass(btn, 'active');
-    if (panel) removeClass(panel, 'active');
+  function switchBBTab(tab){
+    document.querySelectorAll('.bb-subtab').forEach(b=>b.classList.remove('active'));
+    document.getElementById('bbtab-'+tab+'-btn').classList.add('active');
+    document.querySelectorAll('.bb-subtab-panel').forEach(p=>p.classList.remove('active'));
+    document.getElementById('bbtab-'+tab).classList.add('active');
   }
-  addClass(byId('bbtab-' + tab + '-btn'), 'active');
-  addClass(byId('bbtab-' + tab), 'active');
-}
-
-/* Form submit — XHR */
-function handleModalSubmit(e, formId) {
-  if (e.preventDefault) e.preventDefault(); else e.returnValue = false;
-  var form = e.target || e.srcElement;
-  var btn = byId('btn-' + formId);
-  var successEl = byId('success-' + formId);
-  if (!btn) return false;
-  btn.disabled = true; btn.innerHTML = 'Đang gửi...';
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', form.action, true);
-  xhr.setRequestHeader('Accept', 'application/json');
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState !== 4) return;
-    if (xhr.status >= 200 && xhr.status < 300) {
-      form.reset();
-      if (successEl) successEl.style.display = 'block';
-      btn.innerHTML = 'Đã Gửi!';
-    } else { btn.disabled = false; btn.innerHTML = 'Gửi Lại'; alert('Lỗi. Vui lòng thử lại.'); }
-  };
-  xhr.onerror = function() { btn.disabled = false; btn.innerHTML = 'Gửi Lại'; alert('Không thể kết nối.'); };
-  xhr.send(new FormData(form));
-  return false;
-}
-
-/* Card image centering (object-fit:cover polyfill) */
-function centerCardImages() {
-  var wraps = document.getElementsByClassName ? document.getElementsByClassName('card-img-wrap') : [];
-  for (var i = 0; i < wraps.length; i++) {
-    (function(wrap) {
-      var img = wrap.getElementsByTagName('img')[0];
-      if (!img) return;
-      function adjust() {
-        var wW = wrap.offsetWidth || 200, wH = wrap.offsetHeight || 180;
-        var nW = img.naturalWidth || img.width || 0, nH = img.naturalHeight || img.height || 0;
-        if (!nW || !nH) { setTimeout(adjust, 150); return; }
-        var scale = Math.max(wW / nW, wH / nH);
-        var newW = Math.ceil(nW * scale), newH = Math.ceil(nH * scale);
-        img.style.width = newW + 'px'; img.style.height = newH + 'px';
-        img.style.left = '-' + Math.floor((newW - wW) / 2) + 'px';
-        img.style.top  = '-' + Math.floor((newH - wH) / 2) + 'px';
-      }
-      img.onerror = function() { img.style.display = 'none'; };
-      if (img.complete && img.naturalWidth) adjust(); else { img.onload = adjust; if (img.readyState === 'complete') adjust(); }
-    })(wraps[i]);
+  function handleModalSubmit(e,formId){
+    e.preventDefault();
+    var form=e.target;
+    var successEl=document.getElementById('success-'+formId);
+    var btn=document.getElementById('btn-'+formId);
+    btn.disabled=true; btn.textContent='Đang gửi...';
+    fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+    .then(function(res){
+      if(res.ok){form.reset();successEl.style.display='block';btn.textContent='Đã Gửi!';successEl.scrollIntoView({behavior:'smooth',block:'nearest'});}
+      else{btn.disabled=false;btn.textContent='Gửi Lại';alert('Có lỗi xảy ra. Vui lòng thử lại.');}
+    })
+    .catch(function(){btn.disabled=false;btn.textContent='Gửi Lại';alert('Không thể kết nối. Vui lòng kiểm tra mạng và thử lại.');});
   }
-}
-if (document.addEventListener) { document.addEventListener('DOMContentLoaded', centerCardImages); }
-else if (document.attachEvent) { document.attachEvent('onreadystatechange', function() { if (document.readyState === 'complete') centerCardImages(); }); }
-window.onload = function() { centerCardImages(); };
 </script>
+
 </body>
 </html>
