@@ -75,12 +75,10 @@
   .nav-inner {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 30px;
     display: table;
     width: 100%;
     table-layout: fixed;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
   }
   .nav-inner a {
     display: table-cell;
@@ -193,9 +191,7 @@
   .article-body a.btn-dl,
   .article-body .game-card-dl a,
   .article-body .btn-inline.btn-primary { color: #ffffff !important; }
-  .article-body a.btn-dl:hover,
-  .article-body .game-card-dl a:hover,
-  .article-body .btn-inline.btn-primary:hover { color: #ffffff !important; }
+  .article-body a.btn-dl:hover { color: #ffffff !important; }
 
   /* Note boxes */
   .note {
@@ -293,15 +289,13 @@
   .btn-dl {
     display: inline-block;
     background: #70cbff;
-    color: white !important;
-    padding: 10px 22px;
+    color: #ffffff;
+    padding: 14px 32px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.9em;
-    border: 2px solid #70cbff;
-    text-align: center;
+    font-size: 1.05em;
   }
-  .btn-dl:hover { opacity: 0.85; color: white !important; }
+  .btn-dl:hover { opacity: 0.85; }
 
   /* Inline buttons */
   .btn-inline {
@@ -312,7 +306,7 @@
     font-size: 0.93em;
     margin: 18px 8px 18px 0;
   }
-  .btn-primary { background: #70cbff; color: white !important; }
+  .btn-primary { background: #70cbff; color: white; }
   .btn-outline-link { background: white; color: #70cbff; border: 2px solid #70cbff; }
   .btn-inline:hover { opacity: 0.85; }
 
@@ -422,23 +416,18 @@
     padding: 20px 32px;
     border-top: 2px solid #e0e0e0;
     background: white;
-    text-align: center;
   }
   .article-footer a {
     display: inline-block;
-    padding: 10px 0;
-    width: 200px;
+    padding: 10px 22px;
     font-weight: bold;
     font-size: 0.9em;
     text-decoration: none;
     border: 2px solid;
-    margin: 4px 6px;
-    text-align: center;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    margin: 4px 6px 4px 0;
   }
-  .btn-outline { background: white; color: #70cbff !important; border-color: #70cbff; }
-  .btn-solid   { background: #70cbff; color: white !important; border-color: #70cbff; }
+  .btn-outline { background: white; color: #70cbff; border-color: #70cbff; }
+  .btn-solid   { background: #70cbff; color: white; border-color: #70cbff; }
   .article-footer a:hover { opacity: 0.85; }
 
   /* ── SIDEBAR ── */
@@ -921,14 +910,14 @@
 
         <p>Bạn có thể tải bản cập nhật mới nhất tại đây:</p>
 
-        <a href="https://drive.google.com/file/d/1GX-p5Yksd5yjtp8BfyeeIPFYxJgcno0E/view?usp=drive_link" class="btn-inline btn-primary btn-outline" target="_blank">Tải BlackBerry 10 Tools [06-4-2026]</a>
+        <a href="https://www.mediafire.com/file/3kogqd4om8poa6m/BlackBerry_10_Tools_%255B10-3-2026%255D.rar/file" class="btn-dl">Tải BlackBerry 10 Tools [10-3-2026]</a>
 
-        <p>Bạn hãy làm theo hướng dẫn này cùng với <strong>BlackBerry 10 Tools [06-4-2026]</strong> – mọi thứ vẫn sẽ hoạt động hoàn toàn bình thường. Cách làm chỉ hơi khác một chút so với hướng dẫn, nhưng hiệu quả đạt được tương đương, thậm chí tốt hơn:</p>
+        <p>Bạn hãy làm theo hướng dẫn này cùng với <strong>BlackBerry 10 Tools [10-3-2026]</strong>– mọi thứ vẫn sẽ hoạt động hoàn toàn bình thường, không nhất thiết phải dùng bản <strong>[11-2-2026]</strong>:</p>
 
-        <a href="/Pages/BB10-Tools-8.html" class="btn-inline btn-outline">Xem Hướng Dẫn</a>
+        <a href="/Pages/BB10-Tools-8.html" class="btn-dl" style="background:white;color:#4fa3d1 !important;border:2px solid #4fa3d1;display:inline-block">Xem Hướng Dẫn</a>
 
         <div class="note note-blue">
-          <strong>Lưu Ý:</strong> Hướng dẫn root được viết cho bản <strong>[11-2-2026]</strong> nhưng <strong>hoàn toàn tương thích</strong> với bản mới <strong>[06-4-2026]</strong>. Điểm khác biệt duy nhất là ở bước cuối: khi xuất hiện thông báo hỏi script tự động, hãy nhấn <strong>Yes</strong>.
+          <strong>Lưu Ý:</strong> Hướng dẫn root được viết cho bản <strong>[11-2-2026]</strong> nhưng <strong>hoàn toàn tương thích</strong> với bản mới <strong>[10-3-2026]</strong>. Các bước thực hiện không thay đổi.
         </div>
 
         <div class="note note-red">
@@ -995,8 +984,7 @@
 
 <!-- ═══ HELP MODAL ═══ -->
 <div class="modal-overlay" id="helpModal" onclick="onOverlayClick(event)">
-<div class="modal-overlay-table"><div class="modal-overlay-cell">
-<div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-header">
     <div class="modal-header-text">
         <h2 id="modalTitle">Yêu Cầu Trợ Giúp</h2>
@@ -1005,27 +993,23 @@
       <button class="modal-close" onclick="closeHelpModal()" aria-label="Đóng">✕</button>
     </div>
     <div id="step-pick">
-      <div class="modal-picker-wrap"><div class="modal-picker" id="servicePicker">
-        <div class="service-card-wrap">
-          <div class="service-card" id="card-unlock" onclick="selectService('unlock')">
-            <div class="sc-title">Mở Khóa Nhà Mạng</div>
-            <div class="sc-desc">Carrier Unlock BB10 — xóa khóa SIM dùng mọi nhà mạng, trừ <strong>Sprint</strong></div>
-          </div>
+      <div class="modal-picker">
+        <div class="service-card" id="card-unlock" onclick="selectService('unlock')">
+          <div class="sc-title">Mở Khóa Nhà Mạng</div>
+          <div class="sc-desc">Carrier Unlock cho BlackBerry 10 — xóa khóa SIM để dùng mọi nhà mạng, trừ <strong>Sprint</strong></div>
         </div>
-        <div class="service-card-wrap">
-          <div class="service-card" id="card-rom" onclick="selectService('rom')">
-            <div class="sc-title">Tạo ROM Tùy Chỉnh</div>
-            <div class="sc-desc">Nhờ tạo Debloated / ROM Root bằng BB10 Tools thay bạn</div>
-          </div>
+        <div class="service-card" id="card-rom" onclick="selectService('rom')">
+          <div class="sc-title">Tạo ROM Tùy Chỉnh</div>
+          <div class="sc-desc">Nhờ tạo Debloated / ROM Root bằng BB10 Tools thay bạn</div>
         </div>
-      </div></div>
+      </div>
       <div class="bb-accordion" id="bb-accordion">
         <div class="bb-accordion-header" onclick="toggleBerryBus()">
-          <span class="bb-acc-arrow" id="bb-arrow">&#9660;</span>
-          <div class="bb-acc-info">
+          <div>
             <div class="bb-acc-title">Đóng Góp Dữ Liệu BerryBus</div>
             <div class="bb-acc-desc">Bổ sung tuyến xe buýt hoặc địa điểm cho ứng dụng BB10</div>
           </div>
+          <span class="bb-acc-arrow" id="bb-arrow">▼</span>
         </div>
         <div class="bb-accordion-body" id="bb-body">
           <div class="bb-subtab-bar">
@@ -1075,11 +1059,11 @@
         </div>
       </div>
       <div class="modal-fb-row">
-        <div class="mfb-btn-wrap"><a href="https://www.facebook.com/BBerryLife/" target="_blank" class="mfb-btn">Nhắn Tin</a></div>
-        <div class="mfb-info">
+        <div>
           <div class="mfb-title">Hỏi Nhanh Qua Facebook</div>
           <div class="mfb-desc">Cần chỉ bảo vài bước nhỏ hoặc sửa lỗi nhanh? Nhắn tin trực tiếp!</div>
         </div>
+        <a href="https://www.facebook.com/BBerryLife/" target="_blank" class="mfb-btn">Nhắn Tin</a>
       </div>
       <div style="padding:8px 26px 20px;text-align:center;color:#4a6a8a;font-size:.82em">Chọn dịch vụ bạn cần để tiếp tục</div>
     </div>
@@ -1128,7 +1112,6 @@
       <button class="modal-back-btn" onclick="resetToStep1()">← Chọn dịch vụ khác</button>
     </div>
   </div>
-</div></div>
 </div>
 
 <script>
@@ -1311,38 +1294,35 @@ if (window.addEventListener) {
 </script>
 
 <script>
-/* IE/BB10: Cover image — simulate object-fit:cover via JS
-   Handles IE quirk: img.complete=true but naturalWidth=0 before paint */
+/* IE/BB10: Cover image — simulate object-fit:cover via JS */
 function centerCoverImage() {
   var wrap = document.getElementById ? document.getElementById('coverImgWrap') : null;
   if (!wrap) return;
   var img = wrap.getElementsByTagName('img')[0];
   if (!img) return;
   function adjustCover() {
-    var wrapW = wrap.offsetWidth  || wrap.clientWidth  || 600;
-    var wrapH = wrap.offsetHeight || wrap.clientHeight || 380;
-    var natW  = img.naturalWidth  || img.width  || 0;
-    var natH  = img.naturalHeight || img.height || 0;
-    if (!natW || !natH) { setTimeout(adjustCover, 150); return; }
-    var scale = Math.max(wrapW / natW, wrapH / natH);
-    var newW  = Math.ceil(natW * scale);
-    var newH  = Math.ceil(natH * scale);
-    img.style.width    = newW + 'px';
-    img.style.height   = newH + 'px';
-    img.style.position = 'absolute';
-    img.style.left     = '-' + Math.floor((newW - wrapW) / 2) + 'px';
-    img.style.top      = '-' + Math.floor((newH - wrapH) / 2) + 'px';
-    img.style.maxWidth = 'none';
+    var wrapH = wrap.offsetHeight || 380;
+    var wrapW = wrap.offsetWidth || 600;
+    img.style.width  = 'auto';
+    img.style.height = 'auto';
+    img.style.top    = '0';
+    img.style.left   = '0';
+    var natW = img.naturalWidth  || img.width  || wrapW;
+    var natH = img.naturalHeight || img.height || wrapH;
+    var scaleW = wrapW / natW;
+    var scaleH = wrapH / natH;
+    var scale  = scaleW > scaleH ? scaleW : scaleH;
+    var newW = Math.ceil(natW * scale);
+    var newH = Math.ceil(natH * scale);
+    img.style.width  = newW + 'px';
+    img.style.height = newH + 'px';
+    img.style.left = '-' + Math.floor((newW - wrapW) / 2) + 'px';
+    img.style.top  = '-' + Math.floor((newH - wrapH) / 2) + 'px';
   }
-  img.onerror = function() {
-    img.style.display = 'none';
-    wrap.style.background = '#d0d0d0';
-  };
-  if (img.complete && img.naturalWidth) {
+  if (img.complete && (img.naturalWidth || img.width)) {
     adjustCover();
   } else {
     img.onload = adjustCover;
-    if (img.readyState === 'complete') adjustCover();
   }
 }
 if (document.addEventListener) {
