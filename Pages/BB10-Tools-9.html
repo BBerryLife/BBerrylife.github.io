@@ -974,15 +974,14 @@
 </button>
 
 <!-- ═══ HELP MODAL ═══ -->
-<div class="modal-overlay" id="helpModal" onclick="onOverlayClick(event)">
-<div class="modal-overlay-table"><div class="modal-overlay-cell">
-<div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<div class="modal-overlay" id="helpModal" style="display:none" onclick="onOverlayClick(event)"><div class="modal-overlay-table"><div class="modal-overlay-cell">
+<div class="modal-box" id="helpModalBox" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-header">
     <div class="modal-header-text">
         <h2 id="modalTitle">Yêu Cầu Trợ Giúp</h2>
         <p>Không có thời gian hoặc gặp khó khăn khi tự làm? Chúng tôi có thể hỗ trợ bạn trực tiếp!</p>
       </div>
-      <button class="modal-close" onclick="closeHelpModal()" aria-label="Đóng">✕</button>
+      <button class="modal-close" onclick="closeHelpModal()" aria-label="Đóng">&#10005;</button>
     </div>
     <div id="step-pick">
       <div class="modal-picker-wrap"><div class="modal-picker" id="servicePicker">
@@ -1058,7 +1057,7 @@
         <div class="mfb-btn-wrap"><a href="https://www.facebook.com/BBerryLife/" target="_blank" class="mfb-btn">Nhắn Tin</a></div>
         <div class="mfb-info">
           <div class="mfb-title">Hỏi Nhanh Qua Facebook</div>
-          <div class="mfb-desc">Cần chỉ bảo vài bước nhỏ hoặc sửa lỗi nhanh? Nhắn tin trực tiếp!</div>
+          <div class="mfb-desc">Cần hỗ trợ nhanh? Nhắn tin trực tiếp!</div>
         </div>
       </div>
       <div style="padding:8px 26px 20px;text-align:center;color:#4a6a8a;font-size:.82em">Chọn dịch vụ bạn cần để tiếp tục</div>
@@ -1105,11 +1104,10 @@
           <div id="success-rom" class="modal-success"><strong>Đã nhận yêu cầu!</strong> Chúng tôi sẽ liên hệ với bạn qua email để xác nhận thông tin và tiến hành tạo ROM.</div>
         </form>
       </div>
-      <button class="modal-back-btn" onclick="resetToStep1()">← Chọn dịch vụ khác</button>
+      <button class="modal-back-btn" onclick="resetToStep1()">&#8592; Chọn dịch vụ khác</button>
     </div>
   </div>
-</div></div>
-</div>
+</div></div></div>
 
 <script>
 /* ── BB10/IE compatible JS — NO classList, NO querySelectorAll, NO arrow functions, NO fetch ── */
