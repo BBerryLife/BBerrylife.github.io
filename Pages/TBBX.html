@@ -1262,7 +1262,7 @@ function coverBgInit() {
   wrap.style.webkitBackgroundSize = 'cover';
   /* Nếu ảnh webp load lỗi (IE/BB10 không hỗ trợ), thử fallback png */
   img.onerror = function() {
-    var fallback = src.replace(/\.webp(\?.*)?$/i, '.png');
+    var fallback = src.replace(/\.png(\?.*)?$/i, '.png');
     if (fallback !== src) {
       img.onerror = null;
       img.src = fallback;
