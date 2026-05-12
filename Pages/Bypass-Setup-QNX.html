@@ -121,15 +121,15 @@
     height: 380px;
     overflow: hidden;
     position: relative;
-    background: #e0e0e0;
+    background-color: #e0e0e0;
     border-bottom: 3px solid #70cbff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
   }
   .cover-img {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: none;
+    display: none;
   }
 
   /* ── ARTICLE ── */
@@ -891,13 +891,13 @@
         <p>Trước khi bắt đầu, hãy chắc chắn bạn đã có đầy đủ các công cụ sau (đa số đã đều ở trong mục <code>10.3.0 Trở Xuống</code> của BlackBerry 10 Tools):</p>
         <ul>
           <li><strong>Cáp USB</strong> chất lượng tốt</li>
-          <li><strong>2 File Autoloader</strong> (.exe) đúng với model thiết bị của bạn. 1 cái là bản bạn muốn xuống <code>10.2, 10.1, 10.0</code> và bản GỐC <a href="https://drive.google.com/drive/folders/1PDbSoBXxEvLIvPXGhn84hYAgFbMAFSKv?usp=drive_link" target="_blank"> 10.3.3.3216</a> để hạ cấp.</li>
+          <li><strong>2 File Autoloader</strong> (.exe) đúng với model thiết bị của bạn. 1 cái là bản bạn muốn xuống <code>10.2, 10.1, 10.0</code> và bản GỐC <a href="https://drive.google.com/drive/folders/1PDbSoBXxEvLIvPXGhn84hYAgFbMAFSKv?usp=drive_link" target="_blank"> 10.3.3.3216</a> để hạ cấp. (nếu bạn dùng PlayBook, chỉ tải mỗi rom PlayBook về)</li>
           <li><strong>DBBT (Darcy's BlackBerry Tools)</strong> – công cụ extract file từ BlackBerry Autoloader</li>
           <li><strong>bb10mt</strong> – BlackBerry 10 MultiTool (dùng để unpack/repack QCFM)</li>
           <li><strong>Hex Editor</strong></li>
           <li><strong>DBBT (Darcy's BlackBerry Tools) - Modified</strong> – Chỉnh sửa để load file QCFM chưa ký và tạo Autoloader cuối cùng</li>
 		  
-		  <strong>QUAN TRỌNG NHẤT</strong>
+		  <strong>QUAN TRỌNG NHẤT (nếu bạn đang ở 10.3.1 trở xuống, nó không quan trọng nữa)</strong>
 		  <li>Bạn phải xóa OS Block, nếu bạn chưa hiểu cách xóa OS Block, hãy tự tạo&chạy ROM Modified tạo bằng BB10 Tools sử dụng bản rom mới nhất <code>10.3.3.3216</code>, rồi xem bước 3 tại trang này <a href="https://bberrylife.github.io/Pages/BBID-Patch.html">BBID-PATCH</a></li>
           <p>Bạn có thể tải bộ công cụ BlackBerry 10 Tools tại đây:</p>
           <a href="https://drive.google.com/drive/folders/1olUGP0GIbvPx5NfkFvISGZEfWWikjCli?usp=drive_link" class="btn-inline btn-outline btn-primary">BlackBerry 10 Tools</a>
@@ -934,9 +934,9 @@
         </figure>
 		
 		<figure class="article-img-wrap">
-          <img
-            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/01.webp"
-            alt="">
+          <picture><source srcset="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/01.webp" type="image/webp"><img
+            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/01.jpg"
+            alt=""></picture>
         </figure>
 
         <!-- STEP 2 -->
@@ -960,18 +960,18 @@
         </div>
 		
 		<figure class="article-img-wrap">
-          <img
-            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/02.webp"
-            alt="">
+          <picture><source srcset="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/02.webp" type="image/webp"><img
+            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/02.jpg"
+            alt=""></picture>
         </figure>
 		
 		<figure class="article-img-wrap">
-          <img
-            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/03.webp"
-            alt="">
+          <picture><source srcset="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/03.webp" type="image/webp"><img
+            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/03.jpg"
+            alt=""></picture>
         </figure>
 
-        <p>Sau khi unpack, bạn sẽ có một thư mục chứa nhiều file. <strong>Chúng ta chỉ cần file <code>.ufs</code></strong>.</p>
+        <p>Sau khi unpack, bạn sẽ có một thư mục chứa nhiều file. Hãy tạo thêm thư mục <code>unpacked</code> và cho tất cả file vừa giải nén (trừ 2 file ban đầu) vào thư mục đó. <strong>Chúng ta chỉ cần file <code>.ufs</code></strong>.</p>
 
         <!-- STEP 3 -->
         <div class="step-header" id="step3">
@@ -990,9 +990,9 @@
         </ol>
 		
 		<figure class="article-img-wrap">
-          <img
-            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/04.webp"
-            alt="">
+          <picture><source srcset="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/04.webp" type="image/webp"><img
+            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/04.jpg"
+            alt=""></picture>
         </figure>
 
         <h3>Dành cho thiết bị BlackBerry 10:</h3>
@@ -1000,15 +1000,15 @@
         <pre><code>autorun::1  →  autorun::0</code></pre>
 		
 		<figure class="article-img-wrap">
-          <img
-            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/05.webp"
-            alt="">
+          <picture><source srcset="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/05.webp" type="image/webp"><img
+            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/05.jpg"
+            alt=""></picture>
         </figure>
 		
 		<figure class="article-img-wrap">
-          <img
-            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/06.webp"
-            alt="">
+          <picture><source srcset="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/06.webp" type="image/webp"><img
+            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/06.jpg"
+            alt=""></picture>
         </figure>
 
         <h3>Dành cho BlackBerry PlayBook:</h3>
@@ -1017,15 +1017,15 @@
 autorun::1          →  autorun::0</code></pre>
 
 		<figure class="article-img-wrap">
-          <img
-            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/07.webp"
-            alt="">
+          <picture><source srcset="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/07.webp" type="image/webp"><img
+            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/07.jpg"
+            alt=""></picture>
         </figure>
 		
 		<figure class="article-img-wrap">
-          <img
-            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/08.webp"
-            alt="">
+          <picture><source srcset="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/08.webp" type="image/webp"><img
+            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/08.jpg"
+            alt=""></picture>
         </figure>
 
         <div class="note note-yellow">
@@ -1072,9 +1072,9 @@ autorun::1          →  autorun::0</code></pre>
         </ol>
 		
 		<figure class="article-img-wrap">
-          <img
-            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/09.webp"
-            alt="">
+          <picture><source srcset="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/09.webp" type="image/webp"><img
+            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/09.jpg"
+            alt=""></picture>
         </figure>
 
         <!-- STEP 5 -->
@@ -1499,48 +1499,43 @@ if (window.addEventListener) {
 </script>
 
 <script>
-/* IE/BB10: Cover image — simulate object-fit:cover via JS
-   Handles IE quirk: img.complete=true but naturalWidth=0 before paint */
-function centerCoverImage() {
+/* Cover image: IE + BB10 WebKit compatible */
+function coverBgInit() {
   var wrap = document.getElementById ? document.getElementById('coverImgWrap') : null;
   if (!wrap) return;
-  var img = wrap.getElementsByTagName('img')[0];
+  var imgs = wrap.getElementsByTagName('img');
+  var img = imgs.length > 0 ? imgs[0] : null;
   if (!img) return;
-  function adjustCover() {
-    var wrapW = wrap.offsetWidth  || wrap.clientWidth  || 600;
-    var wrapH = wrap.offsetHeight || wrap.clientHeight || 380;
-    var natW  = img.naturalWidth  || img.width  || 0;
-    var natH  = img.naturalHeight || img.height || 0;
-    if (!natW || !natH) { setTimeout(adjustCover, 150); return; }
-    var scale = Math.max(wrapW / natW, wrapH / natH);
-    var newW  = Math.ceil(natW * scale);
-    var newH  = Math.ceil(natH * scale);
-    img.style.width    = newW + 'px';
-    img.style.height   = newH + 'px';
-    img.style.position = 'absolute';
-    img.style.left     = '-' + Math.floor((newW - wrapW) / 2) + 'px';
-    img.style.top      = '-' + Math.floor((newH - wrapH) / 2) + 'px';
-    img.style.maxWidth = 'none';
-  }
+  var src = img.getAttribute('src') || '';
+  if (!src) return;
+  /* Dùng url("...") có dấu nháy kép để CSS parser không lỗi với ký tự đặc biệt */
+  wrap.style.backgroundImage = 'url("' + src + '")';
+  wrap.style.backgroundPosition = 'center center';
+  wrap.style.backgroundRepeat = 'no-repeat';
+  wrap.style.backgroundSize = 'cover';
+  wrap.style.webkitBackgroundSize = 'cover';
+  /* Nếu ảnh webp load lỗi (IE/BB10 không hỗ trợ), thử fallback png */
   img.onerror = function() {
-    img.style.display = 'none';
-    wrap.style.background = '#d0d0d0';
+    var fallback = src.replace(/\.webp(\?.*)?$/i, '.png');
+    if (fallback !== src) {
+      img.onerror = null;
+      img.src = fallback;
+      wrap.style.backgroundImage = 'url("' + fallback + '")';
+    }
   };
-  if (img.complete && img.naturalWidth) {
-    adjustCover();
-  } else {
-    img.onload = adjustCover;
-    if (img.readyState === 'complete') adjustCover();
-  }
 }
 if (document.addEventListener) {
-  document.addEventListener('DOMContentLoaded', centerCoverImage);
+  document.addEventListener('DOMContentLoaded', coverBgInit);
 } else if (document.attachEvent) {
   document.attachEvent('onreadystatechange', function() {
-    if (document.readyState === 'complete') centerCoverImage();
+    if (document.readyState === 'complete') coverBgInit();
   });
 }
-window.onload = function() { centerCoverImage(); };
+if (window.addEventListener) {
+  window.addEventListener('load', coverBgInit);
+} else if (window.attachEvent) {
+  window.attachEvent('onload', coverBgInit);
+}
 </script>
 
 <script>

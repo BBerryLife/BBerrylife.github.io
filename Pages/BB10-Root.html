@@ -121,15 +121,15 @@
     height: 380px;
     overflow: hidden;
     position: relative;
-    background: #e0e0e0;
+    background-color: #e0e0e0;
     border-bottom: 3px solid #70cbff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
   }
   .cover-img {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: none;
+    display: none;
   }
 
   /* ── ARTICLE ── */
@@ -1301,48 +1301,43 @@ if (window.addEventListener) {
 </script>
 
 <script>
-/* IE/BB10: Cover image — simulate object-fit:cover via JS
-   Handles IE quirk: img.complete=true but naturalWidth=0 before paint */
-function centerCoverImage() {
+/* Cover image: IE + BB10 WebKit compatible */
+function coverBgInit() {
   var wrap = document.getElementById ? document.getElementById('coverImgWrap') : null;
   if (!wrap) return;
-  var img = wrap.getElementsByTagName('img')[0];
+  var imgs = wrap.getElementsByTagName('img');
+  var img = imgs.length > 0 ? imgs[0] : null;
   if (!img) return;
-  function adjustCover() {
-    var wrapW = wrap.offsetWidth  || wrap.clientWidth  || 600;
-    var wrapH = wrap.offsetHeight || wrap.clientHeight || 380;
-    var natW  = img.naturalWidth  || img.width  || 0;
-    var natH  = img.naturalHeight || img.height || 0;
-    if (!natW || !natH) { setTimeout(adjustCover, 150); return; }
-    var scale = Math.max(wrapW / natW, wrapH / natH);
-    var newW  = Math.ceil(natW * scale);
-    var newH  = Math.ceil(natH * scale);
-    img.style.width    = newW + 'px';
-    img.style.height   = newH + 'px';
-    img.style.position = 'absolute';
-    img.style.left     = '-' + Math.floor((newW - wrapW) / 2) + 'px';
-    img.style.top      = '-' + Math.floor((newH - wrapH) / 2) + 'px';
-    img.style.maxWidth = 'none';
-  }
+  var src = img.getAttribute('src') || '';
+  if (!src) return;
+  /* Dùng url("...") có dấu nháy kép để CSS parser không lỗi với ký tự đặc biệt */
+  wrap.style.backgroundImage = 'url("' + src + '")';
+  wrap.style.backgroundPosition = 'center center';
+  wrap.style.backgroundRepeat = 'no-repeat';
+  wrap.style.backgroundSize = 'cover';
+  wrap.style.webkitBackgroundSize = 'cover';
+  /* Nếu ảnh webp load lỗi (IE/BB10 không hỗ trợ), thử fallback png */
   img.onerror = function() {
-    img.style.display = 'none';
-    wrap.style.background = '#d0d0d0';
+    var fallback = src.replace(/\.webp(\?.*)?$/i, '.png');
+    if (fallback !== src) {
+      img.onerror = null;
+      img.src = fallback;
+      wrap.style.backgroundImage = 'url("' + fallback + '")';
+    }
   };
-  if (img.complete && img.naturalWidth) {
-    adjustCover();
-  } else {
-    img.onload = adjustCover;
-    if (img.readyState === 'complete') adjustCover();
-  }
 }
 if (document.addEventListener) {
-  document.addEventListener('DOMContentLoaded', centerCoverImage);
+  document.addEventListener('DOMContentLoaded', coverBgInit);
 } else if (document.attachEvent) {
   document.attachEvent('onreadystatechange', function() {
-    if (document.readyState === 'complete') centerCoverImage();
+    if (document.readyState === 'complete') coverBgInit();
   });
 }
-window.onload = function() { centerCoverImage(); };
+if (window.addEventListener) {
+  window.addEventListener('load', coverBgInit);
+} else if (window.attachEvent) {
+  window.attachEvent('onload', coverBgInit);
+}
 </script>
 
 <script>

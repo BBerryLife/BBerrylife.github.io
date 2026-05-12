@@ -119,15 +119,15 @@
     height: 380px;
     overflow: hidden;
     position: relative;
-    background: #e0e0e0;
+    background-color: #e0e0e0;
     border-bottom: 3px solid #70cbff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
   }
   .cover-img {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: none;
+    display: none;
   }
 
   /* ── ARTICLE ── */
@@ -412,18 +412,23 @@
     padding: 20px 32px;
     border-top: 2px solid #e0e0e0;
     background: white;
+    text-align: center;
   }
   .article-footer a {
     display: inline-block;
-    padding: 10px 22px;
+    padding: 10px 0;
+    width: 200px;
     font-weight: bold;
     font-size: 0.9em;
     text-decoration: none;
     border: 2px solid;
-    margin: 4px 6px 4px 0;
+    margin: 4px 6px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
   }
-  .btn-outline { background: white; color: #70cbff; border-color: #70cbff; }
-  .btn-solid   { background: #70cbff; color: white; border-color: #70cbff; }
+  .btn-outline { background: white; color: #70cbff !important; border-color: #70cbff; }
+  .btn-solid   { background: #70cbff; color: white !important; border-color: #70cbff; }
   .article-footer a:hover { opacity: 0.85; }
 
   /* ── SIDEBAR ── */
@@ -841,15 +846,15 @@
  <li>Chứng minh rằng BlackBerry 10 vẫn đang được cộng đồng developer quan tâm và phát triển.</li>
 </ul>Một số hình ảnh chụp màn hình từ BlackBerry Q20:
 
-<img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/reddit.waitberry.com_blackberry_q20_5.webp" alt="" />
+<picture><source srcset="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/reddit.waitberry.com_blackberry_q20_5.webp" type="image/webp"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/reddit.waitberry.com_blackberry_q20_5.jpg" alt="" /></picture>
 
-<img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/reddit.waitberry.com_blackberry_q20_4.webp" alt="" />
+<picture><source srcset="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/reddit.waitberry.com_blackberry_q20_4.webp" type="image/webp"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/reddit.waitberry.com_blackberry_q20_4.jpg" alt="" /></picture>
 
-<img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/reddit.waitberry.com_blackberry_q20_3.webp" alt="" />
+<picture><source srcset="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/reddit.waitberry.com_blackberry_q20_3.webp" type="image/webp"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/reddit.waitberry.com_blackberry_q20_3.jpg" alt="" /></picture>
 
-<img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/reddit.waitberry.com_blackberry_q20_2.webp" alt="" />
+<picture><source srcset="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/reddit.waitberry.com_blackberry_q20_2.webp" type="image/webp"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/reddit.waitberry.com_blackberry_q20_2.jpg" alt="" /></picture>
 
-<img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/reddit.waitberry.com_blackberry_q20_1.webp" alt="" />
+<picture><source srcset="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/reddit.waitberry.com_blackberry_q20_1.webp" type="image/webp"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/reddit.waitberry.com_blackberry_q20_1.jpg" alt="" /></picture>
 
 
 
@@ -1227,45 +1232,43 @@ if (window.addEventListener) {
 </script>
 
 <script>
-/* IE/BB10: Cover image — simulate object-fit:cover via JS */
-function centerCoverImage() {
+/* Cover image: IE + BB10 WebKit compatible */
+function coverBgInit() {
   var wrap = document.getElementById ? document.getElementById('coverImgWrap') : null;
   if (!wrap) return;
-  var img = wrap.getElementsByTagName('img')[0];
+  var imgs = wrap.getElementsByTagName('img');
+  var img = imgs.length > 0 ? imgs[0] : null;
   if (!img) return;
-  function adjustCover() {
-    var wrapH = wrap.offsetHeight || 380;
-    var wrapW = wrap.offsetWidth || 600;
-    img.style.width  = 'auto';
-    img.style.height = 'auto';
-    img.style.top    = '0';
-    img.style.left   = '0';
-    var natW = img.naturalWidth  || img.width  || wrapW;
-    var natH = img.naturalHeight || img.height || wrapH;
-    var scaleW = wrapW / natW;
-    var scaleH = wrapH / natH;
-    var scale  = scaleW > scaleH ? scaleW : scaleH;
-    var newW = Math.ceil(natW * scale);
-    var newH = Math.ceil(natH * scale);
-    img.style.width  = newW + 'px';
-    img.style.height = newH + 'px';
-    img.style.left = '-' + Math.floor((newW - wrapW) / 2) + 'px';
-    img.style.top  = '-' + Math.floor((newH - wrapH) / 2) + 'px';
-  }
-  if (img.complete && (img.naturalWidth || img.width)) {
-    adjustCover();
-  } else {
-    img.onload = adjustCover;
-  }
+  var src = img.getAttribute('src') || '';
+  if (!src) return;
+  /* Dùng url("...") có dấu nháy kép để CSS parser không lỗi với ký tự đặc biệt */
+  wrap.style.backgroundImage = 'url("' + src + '")';
+  wrap.style.backgroundPosition = 'center center';
+  wrap.style.backgroundRepeat = 'no-repeat';
+  wrap.style.backgroundSize = 'cover';
+  wrap.style.webkitBackgroundSize = 'cover';
+  /* Nếu ảnh webp load lỗi (IE/BB10 không hỗ trợ), thử fallback png */
+  img.onerror = function() {
+    var fallback = src.replace(/\.webp(\?.*)?$/i, '.png');
+    if (fallback !== src) {
+      img.onerror = null;
+      img.src = fallback;
+      wrap.style.backgroundImage = 'url("' + fallback + '")';
+    }
+  };
 }
 if (document.addEventListener) {
-  document.addEventListener('DOMContentLoaded', centerCoverImage);
+  document.addEventListener('DOMContentLoaded', coverBgInit);
 } else if (document.attachEvent) {
   document.attachEvent('onreadystatechange', function() {
-    if (document.readyState === 'complete') centerCoverImage();
+    if (document.readyState === 'complete') coverBgInit();
   });
 }
-window.onload = function() { centerCoverImage(); };
+if (window.addEventListener) {
+  window.addEventListener('load', coverBgInit);
+} else if (window.attachEvent) {
+  window.attachEvent('onload', coverBgInit);
+}
 </script>
 
 <script>
