@@ -4,7 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Phát Triển Ứng Dụng BlackBerry 10 Trong Năm 2026 – BerryLife</title>
+<title>[Development] Momentics IDE Mods – Debug & Deploy Unsigned Native Apps cho BB10 – BerryLife</title>
 <style>/* === IE / BB10 WebKit Compatible CSS ===
    - No CSS variables
    - No CSS Grid / flexbox gap
@@ -636,7 +636,7 @@
   .bb-accordion-header { padding: 11px 14px; cursor: pointer; -webkit-box-sizing: border-box; box-sizing: border-box; }
   .bb-accordion-header:after { content: ''; display: table; clear: both; }
   .bb-accordion-header:hover { background: #ede8ff; }
-  .bb-acc-info { float: left; }
+  .bb-acc-info { overflow: hidden; }
   .bb-acc-title { font-weight: bold; font-size: 0.88em; color: #3a2a7a; margin-bottom: 3px; line-height: 1.3; }
   .bb-acc-desc  { font-size: 0.78em; color: #6a5aaa; line-height: 1.4; }
   .bb-acc-arrow { float: right; color: #667eea; font-size: 0.8em; margin-top: 2px; }
@@ -812,7 +812,7 @@
     </div>
   </div>
   <nav class="site-nav">
-        <div class="nav-inner">
+    <div class="nav-inner">
       <a href="/index.html">Trang Chủ</a>
       <a href="/Pages/Category/News/News.html">Tin Tức</a>
       <a href="/Pages/Category/Tutorials/Tutorials.html">Hướng Dẫn</a>
@@ -834,241 +834,144 @@
 
       <!-- COVER -->
       <div class="cover-img-wrap" id="coverImgWrap">
-      <img
-        class="cover-img"
-        src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Development/5939119_037_blackberry_q20.jpg"
-        alt="BlackBerry 10 Development"
-        onerror="this.style.display='none'">
-    </div>
+        <img
+          class="cover-img"
+          src="Media/Debug-Token/development-mo-mentics-ide-mods-to-debug-and-deploy-unsigne-2.png"
+          alt="Momentics IDE Modded"
+          onerror="this.style.display='none'">
+      </div>
 
       <!-- ARTICLE HEADER -->
       <div class="article-header">
         <div class="article-meta">
-          <span class="tag" style="background:#e1f5fe;color:#01579b">HƯỚNG DẪN</span>
+          <span class="tag" style="background:#e8f5e9;color:#388e3c">DEVELOPMENT</span>
           <span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span>
-          <span class="tag" style="background:#e8f4f8;color:#17a2b8">PHÁT TRIỂN ỨNG DỤNG</span>
+          <span class="tag" style="background:#fce4ec;color:#c2185b">MOMENTICS IDE</span>
+          <span class="tag" style="background:#f3e5f5;color:#7b1fa2">NATIVE APP</span>
         </div>
-        <h1>Phát Triển Ứng Dụng BlackBerry 10 Trong Năm 2026 (Và Sau Đó)</h1>
-        <div class="article-date">04/03/2026</div>
+        <h1>[Development] Momentics IDE Mods – Debug &amp; Deploy Unsigned Native Apps cho BB10</h1>
+        <div class="article-date">16/05/2026</div>
       </div>
 
       <!-- ARTICLE BODY -->
       <div class="article-body">
 
-        <div class="note note-dark">
-          <p><em>"Chúng tôi cũng không tệ đâu, nhưng bạn không thể chỉ là một tay mơ bình thường — bạn phải thành thạo công cụ, nếu bạn hiểu ý tôi. Hãy chứng tỏ bản thân."</em></p>
-          <p class="note-attr"><em>— Warren Griffin III</em></p>
+        <div class="note note-yellow">
+          Kể từ năm 2022, Momentics IDE gần như <strong>không thể sử dụng được</strong> với thiết bị thật do yêu cầu BBID và Debug Token — những thứ hiện không còn có được. Chỉ có thể dùng với Simulator, vốn không phản ánh đúng trạng thái thiết bị thực tế của chúng ta. Bài viết này cung cấp các plugin đã được chỉnh sửa để vượt qua hoàn toàn những rào cản đó.
         </div>
 
-        <div class="note note-blue">
-          <p>Như bạn đã biết, BlackBerry đã tắt toàn bộ dịch vụ hệ điều hành BlackBerry OS từ ngày <strong>4 tháng 1 năm 2022</strong>, và các link tải xuống cũ giờ đã chết hoàn toàn. Không chỉ vậy, có vẻ như họ còn yêu cầu xóa các tài nguyên còn sót lại khỏi nhiều trang lưu trữ khác nhau.</p>
+        <!-- TOC -->
+        <div class="toc">
+          <div class="toc-title">Mục Lục</div>
+          <ol>
+            <li><a href="#features">Tính Năng</a></li>
+            <li><a href="#process">Quy Trình Cài Đặt</a></li>
+            <li><a href="#device-req">Yêu Cầu Thiết Bị</a></li>
+            <li><a href="#screenshots">Ảnh Minh Họa</a></li>
+            <li><a href="#resources">Tài Nguyên</a></li>
+          </ol>
         </div>
 
-        <p>Vậy bạn phải làm gì nếu muốn bắt đầu tự phát triển ứng dụng BlackBerry trong năm 2022 trở đi? Về cơ bản bạn cần <strong>ba thành phần chính</strong>:</p>
-
+        <!-- FEATURES -->
+        <h2 id="features">Tính Năng</h2>
+        <p>Sau khi áp dụng các plugin đã được mod, bạn sẽ có được:</p>
         <ul>
-          <li><strong>Momentics IDE</strong>— Môi trường phát triển tích hợp của BlackBerry</li>
-          <li><strong>API level files (SDK)</strong>— Phải cài đặt offline vì Momentics không còn tải được từ máy chủ BlackBerry nữa</li>
-          <li><strong>Simulator</strong>— Môi trường để chạy ứng dụng</li>
+          <li>Kết nối thiết bị BlackBerry vật lý đầy đủ qua <strong>USB và Wi-Fi</strong>, không cần BBID.</li>
+          <li>Hầu hết chức năng debug hoạt động bình thường, <strong>không cần Debug Token</strong>.</li>
+          <li>Quy trình liền mạch — không cần workaround, mọi thứ hoạt động ngay.</li>
         </ul>
 
-        <h2># Bước 1: Tải Momentics IDE</h2>
-        <p>Tải Momentics IDE phù hợp với hệ điều hành của bạn (tôi chỉ có bản Windows 64-bit):</p>
-
-        <ul>
-          <li><a href="https://drive.google.com/file/d/199VISEUFH6OrsVR2DGTukoBLwckdyDxt/view?usp=drive_link">Windows 64-bit</a></li>
-        </ul>
-
-        <div class="note note-yellow">
-          <p> <strong>Lưu ý quan trọng:</strong>Các file API level dưới đây <strong>chỉ dành cho nền tảng Windows</strong>. Nếu bạn dùng macOS hoặc Linux, bạn sẽ gặp khó khăn hơn vì các file tương ứng hiện chưa tìm lại được.</p>
+        <!-- PROCESS -->
+        <div class="step-header" id="process">
+          <div class="step-num">1</div>
+          <h2>Tải và Cài Đặt Momentics IDE</h2>
         </div>
 
-        <h2># Bước 2: Tải API Level Files</h2>
-        <p>Sau ngày 4/1/2022, không thể tìm thấy file cho các API level mới nhất (10.3.3.3204 là mới nhất). Vì vậy, chúng ta phải làm việc với <code>10.3.1.995</code>.</p>
+        <p>Tải về và cài đặt Momentics IDE. Sau khi cài xong, <strong>chưa mở IDE</strong> — tiếp tục bước tiếp theo.</p>
 
-        <p>Các file gốc từng có thể tìm thấy trên máy chủ BlackBerry theo cấu trúc URL như sau:</p>
+        <div class="step-header">
+          <div class="step-num">2</div>
+          <h2>Cài Đặt SDK</h2>
+        </div>
 
-<pre><code>http://downloads.blackberry.com/upr/developers/update/bbndk/ndktargetrepo_&lt;API_LEVEL&gt;/packages/bbndk.&lt;PLATFORM&gt;.&lt;PACKAGE&gt;.&lt;API_LEVEL&gt;.zip</code></pre>
+        <p>Thiết lập Momentics IDE với SDK tương ứng. Xem hướng dẫn cài SDK chi tiết tại tài nguyên bên dưới.</p>
+
+        <div class="step-header">
+          <div class="step-num">3</div>
+          <h2>Thay Thế File Plugin</h2>
+        </div>
+
+        <p>Lấy các file được cung cấp trong bài viết này và <strong>thay thế</strong> chúng vào thư mục <code>plugins</code> của Momentics IDE.</p>
 
         <div class="note note-blue">
-          <p>Trong đó:</p>
-          <ul style="background:transparent;border:none;padding:8px 0 0 20px;margin:0">
-            <li><code>&lt;API_LEVEL&gt;</code>— Phiên bản API, ví dụ: <code>10.3.1.995</code></li>
-            <li><code>&lt;PLATFORM&gt;</code>— Nền tảng: <code>win32</code>/ <code>macosx</code>/ <code>linux</code></li>
-            <li><code>&lt;PACKAGE&gt;</code>— Tên gói: <code>libraries</code>, <code>tools</code>, <code>documents</code>,…</li>
-          </ul>
+          <strong>Mẹo:</strong> Thư mục <code>plugins</code> thường nằm tại đường dẫn cài đặt Momentics IDE, ví dụ: <code>C:\bbndk\plugins\</code> hoặc tương tự tùy theo nơi bạn chọn cài.
         </div>
 
-        <h3>Danh sách các file cần tải (API 10.3.1.995 — Windows):</h3>
-
-        <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Tên File</th>
-              <th>Kích Thước</th>
-              <th>Mô Tả</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code><a>bbndk.win32.libraries.10.3.1.995.zip</a></code></td>
-              <td>1,50 GB</td>
-              <td>Thư viện Native SDK — <strong>quan trọng nhất</strong></td>
-            </tr>
-            <tr>
-              <td><code><a>bbndk.win32.tools.10.3.1.12.zip</a></code></td>
-              <td>290,79 MB</td>
-              <td>Công cụ Native SDK</td>
-            </tr>
-            <tr>
-              <td><code><a>bbndk.win32.cshost.10.3.1.995.zip</a></code></td>
-              <td>19,86 MB</td>
-              <td>CS Host</td>
-            </tr>
-            <tr>
-              <td><code><a>bbndk.win32.documents.10.3.1.995.zip</a></code></td>
-              <td>30,64 MB</td>
-              <td>Tài liệu Native SDK</td>
-            </tr>
-            <tr>
-              <td><code><a>bbndk.win32.qconfigmk.10.3.1.995.zip</a></code></td>
-              <td>5,36 KB</td>
-              <td>Cấu hình QConfig</td>
-            </tr>
-            <tr>
-              <td><code><a>bbndk.win32.samples.10.3.1.995.zip</a></code></td>
-              <td>104 KB</td>
-              <td>Mã nguồn mẫu Native SDK</td>
-            </tr>
-            <tr>
-              <td><code>bbndk.win32.licenses.10.3.1.995.zip</code></td>
-              <td>—</td>
-              <td>Giấy phép SDK (không bắt buộc và tôi không có)</td>
-            </tr>
-          </tbody>
-        </table>
-        </div>
-		<div class="btn-dl">
-		<a href="https://drive.google.com/drive/folders/1em8F-zH8wS5DEKFi72jZYapS3e2TzxqV?usp=drive_link" class="btn-solid">Tải danh sách trên</a>
-		</div>
-
-        <h2># Bước 3: Giải Nén Các File</h2>
-        <p>Tạo thư mục <code>c:\bbndk_api\</code>trước, sau đó:</p>
-
-        <div class="step-box">
-          <p><strong>1.</strong>Giải nén <code>bbndk.win32.tools.10.3.1.12.zip</code>vào <code>c:\bbndk_api\</code>→ sẽ tạo ra thư mục <code>host_10_3_1_12</code></p>
-          <p style="margin-top:10px"><strong>2.</strong>Giải nén các file còn lại (cshost, libraries, documents, qconfigmk, samples) vào <code>c:\bbndk_api\</code>→ sẽ tạo ra thư mục <code>target_10_3_1_995</code></p>
+        <div class="step-header">
+          <div class="step-num">4</div>
+          <h2>Chạy Momentics</h2>
         </div>
 
-        <figure class="article-img-wrap">
-          <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Development/screenshot-2026-03-01-221413.png" alt="Cấu trúc thư mục sau khi giải nén">
-        </figure>
-        <figure class="article-img-wrap">
-          <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Development/screenshot-2026-03-01-221706.png" alt="Cấu trúc thư mục chi tiết">
-        </figure>
-
-        <div class="note note-green">Sau khi xong, bạn sẽ có thư mục <code>c:\bbndk_api\</code>chứa hai thư mục con: <strong>target_10_3_1_995</strong>và <strong>host_10_3_1_12</strong>.
-        </div>
-
-        <h2># Bước 4: Cài Đặt Momentics IDE</h2>
-
-        <div class="step-box">
-          <p><strong>Cài đặt:</strong>Nhấp đúp vào file <code>momentics-2.1.2-201503050937.win32.x86.setup.exe</code>. Để nguyên thư mục cài đặt mặc định là <code>C:\bbndk</code>và nhấn <strong>Next</strong>vài lần cho đến khi quá trình cài đặt bắt đầu. Sau khi hoàn tất, bạn mở Momentics lên và thấy như ảnh thì chọn <strong>Cancel</strong>:</p>
-        </div>
-
-        <figure class="article-img-wrap">
-          <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Development/screenshot-2026-03-01-222656.png" alt="Màn hình Momentics IDE sau khi cài đặt">
-        </figure>
-
-        <h2># Bước 5: Nhập SDK vào Momentics</h2>
-        <p>Sau khi Momentics IDE mở lên, thực hiện theo các bước sau:</p>
-
-        <ol>
-          <li>Vào menu <strong>Help</strong>→ chọn <strong>Update API Levels...</strong></li>
-          <li>Chuyển sang tab <strong>Custom</strong></li>
-          <li>Nhấn nút <strong>Add New Custom SDK</strong>→ cửa sổ <em>Import SDK Platform</em>hiện ra</li>
-          <li>Trong ô <strong>Target Path</strong>: dẫn đến <code>c:\bbndk_api\target_10_3_1_995\</code></li>
-          <li>Trong ô <strong>Host Path</strong>: dẫn đến <code>c:\bbndk_api\host_10_3_1_12\</code></li>
-          <li>Trường <strong>Version</strong>sẽ tự điền là <code>10.3.1.995</code></li>
-          <li>Nhấn <strong>Finish</strong></li>
-        </ol>
-
-        <figure class="article-img-wrap">
-          <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Development/screenshot-2026-03-01-222812.png" alt="Import SDK Platform">
-        </figure>
-
-        <h2># Bước 6: Cài đặt Simulator</h2>
-        <p>Tải plugins.zip, giải nén chúng và cho 3 file jar vào trong thư mục plugin của Momentics như ảnh:</p>
-
-        <div class="note note-yellow">
-          <ul style="background:transparent;border:none;padding:4px 0 4px 20px;margin:0">
-            <li><a href="https://drive.google.com/file/d/1aq-jDhgaCy3PXsg6AYKoUFcBtNKnzAWp/view?usp=drive_link">plugins.zip</a></li>
-          </ul>
-        </div>
-
-        <figure class="article-img-wrap">
-          <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Development/screenshot-2026-03-03-224842.png" alt="Thư mục plugin của Momentics">
-        </figure>
-
-        <ol>
-          <li>Vào menu <strong>Windows</strong>→ chọn <strong>Preferences</strong></li>
-          <li>Chuyển sang tab <strong>BlackBerry → Targets</strong></li>
-          <li>Ở phần Deployment → tích bỏ lựa chọn đầu (tôi bị quên tích lúc chụp ảnh), và tích chọn 2 cái tiếp theo <strong>như ảnh 1</strong></li>
-          <li>Nhấn <strong>OK</strong>→ Sau đó chọn <strong>New Configuration (Làm theo như ảnh 2)</strong></li>
-          <li>Sau khi <strong>Add New Configuration</strong>xong, bấm vào cái hộp bên cạnh như ảnh 4 và <strong>Add New Device</strong>(Không nhớ rõ đúng không nhưng mà chỉ có 1 lựa chọn thôi mà)</li>
-        </ol>
-
-        <figure class="article-img-wrap">
-          <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Development/screenshot-2026-03-03-225248.png" alt="Cài đặt Simulator bước 1">
-        </figure>
-        <figure class="article-img-wrap">
-          <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Development/screenshot-2026-03-03-225513.png" alt="Cài đặt Simulator bước 2">
-        </figure>
-
-        <p>Tải BlackBerry Simulator, VMware 12 và key giải nén - cài đặt chúng và cho toàn bộ thư mục (chỉ Simulator, VMware bạn có thể tự cài đặt và điền key) vào trong documents như ảnh:</p>
-
-        <div class="note note-yellow">
-          <ul style="background:transparent;border:none;padding:4px 0 4px 20px;margin:0">
-            <li><a href="https://drive.google.com/drive/folders/1J2pFWUBysNhmzgnz1WGLJ0IHXVEyap3Z?usp=drive_link">BlackBerry Simulator 10.3.1_995.zip (với Controller và BBM Server Simulator)</a></li>
-            <li><a href="https://drive.google.com/file/d/11GF9xddla95tjLJf_yog1EaF0dRUIe32/view?usp=drive_link">VMware 12.5.9 and Keys.zip</a></li>
-          </ul>
-        </div>
-
-        <figure class="article-img-wrap">
-          <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Development/screenshot-2026-03-04-122200.png" alt="Thư mục Documents với Simulator">
-        </figure>
-
-        <ol>
-          <li><strong>Device Manager</strong>sẽ hiện ra</li>
-          <li>Chuyển sang tab <strong>Simulators</strong>và nhấn <strong>Begin Simulator Setup</strong></li>
-          <li>Sau đó chọn <strong>Pair a simulator downloaded from another sources</strong></li>
-          <li>Browse đến thư mục <strong>Documents</strong>và chọn file .vmx chứa trong thư mục <strong>Simulator</strong>bạn vừa đưa vào (VMware sẽ mở lên)</li>
-          <li>Khi VMware đã mở lên, đơn giản <strong>Power On This Virtual Machine</strong></li>
-          <li><strong>Xong</strong></li>
-        </ol>
-
-        <figure class="article-img-wrap">
-          <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Development/screenshot-2026-03-04-122448.png" alt="Simulator setup bước 1">
-        </figure>
-        <figure class="article-img-wrap">
-          <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Development/screenshot-2026-03-04-122513.png" alt="Simulator setup bước 2">
-        </figure>
-        <figure class="article-img-wrap">
-          <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Development/screenshot-2026-03-04-122538.png" alt="Simulator setup bước 3">
-        </figure>
-        <figure class="article-img-wrap">
-          <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Development/screenshot-2026-03-04-122607.png" alt="Simulator setup bước 4">
-        </figure>
-
-        <p>Bạn sẽ nhận thấy ở góc trái <strong>BlackBerry 10 Simulator</strong>trên <strong>VMware</strong>sẽ <strong>hiện 1 dòng IP nhỏ</strong>(ở hình dưới mình quên không kéo dịch xuống cho các bạn xem), hãy <strong>nhập dòng IP đó vào Momentics - nơi mà bạn đang setup cái simulator đó để chạy được app tự dev trên đó nhé. (Rất xin lỗi vì mình luôn thiếu thông tin quan trọng)</strong></p>
-
-        <figure class="article-img-wrap">
-          <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Development/screenshot-2026-03-04-003300.png" alt="IP của BlackBerry 10 Simulator trên VMware">
-        </figure>
+        <p>Mở lại Momentics IDE. Mọi tính năng đã được mở khóa — bạn có thể kết nối thiết bị, deploy và debug ứng dụng ngay lập tức.</p>
 
         <div class="note note-green">
-           <strong>Vậy là xong!</strong>Giờ bạn có thể tạo một dự án BlackBerry mẫu và bắt đầu phát triển ứng dụng trên BB10.
+          <strong>Lưu Ý:</strong> Trên cửa sổ pairing, khi được hỏi BBID, bạn có thể nhấn <strong>"Finish"</strong> để bỏ qua. Thiết bị sẽ được pair thành công mà không cần BBID.
+        </div>
+
+        <!-- DEVICE REQUIREMENTS -->
+        <h2 id="device-req">Yêu Cầu Thiết Bị</h2>
+
+        <p>Mọi thiết bị BB10 đều hoạt động, nhưng bạn cần cài <strong>Pre-Rooted ROM</strong> tương ứng với thiết bị của mình.</p>
+
+        <div class="note note-red">
+          <strong>Lưu Ý Quan Trọng:</strong> Sử dụng các ROM này sẽ <strong>chặn việc cài Android ở lần khởi động đầu tiên</strong>. Bạn cần khởi động lại thiết bị để có thể cài APK trở lại bình thường.
+        </div>
+
+        <p>ROM sẽ tự động root thiết bị mỗi lần boot, sau vài phút. Bạn sẽ thấy thông báo xác nhận rằng thiết bị đã được root và sẵn sàng sử dụng. Từ đây bạn có thể cài đặt và làm bất cứ điều gì trên thiết bị BlackBerry của mình.</p>
+
+        <p>Tải Pre-Rooted ROM tại đây (Cảm ơn <strong>Oleksandr</strong> vì công trình reverse engineering tuyệt vời):</p>
+
+        <a href="https://drive.google.com/drive/folders/1rNnJdwrTGOTqKaKUdnirx_5cn_RLtF4R?usp=drive_link" class="btn-inline btn-primary" target="_blank">Tải Pre-Rooted ROM</a>
+
+        <!-- SCREENSHOTS -->
+        <h2 id="screenshots">Ảnh Minh Họa</h2>
+
+        <p>Dưới đây là một số ảnh chụp màn hình minh họa quá trình hoạt động:</p>
+
+        <!-- Ảnh theo thứ tự: 1, 2, 3 (từ tên file trong thư mục) -->
+        <figure class="article-img-wrap">
+          <picture>
+            <source srcset="Media/Debug-Token/development-mo-mentics-ide-mods-to-debug-and-deploy-unsigne-1.png" type="image/png">
+            <img src="Media/Debug-Token/development-mo-mentics-ide-mods-to-debug-and-deploy-unsigne-1.png" alt="Cửa sổ pairing thiết bị – nhấn Finish khi được hỏi BBID">
+          </picture>
+          <figcaption>Cửa sổ pairing: nhấn "Finish" khi được hỏi BBID</figcaption>
+        </figure>
+
+        <figure class="article-img-wrap">
+          <picture>
+            <source srcset="Media/Debug-Token/development-mo-mentics-ide-mods-to-debug-and-deploy-unsigne-2.png" type="image/png">
+            <img src="Media/Debug-Token/development-mo-mentics-ide-mods-to-debug-and-deploy-unsigne-2.png" alt="Thiết bị đã được pair thành công và hoạt động đầy đủ">
+          </picture>
+          <figcaption>Thiết bị đã được pair thành công và hoạt động</figcaption>
+        </figure>
+
+        <figure class="article-img-wrap">
+          <picture>
+            <source srcset="Media/Debug-Token/development-mo-mentics-ide-mods-to-debug-and-deploy-unsigne-3.png" type="image/png">
+            <img src="Media/Debug-Token/development-mo-mentics-ide-mods-to-debug-and-deploy-unsigne-3.png" alt="Debug trực tiếp trên thiết bị với Breakpoints đầy đủ">
+          </picture>
+          <figcaption>Debug trực tiếp trên thiết bị thật với Breakpoints đầy đủ</figcaption>
+        </figure>
+
+        <!-- RESOURCES -->
+        <h2 id="resources">Tài Nguyên</h2>
+
+        <p>Đây là bài viết lưu trữ hướng dẫn cách cài SDK trên Momentics. Các tài nguyên cần thiết (bao gồm plugin đã mod, SDK và IDE) đều được đề cập ở đầu bài viết đó:</p>
+
+        <a href="https://bberrylife.github.io/Pages/BB10-Development.html" class="btn-inline btn-primary" target="_blank">Hướng Dẫn Cài SDK &amp; Tải Plugin Mod</a>
+
+        <div class="note note-blue">
+          <strong>Nguồn Tham Khảo:</strong> Bài viết gốc từ cộng đồng Reddit r/blackberry. Plugin được phát triển bởi thành viên cộng đồng với mục đích duy trì khả năng phát triển ứng dụng native cho BB10 sau khi các server BlackBerry ngừng hoạt động năm 2022.
         </div>
 
       </div>
@@ -1161,7 +1064,7 @@
         <div class="bb-accordion-body" id="bb-body">
           <div class="bb-subtab-bar">
             <button class="bb-subtab active" id="bbtab-route-btn" onclick="switchBBTab('route')">Tuyến Xe</button>
-            <button class="bb-subtab" id="bbtab-place-btn" onclick="switchBBTab('place')">Địa Điểm</button>
+            <button class="bb-subtab" id="bbtab-stop-btn" onclick="switchBBTab('stop')">Địa Điểm</button>
           </div>
           <div id="bbtab-route" class="bb-subtab-panel active">
             <form id="form-berrybus-route" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-route')">
@@ -1180,7 +1083,7 @@
               <div id="success-berrybus-route" class="modal-success"><strong>Cảm ơn bạn!</strong> Thông tin tuyến xe đã được gửi. Chúng tôi sẽ xem xét và cập nhật vào BerryBus.</div>
             </form>
           </div>
-          <div id="bbtab-place" class="bb-subtab-panel">
+          <div id="bbtab-stop" class="bb-subtab-panel">
             <form id="form-berrybus-place" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-place')">
               <input type="hidden" name="_subject" value="[BerryBus] Đóng góp dữ liệu địa điểm">
               <input type="hidden" name="loai_dong_gop" value="Địa Điểm">
@@ -1242,7 +1145,7 @@
           <div class="mfg"><label>Facebook của bạn <span class="req">*</span></label><input type="text" name="facebook" placeholder="www.facebook.com/example/" required></div>
           <div class="mfg"><label>Model máy BlackBerry <span class="req">*</span></label><input type="text" name="model_may" placeholder="Ví dụ: Q10, Z10, Passport, Classic..." required></div>
           <div class="mfg"><label>Phiên bản OS gốc (autoloader) <span class="req">*</span></label><input type="text" name="phien_ban_os" placeholder="Ví dụ: 10.3.3.3216" required></div>
-          <div class="mfg"><label>Loại ROM muốn tạo <span class="req">*</span> <span class="opt">— Ghi thêm tùy chọn Root vào ô bên dưới (trừ lựa chọn 3)</span></label>
+          <div class="mfg"><label>Loại ROM muốn tạo <span class="req">*</span></label>
             <select name="loai_rom" required>
               <option value="">-- Chọn loại --</option>
               <option>1. Debloated ROM (xóa app cũ) + Bypass Initial Setup</option>
@@ -1450,15 +1353,13 @@ function coverBgInit() {
   if (!img) return;
   var src = img.getAttribute('src') || '';
   if (!src) return;
-  /* Dùng url("...") có dấu nháy kép để CSS parser không lỗi với ký tự đặc biệt */
   wrap.style.backgroundImage = 'url("' + src + '")';
   wrap.style.backgroundPosition = 'center center';
   wrap.style.backgroundRepeat = 'no-repeat';
   wrap.style.backgroundSize = 'cover';
   wrap.style.webkitBackgroundSize = 'cover';
-  /* Nếu ảnh webp load lỗi (IE/BB10 không hỗ trợ), thử fallback png */
   img.onerror = function() {
-    var fallback = src.replace(/\.webp(\?.*)?$/i, '.png');
+    var fallback = src.replace(/\.png(\?.*)?$/i, '.png');
     if (fallback !== src) {
       img.onerror = null;
       img.src = fallback;
