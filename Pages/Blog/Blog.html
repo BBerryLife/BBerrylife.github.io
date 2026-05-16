@@ -106,7 +106,8 @@
   .btn-outline:hover, .btn-solid:hover { opacity: 0.85; }
 
   /* ── SIDEBAR ── */
-  .sidebar-box { background: #f8f9fa; border: 2px solid #e0e0e0; padding: 22px; margin-bottom: 22px; }
+  .sidebar-sticky { position: relative; }
+  .sidebar-box { background: #f8f9fa; border: 2px solid #e0e0e0; border-top: none; padding: 22px; margin-bottom: 22px; }
   .sidebar-title { color: #2c3e50; font-size: 1.1em; font-weight: bold; margin-bottom: 16px; border-bottom: 3px solid #70cbff; padding-bottom: 8px; }
   .cat-group { margin-bottom: 18px; }
   .cat-group-label { color: #4fa3d1; font-size: 0.8em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
@@ -117,7 +118,7 @@
     background: #70cbff;
     background: -webkit-linear-gradient(315deg, #70cbff 0%, #4fa3d1 100%);
     background: linear-gradient(135deg, #70cbff 0%, #4fa3d1 100%);
-    color: white; text-align: center; padding: 26px 20px; border: 2px solid #4fa3d1; margin-bottom: 22px;
+    color: white; text-align: center; padding: 26px 20px; border: 2px solid #4fa3d1; border-bottom: none; margin-bottom: 0;
   }
   .follow-box h3 { font-size: 1.2em; font-weight: bold; margin-bottom: 10px; color: white; }
   .follow-box p  { font-size: 0.88em; opacity: 0.92; margin-bottom: 18px; line-height: 1.5; color: white; }
@@ -235,7 +236,7 @@
     .page-hero { padding: 18px 14px; }
     .page-hero h1 { font-size: 1.35em; }
     .tab-btn { padding: 9px 16px; font-size: 0.85em; }
-    .follow-box { padding: 20px 14px; }
+    .follow-box { padding: 20px 14px; margin-bottom: 0; }
     .sidebar-box { padding: 14px; }
     .header-brand h1 { font-size: 1.7em; }
     .modal-box { max-height: 90vh; }
@@ -279,6 +280,16 @@
         <h2 class="section-title">Tất Cả Bài Viết</h2>
 
         <div class="blog-card">
+          <div class="blog-accent" style="background:#388e3c"></div>
+          <div class="blog-body">
+            <div class="blog-tags"><span class="tag" style="background:#e8f5e9;color:#388e3c">DEVELOPMENT</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#fce4ec;color:#c2185b">MOMENTICS IDE</span><span class="tag" style="background:#f3e5f5;color:#7b1fa2">NATIVE APP</span><span class="tag-date">16/05/2026</span></div>
+            <h3><a href="/Pages/Debug-Token.html">Momentics IDE Mods – Debug &amp; Deploy Unsigned Native Apps cho BB10</a></h3>
+            <p>Các plugin Momentics IDE đã được mod để bypass yêu cầu BBID và Debug Token — kết nối thiết bị BB10 thật, deploy và debug ứng dụng native không cần Debug Token.</p>
+            <a href="/Pages/Debug-Token.html" class="btn-read" style="background:#388e3c">Đọc thêm &#8594;</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
           <div class="blog-accent" style="background:#ff5722"></div>
           <div class="blog-body">
             <div class="blog-tags"><span class="tag" style="background:#fff3cd;color:#ff5722">TIN TỨC</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#fce4ec;color:#c62828">ROOT</span><span class="tag" style="background:#e8f5e9;color:#2e7d32">ROM</span><span class="tag-date">10/05/2026</span></div>
@@ -287,7 +298,6 @@
             <a href="/Pages/Preroot-Autoloaders.html" class="btn-read" style="background:#ff5722">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#4fa3d1"></div>
           <div class="blog-body">
@@ -297,7 +307,6 @@
             <a href="/Pages/Bypass-Setup-QNX.html" class="btn-read" style="background:#4fa3d1">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#17a2b8"></div>
           <div class="blog-body">
@@ -307,7 +316,6 @@
             <a href="/Pages/BerryBus.html" class="btn-read" style="background:#17a2b8">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#667eea"></div>
           <div class="blog-body">
@@ -317,7 +325,6 @@
             <a href="/Pages/Bar-Installer.html" class="btn-read" style="background:#667eea">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#ff5722"></div>
           <div class="blog-body">
@@ -327,7 +334,6 @@
             <a href="/Pages/BB10-Tools-10.html" class="btn-read" style="background:#ff5722">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#ff5722"></div>
           <div class="blog-body">
@@ -337,7 +343,6 @@
             <a href="/Pages/BB10-Tools-9.html" class="btn-read" style="background:#ff5722">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#ff5722"></div>
           <div class="blog-body">
@@ -347,7 +352,6 @@
             <a href="/Pages/TBBX.html" class="btn-read" style="background:#ff5722">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#4fa3d1"></div>
           <div class="blog-body">
@@ -357,7 +361,6 @@
             <a href="/Pages/BB10-Development.html" class="btn-read" style="background:#4fa3d1">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#4fa3d1"></div>
           <div class="blog-body">
@@ -367,6 +370,13 @@
             <a href="/Pages/BBID-Patch.html" class="btn-read" style="background:#4fa3d1">Đọc thêm &#8594;</a>
           </div>
         </div>
+      </section>
+    </div>
+
+    <!-- ═══ TAB 2 ═══ -->
+    <div class="tab-panel" id="tab2">
+      <section class="posts-section">
+        <h2 class="section-title">Tất Cả Bài Viết</h2>
 
         <div class="blog-card">
           <div class="blog-accent" style="background:#ff5722"></div>
@@ -377,16 +387,6 @@
             <a href="/Pages/Unsigned-Bars.html" class="btn-read" style="background:#ff5722">Đọc thêm &#8594;</a>
           </div>
         </div>
-
-
-      </section>
-    </div>
-
-    <!-- ═══ TAB 2 ═══ -->
-    <div class="tab-panel" id="tab2">
-      <section class="posts-section">
-        <h2 class="section-title">Tất Cả Bài Viết</h2>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#4caf50"></div>
           <div class="blog-body">
@@ -396,7 +396,6 @@
             <a href="/Pages/BB10-Games.html" class="btn-read" style="background:#4caf50">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#4fa3d1"></div>
           <div class="blog-body">
@@ -406,7 +405,6 @@
             <a href="/Pages/BB10-Tools-8.html" class="btn-read" style="background:#4fa3d1">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#ff5722"></div>
           <div class="blog-body">
@@ -416,7 +414,6 @@
             <a href="/Pages/BB10-Root.html" class="btn-read" style="background:#ff5722">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#00bcd4"></div>
           <div class="blog-body">
@@ -426,7 +423,6 @@
             <a href="/Pages/Weather.html" class="btn-read" style="background:#00bcd4">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#ff5722"></div>
           <div class="blog-body">
@@ -436,7 +432,6 @@
             <a href="/Pages/Reddit-2.html" class="btn-read" style="background:#ff5722">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#ff5722"></div>
           <div class="blog-body">
@@ -446,7 +441,6 @@
             <a href="/Pages/Reddit.html" class="btn-read" style="background:#ff5722">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#4fa3d1"></div>
           <div class="blog-body">
@@ -456,7 +450,6 @@
             <a href="/Pages/BB10-Blend.html" class="btn-read" style="background:#4fa3d1">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#667eea"></div>
           <div class="blog-body">
@@ -466,7 +459,6 @@
             <a href="/Pages/S60Tube.html" class="btn-read" style="background:#667eea">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#9c27b0"></div>
           <div class="blog-body">
@@ -476,6 +468,19 @@
             <a href="/Pages/BB10-Apps.html" class="btn-read" style="background:#9c27b0">Đọc thêm &#8594;</a>
           </div>
         </div>
+        <div class="page-nav">
+          <button onclick="switchTab(1)">&#8592; Trang 1</button>
+          <button class="active">Trang 2</button>
+          <button onclick="switchTab(3)">Trang 3 &#8594;</button>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- ═══ TAB 3 ═══ -->
+    <div class="tab-panel" id="tab3">
+      <section class="posts-section">
+        <h2 class="section-title">Tất Cả Bài Viết</h2>
 
         <div class="blog-card">
           <div class="blog-accent" style="background:#4caf50"></div>
@@ -486,20 +491,6 @@
             <a href="/Pages/99xx-Games.html" class="btn-read" style="background:#4caf50">Đọc thêm &#8594;</a>
           </div>
         </div>
-
-        <div class="page-nav">
-          <button onclick="switchTab(1)">&#8592; Trang 1</button>
-          <button class="active">Trang 2</button>
-          <button onclick="switchTab(3)">Trang 3 &#8594;</button>
-        </div>
-      </section>
-    </div>
-
-    <!-- ═══ TAB 3 ═══ -->
-    <div class="tab-panel" id="tab3">
-      <section class="posts-section">
-        <h2 class="section-title">Tất Cả Bài Viết</h2>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#e91e63"></div>
           <div class="blog-body">
@@ -509,7 +500,6 @@
             <a href="/Pages/97xx-Themes.html" class="btn-read" style="background:#e91e63">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#7b1fa2"></div>
           <div class="blog-body">
@@ -519,7 +509,6 @@
             <a href="/Pages/MEP-Code.html" class="btn-read" style="background:#7b1fa2">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="blog-card">
           <div class="blog-accent" style="background:#4fa3d1"></div>
           <div class="blog-body">
@@ -529,11 +518,11 @@
             <a href="/Pages/BerryCore.html" class="btn-read" style="background:#4fa3d1">Đọc thêm &#8594;</a>
           </div>
         </div>
-
         <div class="page-nav">
           <button onclick="switchTab(2)">&#8592; Trang 2</button>
           <button class="active">Trang 3</button>
         </div>
+
       </section>
     </div>
 
@@ -542,6 +531,7 @@
     </div>
   </main>
   <aside class="sidebar">
+    <div class="sidebar-sticky">
     <div class="follow-box">
       <h3>Theo Dõi Chúng Tôi</h3>
       <p>Cập nhật tin tức mới nhất về BlackBerry trên Facebook</p>
@@ -557,6 +547,7 @@
           <a href="/Pages/Category/BlackBerry%206/BlackBerry-6.html" style="color:#009688;border:2px solid #009688">BlackBerry 6</a>
         </div>
       </div>
+    </div>
     </div>
   </aside>
 </div>
