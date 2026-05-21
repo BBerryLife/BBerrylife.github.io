@@ -41,6 +41,19 @@
   .header-inner:after { content: ''; display: table; clear: both; }
   .header-brand { float: left; }
   .header-follow { float: right; padding-top: 8px; }
+  .header-follow a {
+    background: white;
+    color: #4fa3d1;
+    padding: 10px 22px;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    margin-left: 12px;
+  }
+  .header-follow a:first-child { margin-left: 0; }
+  .header-follow a:hover { opacity: 0.85; }
   .header-brand a { text-decoration: none; color: white; display: block; }
   .header-brand a:hover { opacity: 0.88; }
   .header-brand h1 {
@@ -56,17 +69,6 @@
     margin-top: 6px;
     color: white;
   }
-  .header-follow a {
-    background: white;
-    color: #4fa3d1;
-    padding: 10px 22px;
-    font-weight: bold;
-    font-size: 0.9em;
-    text-decoration: none;
-    display: inline-block;
-    white-space: nowrap;
-  }
-  .header-follow a:hover { opacity: 0.85; }
 
   /* ── NAV BAR ── */
   .site-nav {
@@ -679,7 +681,8 @@
     .header-inner { padding: 20px 16px 16px; }
     .header-brand { float: none; }
     .header-follow { float: none; padding-top: 10px; }
-    .header-follow a { display: block; text-align: center; padding: 10px 16px; }
+    .header-follow a { display: inline-block; text-align: center; padding: 10px 16px; margin-left: 8px; }
+    .header-follow a:first-child { margin-left: 0; }
     .header-brand a { text-decoration: none; color: white; display: block; }
   .header-brand a:hover { opacity: 0.88; }
   .header-brand h1 { font-size: 2em; }
@@ -728,6 +731,7 @@
       <p>Everything for BlackBerry Users</p></a>
     </div>
     <div class="header-follow">
+      <a href="/AboutUs.html">About Us</a>
       <a href="https://www.facebook.com/BBerryLife/" target="_blank">Theo Dõi Facebook</a>
     </div>
   </div>
@@ -1317,7 +1321,7 @@ function toggleBerryBus() {
 
 /* BerryBus sub-tabs */
 function switchBBTab(tab) {
-  var tabs = ['route', 'stop'];
+  var tabs = ['route', 'place'];
   for (var i = 0; i < tabs.length; i++) {
     var btn = byId('bbtab-' + tabs[i] + '-btn');
     var panel = byId('bbtab-' + tabs[i]);
