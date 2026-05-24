@@ -463,7 +463,7 @@ main {
 
 /* Gộp follow-box + sidebar-box thành 1 khối liền nhau */
 .sidebar-group {
-  border: 2px solid #4fa3d1;
+  border: 2px solid #e0e0e0;
   margin-bottom: 22px;
 }
 .sidebar-group .follow-box {
