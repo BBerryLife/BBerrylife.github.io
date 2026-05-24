@@ -303,11 +303,22 @@
       <button class="tab-btn" onclick="switchTab(3)">Trang 3</button>
     </div>
 
-    <!-- TAB 1 -->
     <div class="tab-panel active" id="tab1">
       <section class="posts-section">
         <h2 class="section-title"></h2>
         <div class="posts-grid">
+          <article class="card">
+            <div class="card-inner">
+              <div class="card-img-wrap">
+                <a href="/Pages/SmartList10v2.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/SmartList10/IMG_20260524_030557.png" alt="SmartList10 v1.0.1 — Ứng dụng To-Do List Native cho BlackBerry 10" onerror="this.style.display='none'"></a>
+              </div>
+              <div class="card-body">
+                <span class="card-badge" style="background:#667eea">ỨNG DỤNG</span>
+                <h3><a href="/Pages/SmartList10v2.html">SmartList10 v1.0.1 — Ứng dụng To-Do List Native cho BlackBerry 10</a></h3>
+                <div class="card-date">24/05/2026</div>
+              </div>
+            </div>
+          </article>
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -368,6 +379,11 @@
               </div>
             </div>
           </article>
+        </div>
+      </section>
+      <section class="posts-section">
+        <h2 class="section-title"></h2>
+        <div class="posts-grid">
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -380,11 +396,6 @@
               </div>
             </div>
           </article>
-        </div>
-      </section>
-      <section class="posts-section">
-        <h2 class="section-title"></h2>
-        <div class="posts-grid">
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -445,6 +456,14 @@
               </div>
             </div>
           </article>
+        </div>
+      </section>
+    </div>
+
+    <div class="tab-panel" id="tab2">
+      <section class="posts-section">
+        <h2 class="section-title"></h2>
+        <div class="posts-grid">
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -457,15 +476,6 @@
               </div>
             </div>
           </article>
-        </div>
-      </section>
-    </div>
-
-    <!-- TAB 2 -->
-    <div class="tab-panel" id="tab2">
-      <section class="posts-section">
-        <h2 class="section-title"></h2>
-        <div class="posts-grid">
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -526,6 +536,11 @@
               </div>
             </div>
           </article>
+        </div>
+      </section>
+      <section class="posts-section">
+        <h2 class="section-title"></h2>
+        <div class="posts-grid">
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -538,11 +553,6 @@
               </div>
             </div>
           </article>
-        </div>
-      </section>
-      <section class="posts-section">
-        <h2 class="section-title"></h2>
-        <div class="posts-grid">
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -607,7 +617,6 @@
       </section>
     </div>
 
-    <!-- TAB 3 -->
     <div class="tab-panel" id="tab3">
       <section class="posts-section">
         <h2 class="section-title"></h2>
@@ -772,12 +781,13 @@ function switchTab(n) {
   var btns   = document.getElementsByClassName ? document.getElementsByClassName('tab-btn')   : [];
   var panels = document.getElementsByClassName ? document.getElementsByClassName('tab-panel') : [];
   for (var i = 0; i < btns.length; i++) {
-    if (i + 1 === n) { addClass(btns[i], 'active'); } else { removeClass(btns[i], 'active'); }
+    if (i + 1 === n) { addClass(btns[i], 'active'); }
+    else { removeClass(btns[i], 'active'); }
   }
   for (var j = 0; j < panels.length; j++) {
-    if (j + 1 === n) { addClass(panels[j], 'active'); } else { removeClass(panels[j], 'active'); }
+    if (j + 1 === n) { addClass(panels[j], 'active'); }
+    else { removeClass(panels[j], 'active'); }
   }
-  if (typeof centerCardImages === 'function') { setTimeout(centerCardImages, 80); }
 }
 
 /* Modal */
