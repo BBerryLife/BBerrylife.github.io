@@ -461,6 +461,21 @@ main {
 }
 .cat-links a:hover { background: #e8f4ff; }
 
+/* Gộp follow-box + sidebar-box thành 1 khối liền nhau */
+.sidebar-group {
+  border: 2px solid #4fa3d1;
+  margin-bottom: 22px;
+}
+.sidebar-group .follow-box {
+  margin-bottom: 0;
+  border: none;
+}
+.sidebar-group .sidebar-box {
+  margin-bottom: 0;
+  border: none;
+  border-top: 2px solid #e0e0e0;
+}
+
 /* Follow box (sidebar) */
 .follow-box {
   background: #70cbff;
