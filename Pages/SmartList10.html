@@ -5,672 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SmartList10 — Ứng dụng To-Do List Native cho BlackBerry 10</title>
-<style>/* === IE / BB10 WebKit Compatible CSS ===
-   - No CSS variables
-   - No CSS Grid / flexbox gap
-   - No object-fit
-   - No position:sticky
-   - No inset shorthand
-   - No @keyframes
-   - Explicit -webkit- prefixes for BB10
-*/
-
-  * { -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #efefef;
-    color: #2c3e50;
-  }
-
-  /* ── HEADER ── */
-  .site-header {
-    background: #70cbff;
-    background: -webkit-linear-gradient(315deg, #70cbff 0%, #4fa3d1 100%);
-    background: linear-gradient(135deg, #70cbff 0%, #4fa3d1 100%);
-    color: white;
-    padding: 0;
-  }
-  .header-inner {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 40px 30px 30px;
-  }
-  .header-inner:after { content: ''; display: table; clear: both; }
-  .header-brand { float: left; }
-  .header-follow { float: right; padding-top: 8px; }
-  .header-brand a { text-decoration: none; color: white; display: block; }
-  .header-brand a:hover { opacity: 0.88; }
-  .header-brand h1 {
-    font-size: 3em;
-    font-weight: bold;
-    letter-spacing: -1px;
-    line-height: 1;
-    color: white;
-  }
-  .header-brand p {
-    font-size: 1em;
-    opacity: 0.9;
-    margin-top: 6px;
-    color: white;
-  }
-  .header-follow a {
-    background: white;
-    color: #4fa3d1;
-    padding: 10px 22px;
-    font-weight: bold;
-    font-size: 0.9em;
-    text-decoration: none;
-    display: inline-block;
-    white-space: nowrap;
-  }
-  .header-follow a:hover { opacity: 0.85; }
-
-  /* ── NAV BAR ── */
-  .site-nav {
-    background: #4fa3d1;
-    border-top: 2px solid rgba(255,255,255,0.25);
-    overflow: hidden;
-  }
-  .nav-inner {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0;
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .nav-inner a {
-    display: table-cell;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.78em;
-    padding: 12px 6px;
-    text-align: center;
-    border-right: 1px solid rgba(255,255,255,0.15);
-    white-space: nowrap;
-    vertical-align: middle;
-  }
-  .nav-inner a:last-child { border-right: none; }
-  .nav-inner a:hover { background: rgba(255,255,255,0.15); }
-
-  /* ── PAGE LAYOUT (float 2-col) ── */
-  .site-wrapper {
-    max-width: 1280px;
-    margin: 30px auto;
-    padding: 0 20px;
-  }
-  .site-wrapper:after { content: ''; display: table; clear: both; }
-  main {
-    float: left;
-    width: 72%;
-    min-width: 0;
-  }
-  .sidebar {
-    float: right;
-    width: 26%;
-    margin-left: 2%;
-  }
-
-  /* ── COVER IMAGE — IE fix: wrap + JS centering ── */
-  .cover-img-wrap {
-    width: 100%;
-    height: 380px;
-    overflow: hidden;
-    position: relative;
-    background-color: #e0e0e0;
-    border-bottom: 3px solid #70cbff;
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-background-size: cover;
-    background-size: cover;
-  }
-  .cover-img { display: none; }
-
-  /* ── ARTICLE ── */
-  .article-wrap {
-    background: #f8f9fa;
-    border: 2px solid #e0e0e0;
-    overflow: hidden;
-  }
-
-  .article-header {
-    padding: 28px 32px 20px;
-    border-bottom: 2px solid #e0e0e0;
-  }
-  .article-meta:after { content: ''; display: table; clear: both; }
-  .article-meta { margin-bottom: 14px; }
-  .tag {
-    padding: 4px 12px;
-    font-size: 0.78em;
-    font-weight: bold;
-    display: inline-block;
-    margin-right: 4px;
-    margin-bottom: 4px;
-  }
-  .article-header h1 {
-    font-size: 1.9em;
-    font-weight: bold;
-    color: #2c3e50;
-    line-height: 1.35;
-    margin-bottom: 10px;
-  }
-  .article-date { color: #999; font-size: 0.85em; }
-
-  /* ── ARTICLE BODY ── */
-  .article-body {
-    overflow-wrap: break-word;
-    word-break: break-word;
-    padding: 28px 32px 36px;
-    font-size: 0.97em;
-    line-height: 1.75;
-    color: #2c3e50;
-  }
-  .article-body h2 {
-    color: #4fa3d1;
-    font-size: 1.25em;
-    font-weight: bold;
-    margin-top: 36px;
-    margin-bottom: 16px;
-    border-left: 4px solid #70cbff;
-    padding-left: 12px;
-  }
-  .article-body h3 {
-    color: #2c3e50;
-    font-size: 1.05em;
-    font-weight: bold;
-    margin-top: 24px;
-    margin-bottom: 12px;
-  }
-  .article-body p { margin-bottom: 14px; }
-  .article-body a { color: #70cbff; text-decoration: none; word-break: break-all; }
-  .article-body a:hover { color: #4fa3d1; }
-  .article-body a.btn-dl,
-  .article-body .btn-inline.btn-primary { color: #ffffff !important; }
-  .article-body a.btn-dl:hover,
-  .article-body .btn-inline.btn-primary:hover { color: #ffffff !important; }
-
-  /* Note boxes */
-  .note {
-    padding: 14px 18px;
-    margin: 20px 0;
-    border-left: 5px solid;
-    font-size: 0.93em;
-    line-height: 1.65;
-  }
-  .note p, .note li { margin-bottom: 6px; }
-  .note p:last-child { margin-bottom: 0; }
-  .note-yellow  { background: #fff8e1; border-color: #ffc107; }
-  .note-blue    { background: #e8f4f8; border-color: #17a2b8; }
-  .note-green   { background: #eaf7ec; border-color: #28a745; }
-  .note-red     { background: #f8d7da; border-color: #dc3545; }
-  .note-success { background: #d4edda; border-color: #28a745; color: #155724; }
-  .note-purple  { background: #f5f0ff; border-color: #667eea; }
-
-  /* Lists */
-  .article-body ul, .article-body ol {
-    background: #f8f9fa;
-    border-left: 4px solid #70cbff;
-    padding: 16px 16px 16px 38px;
-    margin: 18px 0;
-  }
-  .article-body li { margin-bottom: 6px; }
-
-  /* Code */
-  .article-body code {
-    background: #2c3e50;
-    color: #2ecc71;
-    padding: 2px 8px;
-    font-family: 'Courier New', monospace;
-    font-size: 0.92em;
-    word-break: break-all;
-  }
-  .article-body pre {
-    background: #2c3e50;
-    color: #2ecc71;
-    padding: 16px 20px;
-    margin: 18px 0;
-    overflow-x: auto;
-    font-family: 'Courier New', monospace;
-    font-size: 0.92em;
-    line-height: 1.6;
-    white-space: pre-wrap;
-    word-break: break-all;
-  }
-  .article-body pre code { background: none; padding: 0; word-break: normal; }
-
-  /* Images */
-  .article-body img {
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border: 2px solid #e0e0e0;
-    -webkit-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  /* Image gallery — float-based (no CSS grid) */
-  .image-gallery:after { content: ''; display: table; clear: both; }
-  .image-gallery { margin: 24px 0; }
-  .image-gallery img {
-    float: left;
-    width: 31%;
-    margin: 0 1% 14px;
-    border: 2px solid #e0e0e0;
-    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-    display: block;
-    height: auto;
-    max-width: none;
-  }
-
-  /* Article image wrap */
-  .article-img-wrap { text-align: center; margin: 28px 0; }
-  .article-img-wrap img {
-    max-width: 100%;
-    border: 2px solid #e0e0e0;
-    -webkit-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    display: inline-block;
-  }
-  .article-img-wrap figcaption { color: #999; font-size: 0.85em; font-style: italic; margin-top: 8px; }
-
-  /* Download button */
-  .btn-dl {
-    display: inline-block;
-    background: #70cbff;
-    color: white !important;
-    padding: 10px 22px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9em;
-    border: 2px solid #70cbff;
-    text-align: center;
-  }
-  .btn-dl:hover { opacity: 0.85; color: white !important; }
-
-  /* Inline buttons */
-  .btn-inline {
-    display: inline-block;
-    padding: 12px 24px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.93em;
-    margin: 18px 8px 18px 0;
-  }
-  .btn-primary { background: #70cbff; color: white !important; }
-  .btn-outline-link { background: white; color: #70cbff; border: 2px solid #70cbff; }
-  .btn-inline:hover { opacity: 0.85; }
-
-  /* Version badge */
-  .version-badge {
-    display: inline-block;
-    background: #28a745;
-    color: white;
-    font-weight: bold;
-    font-size: 0.78em;
-    padding: 4px 14px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-right: 6px;
-    vertical-align: middle;
-  }
-
-  /* TOC */
-  .toc {
-    background: #e8f4f8;
-    border: 2px solid #17a2b8;
-    padding: 20px 24px;
-    margin: 24px 0;
-  }
-  .toc-title { font-weight: bold; font-size: 1em; margin-bottom: 12px; color: #4fa3d1; }
-  .toc ol { background: none; border: none; padding: 0 0 0 20px; margin: 0; }
-  .toc li { margin-bottom: 5px; font-size: 0.93em; }
-  .toc a { color: #4fa3d1; font-weight: bold; }
-
-  /* Follow banner */
-  .follow-banner {
-    background: #70cbff;
-    background: -webkit-linear-gradient(315deg, #70cbff 0%, #4fa3d1 100%);
-    background: linear-gradient(135deg, #70cbff 0%, #4fa3d1 100%);
-    color: white;
-    text-align: center;
-    padding: 32px 28px;
-  }
-  .follow-banner h2 { font-size: 1.5em; font-weight: bold; margin-bottom: 10px; color: white; }
-  .follow-banner p  { font-size: 0.95em; opacity: 0.92; margin-bottom: 18px; color: white; }
-  .follow-banner a  {
-    background: white;
-    color: #70cbff;
-    padding: 10px 24px;
-    font-weight: bold;
-    font-size: 0.9em;
-    text-decoration: none;
-    display: inline-block;
-  }
-  .follow-banner a:hover { opacity: 0.85; }
-
-  /* Article footer */
-  .article-footer:after { content: ''; display: table; clear: both; }
-  .article-footer {
-    padding: 20px 32px;
-    border-top: 2px solid #e0e0e0;
-    background: white;
-    text-align: center;
-  }
-  .article-footer a {
-    display: inline-block;
-    padding: 10px 0;
-    width: 200px;
-    font-weight: bold;
-    font-size: 0.9em;
-    text-decoration: none;
-    border: 2px solid;
-    margin: 4px 6px;
-    text-align: center;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .btn-outline { background: white; color: #70cbff !important; border-color: #70cbff; }
-  .btn-solid   { background: #70cbff; color: white !important; border-color: #70cbff; }
-  .article-footer a:hover { opacity: 0.85; }
-
-  /* ── SIDEBAR ── */
-  .sidebar-sticky { }
-  .sidebar-box {
-    background: #f8f9fa;
-    border: 2px solid #e0e0e0;
-    padding: 22px;
-    margin-bottom: 22px;
-  }
-  .sidebar-title {
-    color: #2c3e50;
-    font-size: 1.1em;
-    font-weight: bold;
-    margin-bottom: 16px;
-    border-bottom: 3px solid #70cbff;
-    padding-bottom: 8px;
-  }
-  .cat-group { margin-bottom: 18px; }
-  .cat-group-label {
-    color: #4fa3d1;
-    font-size: 0.8em;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    margin-bottom: 10px;
-  }
-  .cat-links:after { content: ''; display: table; clear: both; }
-  .cat-links a {
-    background: white;
-    padding: 7px 14px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.82em;
-    display: inline-block;
-    margin-right: 6px;
-    margin-bottom: 6px;
-  }
-  .cat-links a:hover { background: #e8f4ff; }
-  .follow-box {
-    background: #70cbff;
-    background: -webkit-linear-gradient(315deg, #70cbff 0%, #4fa3d1 100%);
-    background: linear-gradient(135deg, #70cbff 0%, #4fa3d1 100%);
-    color: white;
-    text-align: center;
-    padding: 26px 20px;
-    border: 2px solid #4fa3d1;
-    margin-bottom: 22px;
-  }
-  .follow-box h3 { font-size: 1.2em; font-weight: bold; margin-bottom: 10px; color: white; }
-  .follow-box p  { font-size: 0.88em; opacity: 0.92; margin-bottom: 18px; line-height: 1.5; color: white; }
-  .follow-box a  {
-    background: white;
-    color: #4fa3d1;
-    padding: 10px 22px;
-    font-weight: bold;
-    font-size: 0.88em;
-    text-decoration: none;
-    display: inline-block;
-  }
-  .follow-box a:hover { opacity: 0.85; }
-
-  /* ── HELP BUTTON (floating) ── */
-  .help-fab {
-    position: fixed;
-    bottom: 28px;
-    right: 28px;
-    z-index: 999;
-    background: #0e91e8;
-    background: -webkit-linear-gradient(315deg, #0e91e8 0%, #1366a8 100%);
-    background: linear-gradient(135deg, #0e91e8 0%, #1366a8 100%);
-    color: white;
-    border: none;
-    padding: 14px 22px;
-    font-family: inherit;
-    font-size: 0.95em;
-    font-weight: bold;
-    cursor: pointer;
-    -webkit-box-shadow: 0 4px 18px rgba(14,145,232,0.45);
-    box-shadow: 0 4px 18px rgba(14,145,232,0.45);
-  }
-  .help-fab:hover { opacity: 0.88; }
-  .help-fab svg { width: 18px; height: 18px; vertical-align: middle; margin-right: 6px; }
-
-  /* ── MODAL OVERLAY ── */
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.45);
-    z-index: 1000;
-    overflow-y: auto;
-  }
-  .modal-overlay-table { display: table; width: 100%; height: 100%; min-height: 100%; }
-  .modal-overlay-cell  { display: table-cell; vertical-align: middle; text-align: center; padding: 20px 10px; }
-  .modal-box {
-    background: #ffffff;
-    border-top: 4px solid #0e91e8;
-    width: 540px;
-    max-width: 540px;
-    max-height: 80vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding-bottom: 10px;
-    -webkit-box-shadow: 0 12px 48px rgba(0,0,0,0.22);
-    box-shadow: 0 12px 48px rgba(0,0,0,0.22);
-    display: inline-block;
-    text-align: left;
-    margin: 0 auto;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .modal-header {
-    background: #0e91e8;
-    background: -webkit-linear-gradient(315deg, #0e91e8 0%, #1366a8 100%);
-    background: linear-gradient(135deg, #0e91e8 0%, #1366a8 100%);
-    color: white;
-    padding: 20px 20px 16px;
-  }
-  .modal-header:after { content: ''; display: table; clear: both; }
-  .modal-header-text { float: left; width: 85%; }
-  .modal-header-text h2 { font-size: 1.15em; font-weight: bold; margin-bottom: 4px; color: white; }
-  .modal-header-text p  { font-size: 0.83em; opacity: 0.88; line-height: 1.45; color: white; }
-  .modal-close {
-    float: right;
-    background: rgba(255,255,255,0.2);
-    border: none;
-    color: white;
-    font-size: 1.3em;
-    cursor: pointer;
-    width: 32px; height: 32px;
-    line-height: 30px;
-    text-align: center;
-  }
-  .modal-close:hover { background: rgba(255,255,255,0.35); }
-
-  .modal-picker-wrap { margin: 14px 14px 6px; }
-  .modal-picker-wrap:after { content: ''; display: table; clear: both; }
-  .modal-picker { margin: 0 -2px; }
-  .modal-picker:after { content: ''; display: table; clear: both; }
-  .service-card-wrap { float: left; width: 50%; padding: 0 2px; -webkit-box-sizing: border-box; box-sizing: border-box; }
-  .service-card {
-    border: 2px solid #d0eaf9; background: #f4faff;
-    padding: 11px 14px; cursor: pointer; text-align: left;
-    -ms-user-select: none; -webkit-user-select: none; user-select: none;
-    -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%;
-  }
-  .service-card:hover, .service-card.selected { border-color: #0e91e8; background: #e6f4ff; }
-  .service-card .sc-title { font-weight: bold; font-size: 0.88em; color: #1a3a5c; margin-bottom: 3px; line-height: 1.3; }
-  .service-card .sc-desc  { font-size: 0.78em; color: #4a6a8a; line-height: 1.4; }
-
-  .modal-fb-row {
-    margin: 8px 14px 0;
-    background: #e8f4ff; border: 2px solid #b3d8f6;
-    padding: 11px 14px; overflow: hidden;
-    -webkit-box-sizing: border-box; box-sizing: border-box;
-  }
-  .mfb-info { overflow: hidden; }
-  .mfb-title { font-weight: bold; font-size: 0.88em; color: #1a3a5c; margin-bottom: 3px; line-height: 1.3; }
-  .mfb-desc  { font-size: 0.78em; color: #3a6a9a; line-height: 1.4; }
-  .mfb-btn-wrap { float: right; margin-left: 12px; }
-  .mfb-btn {
-    background: #1877f2; color: white; text-decoration: none;
-    font-weight: bold; font-size: 0.82em; padding: 8px 16px;
-    white-space: nowrap; border: 2px solid #1460c4; display: inline-block;
-  }
-  .mfb-btn:hover { opacity: 0.88; }
-
-  .modal-form-area { padding: 8px 16px 24px; display: none; }
-  .modal-form-area.visible { display: block; }
-  .modal-divider { border: none; border-top: 2px dashed #d0eaf9; margin: 16px 0 18px; }
-  .modal-form-area label { display: block; font-size: 0.83em; font-weight: bold; color: #1a3a5c; margin-bottom: 5px; }
-  .modal-form-area .req { color: #e74c3c; margin-left: 2px; }
-  .modal-form-area .opt { color: #999; font-weight: normal; font-size: 0.88em; margin-left: 4px; }
-  .modal-form-area .mfg { margin-bottom: 14px; }
-  .modal-form-area input[type="text"],
-  .modal-form-area input[type="email"],
-  .modal-form-area select,
-  .modal-form-area textarea {
-    width: 100%; padding: 8px 10px;
-    border: 1px solid #c5d8ec; font-family: inherit;
-    font-size: 0.88em; color: #1a3a5c; background: #fafdff;
-    -webkit-box-sizing: border-box; box-sizing: border-box;
-  }
-  .modal-form-area textarea { min-height: 72px; resize: vertical; }
-  .btn-modal-submit {
-    display: block; width: 100%; background: #0e91e8; color: white;
-    border: none; padding: 11px 0; font-family: inherit;
-    font-size: 0.93em; font-weight: bold; cursor: pointer; margin-top: 6px;
-  }
-  .btn-modal-submit:hover { opacity: 0.88; }
-  .modal-note {
-    background: #fff8e1; border-left: 4px solid #ffc107;
-    padding: 10px 14px; font-size: 0.83em; color: #5a4000;
-    margin-bottom: 14px; line-height: 1.5;
-  }
-  .modal-success {
-    display: none; background: #eaf7ec; border-left: 5px solid #28a745;
-    padding: 14px 18px; font-size: 0.9em; color: #155724;
-    margin-top: 14px; line-height: 1.5;
-  }
-  .modal-back-btn {
-    background: none; border: none; color: #0e91e8;
-    font-size: 0.83em; font-weight: bold; cursor: pointer;
-    padding: 4px 0 0; display: block; text-decoration: underline;
-  }
-  .modal-back-btn:hover { color: #1366a8; }
-
-  .bb-accordion { margin: 8px 14px 0; border: 2px solid #c5b8f0; background: #f5f0ff; }
-  .bb-accordion.bb-open { border-color: #667eea; }
-  .bb-accordion-header { padding: 11px 14px; cursor: pointer; -webkit-box-sizing: border-box; box-sizing: border-box; }
-  .bb-accordion-header:after { content: ''; display: table; clear: both; }
-  .bb-accordion-header:hover { background: #ede8ff; }
-  .bb-acc-info { float: left; }
-  .bb-acc-title { font-weight: bold; font-size: 0.88em; color: #3a2a7a; margin-bottom: 3px; line-height: 1.3; }
-  .bb-acc-desc  { font-size: 0.78em; color: #6a5aaa; line-height: 1.4; }
-  .bb-acc-arrow { float: right; color: #667eea; font-size: 0.8em; margin-top: 2px; }
-  .bb-accordion-body { display: none; border-top: 2px solid #d5caff; padding: 16px 16px 18px; background: white; }
-  .bb-subtab-bar:after { content: ''; display: table; clear: both; }
-  .bb-subtab-bar { border-bottom: 2px solid #d0eaf9; margin-bottom: 16px; overflow: hidden; }
-  .bb-subtab {
-    float: left;
-    width: 50%;
-    padding: 9px 14px;
-    font-family: inherit;
-    font-size: 0.86em;
-    font-weight: bold;
-    color: #4a6a8a;
-    background: #f4faff;
-    border: none;
-    border-bottom: 3px solid transparent;
-    cursor: pointer;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .bb-subtab:hover { color: #0e91e8; }
-  .bb-subtab.active { color: #0e60a0; border-bottom-color: #0e91e8; background: white; }
-  .bb-subtab-panel { display: none; }
-  .bb-subtab-panel.active { display: block; }
-  .bb-accordion-body input[type="text"],
-  .bb-accordion-body input[type="email"],
-  .bb-accordion-body select,
-  .bb-accordion-body textarea {
-    width: 100%;
-    padding: 9px 12px;
-    border: 2px solid #cde5f6;
-    font-family: inherit;
-    font-size: 0.88em;
-    color: #2c3e50;
-    background: white;
-    outline: none;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .bb-accordion-body input:focus,
-  .bb-accordion-body select:focus,
-  .bb-accordion-body textarea:focus { border-color: #0e91e8; }
-  .bb-accordion-body label { display: block; font-size: 0.83em; font-weight: bold; color: #1a3a5c; margin-bottom: 5px; }
-  .bb-accordion-body .req { color: #e74c3c; margin-left: 2px; }
-  .bb-accordion-body .opt { color: #999; font-weight: normal; font-size: 0.88em; margin-left: 4px; }
-  .bb-accordion-body .mfg { margin-bottom: 14px; }
-  .bb-accordion-body textarea { min-height: 88px; resize: vertical; }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    main { float: none; width: 100%; }
-    .sidebar { float: none; width: 100%; margin-left: 0; }
-    .header-inner { padding: 20px 16px 16px; }
-    .header-brand { float: none; }
-    .header-follow { float: none; padding-top: 10px; }
-    .header-follow a { display: block; text-align: center; padding: 10px 16px; }
-    .header-brand h1 { font-size: 2em; }
-    .site-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    .nav-inner { display: block; white-space: nowrap; width: auto; padding: 0; }
-    .nav-inner a { display: inline-block; padding: 11px 13px; font-size: 0.82em; }
-    .site-wrapper { padding: 0 12px; margin: 16px auto; }
-    .article-header { padding: 18px 16px 14px; }
-    .article-header h1 { font-size: 1.45em; }
-    .article-body { padding: 16px 16px 28px; font-size: 0.93em; }
-    .article-footer { padding: 16px; }
-    .cover-img-wrap { height: 240px; }
-    .image-gallery img { width: 47%; }
-    .help-fab { bottom: 16px; right: 16px; padding: 12px 16px; font-size: 0.88em; }
-    .service-card-wrap { float: none; width: 100%; padding: 0; margin-bottom: 10px; }
-    .modal-picker { margin: 0; }
-    .service-card { height: auto !important; }
-  }
-  @media (max-width: 420px) {
-    .header-brand h1 { font-size: 1.7em; }
-    .image-gallery img { float: none; width: 100%; margin: 0 0 14px; }
-  }
-</style>
+<link rel="stylesheet" href="/Pages/src/berrylife.css">
 </head>
 <body>
 
@@ -695,7 +30,6 @@
 </header>
 
 <div class="site-wrapper">
-
   <main>
     <article class="article-wrap">
 
@@ -732,38 +66,31 @@
 </div>
 
 <h2 id="gioi-thieu">SmartList10 là gì?</h2>
-
 <p>SmartList10 là ứng dụng to-do list và quản lý danh sách công việc được viết hoàn toàn bằng <strong>Cascades</strong>. Không phải Android port, không phải web app, không lag. Đây là ứng dụng được thiết kế từ đầu để chạy mượt mà trên BlackBerry 10.</p>
-
 <p>Giao diện đơn giản, tích hợp Share, cho đến tính năng SmartFrame cho phép bạn điều khiển danh sách ngay cả khi app đang thu nhỏ — SmartList10 mang lại trải nghiệm mà không một ứng dụng Android port nào có thể sánh được trên BB10.</p>
 
 <h2 id="tinh-nang">Tính năng nổi bật</h2>
-
 <h3>Quản lý danh sách &amp; danh mục</h3>
 <ul>
   <li><strong>Tạo và phân loại danh sách:</strong> Tổ chức công việc theo từng danh mục tùy chỉnh — ví dụ Finance, College, Shopping — với các tab riêng biệt trên thanh sidebar.</li>
   <li><strong>Tab "All Lists":</strong> Xem toàn bộ danh sách từ mọi danh mục trong một nơi, được sắp xếp theo bảng chữ cái A–Z.</li>
   <li><strong>Xóa hàng loạt:</strong> Chọn nhiều danh sách hoặc mục cùng lúc để xóa nhanh qua Select More.</li>
 </ul>
-
 <h3>SmartDetection &amp; SmartCopy</h3>
 <ul>
   <li><strong>SmartDetection:</strong> Nhập nhiều mục cùng lúc, phân cách bằng dấu phẩy, chấm phẩy hoặc xuống dòng — app tự động tách từng mục riêng biệt.</li>
   <li><strong>SmartCopy:</strong> Dán văn bản từ clipboard, app nhận diện và chia nhỏ thành các mục tự động.</li>
   <li><strong>Single Entry:</strong> Thêm từng mục một kèm ghi chú tùy chọn.</li>
 </ul>
-
 <h3>Chia sẻ danh sách</h3>
 <ul>
   <li>Chia sẻ toàn bộ danh sách qua <strong>BBM, BBM Groups, BBM Channel</strong> (mặc dù không sử dụng được), SMS, Email, Meeting, NFC, Remember, và các ứng dụng bên thứ ba.</li>
 </ul>
-
 <h3>Lưu trữ &amp; đồng bộ</h3>
 <ul>
   <li>Toàn bộ dữ liệu được lưu vào SQLite local thông qua <code>openDatabaseSync</code>, không cần kết nối internet.</li>
   <li>Dữ liệu được tự động khôi phục khi khởi động lại app, kể cả theme đã chọn.</li>
 </ul>
-
 <h3>Giao diện &amp; cá nhân hóa</h3>
 <ul>
   <li><strong>Dark Theme:</strong> Chuyển sang giao diện tối với một lần nhấn — áp dụng ngay sau khi khởi động lại app.</li>
@@ -771,26 +98,20 @@
 </ul>
 
 <h2 id="smartframe">SmartFrame — Điều khiển khi thu nhỏ</h2>
-
 <p>Đây là tính năng độc đáo nhất của SmartList10, tận dụng triệt để khả năng của BB10 mà Android không thể làm được.</p>
-
 <p>Khi bạn thu nhỏ SmartList10 xuống Active Frame, app không chỉ hiển thị danh sách — bạn còn có thể <strong>điều hướng và tick hoàn thành các mục</strong> mà không cần mở lại app.</p>
-
 <ul>
   <li><strong>Smooth Scroll (mặc định):</strong> Nghiêng máy lên/xuống để cuộn qua các mục trong danh sách trên Active Frame. Cảm biến được tinh chỉnh để bỏ qua trạng thái đặt máy nằm phẳng, chỉ phản hồi khi cầm máy thật sự và giữ nút Vol Up để đánh dấu hoàn thành.</li>
   <li><strong>Volume Key Navigation:</strong> Dùng phím Vol Up/Down để chuyển mục, và nút Mute để đánh dấu hoàn thành.</li>
   <li><strong>Tốc độ cuộn:</strong> Điều chỉnh độ nhạy cảm biến từ chậm đến nhanh thông qua thanh slider trong Settings.</li>
   <li><strong>SmartFrame Info:</strong> Tuỳ chọn hiển thị tên danh sách và số lượng đã hoàn thành (ví dụ: 3/10) và thanh tiến trình ngay trên đầu Active Frame.</li>
 </ul>
-
 <div class="note note-blue">
   <strong>Lưu ý về Volume Key Navigation:</strong> Khi bật chế độ này, phím âm lượng sẽ dùng để điều hướng thay vì điều chỉnh âm thanh — chỉ trong khi SmartFrame đang hiển thị. Hệ thống sẽ cảnh báo bạn khi kích hoạt tính năng này.
 </div>
 
 <h2 id="hinh-anh">Hình ảnh thực tế</h2>
-
 <p>Dưới đây là các ảnh chụp trực tiếp từ thiết bị BlackBerry 10, chụp ngày 20/05/2026:</p>
-
 <div class="image-gallery">
   <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/SmartList10/IMG_20260520_132750.png" alt="SmartList10 - Màn hình All Lists">
   <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/SmartList10/IMG_20260520_132820.png" alt="SmartList10 - Thêm danh sách mới">
@@ -802,26 +123,21 @@
   <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/SmartList10/IMG_20260520_133013.png" alt="SmartList10 - Settings chi tiết">
   <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/SmartList10/IMG_20260520_133020.png" alt="SmartList10 - Dark Theme &amp; Appearance">
 </div>
-
 <p>Giao diện theo phong cách Cascades chuẩn: sidebar tab, title bar, action bar với icon — hoàn toàn tích hợp với ngôn ngữ thiết kế của BB10.</p>
 
 <h2 id="cai-dat">Hướng dẫn cài đặt</h2>
-
 <p>SmartList10 là ứng dụng <strong>unsigned</strong>, vì vậy thiết bị của bạn cần được <strong>root</strong> để cài đặt.</p>
-
 <ol>
   <li>Đảm bảo thiết bị BB10 của bạn đã được root thông qua <strong>BB10 Tools</strong> hoặc tải bộ Autoloader root sẵn: <strong><a href="https://drive.google.com/drive/folders/1rNnJdwrTGOTqKaKUdnirx_5cn_RLtF4R?usp=drive_link">Link</a></strong></li>
   <li>Tải file <code>.bar</code> về máy tính.</li>
   <li>Dùng <strong>DBBT</strong> hoặc <strong>Bar Installer</strong> để sideload file <code>.bar</code> vào máy.</li>
   <li>Mở ứng dụng SmartList10 từ màn hình chính — không cần thêm bước nào khác.</li>
 </ol>
-
 <div class="note note-yellow">
   <strong>Chưa root?</strong> Nếu thiết bị của bạn chưa root, hãy xem bài hướng dẫn root BB10 bằng BB10 Tools trên trang của chúng tôi, hoặc liên hệ qua Facebook để được hỗ trợ trực tiếp.
 </div>
 
 <h2 id="luu-y">Lưu ý</h2>
-
 <ul>
   <li><strong>Yêu cầu:</strong> BlackBerry 10.3.x trở lên (khuyến nghị 10.3.3). Thiết bị cần đã root.</li>
   <li><strong>Dữ liệu:</strong> Toàn bộ dữ liệu lưu cục bộ trên máy, không gửi lên bất kỳ server nào.</li>
@@ -830,15 +146,10 @@
 </ul>
 
 <h2 id="tai-xuong">Tải xuống</h2>
-
 <p>SmartList10 v1.0.0.1 hoàn toàn miễn phí. Nhấn nút bên dưới để tải file <code>.bar</code>:</p>
-
 <p>Link dành cho thiết bị BB10 (tải trực tiếp)</p>
-
 <a class="btn-inline btn-primary" href="https://github.com/BBerryLife/BBerrylife.github.io/raw/main/Downloads/SmartList10-1_0_1_0.bar">Tải SmartList10</a>
-
 <p>Link dành cho các thiết bị hiện đại (Google Drive)</p>
-
 <a class="btn-inline btn-primary" href="https://drive.google.com/drive/folders/17F2fMcvIAt9HnQQoK8UgGUxZzJgkckgv?usp=drive_link">Tải SmartList10 - Google Drive</a>
 
       </div>
@@ -859,19 +170,21 @@
 
   <aside class="sidebar">
     <div class="sidebar-sticky">
-      <div class="follow-box">
-        <h3>Theo Dõi Chúng Tôi</h3>
-        <p>Cập nhật tin tức mới nhất về BlackBerry trên Facebook</p>
-        <a href="https://www.facebook.com/BBerryLife/" target="_blank">Theo Dõi Facebook</a>
-      </div>
-      <div class="sidebar-box">
-        <h3 class="sidebar-title">Danh Mục</h3>
-        <div class="cat-group">
-          <div class="cat-group-label">Hệ Điều Hành</div>
-          <div class="cat-links">
-            <a href="/category/blackberry-10" style="color:#2196f3;border:2px solid #2196f3">BlackBerry 10</a>
-            <a href="/category/blackberry-7-1" style="color:#00bcd4;border:2px solid #00bcd4">BlackBerry 7.1</a>
-            <a href="/category/blackberry-6"  style="color:#009688;border:2px solid #009688">BlackBerry 6</a>
+      <div class="sidebar-group">
+        <div class="follow-box">
+          <h3>Theo Dõi Chúng Tôi</h3>
+          <p>Cập nhật tin tức mới nhất về BlackBerry trên Facebook</p>
+          <a href="https://www.facebook.com/BBerryLife/" target="_blank">Theo Dõi Facebook</a>
+        </div>
+        <div class="sidebar-box">
+          <h3 class="sidebar-title">Danh Mục</h3>
+          <div class="cat-group">
+            <div class="cat-group-label">Hệ Điều Hành</div>
+            <div class="cat-links">
+              <a href="/category/blackberry-10"  style="color:#2196f3;border:2px solid #2196f3">BlackBerry 10</a>
+              <a href="/category/blackberry-7-1" style="color:#00bcd4;border:2px solid #00bcd4">BlackBerry 7.1</a>
+              <a href="/category/blackberry-6"   style="color:#009688;border:2px solid #009688">BlackBerry 6</a>
+            </div>
           </div>
         </div>
       </div>
@@ -880,7 +193,6 @@
 
 </div>
 
-<!-- ═══ HELP FLOATING BUTTON ═══ -->
 <button class="help-fab" onclick="openHelpModal()">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
@@ -889,381 +201,151 @@
 </button>
 
 <!-- ═══ HELP MODAL ═══ -->
-<div class="modal-overlay" id="helpModal" style="display:none" onclick="onOverlayClick(event)"><div class="modal-overlay-table"><div class="modal-overlay-cell">
-<div class="modal-box" id="helpModalBox" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div class="modal-header">
-    <div class="modal-header-text">
-      <h2 id="modalTitle">Yêu Cầu Trợ Giúp</h2>
-      <p>Không có thời gian hoặc gặp khó khăn khi tự làm? Chúng tôi có thể hỗ trợ bạn trực tiếp!</p>
-    </div>
-    <button class="modal-close" onclick="closeHelpModal()" aria-label="Đóng">&#10005;</button>
-  </div>
-  <div id="step-pick">
-    <div class="modal-picker-wrap"><div class="modal-picker" id="servicePicker">
-      <div class="service-card-wrap">
-        <div class="service-card" id="card-unlock" onclick="selectService('unlock')">
-          <div class="sc-title">Mở Khóa Nhà Mạng</div>
-          <div class="sc-desc">Carrier Unlock BB10 — xóa khóa SIM dùng mọi nhà mạng, trừ <strong>Sprint</strong></div>
+<div class="modal-overlay" id="helpModal" style="display:none" onclick="onOverlayClick(event)">
+  <div class="modal-overlay-table"><div class="modal-overlay-cell">
+    <div class="modal-box" id="helpModalBox" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <h2 id="modalTitle">Yêu Cầu Trợ Giúp</h2>
+          <p>Không có thời gian hoặc gặp khó khăn khi tự làm? Chúng tôi có thể hỗ trợ bạn trực tiếp!</p>
         </div>
+        <button class="modal-close" onclick="closeHelpModal()" aria-label="Đóng">&#10005;</button>
       </div>
-      <div class="service-card-wrap">
-        <div class="service-card" id="card-rom" onclick="selectService('rom')">
-          <div class="sc-title">Tạo ROM Tùy Chỉnh</div>
-          <div class="sc-desc">Nhờ tạo Debloated / ROM Root bằng BB10 Tools thay bạn</div>
+
+      <div id="step-pick">
+        <div class="modal-picker-wrap">
+          <div class="modal-picker" id="servicePicker">
+            <div class="service-card-wrap">
+              <div class="service-card" id="card-unlock" onclick="selectService('unlock')">
+                <div class="sc-title">Mở Khóa Nhà Mạng</div>
+                <div class="sc-desc">Carrier Unlock BB10 — xóa khóa SIM dùng mọi nhà mạng, trừ <strong>Sprint</strong></div>
+              </div>
+            </div>
+            <div class="service-card-wrap">
+              <div class="service-card" id="card-rom" onclick="selectService('rom')">
+                <div class="sc-title">Tạo ROM Tùy Chỉnh</div>
+                <div class="sc-desc">Nhờ tạo Debloated / ROM Root bằng BB10 Tools thay bạn</div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div></div>
-    <div class="bb-accordion" id="bb-accordion">
-      <div class="bb-accordion-header" onclick="toggleBerryBus()">
-        <span class="bb-acc-arrow" id="bb-arrow">&#9660;</span>
-        <div class="bb-acc-info">
-          <div class="bb-acc-title">Đóng Góp Dữ Liệu BerryBus</div>
-          <div class="bb-acc-desc">Bổ sung tuyến xe buýt hoặc địa điểm cho ứng dụng BB10</div>
+
+        <div class="bb-accordion" id="bb-accordion">
+          <div class="bb-accordion-header" onclick="toggleBerryBus()">
+            <span class="bb-acc-arrow" id="bb-arrow">&#9660;</span>
+            <div class="bb-acc-info">
+              <div class="bb-acc-title">Đóng Góp Dữ Liệu BerryBus</div>
+              <div class="bb-acc-desc">Bổ sung tuyến xe buýt hoặc địa điểm cho ứng dụng BB10</div>
+            </div>
+          </div>
+          <div class="bb-accordion-body" id="bb-body">
+            <div class="bb-subtab-bar">
+              <button class="bb-subtab active" id="bbtab-route-btn" onclick="switchBBTab('route')">Tuyến Xe</button>
+              <button class="bb-subtab" id="bbtab-place-btn" onclick="switchBBTab('place')">Địa Điểm</button>
+            </div>
+            <div id="bbtab-route" class="bb-subtab-panel active">
+              <form id="form-berrybus-route" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-route')">
+                <input type="hidden" name="_subject" value="[BerryBus] Đóng góp dữ liệu tuyến xe">
+                <input type="hidden" name="loai_dong_gop" value="Tuyến Xe">
+                <div class="mfg"><label>Số / Tên tuyến <span class="req">*</span></label><input type="text" name="so_tuyen" placeholder="Ví dụ: 01, 150, Metro số 1..." required></div>
+                <div class="mfg"><label>Điểm đầu <span class="req">*</span></label><input type="text" name="diem_dau" placeholder="Tên bến/trạm đầu" required></div>
+                <div class="mfg"><label>Điểm cuối <span class="req">*</span></label><input type="text" name="diem_cuoi" placeholder="Tên bến/trạm cuối" required></div>
+                <div class="mfg"><label>Giờ hoạt động <span class="opt">(tùy chọn)</span></label><input type="text" name="gio_hoat_dong" placeholder="Ví dụ: 5:00 – 21:30"></div>
+                <div class="mfg"><label>Tần suất (phút/chuyến) <span class="opt">(tùy chọn)</span></label><input type="text" name="tan_suat" placeholder="Ví dụ: 10-15 phút"></div>
+                <div class="mfg"><label>Giá vé <span class="opt">(tùy chọn)</span></label><input type="text" name="gia_ve" placeholder="Ví dụ: 10.000đ / 12.000đ"></div>
+                <div class="mfg"><label>Khu vực / Thành phố <span class="req">*</span></label><input type="text" name="khu_vuc" placeholder="Ví dụ: Hà Nội, TP. Hồ Chí Minh..." required></div>
+                <div class="mfg"><label>Ghi chú thêm <span class="opt">(tùy chọn)</span></label><textarea name="ghi_chu" placeholder="Biến thể tuyến, chỉ chạy ngày thường, v.v..."></textarea></div>
+                <div class="mfg"><label>Email của bạn <span class="opt">(tùy chọn)</span></label><input type="email" name="email" placeholder="email@example.com"></div>
+                <button type="submit" class="btn-modal-submit" id="btn-berrybus-route">Gửi Đóng Góp Tuyến Xe</button>
+                <div id="success-berrybus-route" class="modal-success"><strong>Cảm ơn bạn!</strong> Thông tin tuyến xe đã được gửi. Chúng tôi sẽ xem xét và cập nhật vào BerryBus.</div>
+              </form>
+            </div>
+            <div id="bbtab-place" class="bb-subtab-panel">
+              <form id="form-berrybus-place" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-place')">
+                <input type="hidden" name="_subject" value="[BerryBus] Đóng góp dữ liệu địa điểm">
+                <input type="hidden" name="loai_dong_gop" value="Địa Điểm">
+                <div class="mfg"><label>Tên địa điểm <span class="req">*</span></label><input type="text" name="ten_dia_diem" placeholder="Tên chính xác của địa điểm" required></div>
+                <div class="mfg"><label>Loại địa điểm <span class="req">*</span></label>
+                  <select name="loai_dia_diem" required>
+                    <option value="">-- Chọn loại --</option>
+                    <option>Bến xe / Nhà ga</option><option>Trạm dừng xe buýt</option>
+                    <option>Trạm metro / Tàu điện</option><option>Bệnh viện</option>
+                    <option>Trường học / Đại học</option><option>Trung tâm thương mại</option>
+                    <option>Điểm tham quan</option><option>Chợ / Siêu thị</option><option>Khác</option>
+                  </select>
+                </div>
+                <div class="mfg"><label>Địa chỉ <span class="req">*</span></label><input type="text" name="dia_chi" placeholder="Số nhà, tên đường, phường/xã, quận/huyện" required></div>
+                <div class="mfg"><label>Khu vực / Thành phố <span class="req">*</span></label><input type="text" name="khu_vuc" placeholder="Hà Nội, TP. Hồ Chí Minh..." required></div>
+                <div class="mfg"><label>Các tuyến xe đi qua <span class="opt">(tùy chọn)</span></label><input type="text" name="tuyen_di_qua" placeholder="Ví dụ: 01, 02, 150, Metro số 1..."></div>
+                <div class="mfg"><label>Mô tả / Ghi chú <span class="opt">(tùy chọn)</span></label><textarea name="mo_ta" placeholder="Giờ mở cửa, thông tin đặc biệt, v.v..."></textarea></div>
+                <div class="mfg"><label>Email của bạn <span class="opt">(tùy chọn)</span></label><input type="email" name="email" placeholder="email@example.com"></div>
+                <button type="submit" class="btn-modal-submit" id="btn-berrybus-place">Gửi Đóng Góp Địa Điểm</button>
+                <div id="success-berrybus-place" class="modal-success"><strong>Cảm ơn bạn!</strong> Thông tin địa điểm đã được gửi. Chúng tôi sẽ xem xét và cập nhật vào BerryBus.</div>
+              </form>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="bb-accordion-body" id="bb-body">
-        <div class="bb-subtab-bar">
-          <button class="bb-subtab active" id="bbtab-route-btn" onclick="switchBBTab('route')">Tuyến Xe</button>
-          <button class="bb-subtab" id="bbtab-place-btn" onclick="switchBBTab('place')">Địa Điểm</button>
+
+        <div class="modal-fb-row">
+          <div class="mfb-btn-wrap"><a href="https://www.facebook.com/BBerryLife/" target="_blank" class="mfb-btn">Nhắn Tin</a></div>
+          <div class="mfb-info">
+            <div class="mfb-title">Hỏi Nhanh Qua Facebook</div>
+            <div class="mfb-desc">Cần hỗ trợ nhanh? Nhắn tin trực tiếp!</div>
+          </div>
         </div>
-        <div id="bbtab-route" class="bb-subtab-panel active">
-          <form id="form-berrybus-route" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-route')">
-            <input type="hidden" name="_subject" value="[BerryBus] Đóng góp dữ liệu tuyến xe">
-            <input type="hidden" name="loai_dong_gop" value="Tuyến Xe">
-            <div class="mfg"><label>Số / Tên tuyến <span class="req">*</span></label><input type="text" name="so_tuyen" placeholder="Ví dụ: 01, 150, Metro số 1..." required></div>
-            <div class="mfg"><label>Điểm đầu <span class="req">*</span></label><input type="text" name="diem_dau" placeholder="Tên bến/trạm đầu" required></div>
-            <div class="mfg"><label>Điểm cuối <span class="req">*</span></label><input type="text" name="diem_cuoi" placeholder="Tên bến/trạm cuối" required></div>
-            <div class="mfg"><label>Giờ hoạt động <span class="opt">(tùy chọn)</span></label><input type="text" name="gio_hoat_dong" placeholder="Ví dụ: 5:00 – 21:30"></div>
-            <div class="mfg"><label>Tần suất (phút/chuyến) <span class="opt">(tùy chọn)</span></label><input type="text" name="tan_suat" placeholder="Ví dụ: 10-15 phút"></div>
-            <div class="mfg"><label>Giá vé <span class="opt">(tùy chọn)</span></label><input type="text" name="gia_ve" placeholder="Ví dụ: 10.000đ / 12.000đ"></div>
-            <div class="mfg"><label>Khu vực / Thành phố <span class="req">*</span></label><input type="text" name="khu_vuc" placeholder="Ví dụ: Hà Nội, TP. Hồ Chí Minh..." required></div>
-            <div class="mfg"><label>Ghi chú thêm <span class="opt">(tùy chọn)</span></label><textarea name="ghi_chu" placeholder="Biến thể tuyến, chỉ chạy ngày thường, v.v..."></textarea></div>
-            <div class="mfg"><label>Email của bạn <span class="opt">(tùy chọn)</span></label><input type="email" name="email" placeholder="email@example.com"></div>
-            <button type="submit" class="btn-modal-submit" id="btn-berrybus-route">Gửi Đóng Góp Tuyến Xe</button>
-            <div id="success-berrybus-route" class="modal-success"><strong>Cảm ơn bạn!</strong> Thông tin tuyến xe đã được gửi. Chúng tôi sẽ xem xét và cập nhật vào BerryBus.</div>
+        <div style="padding:8px 26px 20px;text-align:center;color:#4a6a8a;font-size:.82em">Chọn dịch vụ bạn cần để tiếp tục</div>
+      </div><!-- /#step-pick -->
+
+      <div class="modal-form-area" id="step-form">
+        <hr class="modal-divider">
+        <div id="form-wrap-unlock" style="display:none">
+          <div class="modal-note"><strong>Mở Khóa Nhà Mạng (Carrier Unlock)</strong> — Chúng tôi sẽ hỗ trợ bạn unlock SIM lock trên thiết bị BlackBerry 10 <strong>(Bạn sẽ phải gửi thiết bị đến chúng mình)</strong>. Ghi nhớ: <strong>Việc mở khóa SIM sẽ tốn 100.000đ. Cam kết hoàn tiền 100% nếu không thành công.</strong></div>
+          <form id="form-unlock" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'unlock')">
+            <input type="hidden" name="_subject" value="[BerryLife] Yêu cầu trợ giúp – Mở Khóa Nhà Mạng BB10">
+            <input type="hidden" name="loai_yeu_cau" value="Mở Khóa Nhà Mạng (Carrier Unlock BB10)">
+            <div class="mfg"><label>Họ tên / Nickname <span class="req">*</span></label><input type="text" name="ten" placeholder="Tên của bạn" required></div>
+            <div class="mfg"><label>Email liên hệ <span class="req">*</span></label><input type="email" name="email" placeholder="email@example.com" required></div>
+            <div class="mfg"><label>Facebook của bạn <span class="req">*</span></label><input type="text" name="facebook" placeholder="www.facebook.com/example/" required></div>
+            <div class="mfg"><label>Máy BlackBerry của bạn <span class="req">*</span></label><input type="text" name="model_may" placeholder="Ví dụ: BlackBerry Q10, Z30, Passport..." required></div>
+            <div class="mfg"><label>Phiên bản OS hiện tại <span class="opt">(tùy chọn)</span></label><input type="text" name="phien_ban_os" placeholder="Ví dụ: 10.3.3.3216"></div>
+            <div class="mfg"><label>Nhà mạng đang bị khóa <span class="req">*</span></label><input type="text" name="nha_mang" placeholder="Ví dụ: Verizon, AT&amp;T, Rogers..." required></div>
+            <div class="mfg"><label>Mô tả thêm / Câu hỏi <span class="opt">(tùy chọn)</span></label><textarea name="mo_ta" placeholder="Bạn đã thử cách nào chưa? Thiết bị hiện trạng thế nào?..."></textarea></div>
+            <button type="submit" class="btn-modal-submit" id="btn-unlock">Gửi Yêu Cầu Mở Khóa</button>
+            <div id="success-unlock" class="modal-success"><strong>Đã nhận yêu cầu!</strong> Chúng tôi sẽ liên hệ với bạn qua email sớm nhất có thể để sắp xếp hỗ trợ.</div>
           </form>
         </div>
-        <div id="bbtab-place" class="bb-subtab-panel">
-          <form id="form-berrybus-place" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-place')">
-            <input type="hidden" name="_subject" value="[BerryBus] Đóng góp dữ liệu địa điểm">
-            <input type="hidden" name="loai_dong_gop" value="Địa Điểm">
-            <div class="mfg"><label>Tên địa điểm <span class="req">*</span></label><input type="text" name="ten_dia_diem" placeholder="Tên chính xác của địa điểm" required></div>
-            <div class="mfg"><label>Loại địa điểm <span class="req">*</span></label>
-              <select name="loai_dia_diem" required>
+        <div id="form-wrap-rom" style="display:none">
+          <div class="modal-note"><strong>Tạo ROM Tùy Chỉnh bằng BB10 Tools</strong> — Chúng tôi sẽ tạo Debloated / ROM Root cho thiết bị của bạn thông qua <strong>BB10 Tools</strong>. Vui lòng điền thông tin bên dưới để chúng tôi liên hệ.</div>
+          <form id="form-rom" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'rom')">
+            <input type="hidden" name="_subject" value="[BerryLife] Yêu cầu trợ giúp – Tạo ROM BB10 Tools">
+            <input type="hidden" name="loai_yeu_cau" value="Tạo ROM Tùy Chỉnh bằng BB10 Tools">
+            <div class="mfg"><label>Họ tên / Nickname <span class="req">*</span></label><input type="text" name="ten" placeholder="Tên của bạn" required></div>
+            <div class="mfg"><label>Email liên hệ <span class="req">*</span></label><input type="email" name="email" placeholder="email@example.com" required></div>
+            <div class="mfg"><label>Facebook của bạn <span class="req">*</span></label><input type="text" name="facebook" placeholder="www.facebook.com/example/" required></div>
+            <div class="mfg"><label>Model máy BlackBerry <span class="req">*</span></label><input type="text" name="model_may" placeholder="Ví dụ: Q10, Z10, Passport, Classic..." required></div>
+            <div class="mfg"><label>Phiên bản OS gốc (autoloader) <span class="req">*</span></label><input type="text" name="phien_ban_os" placeholder="Ví dụ: 10.3.3.3216" required></div>
+            <div class="mfg"><label>Loại ROM muốn tạo <span class="req">*</span> <span class="opt">— Ghi thêm tùy chọn Root vào ô bên dưới (trừ lựa chọn 3)</span></label>
+              <select name="loai_rom" required>
                 <option value="">-- Chọn loại --</option>
-                <option>Bến xe / Nhà ga</option><option>Trạm dừng xe buýt</option>
-                <option>Trạm metro / Tàu điện</option><option>Bệnh viện</option>
-                <option>Trường học / Đại học</option><option>Trung tâm thương mại</option>
-                <option>Điểm tham quan</option><option>Chợ / Siêu thị</option><option>Khác</option>
+                <option>1. Debloated ROM (xóa app cũ) + Bypass Initial Setup</option>
+                <option>2. Hạ cấp xuống 10.3.1 hoặc 10.3.2 (dành cho Classic và Passport)</option>
+                <option>3. Hạ cấp xuống 10.2, 10.1 hoặc 10.0</option>
+                <option>Chưa biết – cần tư vấn</option>
               </select>
             </div>
-            <div class="mfg"><label>Địa chỉ <span class="req">*</span></label><input type="text" name="dia_chi" placeholder="Số nhà, tên đường, phường/xã, quận/huyện" required></div>
-            <div class="mfg"><label>Khu vực / Thành phố <span class="req">*</span></label><input type="text" name="khu_vuc" placeholder="Hà Nội, TP. Hồ Chí Minh..." required></div>
-            <div class="mfg"><label>Các tuyến xe đi qua <span class="opt">(tùy chọn)</span></label><input type="text" name="tuyen_di_qua" placeholder="Ví dụ: 01, 02, 150, Metro số 1..."></div>
-            <div class="mfg"><label>Mô tả / Ghi chú <span class="opt">(tùy chọn)</span></label><textarea name="mo_ta" placeholder="Giờ mở cửa, thông tin đặc biệt, v.v..."></textarea></div>
-            <div class="mfg"><label>Email của bạn <span class="opt">(tùy chọn)</span></label><input type="email" name="email" placeholder="email@example.com"></div>
-            <button type="submit" class="btn-modal-submit" id="btn-berrybus-place">Gửi Đóng Góp Địa Điểm</button>
-            <div id="success-berrybus-place" class="modal-success"><strong>Cảm ơn bạn!</strong> Thông tin địa điểm đã được gửi. Chúng tôi sẽ xem xét và cập nhật vào BerryBus.</div>
+            <div class="mfg"><label>Yêu cầu đặc biệt <span class="opt">(tùy chọn)</span></label><textarea name="yeu_cau" placeholder="Các ứng dụng muốn giữ lại, loại bỏ, hoặc cấu hình đặc biệt..."></textarea></div>
+            <button type="submit" class="btn-modal-submit" id="btn-rom">Gửi Yêu Cầu Tạo ROM</button>
+            <div id="success-rom" class="modal-success"><strong>Đã nhận yêu cầu!</strong> Chúng tôi sẽ liên hệ với bạn qua email để xác nhận thông tin và tiến hành tạo ROM.</div>
           </form>
         </div>
-      </div>
-    </div>
-    <div class="modal-fb-row">
-      <div class="mfb-btn-wrap"><a href="https://www.facebook.com/BBerryLife/" target="_blank" class="mfb-btn">Nhắn Tin</a></div>
-      <div class="mfb-info">
-        <div class="mfb-title">Hỏi Nhanh Qua Facebook</div>
-        <div class="mfb-desc">Cần hỗ trợ nhanh? Nhắn tin trực tiếp!</div>
-      </div>
-    </div>
-    <div style="padding:8px 26px 20px;text-align:center;color:#4a6a8a;font-size:.82em">Chọn dịch vụ bạn cần để tiếp tục</div>
-  </div>
-  <div class="modal-form-area" id="step-form">
-    <hr class="modal-divider">
-    <div id="form-wrap-unlock" style="display:none">
-      <div class="modal-note"><strong>Mở Khóa Nhà Mạng (Carrier Unlock)</strong> — Chúng tôi sẽ hỗ trợ bạn unlock SIM lock trên thiết bị BlackBerry 10 <strong>(Bạn sẽ phải gửi thiết bị đến chúng mình)</strong>. Ghi nhớ: <strong>Việc mở khóa SIM sẽ tốn 100.000đ. Cam kết hoàn tiền 100% nếu không thành công.</strong></div>
-      <form id="form-unlock" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'unlock')">
-        <input type="hidden" name="_subject" value="[BerryLife] Yêu cầu trợ giúp – Mở Khóa Nhà Mạng BB10">
-        <input type="hidden" name="loai_yeu_cau" value="Mở Khóa Nhà Mạng (Carrier Unlock BB10)">
-        <div class="mfg"><label>Họ tên / Nickname <span class="req">*</span></label><input type="text" name="ten" placeholder="Tên của bạn" required></div>
-        <div class="mfg"><label>Email liên hệ <span class="req">*</span></label><input type="email" name="email" placeholder="email@example.com" required></div>
-        <div class="mfg"><label>Facebook của bạn <span class="req">*</span></label><input type="text" name="facebook" placeholder="www.facebook.com/example/" required></div>
-        <div class="mfg"><label>Máy BlackBerry của bạn <span class="req">*</span></label><input type="text" name="model_may" placeholder="Ví dụ: BlackBerry Q10, Z30, Passport..." required></div>
-        <div class="mfg"><label>Phiên bản OS hiện tại <span class="opt">(tùy chọn)</span></label><input type="text" name="phien_ban_os" placeholder="Ví dụ: 10.3.3.3216"></div>
-        <div class="mfg"><label>Nhà mạng đang bị khóa <span class="req">*</span></label><input type="text" name="nha_mang" placeholder="Ví dụ: Verizon, AT&amp;T, Rogers..." required></div>
-        <div class="mfg"><label>Mô tả thêm <span class="opt">(tùy chọn)</span></label><textarea name="mo_ta" placeholder="Bạn đã thử cách nào chưa?..."></textarea></div>
-        <button type="submit" class="btn-modal-submit" id="btn-unlock">Gửi Yêu Cầu Mở Khóa</button>
-        <div id="success-unlock" class="modal-success"><strong>Đã nhận yêu cầu!</strong> Chúng tôi sẽ liên hệ với bạn qua email sớm nhất có thể.</div>
-      </form>
-    </div>
-    <div id="form-wrap-rom" style="display:none">
-      <div class="modal-note"><strong>Tạo ROM Tùy Chỉnh bằng BB10 Tools</strong> — Chúng tôi sẽ tạo Debloated / ROM Root cho thiết bị của bạn thông qua <strong>BB10 Tools</strong>. Vui lòng điền thông tin bên dưới.</div>
-      <form id="form-rom" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'rom')">
-        <input type="hidden" name="_subject" value="[BerryLife] Yêu cầu trợ giúp – Tạo ROM BB10 Tools">
-        <input type="hidden" name="loai_yeu_cau" value="Tạo ROM Tùy Chỉnh bằng BB10 Tools">
-        <div class="mfg"><label>Họ tên / Nickname <span class="req">*</span></label><input type="text" name="ten" placeholder="Tên của bạn" required></div>
-        <div class="mfg"><label>Email liên hệ <span class="req">*</span></label><input type="email" name="email" placeholder="email@example.com" required></div>
-        <div class="mfg"><label>Facebook của bạn <span class="req">*</span></label><input type="text" name="facebook" placeholder="www.facebook.com/example/" required></div>
-        <div class="mfg"><label>Model máy BlackBerry <span class="req">*</span></label><input type="text" name="model_may" placeholder="Ví dụ: Q10, Z10, Passport, Classic..." required></div>
-        <div class="mfg"><label>Phiên bản OS gốc (autoloader) <span class="req">*</span></label><input type="text" name="phien_ban_os" placeholder="Ví dụ: 10.3.3.3216" required></div>
-        <div class="mfg"><label>Loại ROM muốn tạo <span class="req">*</span></label>
-          <select name="loai_rom" required>
-            <option value="">-- Chọn loại --</option>
-            <option>1. Debloated ROM (xóa app cũ) + Bypass Initial Setup</option>
-            <option>2. Hạ cấp xuống 10.3.1 hoặc 10.3.2 (dành cho Classic và Passport)</option>
-            <option>3. Hạ cấp xuống 10.2, 10.1 hoặc 10.0</option>
-            <option>Chưa biết – cần tư vấn</option>
-          </select>
-        </div>
-        <div class="mfg"><label>Yêu cầu đặc biệt <span class="opt">(tùy chọn)</span></label><textarea name="yeu_cau" placeholder="Các ứng dụng muốn giữ lại, loại bỏ..."></textarea></div>
-        <button type="submit" class="btn-modal-submit" id="btn-rom">Gửi Yêu Cầu Tạo ROM</button>
-        <div id="success-rom" class="modal-success"><strong>Đã nhận yêu cầu!</strong> Chúng tôi sẽ liên hệ với bạn qua email để xác nhận thông tin và tiến hành tạo ROM.</div>
-      </form>
-    </div>
-    <button class="modal-back-btn" onclick="resetToStep1()">&#8592; Chọn dịch vụ khác</button>
-  </div>
-</div>
-</div></div></div>
+        <button class="modal-back-btn" onclick="resetToStep1()">&#8592; Chọn dịch vụ khác</button>
+      </div><!-- /#step-form -->
 
-<script>
-/* ── BB10/IE compatible JS — NO classList, NO querySelectorAll, NO arrow functions, NO fetch ── */
-
-function hasClass(el, cls) {
-  if (!el || !el.className) return false;
-  return (' ' + el.className + ' ').indexOf(' ' + cls + ' ') >= 0;
-}
-function addClass(el, cls) {
-  if (!el) return;
-  if (!hasClass(el, cls)) el.className = el.className ? el.className + ' ' + cls : cls;
-}
-function removeClass(el, cls) {
-  if (!el) return;
-  el.className = (' ' + el.className + ' ').replace(' ' + cls + ' ', ' ').replace(/^\s+|\s+$/g, '');
-}
-function byId(id) { return document.getElementById(id); }
-
-function clampModalWidth() {
-  var box = byId('helpModalBox');
-  if (box) {
-    var vw = document.documentElement.clientWidth || window.innerWidth || 600;
-    box.style.width = Math.min(540, vw - 20) + 'px';
-  }
-}
-
-function openHelpModal() {
-  var modal = byId('helpModal');
-  if (!modal) return;
-  modal.style.display = 'block';
-  clampModalWidth();
-  document.body.style.overflow = 'hidden';
-  if (typeof equalizeServiceCards === 'function') {
-    setTimeout(equalizeServiceCards, 80);
-    setTimeout(equalizeServiceCards, 400);
-  }
-}
-function closeHelpModal() {
-  var modal = byId('helpModal');
-  if (!modal) return;
-  modal.style.display = 'none';
-  document.body.style.overflow = '';
-}
-function onOverlayClick(e) {
-  var t = e.target || e.srcElement;
-  if (t && t.id === 'helpModal') closeHelpModal();
-}
-
-function attachKeyClose() {
-  if (document.addEventListener) {
-    document.addEventListener('keydown', function(e) {
-      if ((e.key === 'Escape') || (e.keyCode === 27)) closeHelpModal();
-    });
-  } else if (document.attachEvent) {
-    document.attachEvent('onkeydown', function() {
-      var e = window.event;
-      if (e && e.keyCode === 27) closeHelpModal();
-    });
-  }
-}
-attachKeyClose();
-
-function selectService(type) {
-  var cards = ['unlock', 'rom'];
-  for (var i = 0; i < cards.length; i++) {
-    var c = byId('card-' + cards[i]);
-    if (c) removeClass(c, 'selected');
-  }
-  var sel = byId('card-' + type);
-  if (sel) addClass(sel, 'selected');
-  var stepForm = byId('step-form');
-  if (stepForm) addClass(stepForm, 'visible');
-  var fmts = ['unlock', 'rom'];
-  for (var j = 0; j < fmts.length; j++) {
-    var fw = byId('form-wrap-' + fmts[j]);
-    if (fw) fw.style.display = 'none';
-  }
-  var target = byId('form-wrap-' + type);
-  if (target) target.style.display = 'block';
-  setTimeout(function() {
-    var sf = byId('step-form');
-    if (sf && sf.scrollIntoView) sf.scrollIntoView(false);
-  }, 80);
-}
-
-function resetToStep1() {
-  var stepForm = byId('step-form');
-  if (stepForm) removeClass(stepForm, 'visible');
-  var cards = ['unlock', 'rom'];
-  for (var i = 0; i < cards.length; i++) {
-    var c = byId('card-' + cards[i]);
-    if (c) removeClass(c, 'selected');
-  }
-  var fmts = ['unlock', 'rom'];
-  for (var j = 0; j < fmts.length; j++) {
-    var fw = byId('form-wrap-' + fmts[j]);
-    if (fw) fw.style.display = 'none';
-    var sc = byId('success-' + fmts[j]);
-    if (sc) sc.style.display = 'none';
-  }
-}
-
-function handleModalSubmit(e, formId) {
-  if (e.preventDefault) e.preventDefault();
-  else e.returnValue = false;
-  var form = e.target || e.srcElement;
-  var successEl = byId('success-' + formId);
-  var btn = byId('btn-' + formId);
-  if (!form || !btn) return false;
-  btn.disabled = true;
-  btn.innerHTML = 'Đang gửi...';
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', form.action, true);
-  xhr.setRequestHeader('Accept', 'application/json');
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState !== 4) return;
-    if (xhr.status >= 200 && xhr.status < 300) {
-      form.reset();
-      if (successEl) successEl.style.display = 'block';
-      btn.innerHTML = 'Đã Gửi!';
-    } else {
-      btn.disabled = false;
-      btn.innerHTML = 'Gửi Lại';
-      alert('Có lỗi xảy ra. Vui lòng thử lại.');
-    }
-  };
-  xhr.onerror = function() {
-    btn.disabled = false;
-    btn.innerHTML = 'Gửi Lại';
-    alert('Không thể kết nối. Vui lòng kiểm tra mạng và thử lại.');
-  };
-  xhr.send(new FormData(form));
-  return false;
-}
-
-/* BerryBus accordion */
-var bbOpen = false;
-function toggleBerryBus() {
-  bbOpen = !bbOpen;
-  var body = byId('bb-body');
-  var arrow = byId('bb-arrow');
-  var acc = byId('bb-accordion');
-  if (body)  body.style.display  = bbOpen ? 'block' : 'none';
-  if (arrow) arrow.innerHTML      = bbOpen ? '&#9650;' : '&#9660;';
-  if (acc) {
-    if (bbOpen) addClass(acc, 'bb-open');
-    else removeClass(acc, 'bb-open');
-  }
-}
-
-/* BerryBus sub-tabs */
-function switchBBTab(tab) {
-  var tabs = ['route', 'place'];
-  for (var i = 0; i < tabs.length; i++) {
-    var btn = byId('bbtab-' + tabs[i] + '-btn');
-    var panel = byId('bbtab-' + tabs[i]);
-    if (btn)   removeClass(btn, 'active');
-    if (panel) removeClass(panel, 'active');
-  }
-  var activeBtn = byId('bbtab-' + tab + '-btn');
-  var activePanel = byId('bbtab-' + tab);
-  if (activeBtn)   addClass(activeBtn, 'active');
-  if (activePanel) addClass(activePanel, 'active');
-}
-
-function onWindowResize() {
-  clampModalWidth();
-  if (typeof centerCoverImage === 'function') centerCoverImage();
-  if (typeof equalizeServiceCards === 'function') equalizeServiceCards();
-}
-if (window.addEventListener) {
-  window.addEventListener('resize', onWindowResize);
-} else if (window.attachEvent) {
-  window.attachEvent('onresize', onWindowResize);
-}
-</script>
-
-<script>
-/* Cover image: IE + BB10 WebKit compatible */
-function coverBgInit() {
-  var wrap = document.getElementById ? document.getElementById('coverImgWrap') : null;
-  if (!wrap) return;
-  var imgs = wrap.getElementsByTagName('img');
-  var img = imgs.length > 0 ? imgs[0] : null;
-  if (!img) return;
-  var src = img.getAttribute('src') || '';
-  if (!src) return;
-  wrap.style.backgroundImage = 'url("' + src + '")';
-  wrap.style.backgroundPosition = 'center center';
-  wrap.style.backgroundRepeat = 'no-repeat';
-  wrap.style.backgroundSize = 'cover';
-  wrap.style.webkitBackgroundSize = 'cover';
-  img.onerror = function() {
-    var fallback = src.replace(/\.webp(\?.*)?$/i, '.png');
-    if (fallback !== src) {
-      img.onerror = null;
-      img.src = fallback;
-      wrap.style.backgroundImage = 'url("' + fallback + '")';
-    }
-  };
-}
-if (document.addEventListener) {
-  document.addEventListener('DOMContentLoaded', coverBgInit);
-} else if (document.attachEvent) {
-  document.attachEvent('onreadystatechange', function() {
-    if (document.readyState === 'complete') coverBgInit();
-  });
-}
-if (window.addEventListener) {
-  window.addEventListener('load', coverBgInit);
-} else if (window.attachEvent) {
-  window.attachEvent('onload', coverBgInit);
-}
-</script>
-
-<script>
-/* Equalize service-card heights */
-function equalizeServiceCards() {
-  var picker = document.getElementById ? document.getElementById('servicePicker') : null;
-  if (!picker) return;
-  var cards = picker.getElementsByClassName ? picker.getElementsByClassName('service-card') : [];
-  if (cards.length < 2) return;
-  cards[0].style.height = '';
-  cards[1].style.height = '';
-  var h = Math.max(cards[0].offsetHeight, cards[1].offsetHeight);
-  if (h <= 0) return;
-  cards[0].style.height = h + 'px';
-  cards[1].style.height = h + 'px';
-}
-function runEqualize() {
-  equalizeServiceCards();
-  if (typeof setTimeout !== 'undefined') setTimeout(equalizeServiceCards, 200);
-}
-if (document.addEventListener) {
-  document.addEventListener('DOMContentLoaded', runEqualize);
-} else if (document.attachEvent) {
-  document.attachEvent('onreadystatechange', function() {
-    if (document.readyState === 'complete') runEqualize();
-  });
-}
-</script>
-
+    </div><!-- /.modal-box -->
+  </div></div>
+</div><!-- /.modal-overlay -->
+-e 
+<script src="/Pages/src/berrylife.js"></script>
 </body>
 </html>
