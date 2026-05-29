@@ -63,59 +63,37 @@
 
       <!-- ARTICLE BODY -->
       <div class="article-body">
+	  
+        <div class="note note-yellow">
+          <strong>Lưu ý:</strong>BerryCore ở thời điểm tôi sửa bài này 29-5-2026, thì không thể sử dụng trên thiết bị đã root do lỗi phân vùng.
+        </div>
 
         <h2>Chuẩn bị - Cài đặt</h2>
 
         <ul>
-          <li>Term49 và BGShell (File bar).</li>
-          <li>DBBT 3.1.0.1.zip</li>
-          <li>BerryCore.zip</li>
-          <li>BlackBerry Desktop Software cho BB10 (Chủ yếu cần driver)</li>
+          <li><a href="https://drive.google.com/file/d/1zIQaQC5lCkuBHRt3hzeP2ct-MRcQgE--/view?usp=drive_link">Term49</a></li>
+          <li><a href="https://drive.google.com/file/d/1ek0wifxxATox5jjWLw2T_FLc6fBHXXFN/view?usp=drive_link">DBBT</a></li>
+          <li><a href="https://github.com/sw7ft/BerryCore/releases/">BerryCore.zip & install.sh</a></li>
+          <li><a href="https://drive.google.com/file/d/1mal4OxWn20jfDGxAvVfZ_OGhIbx4iVfS/view?usp=drive_link">BlackBerry Desktop Software cho BB10 (Chủ yếu cần driver)</a></li>
         </ul>
-
-        <div class="note note-yellow">
-          <strong>Đầu tiên</strong>, bạn cần truy cập link sau trên máy tính:
-        </div>
-
-        <ol>
-          <li><a href="https://github.com/sw7ft/BerryCore/releases/" target="_blank">https://github.com/sw7ft/BerryCore/releases/</a></li>
-        </ol>
-
-        <div class="note note-blue">
-          <p><strong>Ở link</strong>→ tải xuống <strong>[BerryCore.zip]</strong></p>
-          <p style="margin-top:8px"><strong>Sau đó</strong>→ truy cập BerryLife\BlackBerry 10 và <strong>[tải xuống như ảnh 1]</strong>, tiếp đó truy cập BerryLife\BlackBerry 10\Coding và <strong>[tải xuống như ảnh 3].</strong>Cuối cùng, truy cập BerryLife\BlackBerry 10\Desktop Software và <strong>[tải xuống như ảnh 2]</strong>.</p>
-          <p style="margin-top:8px">Sau khi tải <strong>[BlackBerry 10 Tools 3-9-2025]</strong>→ Giải nén → Lấy <strong>DBBTool 3.1.0.1</strong>ra Desktop → Xóa <strong>[BlackBerry 10 Tools 3-9-2025]</strong>vì không cần thiết nữa.</p>
-        </div>
-
-        <figure class="article-img-wrap">
-          <img
-            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BerryCore/berrycore-pic-1.png"
-            alt="Hướng dẫn tải các file cần thiết">
-          <figcaption>Ảnh 1 – Hướng dẫn tải các file cần thiết</figcaption>
-        </figure>
 
         <h2>Thực Hiện</h2>
 
-        <div class="step-box">
-          <span class="step-label">Bước 1</span>Mở DBBT trên màn hình desktop đã chuẩn bị từ trước, kết nối với BlackBerry 10 của bạn. Lưu ý phải có BlackBerry Desktop Manager 10. Hãy thực hiện từng thao tác giống như trong ảnh (2 file bar thường sẽ ở nơi bạn tải chúng xuống):
-        </div>
+        <ul>
+		  <li>Cài đặt Term49 thông qua DBBT (Đã cài BlackBerry Desktop Software thì thiết bị mới kết nối đến DBBT)</li>
+          <li>Đặt BerryCore.zip và install.sh vào thư mục Documents trên thiết bị BB10 của bạn (không phải Documents trong thẻ nhớ)</li>
+        </ul>
 
         <figure class="article-img-wrap">
           <img
             src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BerryCore/berrycore-pic-3.png"
             alt="Cài đặt file .bar trên DBBT">
-          <figcaption>Ảnh 3 – Hướng dẫn cài đặt file .bar trên DBBT</figcaption>
         </figure>
-
-        <div class="step-box">
-          <span class="step-label">Bước 2</span>Sau khi cài đặt thành công, chuyển sang chế độ <strong>USB Mass Storage Mode</strong>trên BlackBerry 10 trong phần cài đặt, sau đó truyền 3 tệp đã nói ở link 1 vào thư mục Document trong thẻ SD. Sau đó rút dây kết nối, lựa chọn 3 tệp trong thư mục Doc của thẻ SD và chuyển chúng vào thư mục Document của điện thoại (tức bộ nhớ chính):
-        </div>
 
         <figure class="article-img-wrap">
           <img
             src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BerryCore/berrycore-pic-2.png"
             alt="Di chuyển file đến Documents">
-          <figcaption>Ảnh 2 – Di chuyển file đến Documents</figcaption>
         </figure>
 
         <p>Sau khi làm xong các bước trên, mở Term49 lên và gõ:</p>
@@ -124,22 +102,17 @@
 chmod +x install.sh
 ./install.sh</code></pre>
 
-        <div class="note note-green">Chỉ cần đợi tầm 10 phút cho nó cài đặt, đóng Term49 và mở lại rồi làm theo hướng dẫn hiển thị trên màn hình (env.sh). Nếu hiển thị như ảnh dưới là bạn đã thành công (ảnh dưới được thực hiện trên BGShell — khuyên nên dùng Term49 để cài đặt và BGShell để sử dụng).
+        <div class="note note-green">Chỉ cần đợi tầm 10 - 15 phút cho nó cài đặt, đóng Term49 và mở lại rồi làm theo hướng dẫn hiển thị trên màn hình (env.sh). Nếu hiển thị như ảnh dưới là bạn đã thành công (ảnh dưới được thực hiện trên BGShell — khuyên nên dùng Term49 để cài đặt và BGShell để sử dụng).
         </div>
 
         <figure class="article-img-wrap">
           <img
             src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BerryCore/berrycore-pic-4.png"
             alt="Hoàn thiện BerryCore">
-          <figcaption>Ảnh 4 – Hoàn thiện BerryCore</figcaption>
         </figure>
 
-        <div class="note note-blue">
-          <strong>Nếu bạn có mạng khỏe và không thích bước 2?</strong>Chỉ cần mở Wifi trên BlackBerry 10 song song với Term49 và gõ lệnh này là xong.
-        </div>
-
         <h2>Sử dụng BerryCore</h2>
-        <p style="color:var(--text-muted);font-size:0.9em;margin-top:-8px;margin-bottom:16px">Bạn nên có một chút kiến thức về câu lệnh trong môi trường Linux.</p>
+        <p>Bạn nên có một chút kiến thức về câu lệnh trong môi trường Linux.</p>
 
         <p><strong>Xem có những thứ gì để cài đặt:</strong> <code>qpkg catalog</code></p>
         <p><strong>Cài đặt:</strong> <code>qpkg install (vật cần cài đặt)</code></p>
