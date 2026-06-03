@@ -274,10 +274,29 @@
       <button class="tab-btn" onclick="switchTab(3)">Trang 3</button>
     </div>
 
-    <!-- ═══ TAB 1 ═══ -->
     <div class="tab-panel active" id="tab1">
       <section class="posts-section">
         <h2 class="section-title">Tất Cả Bài Viết</h2>
+
+        <div class="blog-card">
+          <div class="blog-accent" style="background:#17a2b8"></div>
+          <div class="blog-body">
+            <div class="blog-tags"><span class="tag" style="background:#e8f4f8;color:#17a2b8">ỨNG DỤNG</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#fff3e0;color:#e65100">YOUTUBE</span><span class="tag-date">01/06/2026</span></div>
+            <h3><a href="/Pages/NativeYT-Preview2.html">Ứng dụng YouTube Native cho BB10 (Preview 2)</a></h3>
+            <p>Bản Preview 2 của ứng dụng YouTube Native cho BlackBerry 10 đã hỗ trợ tính năng Tìm Kiếm & Subscriptions độc lập không cần đăng nhập tài khoản Google.</p>
+            <a href="/Pages/NativeYT-Preview2.html" class="btn-read" style="background:#17a2b8">Đọc thêm &#8594;</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-accent" style="background:#ff5722"></div>
+          <div class="blog-body">
+            <div class="blog-tags"><span class="tag" style="background:#fff3cd;color:#ff5722">TIN TỨC</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#fce4ec;color:#c62828">ROOT</span><span class="tag" style="background:#e8f5e9;color:#2e7d32">ROM</span><span class="tag-date">28/05/2026</span></div>
+            <h3><a href="/Pages/Preroot-Autoloadersv2.html">Pre-rooted Autoloaders V2 – Firmware Đã Được Root Sẵn Cho BlackBerry 10</a></h3>
+            <p>Bộ sưu tập Autoloaders V2 cho BB10 tích hợp sẵn root, Term49, mod_nvram và tự động sao lưu, sửa lỗi cài đặt APK.</p>
+            <a href="/Pages/Preroot-Autoloadersv2.html" class="btn-read" style="background:#ff5722">Đọc thêm &#8594;</a>
+          </div>
+        </div>
 
         <div class="blog-card">
           <div class="blog-accent" style="background:#17a2b8"></div>
@@ -359,6 +378,19 @@
           </div>
         </div>
 
+        <div class="page-nav">
+          <button class="active">Trang 1</button>
+          <button onclick="switchTab(2)">Trang 2 &#8594;</button>
+          <button onclick="switchTab(3)">Trang 3 &#8594;</button>
+        </div>
+
+      </section>
+    </div>
+
+    <div class="tab-panel" id="tab2">
+      <section class="posts-section">
+        <h2 class="section-title">Tất Cả Bài Viết</h2>
+
         <div class="blog-card">
           <div class="blog-accent" style="background:#ff5722"></div>
           <div class="blog-body">
@@ -378,15 +410,6 @@
             <a href="/Pages/BB10-Tools-9.html" class="btn-read" style="background:#ff5722">Đọc thêm &#8594;</a>
           </div>
         </div>
-
-
-      </section>
-    </div>
-
-    <!-- ═══ TAB 2 ═══ -->
-    <div class="tab-panel" id="tab2">
-      <section class="posts-section">
-        <h2 class="section-title">Tất Cả Bài Viết</h2>
 
         <div class="blog-card">
           <div class="blog-accent" style="background:#ff5722"></div>
@@ -468,6 +491,18 @@
           </div>
         </div>
 
+        <div class="page-nav">
+          <button onclick="switchTab(1)">&#8592; Trang 1</button>
+          <button class="active">Trang 2</button>
+          <button onclick="switchTab(3)">Trang 3 &#8594;</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="tab-panel" id="tab3">
+      <section class="posts-section">
+        <h2 class="section-title">Tất Cả Bài Viết</h2>
+
         <div class="blog-card">
           <div class="blog-accent" style="background:#ff5722"></div>
           <div class="blog-body">
@@ -487,19 +522,6 @@
             <a href="/Pages/Reddit.html" class="btn-read" style="background:#ff5722">Đọc thêm &#8594;</a>
           </div>
         </div>
-
-        <div class="page-nav">
-          <button onclick="switchTab(1)">&#8592; Trang 1</button>
-          <button class="active">Trang 2</button>
-          <button onclick="switchTab(3)">Trang 3 &#8594;</button>
-        </div>
-      </section>
-    </div>
-
-    <!-- ═══ TAB 3 ═══ -->
-    <div class="tab-panel" id="tab3">
-      <section class="posts-section">
-        <h2 class="section-title">Tất Cả Bài Viết</h2>
 
         <div class="blog-card">
           <div class="blog-accent" style="background:#4fa3d1"></div>
@@ -734,10 +756,12 @@ function switchTab(n) {
   var btns   = document.getElementsByClassName ? document.getElementsByClassName('tab-btn')   : [];
   var panels = document.getElementsByClassName ? document.getElementsByClassName('tab-panel') : [];
   for (var i = 0; i < btns.length; i++) {
-    if (i + 1 === n) { addClass(btns[i], 'active'); } else { removeClass(btns[i], 'active'); }
+    if (i + 1 === n) { addClass(btns[i], 'active'); }
+    else { removeClass(btns[i], 'active'); }
   }
   for (var j = 0; j < panels.length; j++) {
-    if (j + 1 === n) { addClass(panels[j], 'active'); } else { removeClass(panels[j], 'active'); }
+    if (j + 1 === n) { addClass(panels[j], 'active'); }
+    else { removeClass(panels[j], 'active'); }
   }
   if (window.scrollTo) window.scrollTo(0, 0);
 }
