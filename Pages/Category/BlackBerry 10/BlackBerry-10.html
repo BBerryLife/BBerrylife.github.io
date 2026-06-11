@@ -310,6 +310,18 @@
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
+                <a href="/Pages/BBCord.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BBCord/splash1280x720.png" alt="BBCord — Ứng dụng Discord Native cho BlackBerry 10" onerror="this.style.display='none'"></a>
+              </div>
+              <div class="card-body">
+                <span class="card-badge" style="background:#17a2b8">ỨNG DỤNG</span>
+                <h3><a href="/Pages/BBCord.html">BBCord — Ứng dụng Discord Native cho BlackBerry 10</a></h3>
+                <div class="card-date">11/06/2026</div>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-inner">
+              <div class="card-img-wrap">
                 <a href="/Pages/Zalo10.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Zalo/7.png" alt="Zalo10 — Ứng dụng Zalo Native cho BlackBerry 10" onerror="this.style.display='none'"></a>
               </div>
               <div class="card-body">
@@ -367,6 +379,11 @@
               </div>
             </div>
           </article>
+        </div>
+      </section>
+      <section class="posts-section">
+        <h2 class="section-title"></h2>
+        <div class="posts-grid">
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -379,11 +396,6 @@
               </div>
             </div>
           </article>
-        </div>
-      </section>
-      <section class="posts-section">
-        <h2 class="section-title"></h2>
-        <div class="posts-grid">
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -444,6 +456,14 @@
               </div>
             </div>
           </article>
+        </div>
+      </section>
+    </div>
+
+    <div class="tab-panel" id="tab2">
+      <section class="posts-section">
+        <h2 class="section-title"></h2>
+        <div class="posts-grid">
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -456,14 +476,6 @@
               </div>
             </div>
           </article>
-        </div>
-      </section>
-    </div>
-
-    <div class="tab-panel" id="tab2">
-      <section class="posts-section">
-        <h2 class="section-title"></h2>
-        <div class="posts-grid">
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -524,6 +536,11 @@
               </div>
             </div>
           </article>
+        </div>
+      </section>
+      <section class="posts-section">
+        <h2 class="section-title"></h2>
+        <div class="posts-grid">
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -536,11 +553,6 @@
               </div>
             </div>
           </article>
-        </div>
-      </section>
-      <section class="posts-section">
-        <h2 class="section-title"></h2>
-        <div class="posts-grid">
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -601,6 +613,14 @@
               </div>
             </div>
           </article>
+        </div>
+      </section>
+    </div>
+
+    <div class="tab-panel" id="tab3">
+      <section class="posts-section">
+        <h2 class="section-title"></h2>
+        <div class="posts-grid">
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -613,14 +633,6 @@
               </div>
             </div>
           </article>
-        </div>
-      </section>
-    </div>
-
-    <div class="tab-panel" id="tab3">
-      <section class="posts-section">
-        <h2 class="section-title"></h2>
-        <div class="posts-grid">
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -658,6 +670,11 @@
             </div>
           </article>
         </div>
+      </section>
+      <section class="posts-section">
+        <h2 class="section-title"></h2>
+        <div class="posts-grid">
+          </div>
       </section>
     </div>
 
@@ -726,7 +743,7 @@
         <div class="bb-accordion-body" id="bb-body">
           <div class="bb-subtab-bar">
             <button class="bb-subtab active" id="bbtab-route-btn" onclick="switchBBTab('route')">Tuyến Xe</button>
-            <button class="bb-subtab" id="bbtab-place-btn" onclick="switchBBTab('place')">Địa Điểm</button>
+            <button class="bb-subtab" id="bbtab-stop-btn" onclick="switchBBTab('stop')">Địa Điểm</button>
           </div>
           <div id="bbtab-route" class="bb-subtab-panel active">
             <form id="form-berrybus-route" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-route')">
@@ -740,15 +757,15 @@
               <div id="success-berrybus-route" class="modal-success"><strong>Cảm ơn!</strong> Đã nhận đóng góp tuyến xe.</div>
             </form>
           </div>
-          <div id="bbtab-place" class="bb-subtab-panel">
-            <form id="form-berrybus-place" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-place')">
+          <div id="bbtab-stop" class="bb-subtab-panel">
+            <form id="form-berrybus-stop" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-stop')">
               <input type="hidden" name="_subject" value="[BerryBus] Đóng góp địa điểm">
               <div class="mfg"><label>Tên địa điểm <span class="req">*</span></label><input type="text" name="ten_dia_diem" placeholder="Tên địa điểm" required></div>
               <div class="mfg"><label>Địa chỉ <span class="req">*</span></label><input type="text" name="dia_chi" placeholder="Địa chỉ đầy đủ" required></div>
               <div class="mfg"><label>Khu vực <span class="req">*</span></label><input type="text" name="khu_vuc" placeholder="Hà Nội, TP. HCM..." required></div>
               <div class="mfg"><label>Email <span class="opt">(tùy chọn)</span></label><input type="email" name="email" placeholder="email@example.com"></div>
-              <button type="submit" class="btn-modal-submit" id="btn-berrybus-place">Gửi Đóng Góp</button>
-              <div id="success-berrybus-place" class="modal-success"><strong>Cảm ơn!</strong> Đã nhận đóng góp địa điểm.</div>
+              <button type="submit" class="btn-modal-submit" id="btn-berrybus-stop">Gửi Đóng Góp</button>
+              <div id="success-berrybus-stop" class="modal-success"><strong>Cảm ơn!</strong> Đã nhận đóng góp địa điểm.</div>
             </form>
           </div>
         </div>
@@ -878,7 +895,7 @@ function toggleBerryBus() {
   if (acc) { if (bbOpen) addClass(acc, 'bb-open'); else removeClass(acc, 'bb-open'); }
 }
 function switchBBTab(tab) {
-  var tabs = ['route', 'place'];
+  var tabs = ['route', 'stop'];
   for (var i = 0; i < tabs.length; i++) {
     var btn = byId('bbtab-' + tabs[i] + '-btn');
     var panel = byId('bbtab-' + tabs[i]);
