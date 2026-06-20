@@ -1,0 +1,14 @@
+{
+  "latestVersion": "1.2.0",
+  "downloadUrl": "https://github.com/BBerryLife/BBerryLife.github.io/raw/main/Downloads/Zalo10-1_2_0_0.bar",
+  "changelog": [
+    {
+      "version": "1.2.0",
+      "items": [
+        "NEW: Update + Change List buttons in About screen",
+        "NEW: Get Quick Messages straight from your **Zalo** account",
+        "IMPROVE: Export/Import now also covers quick messages"
+      ]
+    }
+  ]
+}
