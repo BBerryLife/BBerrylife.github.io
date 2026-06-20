@@ -213,13 +213,86 @@ function equalizeServiceCards() {
 /* ── Window resize handler ── */
 function onWindowResize() {
   clampModalWidth();
-  if (typeof centerCoverImage    === 'function') centerCoverImage();
+  if (typeof centerCardImages    === 'function') centerCardImages();
   if (typeof equalizeServiceCards === 'function') equalizeServiceCards();
+}
+
+/* ── Fill và center card images trong khung cố định chiều cao (IE/BB10) ── */
+function centerCardImages() {
+  var wraps = document.getElementsByClassName ? document.getElementsByClassName('card-img-wrap') : [];
+  for (var i = 0; i < wraps.length; i++) {
+    (function(wrap) {
+      var img = wrap.getElementsByTagName('img')[0];
+      if (!img) return;
+      function adjustImg() {
+        var wrapH = wrap.offsetHeight || 180;
+        var wrapW = wrap.offsetWidth || 300;
+        img.style.width  = 'auto';
+        img.style.height = 'auto';
+        img.style.top    = '0';
+        img.style.left   = '0';
+        var natW = img.naturalWidth  || img.width  || wrapW;
+        var natH = img.naturalHeight || img.height || wrapH;
+        var scaleW = wrapW / natW;
+        var scaleH = wrapH / natH;
+        var scale  = scaleW > scaleH ? scaleW : scaleH;
+        var newW = Math.ceil(natW * scale);
+        var newH = Math.ceil(natH * scale);
+        img.style.width  = newW + 'px';
+        img.style.height = newH + 'px';
+        img.style.left = '-' + Math.floor((newW - wrapW) / 2) + 'px';
+        img.style.top  = '-' + Math.floor((newH - wrapH) / 2) + 'px';
+      }
+      if (img.complete && (img.naturalWidth || img.width)) {
+        adjustImg();
+      } else {
+        img.onload = adjustImg;
+      }
+    })(wraps[i]);
+  }
+}
+
+/* ── Auto-inject Help Modal (dùng chung, tránh copy/paste HTML mỗi trang) ──
+   Mọi trang chỉ cần: <script src="/Pages/src/berrylife.js"></script>
+   Modal sẽ tự được tải từ help-modal.html và chèn vào cuối <body>.
+*/
+function injectHelpModal() {
+  if (byId('helpModal')) return; /* đã có sẵn (trang cũ chưa dọn) -> không chèn trùng */
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState !== 4) return;
+    if (xhr.status >= 200 && xhr.status < 300) {
+      var holder = document.createElement('div');
+      holder.innerHTML = xhr.responseText;
+      while (holder.firstChild) {
+        document.body.appendChild(holder.firstChild);
+      }
+    }
+  };
+  xhr.open('GET', '/Pages/src/help-modal.html', true);
+  xhr.send(null);
+}
+
+/* ── Auto-inject "About Us" link vào header-follow (đồng bộ mọi trang) ── */
+function injectAboutUsLink() {
+  var follow = document.getElementsByClassName ? document.getElementsByClassName('header-follow')[0] : null;
+  if (!follow) return;
+  var links = follow.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (links[i].href && links[i].href.indexOf('AboutUs.html') >= 0) return; /* đã có sẵn */
+  }
+  var a = document.createElement('a');
+  a.href = '/Pages/AboutUs.html';
+  a.innerHTML = 'About Us';
+  follow.insertBefore(a, follow.firstChild);
 }
 
 /* ── Init on DOM ready ── */
 function blInit() {
+  injectAboutUsLink();
+  injectHelpModal();
   coverBgInit();
+  centerCardImages();
   equalizeServiceCards();
   setTimeout(equalizeServiceCards, 200);
 }
@@ -227,11 +300,13 @@ function blInit() {
 if (document.addEventListener) {
   document.addEventListener('DOMContentLoaded', blInit);
   window.addEventListener('load', coverBgInit);
+  window.addEventListener('load', centerCardImages);
   window.addEventListener('resize', onWindowResize);
 } else if (document.attachEvent) {
   document.attachEvent('onreadystatechange', function() {
     if (document.readyState === 'complete') blInit();
   });
   window.attachEvent('onload', coverBgInit);
+  window.attachEvent('onload', centerCardImages);
   window.attachEvent('onresize', onWindowResize);
 }
