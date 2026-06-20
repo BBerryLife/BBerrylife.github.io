@@ -3,11 +3,34 @@
   "downloadUrl": "https://github.com/BBerryLife/BBerryLife.github.io/raw/main/Downloads/Zalo10-1_2_0_0.bar",
   "changelog": [
     {
-      "version": "1.2.0",
+      "version": "1.1.0",
       "items": [
-        "NEW: Update + Change List buttons in About screen",
-        "NEW: Get Quick Messages straight from your **Zalo** account",
-        "IMPROVE: Export/Import now also covers quick messages"
+        "NEW: **Mute notifications** for individual conversations",
+        "NEW: **Block User** straight from the app",
+        "NEW: **Clear history** for a conversation in one tap",
+        "NEW: **Leave Group** with a single action",
+        "NEW: Photos now display fully for both sent and received messages (.png/.jpg/.webp) — previously only sending worked",
+        "NEW: **Active Frame** preview",
+        "NEW: Redesigned splash screen, now adapts to more device sizes",
+        "NEW: Press **S** on the keyboard to open search across contacts, chats and groups",
+        "IMPROVE: Dark mode is now stable and consistent across the whole app",
+        "IMPROVE: Friend requests now support Accept, Accept All and Decline",
+        "IMPROVE: Refresh button briefly disables itself after tapping to avoid hitting Zalo's rate limit",
+        "IMPROVE: Hub notifications can now be tapped to open the app directly"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "items": [
+        "NEW: **QR code login** — scan from your main Zalo app instead of typing a password",
+        "NEW: Native real-time chat with a BBM-style interface",
+        "NEW: Built-in emoji keyboard",
+        "NEW: Send photos from your device storage",
+        "NEW: 1-1 and group messaging",
+        "NEW: Conversation list with synced names and avatars",
+        "NEW: Friend requests with Accept/Decline",
+        "NEW: **Dark Theme** for OLED devices like the Q10 and Z30",
+        "NEW: BlackBerry Hub notifications for both 1-1 and group chats"
       ]
     }
   ]
