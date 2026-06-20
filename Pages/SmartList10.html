@@ -35,7 +35,7 @@
     <article class="article-wrap">
 
       <div class="cover-img-wrap" id="coverImgWrap">
-        <img class="cover-img" src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/SmartList10/IMG_20260520_132939.png" alt="SmartList10 Cover">
+        <img class="cover-img" src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/SmartList10/IMG_20260524_030557.png" alt="SmartList10 Cover">
       </div>
 
       <div class="article-header">
@@ -44,25 +44,30 @@
           <span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span>
         </div>
         <h1>SmartList10 — Ứng dụng To-Do List Native cho BlackBerry 10</h1>
-        <div class="article-date">20/05/2026</div>
+        <div class="article-date">Cập nhật lần cuối: 24/05/2026</div>
       </div>
 
       <div class="article-body">
 
 <div class="note note-success">
-  <strong>SmartList10 v1.0.0.1 đã ra mắt chính thức!</strong> Đây là ứng dụng quản lý danh sách công việc (to-do list) được viết hoàn toàn bằng Cascades, dành riêng cho hệ điều hành BlackBerry 10. Tải xuống miễn phí ngay hôm nay.
+  <strong>SmartList10 v1.0.1.x đã ra mắt!</strong> Đây là ứng dụng quản lý danh sách công việc (to-do list) được viết hoàn toàn bằng Cascades, dành riêng cho hệ điều hành BlackBerry 10. Tải xuống miễn phí ngay hôm nay.
 </div>
+
+<h2 id="tai-xuong">Tải xuống</h2>
+<p>SmartList10 hoàn toàn miễn phí. Nhấn nút bên dưới để tải file <code>.bar</code> phiên bản mới nhất (v1.0.1.x):</p>
+<p>Link dành cho thiết bị BB10 (tải trực tiếp)</p>
+<a class="btn-inline btn-primary" href="https://github.com/BBerryLife/BBerrylife.github.io/raw/main/Downloads/SmartList10-1_0_1_0.bar">Tải SmartList10</a>
+<p>Link dành cho các thiết bị hiện đại (Google Drive)</p>
+<a class="btn-inline btn-primary" href="https://drive.google.com/drive/folders/17F2fMcvIAt9HnQQoK8UgGUxZzJgkckgv?usp=drive_link">Tải SmartList10 - Google Drive</a>
 
 <div class="toc">
   <div class="toc-title">&#9656; Nội dung bài viết</div>
   <ol>
     <li><a href="#gioi-thieu">Giới thiệu — SmartList10 là gì?</a></li>
-    <li><a href="#tinh-nang">Tính năng nổi bật</a></li>
-    <li><a href="#smartframe">SmartFrame — Điều khiển khi thu nhỏ</a></li>
-    <li><a href="#hinh-anh">Hình ảnh thực tế</a></li>
+    <li><a href="#changelog-101">Changelog — Phiên bản 1.0.1.x</a></li>
+    <li><a href="#changelog-1001">Changelog — Phiên bản 1.0.0.x</a></li>
     <li><a href="#cai-dat">Hướng dẫn cài đặt</a></li>
     <li><a href="#luu-y">Lưu ý</a></li>
-    <li><a href="#tai-xuong">Tải xuống</a></li>
   </ol>
 </div>
 
@@ -70,35 +75,59 @@
 <p>SmartList10 là ứng dụng to-do list và quản lý danh sách công việc được viết hoàn toàn bằng <strong>Cascades</strong>. Không phải Android port, không phải web app, không lag. Đây là ứng dụng được thiết kế từ đầu để chạy mượt mà trên BlackBerry 10.</p>
 <p>Giao diện đơn giản, tích hợp Share, cho đến tính năng SmartFrame cho phép bạn điều khiển danh sách ngay cả khi app đang thu nhỏ — SmartList10 mang lại trải nghiệm mà không một ứng dụng Android port nào có thể sánh được trên BB10.</p>
 
-<h2 id="tinh-nang">Tính năng nổi bật</h2>
-<h3>Quản lý danh sách &amp; danh mục</h3>
+<h2 id="changelog-101">Changelog — Phiên bản 1.0.1.x</h2>
+<div class="article-date" style="margin-bottom:16px">Cập nhật ngày 24/05/2026</div>
+
+<p>Đây là bản cập nhật cải thiện giao diện và bổ sung thêm tính năng dựa trên quá trình sử dụng thực tế.</p>
+<ul>
+  <li><strong>Tính năng sao chép:</strong> Đã bổ sung khả năng sao chép (copy) từng item riêng lẻ trong danh sách.</li>
+  <li><strong>Đồng bộ kích thước:</strong> Chỉnh sửa lại kích cỡ của list và các item sao cho bằng đúng kích thước của các nút trong menu (dành cho những người theo chủ nghĩa hoàn hảo).</li>
+  <li><strong>Sửa lỗi Active Frame hiển thị thiếu mục:</strong> Khắc phục tình trạng hiển thị không đầy đủ danh sách trên các dòng máy khác ngoài Q10, Q20, Q5. Bản trước bị giới hạn chỉ load 4 item và chạy qua highlight do tác giả mặc định sử dụng Q20. Giờ đây danh sách được hiển thị trọn vẹn.</li>
+  <li><strong>Sửa lỗi che khuất trên Active Frame:</strong> Thêm khoảng trắng ở cuối danh sách trên Active Frame để đảm bảo item cuối cùng không bị che khuất bởi icon, tên ứng dụng và nút đóng (X).</li>
+  <li><strong>Sửa lỗi reset highlight:</strong> Khắc phục triệt để lỗi không reset highlight về item ban đầu khi người dùng tích chọn một item trong tab list.</li>
+  <li><strong>Mạng xã hội:</strong> Thêm nút Reddit trong phần About &gt; Follow us (mặc dù tác giả cảm thấy chúng vô dụng vô cùng).</li>
+  <li><strong>Thông báo:</strong> Các thông báo category / list được xóa thành công được căn giữa thay vì nằm ở bottom.</li>
+</ul>
+
+<p>Hình ảnh thực tế từ SmartList10 phiên bản 1.0.1.x:</p>
+<div class="image-gallery">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/SmartList10/IMG_20260524_030557.png" alt="SmartList10 v1.0.1 - About Screen">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/SmartList10/IMG_20260524_031415.png" alt="SmartList10 v1.0.1 - List Menu">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/SmartList10/IMG_20260524_032253.png" alt="SmartList10 v1.0.1 - Copy Item">
+</div>
+
+<h2 id="changelog-1001">Changelog — Phiên bản 1.0.0.x</h2>
+<div class="article-date" style="margin-bottom:16px">Phát hành ngày 20/05/2026</div>
+
+<h3>Tính năng nổi bật</h3>
+<h4>Quản lý danh sách &amp; danh mục</h4>
 <ul>
   <li><strong>Tạo và phân loại danh sách:</strong> Tổ chức công việc theo từng danh mục tùy chỉnh — ví dụ Finance, College, Shopping — với các tab riêng biệt trên thanh sidebar.</li>
   <li><strong>Tab "All Lists":</strong> Xem toàn bộ danh sách từ mọi danh mục trong một nơi, được sắp xếp theo bảng chữ cái A–Z.</li>
   <li><strong>Xóa hàng loạt:</strong> Chọn nhiều danh sách hoặc mục cùng lúc để xóa nhanh qua Select More.</li>
 </ul>
-<h3>SmartDetection &amp; SmartCopy</h3>
+<h4>SmartDetection &amp; SmartCopy</h4>
 <ul>
   <li><strong>SmartDetection:</strong> Nhập nhiều mục cùng lúc, phân cách bằng dấu phẩy, chấm phẩy hoặc xuống dòng — app tự động tách từng mục riêng biệt.</li>
   <li><strong>SmartCopy:</strong> Dán văn bản từ clipboard, app nhận diện và chia nhỏ thành các mục tự động.</li>
   <li><strong>Single Entry:</strong> Thêm từng mục một kèm ghi chú tùy chọn.</li>
 </ul>
-<h3>Chia sẻ danh sách</h3>
+<h4>Chia sẻ danh sách</h4>
 <ul>
   <li>Chia sẻ toàn bộ danh sách qua <strong>BBM, BBM Groups, BBM Channel</strong> (mặc dù không sử dụng được), SMS, Email, Meeting, NFC, Remember, và các ứng dụng bên thứ ba.</li>
 </ul>
-<h3>Lưu trữ &amp; đồng bộ</h3>
+<h4>Lưu trữ &amp; đồng bộ</h4>
 <ul>
   <li>Toàn bộ dữ liệu được lưu vào SQLite local thông qua <code>openDatabaseSync</code>, không cần kết nối internet.</li>
   <li>Dữ liệu được tự động khôi phục khi khởi động lại app, kể cả theme đã chọn.</li>
 </ul>
-<h3>Giao diện &amp; cá nhân hóa</h3>
+<h4>Giao diện &amp; cá nhân hóa</h4>
 <ul>
   <li><strong>Dark Theme:</strong> Chuyển sang giao diện tối với một lần nhấn — áp dụng ngay sau khi khởi động lại app.</li>
   <li><strong>Header tự động:</strong> Khi danh sách có hơn 8 mục, tùy chọn bật header nhóm theo chữ cái đầu tiên.</li>
 </ul>
 
-<h2 id="smartframe">SmartFrame — Điều khiển khi thu nhỏ</h2>
+<h3>SmartFrame — Điều khiển khi thu nhỏ</h3>
 <p>Đây là tính năng độc đáo nhất của SmartList10, tận dụng triệt để khả năng của BB10 mà Android không thể làm được.</p>
 <p>Khi bạn thu nhỏ SmartList10 xuống Active Frame, app không chỉ hiển thị danh sách — bạn còn có thể <strong>điều hướng và tick hoàn thành các mục</strong> mà không cần mở lại app.</p>
 <ul>
@@ -111,8 +140,7 @@
   <strong>Lưu ý về Volume Key Navigation:</strong> Khi bật chế độ này, phím âm lượng sẽ dùng để điều hướng thay vì điều chỉnh âm thanh — chỉ trong khi SmartFrame đang hiển thị. Hệ thống sẽ cảnh báo bạn khi kích hoạt tính năng này.
 </div>
 
-<h2 id="hinh-anh">Hình ảnh thực tế</h2>
-<p>Dưới đây là các ảnh chụp trực tiếp từ thiết bị BlackBerry 10, chụp ngày 20/05/2026:</p>
+<p>Hình ảnh thực tế từ SmartList10 phiên bản 1.0.0.x:</p>
 <div class="image-gallery">
   <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/SmartList10/IMG_20260520_132750.png" alt="SmartList10 - Màn hình All Lists">
   <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/SmartList10/IMG_20260520_132820.png" alt="SmartList10 - Thêm danh sách mới">
@@ -145,13 +173,6 @@
   <li><strong>Dark Theme:</strong> Sau khi bật/tắt Dark Theme, cần khởi động lại app để áp dụng — đây là giới hạn của Cascades ThemeSupport.</li>
   <li><strong>Volume Key Navigation:</strong> Khi bật chế độ này, phím âm lượng sẽ không điều chỉnh âm lượng trong khi SmartFrame đang hiển thị.</li>
 </ul>
-
-<h2 id="tai-xuong">Tải xuống</h2>
-<p>SmartList10 v1.0.0.1 hoàn toàn miễn phí. Nhấn nút bên dưới để tải file <code>.bar</code>:</p>
-<p>Link dành cho thiết bị BB10 (tải trực tiếp)</p>
-<a class="btn-inline btn-primary" href="https://github.com/BBerryLife/BBerrylife.github.io/raw/main/Downloads/SmartList10-1_0_1_0.bar">Tải SmartList10</a>
-<p>Link dành cho các thiết bị hiện đại (Google Drive)</p>
-<a class="btn-inline btn-primary" href="https://drive.google.com/drive/folders/17F2fMcvIAt9HnQQoK8UgGUxZzJgkckgv?usp=drive_link">Tải SmartList10 - Google Drive</a>
 
       </div>
 
