@@ -44,7 +44,7 @@
           <span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span>
         </div>
         <h1>Zalo10 — Ứng dụng Zalo Native cho BlackBerry 10</h1>
-        <div class="article-date">Cập nhật lần cuối: 16/06/2026</div>
+        <div class="article-date">Cập nhật lần cuối: 22/06/2026</div>
       </div>
 
       <div class="article-body">
@@ -53,37 +53,86 @@
   <strong>Nếu bạn cảm thấy hào phóng</strong> , bạn có thể donate cho chúng mình thông qua vuốt 2 ngón tay ở mép màn hình trên -> Info -> Donate. Việc này sẽ giúp chúng mình không chết đói, có chút để kiếm thiết bị test thay vì phụ thuộc Simulator và cập nhật đều đặn. Bởi mình được trả bằng niềm tin và hi vọng ;-;
 </div>
 
-<div class="note note-success">
-  <strong>Giới thiệu Zalo10!</strong> Đây là ứng dụng nhắn tin Zalo được viết hoàn toàn bằng nền tảng Cascades, mang lại trải nghiệm Native mượt mà nhất dành riêng cho hệ điều hành BlackBerry 10. Nên ghi nhớ, ứng dụng Zalo cho Android 4.3 đã chết từ tháng 10-11 năm 2024.
+<div class="note note-red">
+<strong>Cảnh Báo:</strong> App được xây trên thư viện ZCAJS 2.0, nếu bạn đóng app thì nó kill session của bạn, hãy cân nhắc để app ở dạng minimized windows (active frame)
 </div>
 
-<h2 id="tai-xuong">Tải xuống</h2>
-<p>Zalo10 hoàn toàn miễn phí. Nhấn nút bên dưới để tải file <code>.bar</code> phiên bản mới nhất (1.1.0.1):</p>
+<h2>Zalo10 là gì?</h2>
+<p>Zalo10 là ứng dụng khách (client) không chính thức dành cho mạng xã hội Zalo, được xây dựng hoàn toàn bằng <strong>Cascades</strong> (Native C++/QML). Giải quyết vấn đề các ứng dụng Zalo Android port ngày càng nặng nề và giật lag, Zalo10 mang lại trải nghiệm nhắn tin tốc độ cao, giao diện chuẩn BB10 và tối ưu phần cứng thiết bị của bạn.</p>
+
+<h2>Hướng dẫn cài đặt</h2>
+<p>Tương tự như các ứng dụng native khác, Zalo10 được phân phối dưới dạng file <code>.bar</code>.</p>
+<ol>
+  <li>Đảm bảo thiết bị BB10 của bạn đã được bật <strong>Chế độ phát triển (Development Mode)</strong>.</li>
+  <li>Tải file <code>.bar</code> Zalo10 về máy tính.</li>
+  <li>Dùng <strong>Sachesi</strong>, <strong>DBBT</strong> hoặc <strong>Bar Installer</strong> để sideload file <code>.bar</code> vào điện thoại của bạn.</li>
+  <li>Mở ứng dụng, quét mã QR và tận hưởng!</li>
+</ol>
+
+<h2>Lưu ý</h2>
+<ul>
+  <li><strong>Yêu cầu OS:</strong> BlackBerry 10.3.x trở lên (khuyến nghị 10.3.3). Thiết bị cần đã root, ROM root sẵn ở <a href="https://bberrylife.github.io/Pages/Preroot-Autoloadersv2.html"><strong>đây</strong></a></li>
+  <li><strong>Đăng nhập:</strong> Tính năng đăng nhập hiện đang thông qua web API/QR code quét từ ứng dụng gốc trên điện thoại khác.</li>
+  <li><strong>Menu</strong> Để truy cập được Settings / Feedback / About , vuốt 1 ngón tay xuống từ mép màn hình trên.</li>
+</ul>
+
+<h2>Tải xuống</h2>
+<p>Zalo10 hoàn toàn miễn phí. Nhấn nút bên dưới để tải file <code>.bar</code> phiên bản mới nhất (1.2.0.0):</p>
 <p>Link tải trực tiếp:</p>
-<a class="btn-inline btn-primary" href="https://github.com/BBerryLife/BBerrylife.github.io/raw/main/Downloads/Zalo10-1_1_0_1.bar">Tải Zalo10 (.bar)</a>
+<a class="btn-inline btn-primary" href="https://github.com/BBerryLife/BBerrylife.github.io/raw/main/Downloads/Zalo10-1_2_0_0.bar">Tải Zalo10 (.bar)</a>
 <p>Link dự phòng (Google Drive):</p>
 <a class="btn-inline btn-primary" href="https://drive.google.com/drive/folders/1iYQUIf5Q2f9xwzfEnnKPG64M0IEGWPwJ?usp=drive_link">Tải Zalo10 - Google Drive</a>
 
 <div class="toc">
-  <div class="toc-title">&#9656; Nội dung bài viết</div>
+  <div class="toc-title">&#9656; Change List</div>
   <ol>
-    <li><a href="#gioi-thieu">Giới thiệu — Zalo10 là gì?</a></li>
+    <li><a href="#changelog-120">Changelog — Phiên bản 1.2.0.x</a></li>
     <li><a href="#changelog-110">Changelog — Phiên bản 1.1.0.x</a></li>
     <li><a href="#changelog-100">Changelog — Phiên bản 1.0.0.x</a></li>
-    <li><a href="#cai-dat">Hướng dẫn cài đặt</a></li>
-    <li><a href="#luu-y">Lưu ý</a></li>
   </ol>
 </div>
 
-<h2 id="gioi-thieu">Zalo10 là gì?</h2>
-<p>Zalo10 là ứng dụng khách (client) không chính thức dành cho mạng xã hội Zalo, được xây dựng hoàn toàn bằng <strong>Cascades</strong> (Native C++/QML). Giải quyết vấn đề các ứng dụng Zalo Android port ngày càng nặng nề và giật lag, Zalo10 mang lại trải nghiệm nhắn tin tốc độ cao, giao diện chuẩn BB10 và tối ưu phần cứng thiết bị của bạn.</p>
+<h2 id="changelog-120">Changelog — Phiên bản 1.2.0.x</h2>
+<div class="article-date" style="margin-bottom:16px">Cập nhật ngày 22/06/2026</div>
+
+<h3>Tính năng mới</h3>
+<ul>
+  <li><strong>Nút Update trong About:</strong> Kiểm tra phiên bản mới ngay trong ứng dụng, không cần vào lại trang web để xem có bản nào mới hơn không.</li>
+  <li><strong>Nút Change List trong About:</strong> Xem lại toàn bộ lịch sử các phiên bản (đúng cái bạn đang đọc đây) ngay trong app, không cần mở trình duyệt.</li>
+  <li><strong>Tính năng độc quyền — Xem tin nhắn đã thu hồi:</strong> Hỗ trợ cả tin nhắn văn bản và hình ảnh. Video thì xin khoan, chưa hỗ trợ ở bản này.</li>
+  <li><strong>Xuất log trong Settings:</strong> Phục vụ việc debug khi bạn gặp lỗi và cần gửi log cho chúng mình.</li>
+  <li><strong>Export / Import dữ liệu trong Settings:</strong> Bao gồm tin nhắn văn bản (không kèm media) và Quick Messages — sao lưu hoặc chuyển dữ liệu sang máy khác dễ dàng hơn.</li>
+  <li><strong>Clear Cache trong Settings.</strong></li>
+  <li><strong>Search toàn ứng dụng:</strong> Tìm kiếm hội thoại, đoạn chat và tin nhắn ngay từ menu 3 chấm (overflow) ở mọi tab.</li>
+  <li><strong>Tính năng độc quyền — Quick Messages không giới hạn:</strong> Tạo bao nhiêu Quick Message tùy ý, kể cả lấy lại QM từ tài khoản Zalo chính chủ của bạn. Zalo bản chính thức chỉ cho tài khoản thường tối đa 1 QM thôi đó.</li>
+</ul>
+
+<h3>Cải thiện</h3>
+<ul>
+  <li><strong>Hỗ trợ hình ảnh tốt hơn.</strong></li>
+  <li><strong>Bảng Emoji:</strong> Đổi màu sắc để tránh trùng với màu nền (background) của đoạn chat, nhìn rõ hơn nhiều.</li>
+</ul>
+
+<h3>Sửa lỗi</h3>
+<ul>
+  <li>Sửa lỗi khi bấm <strong>Leave Group</strong> không tự động thoát ra danh sách nhóm.</li>
+  <li>Sửa lỗi tin nhắn báo trên <strong>BlackBerry Hub</strong>, bấm Open nhưng app không mở.</li>
+</ul>
+
+<p>Hình ảnh thực tế từ Zalo10 phiên bản 1.1.0.1:</p>
+<div class="image-gallery">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Zalo/14.png" alt="Zalo10 1.1.0.1 - Ảnh 14">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Zalo/15.png" alt="Zalo10 1.1.0.1 - Ảnh 15">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Zalo/16.png" alt="Zalo10 1.1.0.1 - Ảnh 16">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Zalo/17.png" alt="Zalo10 1.1.0.1 - Ảnh 17">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Zalo/18.png" alt="Zalo10 1.1.0.1 - Ảnh 18">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Zalo/19.png" alt="Zalo10 1.1.0.1 - Ảnh 19">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Zalo/20.png" alt="Zalo10 1.1.0.1 - Ảnh 20">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Zalo/21.png" alt="Zalo10 1.1.0.1 - Ảnh 21">
+</div>
 
 <h2 id="changelog-110">Changelog — Phiên bản 1.1.0.x</h2>
 <div class="article-date" style="margin-bottom:16px">Cập nhật ngày 16/06/2026</div>
-
-<div class="note note-red">
-<strong>Cảnh Báo:</strong> App được xây trên thư viện ZCAJS, nếu bạn đóng app thì nó kill session của bạn, hãy cân nhắc để app ở dạng minimized windows (active frame)
-</div>
 
 <h3>Tính năng mới</h3>
 <ul>
@@ -154,23 +203,6 @@
   <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Zalo/6.png" alt="Zalo10 - Cài đặt Dark Theme">
   <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Zalo/7.png" alt="Zalo10 - Splash">
 </div>
-
-<h2 id="cai-dat">Hướng dẫn cài đặt</h2>
-<p>Tương tự như các ứng dụng native khác, Zalo10 được phân phối dưới dạng file <code>.bar</code>.</p>
-<ol>
-  <li>Đảm bảo thiết bị BB10 của bạn đã được bật <strong>Chế độ phát triển (Development Mode)</strong>.</li>
-  <li>Tải file <code>.bar</code> Zalo10 về máy tính.</li>
-  <li>Dùng <strong>Sachesi</strong>, <strong>DBBT</strong> hoặc <strong>Bar Installer</strong> để sideload file <code>.bar</code> vào điện thoại của bạn.</li>
-  <li>Mở ứng dụng, quét mã QR và tận hưởng!</li>
-</ol>
-
-<h2 id="luu-y">Lưu ý</h2>
-<ul>
-  <li><strong>Yêu cầu OS:</strong> BlackBerry 10.3.x trở lên (khuyến nghị 10.3.3). Thiết bị cần đã root, ROM root sẵn ở <a href="https://bberrylife.github.io/Pages/Preroot-Autoloadersv2.html"><strong>đây</strong></a></li>
-  <li><strong>Đăng nhập:</strong> Tính năng đăng nhập hiện đang thông qua web API/QR code quét từ ứng dụng gốc trên điện thoại khác.</li>
-  <li><strong>Menu</strong> Để truy cập được Menu / Email / Info , vuốt 2 ngón tay xuống từ mép màn hình trên.</li>
-</ul>
-
       </div>
 
       <div class="follow-banner">
