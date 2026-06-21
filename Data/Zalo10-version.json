@@ -3,6 +3,23 @@
   "downloadUrl": "https://github.com/BBerryLife/BBerryLife.github.io/raw/main/Downloads/Zalo10-1_2_0_0.bar",
   "changelog": [
     {
+      "version": "1.2.0",
+      "items": [
+        "NEW: **Update** button in About — check for the latest version right from the app",
+        "NEW: **Change List** button in About — read the full version history without leaving the app",
+        "NEW: Exclusive feature — view **recalled messages**, including text and photos (video not supported yet)",
+        "NEW: **Export log** button in Settings",
+        "NEW: **Export / Import data** in Settings (text messages without media, plus Quick Messages)",
+        "NEW: **Clear cache** button in Settings",
+        "NEW: **Search** everywhere — conversations, chats and messages, from the overflow menu (⋮) on every tab",
+        "NEW: Exclusive feature — create **unlimited Quick Messages**, including importing the one QM from your official Zalo account (the official app limits regular accounts to a single QM)",
+        "IMPROVE: Better overall image support",
+        "IMPROVE: Emoji panel colors adjusted so they no longer blend into the chat background",
+        "FIX: Leaving a group no longer fails to return you to the group list",
+        "FIX: Tapping a new-message Hub notification now actually opens the app"
+      ]
+    },
+    {
       "version": "1.1.0",
       "items": [
         "NEW: **Mute notifications** for individual conversations",
