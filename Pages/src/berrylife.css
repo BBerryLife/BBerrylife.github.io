@@ -57,7 +57,9 @@ body {
   text-decoration: none;
   display: inline-block;
   white-space: nowrap;
+  margin-left: 12px;
 }
+.header-follow a:first-child { margin-left: 0; }
 .header-follow a:hover { opacity: 0.85; }
 
 /* ── NAV BAR ── */
@@ -762,7 +764,8 @@ main {
   .header-inner { padding: 20px 16px 16px; }
   .header-brand { float: none; }
   .header-follow { float: none; padding-top: 10px; }
-  .header-follow a { display: block; text-align: center; padding: 10px 16px; }
+  .header-follow a { display: inline-block; text-align: center; padding: 10px 16px; margin-left: 8px; }
+  .header-follow a:first-child { margin-left: 0; }
   .header-brand h1 { font-size: 2em; }
   .site-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .nav-inner { display: block; white-space: nowrap; width: auto; padding: 0; }
