@@ -502,16 +502,16 @@ main {
 }
 .follow-box a:hover { opacity: 0.85; }
 
-/* Archive box — màu xanh nhạt, tông giống thẻ bài viết */
+/* Archive box — màu matcha */
 .follow-box-archive {
-  background: #e8f7f0;
-  background: -webkit-linear-gradient(315deg, #e8f7f0 0%, #d4f0e3 100%);
-  background: linear-gradient(135deg, #e8f7f0 0%, #d4f0e3 100%);
-  border-color: #43c97e;
+  background: #6b8f3e;
+  background: -webkit-linear-gradient(315deg, #7aa346 0%, #567230 100%);
+  background: linear-gradient(135deg, #7aa346 0%, #567230 100%);
+  border-color: #567230;
 }
-.follow-box-archive h3 { color: #1a7a4a; }
-.follow-box-archive p  { color: #2d6a4f; opacity: 1; }
-.follow-box-archive a  { background: #2ea86a; color: white; }
+.follow-box-archive h3 { color: #fff; }
+.follow-box-archive p  { color: #e8f2d8; opacity: 1; }
+.follow-box-archive a  { color: #567230; }
 
 /* BerryBus button */
 .berrybus-btn {
