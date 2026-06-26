@@ -378,28 +378,6 @@ main {
 .article-body table th { background: #e8f4f8; font-weight: bold; }
 .article-body table tr:nth-child(even) td { background: #f0f8ff; }
 
-/* Follow banner (inside article) */
-.follow-banner {
-  background: #70cbff;
-  background: -webkit-linear-gradient(315deg, #70cbff 0%, #4fa3d1 100%);
-  background: linear-gradient(135deg, #70cbff 0%, #4fa3d1 100%);
-  color: white;
-  text-align: center;
-  padding: 32px 28px;
-}
-.follow-banner h2 { font-size: 1.5em; font-weight: bold; margin-bottom: 10px; color: white; }
-.follow-banner p  { font-size: 0.95em; opacity: 0.92; margin-bottom: 18px; color: white; }
-.follow-banner a  {
-  background: white;
-  color: #70cbff;
-  padding: 10px 24px;
-  font-weight: bold;
-  font-size: 0.9em;
-  text-decoration: none;
-  display: inline-block;
-}
-.follow-banner a:hover { opacity: 0.85; }
-
 /* Article footer */
 .article-footer:after { content: ''; display: table; clear: both; }
 .article-footer {
