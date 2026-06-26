@@ -252,6 +252,26 @@ function centerCardImages() {
   }
 }
 
+/* ── Auto-inject Sidebar (dùng chung, tránh copy/paste HTML mỗi trang) ──
+   Mọi trang chỉ cần: <aside class="sidebar"></aside>
+   Nội dung sidebar sẽ tự được tải từ sidebar.html và chèn vào trong.
+*/
+function injectSidebar() {
+  var aside = document.getElementsByTagName('aside')[0];
+  if (!aside) return;
+  /* Nếu đã có nội dung (trang cũ chưa dọn) -> không chèn trùng */
+  if (aside.innerHTML.replace(/\s/g, '') !== '') return;
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState !== 4) return;
+    if (xhr.status >= 200 && xhr.status < 300) {
+      aside.innerHTML = xhr.responseText;
+    }
+  };
+  xhr.open('GET', '/Pages/src/sidebar.html', true);
+  xhr.send(null);
+}
+
 /* ── Auto-inject Help Modal (dùng chung, tránh copy/paste HTML mỗi trang) ──
    Mọi trang chỉ cần: <script src="/Pages/src/berrylife.js"></script>
    Modal sẽ tự được tải từ help-modal.html và chèn vào cuối <body>.
@@ -290,6 +310,7 @@ function injectAboutUsLink() {
 /* ── Init on DOM ready ── */
 function blInit() {
   injectAboutUsLink();
+  injectSidebar();
   injectHelpModal();
   coverBgInit();
   centerCardImages();
