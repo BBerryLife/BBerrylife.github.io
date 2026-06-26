@@ -252,6 +252,24 @@ function centerCardImages() {
   }
 }
 
+/* ── Auto-inject Footer ── */
+function injectFooter() {
+  if (document.getElementsByClassName('site-footer').length > 0) return;
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState !== 4) return;
+    if (xhr.status >= 200 && xhr.status < 300) {
+      var holder = document.createElement('div');
+      holder.innerHTML = xhr.responseText;
+      while (holder.firstChild) {
+        document.body.appendChild(holder.firstChild);
+      }
+    }
+  };
+  xhr.open('GET', '/Pages/src/footer.html', true);
+  xhr.send(null);
+}
+
 /* ── Auto-inject Sidebar (dùng chung, tránh copy/paste HTML mỗi trang) ──
    Mọi trang chỉ cần: <aside class="sidebar"></aside>
    Nội dung sidebar sẽ tự được tải từ sidebar.html và chèn vào trong.
@@ -310,6 +328,7 @@ function injectAboutUsLink() {
 /* ── Init on DOM ready ── */
 function blInit() {
   injectAboutUsLink();
+  injectFooter();
   injectSidebar();
   injectHelpModal();
   coverBgInit();
