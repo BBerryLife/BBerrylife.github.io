@@ -502,6 +502,15 @@ main {
 }
 .follow-box a:hover { opacity: 0.85; }
 
+/* Archive box — màu xanh lá phân biệt với Facebook box */
+.follow-box-archive {
+  background: #43c97e;
+  background: -webkit-linear-gradient(315deg, #43c97e 0%, #2ea86a 100%);
+  background: linear-gradient(135deg, #43c97e 0%, #2ea86a 100%);
+  border-color: #2ea86a;
+}
+.follow-box-archive a { color: #2ea86a; }
+
 /* BerryBus button */
 .berrybus-btn {
   display: block;
