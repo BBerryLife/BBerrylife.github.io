@@ -1,6 +1,5 @@
 <!-- ═══════════════════════════════════════════════════════════════
      FOOTER — Nguồn dùng chung cho toàn bộ trang BBerryLife
-     berrylife.js tự động fetch + chèn vào cuối <body>.
      ═══════════════════════════════════════════════════════════════ -->
 
 <style>
@@ -11,85 +10,107 @@
   color: white;
   margin-top: 48px;
   padding: 36px 30px 28px;
-  text-align: center;
 }
 .site-footer-inner {
   max-width: 1280px;
   margin: 0 auto;
 }
-.site-footer-social {
-  display: inline-block;
-  margin-bottom: 20px;
+.site-footer-inner:after { content: ''; display: table; clear: both; }
+
+.site-footer-col {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
 }
-.site-footer-social a {
-  display: inline-block;
-  margin: 0 10px;
-  text-decoration: none;
-  color: white;
-  font-size: 0.82em;
-  font-weight: bold;
-  vertical-align: top;
-  text-align: center;
-  opacity: 0.92;
+.site-footer-col:last-of-type {
+  float: right;
+  text-align: right;
 }
-.site-footer-social a:hover { opacity: 1; }
-.site-footer-social img {
+
+.sf-row {
   display: block;
-  width: 32px;
-  height: 32px;
-  margin: 0 auto 5px;
-  /* Trắng hóa icon cho nền xanh */
-  -webkit-filter: brightness(0) invert(1);
-  filter: brightness(0) invert(1);
-}
-.site-footer-contact {
-  font-size: 0.85em;
-  opacity: 0.9;
-  margin-top: 4px;
-  line-height: 1.8;
-}
-.site-footer-contact a {
-  color: white;
+  margin-bottom: 11px;
   text-decoration: none;
+  color: white;
+  font-size: 0.92em;
+  font-weight: bold;
+  line-height: 28px;
 }
-.site-footer-contact a:hover { text-decoration: underline; }
+.sf-row:last-child { margin-bottom: 0; }
+.sf-row:hover { opacity: 0.8; }
+.sf-icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  margin-right: 9px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.sf-icon img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+.sf-icon-char {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 9px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 5px;
+  font-size: 16px;
+}
+.sf-row span { vertical-align: middle; }
+
 .site-footer-copy {
-  margin-top: 18px;
-  font-size: 0.78em;
-  opacity: 0.7;
+  clear: both;
+  padding-top: 22px;
+  font-size: 0.8em;
+  opacity: 0.72;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .site-footer-col,
+  .site-footer-col:last-of-type {
+    float: none;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 12px;
+  }
 }
 </style>
 
 <footer class="site-footer">
   <div class="site-footer-inner">
 
-    <div class="site-footer-social">
-      <a href="https://www.facebook.com/BBerryLife/" target="_blank">
-        <img src="/Data/icon/facebook.png" alt="Facebook">
-        Facebook
+    <div class="site-footer-col">
+      <a class="sf-row" href="https://www.facebook.com/BBerryLife/" target="_blank">
+        <span class="sf-icon"><img src="/Data/icon/facebook.png" alt=""></span><span>@BBerryLife</span>
       </a>
-      <a href="https://www.youtube.com/@BBerryLife" target="_blank">
-        <img src="/Data/icon/youtube.png" alt="YouTube">
-        YouTube
+      <a class="sf-row" href="https://www.youtube.com/@BBerryLife" target="_blank">
+        <span class="sf-icon"><img src="/Data/icon/youtube.png" alt=""></span><span>@BBerryLife</span>
       </a>
-      <a href="https://github.com/BBerrylife" target="_blank">
-        <img src="/Data/icon/github.png" alt="GitHub">
-        GitHub
-      </a>
-      <a href="https://zalo.me/84792205730" target="_blank">
-        <img src="/Data/icon/zalo.png" alt="Zalo">
-        Zalo
+      <a class="sf-row" href="https://github.com/BBerrylife" target="_blank">
+        <span class="sf-icon"><img src="/Data/icon/github.png" alt=""></span><span>@BBerrylife</span>
       </a>
     </div>
 
-    <div class="site-footer-contact">
-      <a href="mailto:Berrylife2025@gmail.com">Berrylife2025@gmail.com</a>
-      &nbsp;·&nbsp;
-      <a href="tel:+84792205730">+84 792 205 730</a>
+    <div class="site-footer-col">
+      <a class="sf-row" href="https://zalo.me/84792205730" target="_blank">
+        <span class="sf-icon"><img src="/Data/icon/zalo.png" alt=""></span><span>+84 792 205 730</span>
+      </a>
+      <a class="sf-row" href="mailto:Berrylife2025@gmail.com">
+        <span class="sf-icon-char">&#9993;</span><span>Berrylife2025@gmail.com</span>
+      </a>
     </div>
 
     <div class="site-footer-copy">
-      &copy; 2025 BBerryLife &mdash; Cộng đồng BlackBerry Việt Nam
+      &copy; 2026 BBerryLife &mdash; Cộng đồng BlackBerry Việt Nam
     </div>
 
   </div>
