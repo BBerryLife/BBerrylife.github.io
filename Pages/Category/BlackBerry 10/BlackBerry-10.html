@@ -30,7 +30,8 @@
   .header-brand h1 { font-size: 3em; font-weight: bold; letter-spacing: -1px; line-height: 1; color: white; }
   .header-brand p  { font-size: 1em; opacity: 0.9; margin-top: 6px; color: white; }
   .header-follow { float: right; padding-top: 8px; }
-  .header-follow a { background: white; color: #4fa3d1; padding: 10px 22px; font-weight: bold; font-size: 0.9em; text-decoration: none; display: inline-block; white-space: nowrap; }
+  .header-follow a { background: white; color: #4fa3d1; padding: 10px 22px; font-weight: bold; font-size: 0.9em; text-decoration: none; display: inline-block; white-space: nowrap; margin-left: 12px; }
+  .header-follow a:first-child { margin-left: 0; }
   .header-follow a:hover { opacity: 0.85; }
 
   /* ── NAV ── */
@@ -238,7 +239,8 @@
     .header-inner { padding: 20px 16px 16px; }
     .header-brand { float: none; }
     .header-follow { float: none; padding-top: 10px; }
-    .header-follow a { display: block; text-align: center; padding: 10px 16px; }
+    .header-follow a { display: inline-block; text-align: center; padding: 10px 16px; margin-left: 8px; }
+    .header-follow a:first-child { margin-left: 0; }
     .header-brand h1 { font-size: 2em; }
     .site-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .nav-inner { display: block; white-space: nowrap; width: auto; }
@@ -278,12 +280,11 @@
 <header class="site-header">
   <div class="header-inner">
     <div class="header-brand"><a href="/index.html"><h1>BerryLife</h1><p>Everything for BlackBerry Users</p></a></div>
-    <div class="header-follow"><a href="https://www.facebook.com/BBerryLife/" target="_blank">Theo Dõi Facebook</a></div>
+    <div class="header-follow"><a href="/Pages/AboutUs.html">About Us</a><a href="https://www.facebook.com/BBerryLife/" target="_blank">Theo Dõi Facebook</a></div>
   </div>
   <nav class="site-nav">
     <div class="nav-inner">
       <a href="/index.html">Trang Chủ</a>
-      <a href="/Pages/Category/News/News.html">Tin Tức</a>
       <a href="/Pages/Category/Tutorials/Tutorials.html">Hướng Dẫn</a>
       <a href="/Pages/Category/Apps/Apps.html">Ứng Dụng</a>
       <a href="/Pages/Category/Games/Games.html">Games</a>
@@ -308,6 +309,18 @@
       <section class="posts-section">
         <h2 class="section-title"></h2>
         <div class="posts-grid">
+          <article class="card">
+            <div class="card-inner">
+              <div class="card-img-wrap">
+                <a href="/Pages/Bar-Installer.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bar%20Installer/4.png" alt="Bar Installer – Cài Đặt File .BAR Trực Tiếp Trên BB10" onerror="this.style.display='none'"></a>
+              </div>
+              <div class="card-body">
+                <span class="card-badge" style="background:#667eea">ỨNG DỤNG</span>
+                <h3><a href="/Pages/Bar-Installer.html">Bar Installer – Cài Đặt File .BAR Trực Tiếp Trên BB10</a></h3>
+                <div class="card-date">24/06/2026</div>
+              </div>
+            </div>
+          </article>
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -350,7 +363,7 @@
                 <a href="/Pages/Preroot-Autoloadersv2.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Preroot-Autoloaders/1.png" alt="Pre-rooted Autoloaders V2 – Firmware Đã Được Root Sẵn Cho BlackBerry 10" onerror="this.style.display='none'"></a>
               </div>
               <div class="card-body">
-                <span class="card-badge" style="background:#ff5722">TIN TỨC</span>
+
                 <h3><a href="/Pages/Preroot-Autoloadersv2.html">Pre-rooted Autoloaders V2 – Firmware Đã Được Root Sẵn Cho BlackBerry 10</a></h3>
                 <div class="card-date">28/05/2026</div>
               </div>
@@ -368,6 +381,13 @@
               </div>
             </div>
           </article>
+
+        </div>
+      </section>
+
+      <section class="posts-section">
+        <h2 class="section-title"></h2>
+        <div class="posts-grid">
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -380,13 +400,6 @@
               </div>
             </div>
           </article>
-
-        </div>
-      </section>
-
-      <section class="posts-section">
-        <h2 class="section-title"></h2>
-        <div class="posts-grid">
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
@@ -414,22 +427,10 @@
           <article class="card">
             <div class="card-inner">
               <div class="card-img-wrap">
-                <a href="/Pages/Bar-Installer.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bar%20Installer/4.png" alt="Bar Installer – Cài Đặt File .BAR Trực Tiếp Trên BB10" onerror="this.style.display='none'"></a>
-              </div>
-              <div class="card-body">
-                <span class="card-badge" style="background:#667eea">ỨNG DỤNG</span>
-                <h3><a href="/Pages/Bar-Installer.html">Bar Installer – Cài Đặt File .BAR Trực Tiếp Trên BB10</a></h3>
-                <div class="card-date">08/04/2026</div>
-              </div>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-inner">
-              <div class="card-img-wrap">
                 <a href="/Pages/BB10-Tools-10.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Tools%2010/BB10-Tools-10.png" alt="BlackBerry 10 Tools – Cập Nhật Thứ 10" onerror="this.style.display='none'"></a>
               </div>
               <div class="card-body">
-                <span class="card-badge" style="background:#ff5722">TIN TỨC</span>
+
                 <h3><a href="/Pages/BB10-Tools-10.html">BlackBerry 10 Tools – Cập Nhật Thứ 10</a></h3>
                 <div class="card-date">06/04/2026</div>
               </div>
@@ -487,7 +488,7 @@
                 <a href="/Pages/Unsigned-Bars.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Unsigned%20Bars/rn_image_picker_lib_temp_5f588acb-0778-4147-bba6-287f2cf5d565.png" alt="Unsigned Apps Chạy Trên BlackBerry 10!" onerror="this.style.display='none'"></a>
               </div>
               <div class="card-body">
-                <span class="card-badge" style="background:#ff5722">TIN TỨC</span>
+
                 <h3><a href="/Pages/Unsigned-Bars.html">Unsigned Apps Chạy Trên BlackBerry 10!</a></h3>
                 <div class="card-date">12/02/2026</div>
               </div>
@@ -523,7 +524,7 @@
                 <a href="/Pages/BB10-Root.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Root/download.png" alt="Đột Phá Lịch Sử: BB10 Chính Thức Được Root!" onerror="this.style.display='none'"></a>
               </div>
               <div class="card-body">
-                <span class="card-badge" style="background:#ff5722">TIN TỨC</span>
+
                 <h3><a href="/Pages/BB10-Root.html">Đột Phá Lịch Sử: BB10 Chính Thức Được Root!</a></h3>
                 <div class="card-date">05/02/2026</div>
               </div>
@@ -554,7 +555,7 @@
                 <a href="/Pages/Reddit.html"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/WB%20Reddit/app-waitberry-reddit-for-blackberry-10-v0-ternv4movigg1.png" alt="Waitberry Reddit Chính Thức Ra Mắt" onerror="this.style.display='none'"></a>
               </div>
               <div class="card-body">
-                <span class="card-badge" style="background:#ff5722">TIN TỨC</span>
+
                 <h3><a href="/Pages/Reddit.html">Waitberry Reddit Chính Thức Ra Mắt</a></h3>
                 <div class="card-date">30/01/2026</div>
               </div>
