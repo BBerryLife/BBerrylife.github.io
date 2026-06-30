@@ -5,13 +5,16 @@
     {
       "version": "1.1.0",
       "items": [
+		"NEW: **Import/Export** — backup and restore all your lists and categories via a single .json file",
+		"NEW: **Microsoft To Do import** — bring in your task lists from Microsoft To Do (list only)",
+		"NEW: **Google Keep import** — import your Keep notes that are formatted as simple checklists (list only)",
         "NEW: **Update** button in About — check for the latest version right from the app",
         "NEW: **Change List** button in About — read the full version history without leaving the app",
         "NEW: About page redesigned with a modern header and Donate page",
         "NEW: App version in About is now read directly from bar-descriptor.xml — no QML edits needed when releasing a new version",
         "FIX: Checking or unchecking an item now updates the visual immediately — no need to leave and re-enter the list",
         "FIX: Unchecking an item no longer reverts to checked after re-entering the list",
-        "IMPROVE: Build target changed to BB10 NDK 10.2.1 for broader device compatibility (OS 10.2.x and above)"
+        "IMPROVE: Build target changed to BB10 NDK 10.2.1 for broader device compatibility — though root access on 10.2.x is still unavailable at the time of this release"
       ]
     },
     {
