@@ -43,19 +43,19 @@
           <span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span>
         </div>
         <h1>SmartList10 — Ứng dụng To-Do List Native cho BlackBerry 10</h1>
-        <div class="article-date">Cập nhật lần cuối: 24/05/2026</div>
+        <div class="article-date">Cập nhật lần cuối: 30/06/2026</div>
       </div>
 
       <div class="article-body">
 
 <div class="note note-success">
-  <strong>SmartList10 v1.0.1.x đã ra mắt!</strong> Đây là ứng dụng quản lý danh sách công việc (to-do list) được viết hoàn toàn bằng Cascades, dành riêng cho hệ điều hành BlackBerry 10. Tải xuống miễn phí ngay hôm nay.
+  <strong>SmartList10 v1.1.0.x đã ra mắt!</strong> Đây là ứng dụng quản lý danh sách công việc (to-do list) được viết hoàn toàn bằng Cascades, dành riêng cho hệ điều hành BlackBerry 10. Tải xuống miễn phí ngay hôm nay.
 </div>
 
 <h2 id="tai-xuong">Tải xuống</h2>
-<p>SmartList10 hoàn toàn miễn phí. Nhấn nút bên dưới để tải file <code>.bar</code> phiên bản mới nhất (v1.0.1.x):</p>
+<p>SmartList10 hoàn toàn miễn phí. Nhấn nút bên dưới để tải file <code>.bar</code> phiên bản mới nhất (v1.1.0.x):</p>
 <p>Link dành cho thiết bị BB10 (tải trực tiếp)</p>
-<a class="btn-inline btn-primary" href="https://github.com/BBerryLife/BBerrylife.github.io/raw/main/Downloads/SmartList10-1_0_1_0.bar">Tải SmartList10</a>
+<a class="btn-inline btn-primary" href="https://github.com/BBerryLife/BBerrylife.github.io/raw/main/Downloads/SmartList10-1_1_0_0.bar">Tải SmartList10</a>
 <p>Link dành cho các thiết bị hiện đại (Google Drive)</p>
 <a class="btn-inline btn-primary" href="https://drive.google.com/drive/folders/17F2fMcvIAt9HnQQoK8UgGUxZzJgkckgv?usp=drive_link">Tải SmartList10 - Google Drive</a>
 
@@ -63,6 +63,7 @@
   <div class="toc-title">&#9656; Nội dung bài viết</div>
   <ol>
     <li><a href="#gioi-thieu">Giới thiệu — SmartList10 là gì?</a></li>
+    <li><a href="#changelog-110">Changelog — Phiên bản 1.1.0.x</a></li>
     <li><a href="#changelog-101">Changelog — Phiên bản 1.0.1.x</a></li>
     <li><a href="#changelog-1001">Changelog — Phiên bản 1.0.0.x</a></li>
     <li><a href="#cai-dat">Hướng dẫn cài đặt</a></li>
@@ -73,6 +74,31 @@
 <h2 id="gioi-thieu">SmartList10 là gì?</h2>
 <p>SmartList10 là ứng dụng to-do list và quản lý danh sách công việc được viết hoàn toàn bằng <strong>Cascades</strong>. Không phải Android port, không phải web app, không lag. Đây là ứng dụng được thiết kế từ đầu để chạy mượt mà trên BlackBerry 10.</p>
 <p>Giao diện đơn giản, tích hợp Share, cho đến tính năng SmartFrame cho phép bạn điều khiển danh sách ngay cả khi app đang thu nhỏ — SmartList10 mang lại trải nghiệm mà không một ứng dụng Android port nào có thể sánh được trên BB10.</p>
+
+<h2 id="changelog-110">Changelog — Phiên bản 1.1.0.x</h2>
+<div class="article-date" style="margin-bottom:16px">Cập nhật ngày 30/06/2026</div>
+
+<h3>Tính năng mới</h3>
+<ul>
+  <li><strong>Import / Export:</strong> Sao lưu và khôi phục toàn bộ danh sách, danh mục chỉ với một file <code>.json</code> duy nhất.</li>
+  <li><strong>Import từ Microsoft To Do:</strong> Mang các list công việc từ Microsoft To Do vào thẳng SmartList10 (chỉ hỗ trợ list).</li>
+  <li><strong>Import từ Google Keep:</strong> Import các ghi chú Keep được định dạng dạng checklist đơn giản (chỉ hỗ trợ list).</li>
+  <li><strong>Nút Update trong About:</strong> Kiểm tra phiên bản mới ngay trong ứng dụng, không cần vào lại trang web để xem có bản nào mới hơn không.</li>
+  <li><strong>Nút Change List trong About:</strong> Xem lại toàn bộ lịch sử các phiên bản ngay trong app, không cần mở trình duyệt.</li>
+  <li><strong>About được làm mới:</strong> Header hiện đại hơn, kèm trang Donate.</li>
+  <li><strong>Phiên bản app trong About</strong> giờ đọc trực tiếp từ <code>bar-descriptor.xml</code> — không cần sửa QML mỗi lần ra bản mới.</li>
+</ul>
+
+<h3>Sửa lỗi</h3>
+<ul>
+  <li>Tích chọn hoặc bỏ tích một item giờ cập nhật giao diện ngay lập tức — không cần thoát ra rồi vào lại danh sách.</li>
+  <li>Sửa lỗi bỏ tích một item bị tự động tích lại sau khi vào lại danh sách.</li>
+</ul>
+
+<h3>Cải thiện</h3>
+<ul>
+  <li><strong>Build target:</strong> Chuyển sang BB10 NDK 10.2.1 để tương thích rộng hơn với nhiều dòng máy — dù root cho 10.2.x vẫn chưa khả dụng tại thời điểm phát hành bản này.</li>
+</ul>
 
 <h2 id="changelog-101">Changelog — Phiên bản 1.0.1.x</h2>
 <div class="article-date" style="margin-bottom:16px">Cập nhật ngày 24/05/2026</div>
