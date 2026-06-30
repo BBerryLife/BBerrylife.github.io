@@ -1,0 +1,48 @@
+{
+  "latestVersion": "1.1.0.0",
+  "downloadUrl": "https://github.com/BBerryLife/BBerrylife.github.io/raw/main/Downloads/SmartList10-1_1_0_0.bar",
+  "changelog": [
+    {
+      "version": "1.1.0",
+      "items": [
+        "NEW: **Update** button in About — check for the latest version right from the app",
+        "NEW: **Change List** button in About — read the full version history without leaving the app",
+        "NEW: About page redesigned with a modern header and Donate page",
+        "NEW: App version in About is now read directly from bar-descriptor.xml — no QML edits needed when releasing a new version",
+        "FIX: Checking or unchecking an item now updates the visual immediately — no need to leave and re-enter the list",
+        "FIX: Unchecking an item no longer reverts to checked after re-entering the list",
+        "IMPROVE: Build target changed to BB10 NDK 10.2.1 for broader device compatibility (OS 10.2.x and above)"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "items": [
+        "NEW: **Copy** individual items from the context menu",
+        "IMPROVE: List and item sizes adjusted to match action bar button dimensions",
+        "FIX: Active Frame now displays the full list on all devices — previously capped at 4 items and misaligned on non-Q10/Q20/Q5 hardware",
+        "FIX: Last item on the Active Frame no longer hidden behind the app icon, name and close button",
+        "FIX: Highlight no longer fails to reset when checking an item in the list tab",
+        "NEW: Reddit button added in About",
+        "IMPROVE: Category and list deletion toasts now appear centered instead of at the bottom"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "items": [
+        "NEW: **SmartDetection** — enter multiple items at once, separated by commas, semicolons or newlines",
+        "NEW: **SmartCopy** — paste from clipboard and items are split automatically",
+        "NEW: **Single Entry** — add items one by one with an optional note",
+        "NEW: Organize lists into custom **categories** with separate sidebar tabs",
+        "NEW: **All Lists** tab shows every list across all categories, sorted A–Z",
+        "NEW: **Select More** to bulk-delete multiple lists or items at once",
+        "NEW: Share a full list via BBM, SMS, Email and other installed apps",
+        "NEW: All data saved locally to SQLite — no internet connection needed",
+        "NEW: **Dark Theme** for OLED devices — applies after an app restart",
+        "NEW: **SmartFrame** — navigate and tick items directly from the Active Frame without reopening the app",
+        "NEW: **Smooth Scroll** mode — tilt the device to scroll through the Active Frame list; hold Vol Up to check an item",
+        "NEW: **Volume Key Navigation** mode — use Vol Up/Down to move between items and Mute to check",
+        "NEW: **SmartFrame Info** — optionally show the list name, completion count and a progress bar on the Active Frame"
+      ]
+    }
+  ]
+}
