@@ -1,6 +1,6 @@
 {
-  "latestVersion": "1.1.0.0",
-  "downloadUrl": "https://github.com/BBerryLife/BBerrylife.github.io/raw/main/Downloads/SmartList10-1_1_0_0.bar",
+  "latestVersion": "1.1.0.1",
+  "downloadUrl": "https://github.com/BBerryLife/BBerrylife.github.io/raw/main/Downloads/SmartList10-1_1_0_1.bar",
   "changelog": [
     {
       "version": "1.1.0",
@@ -10,11 +10,12 @@
 		"NEW: **Google Keep import** — import your Keep notes that are formatted as simple checklists (list only)",
         "NEW: **Update** button in About — check for the latest version right from the app",
         "NEW: **Change List** button in About — read the full version history without leaving the app",
-        "NEW: About page redesigned with a modern header and Donate page",
-        "NEW: App version in About is now read directly from bar-descriptor.xml — no QML edits needed when releasing a new version",
+        "NEW: About page redesigned",
+		"NEW: New app icon, more splash screens & active frame images",
         "FIX: Checking or unchecking an item now updates the visual immediately — no need to leave and re-enter the list",
         "FIX: Unchecking an item no longer reverts to checked after re-entering the list",
-        "IMPROVE: Build target changed to BB10 NDK 10.2.1 for broader device compatibility — though root access on 10.2.x is still unavailable at the time of this release"
+        "IMPROVE: You can now switch to dark mode instantly without restarting the app",
+		"IMPROVE: Turning off SmartFrame in the settings will disabled related options"
       ]
     },
     {
