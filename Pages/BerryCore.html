@@ -89,13 +89,13 @@
 		
 		<p>Ảnh trên chỉ là minh họa cách cài file .bar, bạn có thể dùng <strong><a href="https://bberrylife.github.io/Pages/Bar-Installer.html">Bar Installer</a></strong> trên máy đã root</p>
 
-		<p>Hãy cố gắng di chuyển 2 tệp BerryCore.zip và install.sh vào thư mục <code>Documents</code> của thiết bị.</p>
+		<p>Hãy cố gắng di chuyển 2 tệp BerryCore.zip và install.sh vào thư mục <code>Misc</code> của thiết bị.</p>
 
         <p>Sau khi làm xong các bước trên, mở Term49 lên và gõ:</p>
 
-<pre><code>cd /accounts/1000/shared/documents
-chmod +x install.sh
-./install.sh</code></pre>
+<pre><code>cd /accounts/1000/shared/misc
+sh install.sh --fresh -y
+. berrycore/env.sh</code></pre>
 
         <div class="note note-green">Chỉ cần đợi tầm 10 - 15 phút cho nó cài đặt, đóng Term49 và mở lại rồi làm theo hướng dẫn hiển thị trên màn hình (env.sh). Nếu hiển thị như ảnh dưới là bạn đã thành công (ảnh dưới được thực hiện trên BGShell — khuyên nên dùng Term49 để cài đặt và BGShell để sử dụng).
         </div>
@@ -107,7 +107,7 @@ chmod +x install.sh
         </figure>
 
         <h2>Sử dụng BerryCore</h2>
-        <p>Bạn nên có một chút kiến thức về câu lệnh trong môi trường Linux.</p>
+        <p>Bạn nên có một chút kiến thức về câu lệnh trong môi trường Linux. Note: Kể từ bản v0.86.0 trở đi, ở releases/ sẽ luôn có 1 file tên <code>berrycore.html</code>, bạn có thể đọc chúng để xem hướng dẫn - tải xuống - các ports có sẵn,...</p>
 
         <p><strong>Xem có những thứ gì để cài đặt:</strong> <code>qpkg catalog</code></p>
         <p><strong>Cài đặt:</strong> <code>qpkg install (vật cần cài đặt)</code></p>
