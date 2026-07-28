@@ -35,7 +35,7 @@
   .header-follow a:hover { opacity: 0.85; }
 
   /* ── NAV ── */
-  .site-nav { background: #70cbff; border-top: 2px solid rgba(255,255,255,0.25); overflow: hidden; }
+  .site-nav { background: #4fa3d1; border-top: 2px solid rgba(255,255,255,0.25); overflow: hidden; }
   .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0; display: table; width: 100%; table-layout: fixed; -webkit-box-sizing: border-box; box-sizing: border-box; }
   .nav-inner a { display: table-cell; color: white; text-decoration: none; font-weight: bold; font-size: 0.78em; padding: 12px 6px; text-align: center; border-right: 1px solid rgba(255,255,255,0.15); white-space: nowrap; vertical-align: middle; }
   .nav-inner a:last-child { border-right: none; }
@@ -191,23 +191,6 @@
   .service-card:hover, .service-card.selected { border-color: #70cbff; background: #70cbff; }
   .service-card .sc-title { font-weight: bold; font-size: 0.88em; color: #70cbff; margin-bottom: 3px; line-height: 1.3; }
   .service-card .sc-desc  { font-size: 0.78em; color: #70cbff; line-height: 1.4; }
-  .bb-accordion { margin: 8px 14px 0; border: 2px solid #70cbff; background: #70cbff; }
-  .bb-accordion.bb-open { border-color: #70cbff; }
-  .bb-accordion-header { padding: 11px 14px; cursor: pointer; -webkit-box-sizing: border-box; box-sizing: border-box; }
-  .bb-accordion-header:after { content: ''; display: table; clear: both; }
-  .bb-accordion-header:hover { background: #70cbff; }
-  .bb-acc-info { overflow: hidden; }
-  .bb-acc-arrow { float: right; color: #70cbff; font-size: 0.8em; margin-top: 2px; }
-  .bb-acc-title { font-weight: bold; font-size: 0.88em; color: #70cbff; margin-bottom: 3px; line-height: 1.3; }
-  .bb-acc-desc  { font-size: 0.78em; color: #70cbff; line-height: 1.4; }
-  .bb-accordion-body { display: none; border-top: 2px solid #70cbff; padding: 16px 16px 18px; background: white; }
-  .bb-subtab-bar:after { content: ''; display: table; clear: both; }
-  .bb-subtab-bar { border-bottom: 2px solid #70cbff; margin-bottom: 16px; overflow: hidden; }
-  .bb-subtab { float: left; width: 50%; padding: 9px 14px; font-family: inherit; font-size: 0.86em; font-weight: bold; color: #70cbff; background: #70cbff; border: none; border-bottom: 3px solid transparent; cursor: pointer; -webkit-box-sizing: border-box; box-sizing: border-box; }
-  .bb-subtab:hover { color: #70cbff; }
-  .bb-subtab.active { color: #70cbff; border-bottom-color: #70cbff; background: white; }
-  .bb-subtab-panel { display: none; }
-  .bb-subtab-panel.active { display: block; }
   .modal-fb-row { margin: 8px 14px 0; background: #70cbff; border: 2px solid #70cbff; padding: 11px 14px; overflow: hidden; -webkit-box-sizing: border-box; box-sizing: border-box; }
   .mfb-btn-wrap { float: right; margin-left: 12px; }
   .mfb-info { overflow: hidden; }
@@ -218,21 +201,16 @@
   .modal-form-area { padding: 8px 16px 24px; display: none; }
   .modal-form-area.visible { display: block; }
   .modal-divider { border: none; border-top: 2px dashed #70cbff; margin: 16px 0 18px; }
-  .modal-form-area label, .bb-accordion-body label { display: block; font-size: 0.83em; font-weight: bold; color: #70cbff; margin-bottom: 5px; }
-  .modal-form-area .req, .bb-accordion-body .req { color: #70cbff; margin-left: 2px; }
-  .modal-form-area .opt, .bb-accordion-body .opt { color: #70cbff; font-weight: normal; font-size: 0.88em; margin-left: 4px; }
-  .modal-form-area .mfg, .bb-accordion-body .mfg { margin-bottom: 14px; }
+  .modal-form-area label { display: block; font-size: 0.83em; font-weight: bold; color: #70cbff; margin-bottom: 5px; }
+  .modal-form-area .req { color: #70cbff; margin-left: 2px; }
+  .modal-form-area .opt { color: #70cbff; font-weight: normal; font-size: 0.88em; margin-left: 4px; }
+  .modal-form-area .mfg { margin-bottom: 14px; }
   .modal-form-area input[type="text"],
   .modal-form-area input[type="email"],
   .modal-form-area select,
   .modal-form-area textarea,
-  .bb-accordion-body input[type="text"],
-  .bb-accordion-body input[type="email"],
-  .bb-accordion-body select,
-  .bb-accordion-body textarea { width: 100%; padding: 9px 12px; border: 2px solid #70cbff; font-family: inherit; font-size: 0.88em; color: #70cbff; background: white; outline: none; -webkit-box-sizing: border-box; box-sizing: border-box; }
   .modal-form-area input:focus, .modal-form-area select:focus, .modal-form-area textarea:focus,
-  .bb-accordion-body input:focus, .bb-accordion-body select:focus, .bb-accordion-body textarea:focus { border-color: #70cbff; }
-  .modal-form-area textarea, .bb-accordion-body textarea { min-height: 88px; resize: vertical; }
+  .modal-form-area textarea { min-height: 88px; resize: vertical; }
   .modal-note { background: #fff8e1; border-left: 4px solid #ffc107; padding: 10px 14px; font-size: 0.82em; color: #70cbff; line-height: 1.55; margin-bottom: 16px; }
   .modal-note strong { color: #70cbff; }
   .btn-modal-submit { width: 100%; background: #70cbff; background: -webkit-linear-gradient(315deg,#70cbff 0%,#70cbff 100%); background: linear-gradient(135deg,#70cbff 0%,#70cbff 100%); color: white; border: none; padding: 13px 20px; font-family: inherit; font-size: 0.95em; font-weight: bold; cursor: pointer; margin-top: 6px; }
@@ -513,57 +491,20 @@
         <h2>Yêu Cầu Trợ Giúp</h2>
         <p>Không có thời gian hoặc gặp khó khăn khi tự làm? Chúng tôi có thể hỗ trợ bạn trực tiếp!</p>
       </div>
-      <button class="modal-close" onclick="closeHelpModal()">&#70cbff;</button>
+      <button class="modal-close" onclick="closeHelpModal()">&#10005;</button>
     </div>
     <div id="step-pick">
       <div class="modal-picker-wrap"><div class="modal-picker" id="servicePicker">
         <div class="service-card-wrap"><div class="service-card" id="card-unlock" onclick="selectService('unlock')">
           <div class="sc-title">Mở Khóa Nhà Mạng</div>
-          <div class="sc-desc">Carrier Unlock BB10 &#70cbff; xóa khóa SIM dùng mọi nhà mạng, trừ <strong>Sprint</strong></div>
+          <div class="sc-desc">Carrier Unlock BB10 &#8212; xóa khóa SIM dùng mọi nhà mạng, trừ <strong>Sprint</strong></div>
         </div></div>
         <div class="service-card-wrap"><div class="service-card" id="card-rom" onclick="selectService('rom')">
           <div class="sc-title">Tạo ROM Tùy Chỉnh</div>
           <div class="sc-desc">Nhờ tạo Debloated / ROM Root bằng BB10 Tools thay bạn</div>
         </div></div>
       </div></div>
-      <div class="bb-accordion" id="bb-accordion">
-        <div class="bb-accordion-header" onclick="toggleBerryBus()">
-          <span class="bb-acc-arrow" id="bb-arrow">&#70cbff;</span>
-          <div class="bb-acc-info">
-            <div class="bb-acc-title">Đóng Góp Dữ Liệu BerryBus</div>
-            <div class="bb-acc-desc">Bổ sung tuyến xe buýt hoặc địa điểm cho ứng dụng BB10</div>
-          </div>
-        </div>
-        <div class="bb-accordion-body" id="bb-body">
-          <div class="bb-subtab-bar">
-            <button class="bb-subtab active" id="bbtab-route-btn" onclick="switchBBTab('route')">Tuyến Xe</button>
-            <button class="bb-subtab" id="bbtab-stop-btn" onclick="switchBBTab('stop')">Địa Điểm</button>
-          </div>
-          <div id="bbtab-route" class="bb-subtab-panel active">
-            <form id="form-berrybus-route" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-route')">
-              <input type="hidden" name="_subject" value="[BerryBus] Đóng góp tuyến xe">
-              <div class="mfg"><label>Số / Tên tuyến <span class="req">*</span></label><input type="text" name="so_tuyen" placeholder="Ví dụ: 01, 150..." required></div>
-              <div class="mfg"><label>Điểm đầu <span class="req">*</span></label><input type="text" name="diem_dau" placeholder="Tên bến/trạm đầu" required></div>
-              <div class="mfg"><label>Điểm cuối <span class="req">*</span></label><input type="text" name="diem_cuoi" placeholder="Tên bến/trạm cuối" required></div>
-              <div class="mfg"><label>Khu vực <span class="req">*</span></label><input type="text" name="khu_vuc" placeholder="Ví dụ: Hà Nội..." required></div>
-              <div class="mfg"><label>Email <span class="opt">(tùy chọn)</span></label><input type="email" name="email" placeholder="email@example.com"></div>
-              <button type="submit" class="btn-modal-submit" id="btn-berrybus-route">Gửi Đóng Góp</button>
-              <div id="success-berrybus-route" class="modal-success"><strong>Cảm ơn!</strong> Đã nhận đóng góp tuyến xe.</div>
-            </form>
-          </div>
-          <div id="bbtab-stop" class="bb-subtab-panel">
-            <form id="form-berrybus-stop" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-stop')">
-              <input type="hidden" name="_subject" value="[BerryBus] Đóng góp địa điểm">
-              <div class="mfg"><label>Tên địa điểm <span class="req">*</span></label><input type="text" name="ten_dia_diem" placeholder="Tên địa điểm" required></div>
-              <div class="mfg"><label>Địa chỉ <span class="req">*</span></label><input type="text" name="dia_chi" placeholder="Địa chỉ đầy đủ" required></div>
-              <div class="mfg"><label>Khu vực <span class="req">*</span></label><input type="text" name="khu_vuc" placeholder="Hà Nội, TP. HCM..." required></div>
-              <div class="mfg"><label>Email <span class="opt">(tùy chọn)</span></label><input type="email" name="email" placeholder="email@example.com"></div>
-              <button type="submit" class="btn-modal-submit" id="btn-berrybus-stop">Gửi Đóng Góp</button>
-              <div id="success-berrybus-stop" class="modal-success"><strong>Cảm ơn!</strong> Đã nhận đóng góp địa điểm.</div>
-            </form>
-          </div>
-        </div>
-      </div>
+      
       <div class="modal-fb-row">
         <div class="mfb-btn-wrap"><a href="https://www.facebook.com/BBerryLife/" target="_blank" class="mfb-btn">Nhắn Tin</a></div>
         <div class="mfb-info">
@@ -612,7 +553,7 @@
           <div id="success-rom" class="modal-success"><strong>Đã nhận!</strong> Chúng tôi sẽ liên hệ để xác nhận.</div>
         </form>
       </div>
-      <button class="modal-back-btn" onclick="resetToStep1()">&#70cbff; Chọn dịch vụ khác</button>
+      <button class="modal-back-btn" onclick="resetToStep1()">&#8592; Chọn dịch vụ khác</button>
     </div>
   </div>
 </div></div></div>
@@ -677,27 +618,6 @@ function resetToStep1() {
     var fw = byId('form-wrap-' + fmts[j]); if (fw) fw.style.display = 'none';
     var sc = byId('success-' + fmts[j]); if (sc) sc.style.display = 'none';
   }
-}
-
-/* BerryBus accordion */
-var bbOpen = false;
-function toggleBerryBus() {
-  bbOpen = !bbOpen;
-  var body = byId('bb-body'), arrow = byId('bb-arrow'), acc = byId('bb-accordion');
-  if (body) body.style.display = bbOpen ? 'block' : 'none';
-  if (arrow) arrow.innerHTML = bbOpen ? '&#70cbff;' : '&#70cbff;';
-  if (acc) { if (bbOpen) addClass(acc, 'bb-open'); else removeClass(acc, 'bb-open'); }
-}
-function switchBBTab(tab) {
-  var tabs = ['route', 'stop'];
-  for (var i = 0; i < tabs.length; i++) {
-    var btn = byId('bbtab-' + tabs[i] + '-btn');
-    var panel = byId('bbtab-' + tabs[i]);
-    if (btn) removeClass(btn, 'active');
-    if (panel) removeClass(panel, 'active');
-  }
-  addClass(byId('bbtab-' + tab + '-btn'), 'active');
-  addClass(byId('bbtab-' + tab), 'active');
 }
 
 /* Form submit — XHR */
