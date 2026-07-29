@@ -42,6 +42,62 @@
           </div>
         </div>
 
+        <div class="bb-accordion" id="bb-accordion">
+          <div class="bb-accordion-header" onclick="toggleBerryBus()">
+            <span class="bb-acc-arrow" id="bb-arrow">&#9660;</span>
+            <div class="bb-acc-info">
+              <div class="bb-acc-title">Đóng Góp Dữ Liệu BerryBus</div>
+              <div class="bb-acc-desc">Bổ sung tuyến xe buýt hoặc địa điểm cho ứng dụng BB10</div>
+            </div>
+          </div>
+          <div class="bb-accordion-body" id="bb-body">
+            <div class="bb-subtab-bar">
+              <button class="bb-subtab active" id="bbtab-route-btn" onclick="switchBBTab('route')">Tuyến Xe</button>
+              <button class="bb-subtab" id="bbtab-place-btn" onclick="switchBBTab('place')">Địa Điểm</button>
+            </div>
+            <div id="bbtab-route" class="bb-subtab-panel active">
+              <form id="form-berrybus-route" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-route')">
+                <input type="hidden" name="_subject" value="[BerryBus] Đóng góp dữ liệu tuyến xe">
+                <input type="hidden" name="loai_dong_gop" value="Tuyến Xe">
+                <div class="mfg"><label>Số / Tên tuyến <span class="req">*</span></label><input type="text" name="so_tuyen" placeholder="Ví dụ: 01, 150, Metro số 1..." required></div>
+                <div class="mfg"><label>Điểm đầu <span class="req">*</span></label><input type="text" name="diem_dau" placeholder="Tên bến/trạm đầu" required></div>
+                <div class="mfg"><label>Điểm cuối <span class="req">*</span></label><input type="text" name="diem_cuoi" placeholder="Tên bến/trạm cuối" required></div>
+                <div class="mfg"><label>Giờ hoạt động <span class="opt">(tùy chọn)</span></label><input type="text" name="gio_hoat_dong" placeholder="Ví dụ: 5:00 – 21:30"></div>
+                <div class="mfg"><label>Tần suất (phút/chuyến) <span class="opt">(tùy chọn)</span></label><input type="text" name="tan_suat" placeholder="Ví dụ: 10-15 phút"></div>
+                <div class="mfg"><label>Giá vé <span class="opt">(tùy chọn)</span></label><input type="text" name="gia_ve" placeholder="Ví dụ: 10.000đ / 12.000đ"></div>
+                <div class="mfg"><label>Khu vực / Thành phố <span class="req">*</span></label><input type="text" name="khu_vuc" placeholder="Ví dụ: Hà Nội, TP. Hồ Chí Minh..." required></div>
+                <div class="mfg"><label>Ghi chú thêm <span class="opt">(tùy chọn)</span></label><textarea name="ghi_chu" placeholder="Biến thể tuyến, chỉ chạy ngày thường, v.v..."></textarea></div>
+                <div class="mfg"><label>Email của bạn <span class="opt">(tùy chọn)</span></label><input type="email" name="email" placeholder="email@example.com"></div>
+                <button type="submit" class="btn-modal-submit" id="btn-berrybus-route">Gửi Đóng Góp Tuyến Xe</button>
+                <div id="success-berrybus-route" class="modal-success"><strong>Cảm ơn bạn!</strong> Thông tin tuyến xe đã được gửi. Chúng tôi sẽ xem xét và cập nhật vào BerryBus.</div>
+              </form>
+            </div>
+            <div id="bbtab-place" class="bb-subtab-panel">
+              <form id="form-berrybus-place" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-place')">
+                <input type="hidden" name="_subject" value="[BerryBus] Đóng góp dữ liệu địa điểm">
+                <input type="hidden" name="loai_dong_gop" value="Địa Điểm">
+                <div class="mfg"><label>Tên địa điểm <span class="req">*</span></label><input type="text" name="ten_dia_diem" placeholder="Tên chính xác của địa điểm" required></div>
+                <div class="mfg"><label>Loại địa điểm <span class="req">*</span></label>
+                  <select name="loai_dia_diem" required>
+                    <option value="">-- Chọn loại --</option>
+                    <option>Bến xe / Nhà ga</option><option>Trạm dừng xe buýt</option>
+                    <option>Trạm metro / Tàu điện</option><option>Bệnh viện</option>
+                    <option>Trường học / Đại học</option><option>Trung tâm thương mại</option>
+                    <option>Điểm tham quan</option><option>Chợ / Siêu thị</option><option>Khác</option>
+                  </select>
+                </div>
+                <div class="mfg"><label>Địa chỉ <span class="req">*</span></label><input type="text" name="dia_chi" placeholder="Số nhà, tên đường, phường/xã, quận/huyện" required></div>
+                <div class="mfg"><label>Khu vực / Thành phố <span class="req">*</span></label><input type="text" name="khu_vuc" placeholder="Hà Nội, TP. Hồ Chí Minh..." required></div>
+                <div class="mfg"><label>Các tuyến xe đi qua <span class="opt">(tùy chọn)</span></label><input type="text" name="tuyen_di_qua" placeholder="Ví dụ: 01, 02, 150, Metro số 1..."></div>
+                <div class="mfg"><label>Mô tả / Ghi chú <span class="opt">(tùy chọn)</span></label><textarea name="mo_ta" placeholder="Giờ mở cửa, thông tin đặc biệt, v.v..."></textarea></div>
+                <div class="mfg"><label>Email của bạn <span class="opt">(tùy chọn)</span></label><input type="email" name="email" placeholder="email@example.com"></div>
+                <button type="submit" class="btn-modal-submit" id="btn-berrybus-place">Gửi Đóng Góp Địa Điểm</button>
+                <div id="success-berrybus-place" class="modal-success"><strong>Cảm ơn bạn!</strong> Thông tin địa điểm đã được gửi. Chúng tôi sẽ xem xét và cập nhật vào BerryBus.</div>
+              </form>
+            </div>
+          </div>
+        </div>
+
         <div class="modal-fb-row">
           <div class="mfb-btn-wrap"><a href="https://www.facebook.com/BBerryLife/" target="_blank" class="mfb-btn">Nhắn Tin</a></div>
           <div class="mfb-info">
@@ -49,7 +105,7 @@
             <div class="mfb-desc">Cần hỗ trợ nhanh? Nhắn tin trực tiếp!</div>
           </div>
         </div>
-        <div style="padding:8px 26px 20px;text-align:center;color:#70cbff;font-size:.82em">Chọn dịch vụ bạn cần để tiếp tục</div>
+        <div style="padding:8px 26px 20px;text-align:center;color:#4a6a8a;font-size:.82em">Chọn dịch vụ bạn cần để tiếp tục</div>
       </div>
 
       <div class="modal-form-area" id="step-form">

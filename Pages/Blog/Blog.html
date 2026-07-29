@@ -12,13 +12,13 @@
 */
 
   * { -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #70cbff; color: #70cbff; }
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #efefef; color: #2c3e50; }
 
   /* ── HEADER ── */
   .site-header {
     background: #70cbff;
-    background: -webkit-linear-gradient(315deg, #70cbff 0%, #70cbff 100%);
-    background: linear-gradient(135deg, #70cbff 0%, #70cbff 100%);
+    background: -webkit-linear-gradient(315deg, #70cbff 0%, #4fa3d1 100%);
+    background: linear-gradient(135deg, #70cbff 0%, #4fa3d1 100%);
     color: white;
   }
   .header-inner { max-width: 1280px; margin: 0 auto; padding: 40px 30px 30px; }
@@ -29,7 +29,7 @@
   .header-brand h1 { font-size: 3em; font-weight: bold; letter-spacing: -1px; line-height: 1; color: white; }
   .header-brand p  { font-size: 1em; opacity: 0.9; margin-top: 6px; color: white; }
   .header-follow { float: right; padding-top: 8px; }
-  .header-follow a { background: white; color: #70cbff; padding: 10px 22px; font-weight: bold; font-size: 0.9em; text-decoration: none; display: inline-block; white-space: nowrap; margin-left: 12px; }
+  .header-follow a { background: white; color: #4fa3d1; padding: 10px 22px; font-weight: bold; font-size: 0.9em; text-decoration: none; display: inline-block; white-space: nowrap; margin-left: 12px; }
   .header-follow a:first-child { margin-left: 0; }
   .header-follow a:hover { opacity: 0.85; }
 
@@ -49,9 +49,9 @@
   /* ── PAGE HERO ── */
   .page-hero {
     background: #70cbff;
-    background: -webkit-linear-gradient(315deg, #70cbff 0%, #70cbff 100%);
-    background: linear-gradient(135deg, #70cbff 0%, #70cbff 100%);
-    color: white; padding: 36px 30px 32px; margin-bottom: 20px; border: 2px solid #70cbff;
+    background: -webkit-linear-gradient(315deg, #70cbff 0%, #4fa3d1 100%);
+    background: linear-gradient(135deg, #70cbff 0%, #4fa3d1 100%);
+    color: white; padding: 36px 30px 32px; margin-bottom: 20px; border: 2px solid #e0e0e0;
   }
   .page-hero h1 { font-size: 2em; font-weight: bold; margin-bottom: 8px; color: white; }
   .page-hero p  { font-size: 0.97em; opacity: 0.92; line-height: 1.6; color: white; }
@@ -59,23 +59,23 @@
   /* ── TABS ── */
   .tabs-nav { margin-bottom: 0; border-bottom: 3px solid #70cbff; overflow: hidden; }
   .tab-btn {
-    background: white; border: 2px solid #70cbff; border-bottom: none;
-    color: #70cbff; font-family: inherit; font-weight: bold; font-size: 0.92em;
+    background: white; border: 2px solid #e0e0e0; border-bottom: none;
+    color: #666; font-family: inherit; font-weight: bold; font-size: 0.92em;
     padding: 11px 28px; cursor: pointer; margin-right: 4px; float: left;
     -webkit-box-sizing: border-box; box-sizing: border-box;
   }
   .tab-btn.active { background: #70cbff; color: white; border-color: #70cbff; }
-  .tab-btn:hover  { background: #70cbff; color: #70cbff; }
+  .tab-btn:hover  { background: #f8f9fa; color: #2c3e50; }
   .tabs-nav:after { content: ''; display: table; clear: both; }
   .tab-panel { display: none; }
   .tab-panel.active { display: block; }
 
   /* ── POSTS SECTION ── */
-  .posts-section { background: #70cbff; padding: 24px; margin-bottom: 20px; border: 2px solid #70cbff; }
-  .section-title { color: #70cbff; font-size: 1.3em; font-weight: bold; margin-bottom: 18px; border-bottom: 3px solid #70cbff; padding-bottom: 8px; }
+  .posts-section { background: #f8f9fa; padding: 24px; margin-bottom: 20px; border: 2px solid #e0e0e0; }
+  .section-title { color: #2c3e50; font-size: 1.3em; font-weight: bold; margin-bottom: 18px; border-bottom: 3px solid #70cbff; padding-bottom: 8px; }
 
   /* ── BLOG CARDS ── */
-  .blog-card { background: white; border: 2px solid #70cbff; overflow: hidden; margin-bottom: 20px; }
+  .blog-card { background: white; border: 2px solid #e0e0e0; overflow: hidden; margin-bottom: 20px; }
   .blog-card:after { content: ''; display: table; clear: both; }
   .blog-accent { float: left; width: 8px; height: 100%; min-height: 90px; position: relative; }
   /* height trick: accent uses absolute fill inside relative parent */
@@ -84,11 +84,11 @@
   .blog-body { margin-left: 8px; padding: 16px 18px 16px; }
   .blog-tags { margin-bottom: 8px; overflow: hidden; }
   .tag { display: inline-block; padding: 3px 10px; font-size: 0.78em; font-weight: bold; margin-right: 4px; margin-bottom: 4px; }
-  .tag-date { display: inline-block; color: #70cbff; font-size: 0.82em; margin-left: 4px; vertical-align: middle; }
+  .tag-date { display: inline-block; color: #999; font-size: 0.82em; margin-left: 4px; vertical-align: middle; }
   .blog-body h3 { font-size: 1.05em; font-weight: bold; margin-bottom: 8px; line-height: 1.4; }
-  .blog-body h3 a { color: #70cbff; text-decoration: none; }
-  .blog-body h3 a:hover { color: #70cbff; }
-  .blog-body p { color: #70cbff; font-size: 0.88em; line-height: 1.6; margin-bottom: 12px; }
+  .blog-body h3 a { color: #2c3e50; text-decoration: none; }
+  .blog-body h3 a:hover { color: #4fa3d1; }
+  .blog-body p { color: #666; font-size: 0.88em; line-height: 1.6; margin-bottom: 12px; }
   .btn-read { display: inline-block; color: white; padding: 7px 16px; text-decoration: none; font-weight: bold; font-size: 0.85em; }
   .btn-read:hover { opacity: 0.85; }
 
@@ -96,7 +96,7 @@
   .page-nav { text-align: center; margin: 20px 0 4px; }
   .page-nav button { background: white; border: 2px solid #70cbff; color: #70cbff; font-family: inherit; font-weight: bold; font-size: 0.9em; padding: 9px 18px; cursor: pointer; margin: 0 3px; -webkit-box-sizing: border-box; box-sizing: border-box; }
   .page-nav button.active { background: #70cbff; color: white; }
-  .page-nav button:hover { background: #70cbff; }
+  .page-nav button:hover { background: #f8f9fa; }
   .page-nav button.active:hover { background: #70cbff; }
 
   /* ── PAGE FOOTER ── */
@@ -109,30 +109,30 @@
 
   /* ── SIDEBAR ── */
   .sidebar-sticky { position: relative; }
-  .sidebar-box { background: #70cbff; border: 2px solid #70cbff; border-top: none; padding: 22px; margin-bottom: 22px; }
-  .sidebar-title { color: #70cbff; font-size: 1.1em; font-weight: bold; margin-bottom: 16px; border-bottom: 3px solid #70cbff; padding-bottom: 8px; }
+  .sidebar-box { background: #f8f9fa; border: 2px solid #e0e0e0; border-top: none; padding: 22px; margin-bottom: 22px; }
+  .sidebar-title { color: #2c3e50; font-size: 1.1em; font-weight: bold; margin-bottom: 16px; border-bottom: 3px solid #70cbff; padding-bottom: 8px; }
   .cat-group { margin-bottom: 18px; }
-  .cat-group-label { color: #70cbff; font-size: 0.8em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+  .cat-group-label { color: #4fa3d1; font-size: 0.8em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
   .cat-links:after { content: ''; display: table; clear: both; }
   .cat-links a { background: white; padding: 7px 14px; text-decoration: none; font-weight: bold; font-size: 0.82em; display: inline-block; margin-right: 6px; margin-bottom: 6px; }
-  .cat-links a:hover { background: #70cbff; }
+  .cat-links a:hover { background: #e8f4ff; }
   .follow-box {
     background: #70cbff;
-    background: -webkit-linear-gradient(315deg, #70cbff 0%, #70cbff 100%);
-    background: linear-gradient(135deg, #70cbff 0%, #70cbff 100%);
-    color: white; text-align: center; padding: 26px 20px; border: 2px solid #70cbff; border-bottom: none; margin-bottom: 0;
+    background: -webkit-linear-gradient(315deg, #70cbff 0%, #4fa3d1 100%);
+    background: linear-gradient(135deg, #70cbff 0%, #4fa3d1 100%);
+    color: white; text-align: center; padding: 26px 20px; border: 2px solid #4fa3d1; border-bottom: none; margin-bottom: 0;
   }
   .follow-box h3 { font-size: 1.2em; font-weight: bold; margin-bottom: 10px; color: white; }
   .follow-box p  { font-size: 0.88em; opacity: 0.92; margin-bottom: 18px; line-height: 1.5; color: white; }
-  .follow-box a  { background: white; color: #70cbff; padding: 10px 22px; font-weight: bold; font-size: 0.88em; text-decoration: none; display: inline-block; }
+  .follow-box a  { background: white; color: #4fa3d1; padding: 10px 22px; font-weight: bold; font-size: 0.88em; text-decoration: none; display: inline-block; }
   .follow-box a:hover { opacity: 0.85; }
 
   /* ── HELP FAB ── */
   .help-fab {
     position: fixed; bottom: 28px; right: 28px; z-index: 999;
-    background: #70cbff;
-    background: -webkit-linear-gradient(315deg, #70cbff 0%, #70cbff 100%);
-    background: linear-gradient(135deg, #70cbff 0%, #70cbff 100%);
+    background: #0e91e8;
+    background: -webkit-linear-gradient(315deg, #0e91e8 0%, #1366a8 100%);
+    background: linear-gradient(135deg, #0e91e8 0%, #1366a8 100%);
     color: white; border: none; padding: 14px 22px;
     font-family: inherit; font-size: 0.95em; font-weight: bold; cursor: pointer;
     -webkit-box-shadow: 0 4px 18px rgba(14,145,232,0.45);
@@ -145,8 +145,8 @@
   .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 1000; overflow-y: auto; }
   .modal-overlay-table { display: table; width: 100%; height: 100%; min-height: 100%; }
   .modal-overlay-cell  { display: table-cell; vertical-align: middle; text-align: center; padding: 20px 10px; }
-  .modal-box { background: #fff; border-top: 4px solid #70cbff; width: 540px; max-width: 540px; max-height: 80vh; overflow-x: hidden; overflow-y: auto; padding-bottom: 10px; -webkit-box-shadow: 0 12px 48px rgba(0,0,0,0.22); box-shadow: 0 12px 48px rgba(0,0,0,0.22); display: inline-block; text-align: left; margin: 0 auto; -webkit-box-sizing: border-box; box-sizing: border-box; }
-  .modal-header { background: #70cbff; background: -webkit-linear-gradient(315deg,#70cbff 0%,#70cbff 100%); background: linear-gradient(135deg,#70cbff 0%,#70cbff 100%); color: white; padding: 20px 20px 16px; }
+  .modal-box { background: #fff; border-top: 4px solid #0e91e8; width: 540px; max-width: 540px; max-height: 80vh; overflow-x: hidden; overflow-y: auto; padding-bottom: 10px; -webkit-box-shadow: 0 12px 48px rgba(0,0,0,0.22); box-shadow: 0 12px 48px rgba(0,0,0,0.22); display: inline-block; text-align: left; margin: 0 auto; -webkit-box-sizing: border-box; box-sizing: border-box; }
+  .modal-header { background: #0e91e8; background: -webkit-linear-gradient(315deg,#0e91e8 0%,#1366a8 100%); background: linear-gradient(135deg,#0e91e8 0%,#1366a8 100%); color: white; padding: 20px 20px 16px; }
   .modal-header:after { content: ''; display: table; clear: both; }
   .modal-header-text { float: left; width: 85%; }
   .modal-header-text h2 { font-size: 1.15em; font-weight: bold; margin-bottom: 4px; color: white; }
@@ -158,38 +158,60 @@
   .modal-picker { margin: 0 -2px; }
   .modal-picker:after { content: ''; display: table; clear: both; }
   .service-card-wrap { float: left; width: 50%; padding: 0 2px; -webkit-box-sizing: border-box; box-sizing: border-box; }
-  .service-card { border: 2px solid #70cbff; background: #70cbff; padding: 11px 14px; cursor: pointer; text-align: left; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; }
-  .service-card:hover, .service-card.selected { border-color: #70cbff; background: #70cbff; }
-  .service-card .sc-title { font-weight: bold; font-size: 0.88em; color: #70cbff; margin-bottom: 3px; line-height: 1.3; }
-  .service-card .sc-desc  { font-size: 0.78em; color: #70cbff; line-height: 1.4; }
-  .modal-fb-row { margin: 8px 14px 0; background: #70cbff; border: 2px solid #70cbff; padding: 11px 14px; overflow: hidden; -webkit-box-sizing: border-box; box-sizing: border-box; }
+  .service-card { border: 2px solid #d0eaf9; background: #f4faff; padding: 11px 14px; cursor: pointer; text-align: left; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; }
+  .service-card:hover, .service-card.selected { border-color: #0e91e8; background: #e6f4ff; }
+  .service-card .sc-title { font-weight: bold; font-size: 0.88em; color: #1a3a5c; margin-bottom: 3px; line-height: 1.3; }
+  .service-card .sc-desc  { font-size: 0.78em; color: #4a6a8a; line-height: 1.4; }
+  .bb-accordion { margin: 8px 14px 0; border: 2px solid #c5b8f0; background: #f5f0ff; }
+  .bb-accordion.bb-open { border-color: #667eea; }
+  .bb-accordion-header { padding: 11px 14px; cursor: pointer; -webkit-box-sizing: border-box; box-sizing: border-box; }
+  .bb-accordion-header:after { content: ''; display: table; clear: both; }
+  .bb-accordion-header:hover { background: #ede8ff; }
+  .bb-acc-info { overflow: hidden; }
+  .bb-acc-arrow { float: right; color: #667eea; font-size: 0.8em; margin-top: 2px; }
+  .bb-acc-title { font-weight: bold; font-size: 0.88em; color: #3a2a7a; margin-bottom: 3px; line-height: 1.3; }
+  .bb-acc-desc  { font-size: 0.78em; color: #6a5aaa; line-height: 1.4; }
+  .bb-accordion-body { display: none; border-top: 2px solid #d5caff; padding: 16px 16px 18px; background: white; }
+  .bb-subtab-bar:after { content: ''; display: table; clear: both; }
+  .bb-subtab-bar { border-bottom: 2px solid #d0eaf9; margin-bottom: 16px; overflow: hidden; }
+  .bb-subtab { float: left; width: 50%; padding: 9px 14px; font-family: inherit; font-size: 0.86em; font-weight: bold; color: #4a6a8a; background: #f4faff; border: none; border-bottom: 3px solid transparent; cursor: pointer; -webkit-box-sizing: border-box; box-sizing: border-box; }
+  .bb-subtab:hover { color: #0e91e8; }
+  .bb-subtab.active { color: #0e60a0; border-bottom-color: #0e91e8; background: white; }
+  .bb-subtab-panel { display: none; }
+  .bb-subtab-panel.active { display: block; }
+  .modal-fb-row { margin: 8px 14px 0; background: #e8f4ff; border: 2px solid #b3d8f6; padding: 11px 14px; overflow: hidden; -webkit-box-sizing: border-box; box-sizing: border-box; }
   .mfb-btn-wrap { float: right; margin-left: 12px; }
   .mfb-info { overflow: hidden; }
-  .mfb-title { font-weight: bold; font-size: 0.88em; color: #70cbff; margin-bottom: 3px; line-height: 1.3; }
-  .mfb-desc  { font-size: 0.78em; color: #70cbff; line-height: 1.4; }
-  .mfb-btn { background: #70cbff; color: white !important; text-decoration: none; font-weight: bold; font-size: 0.82em; padding: 8px 16px; white-space: nowrap; border: 2px solid #70cbff; display: inline-block; }
+  .mfb-title { font-weight: bold; font-size: 0.88em; color: #1a3a5c; margin-bottom: 3px; line-height: 1.3; }
+  .mfb-desc  { font-size: 0.78em; color: #3a6a9a; line-height: 1.4; }
+  .mfb-btn { background: #1877f2; color: white !important; text-decoration: none; font-weight: bold; font-size: 0.82em; padding: 8px 16px; white-space: nowrap; border: 2px solid #1460c4; display: inline-block; }
   .mfb-btn:hover { opacity: 0.88; }
   .modal-form-area { padding: 8px 16px 24px; display: none; }
   .modal-form-area.visible { display: block; }
-  .modal-divider { border: none; border-top: 2px dashed #70cbff; margin: 16px 0 18px; }
-  .modal-form-area label { display: block; font-size: 0.83em; font-weight: bold; color: #70cbff; margin-bottom: 5px; }
-  .modal-form-area .req { color: #70cbff; margin-left: 2px; }
-  .modal-form-area .opt { color: #70cbff; font-weight: normal; font-size: 0.88em; margin-left: 4px; }
-  .modal-form-area .mfg { margin-bottom: 14px; }
+  .modal-divider { border: none; border-top: 2px dashed #d0eaf9; margin: 16px 0 18px; }
+  .modal-form-area label, .bb-accordion-body label { display: block; font-size: 0.83em; font-weight: bold; color: #1a3a5c; margin-bottom: 5px; }
+  .modal-form-area .req, .bb-accordion-body .req { color: #e74c3c; margin-left: 2px; }
+  .modal-form-area .opt, .bb-accordion-body .opt { color: #999; font-weight: normal; font-size: 0.88em; margin-left: 4px; }
+  .modal-form-area .mfg, .bb-accordion-body .mfg { margin-bottom: 14px; }
   .modal-form-area input[type="text"],
   .modal-form-area input[type="email"],
   .modal-form-area select,
   .modal-form-area textarea,
+  .bb-accordion-body input[type="text"],
+  .bb-accordion-body input[type="email"],
+  .bb-accordion-body select,
+  .bb-accordion-body textarea { width: 100%; padding: 9px 12px; border: 2px solid #cde5f6; font-family: inherit; font-size: 0.88em; color: #2c3e50; background: white; outline: none; -webkit-box-sizing: border-box; box-sizing: border-box; }
   .modal-form-area input:focus, .modal-form-area select:focus, .modal-form-area textarea:focus,
-  .modal-form-area textarea { min-height: 88px; resize: vertical; }
-  .modal-note { background: #fff8e1; border-left: 4px solid #ffc107; padding: 10px 14px; font-size: 0.82em; color: #70cbff; line-height: 1.55; margin-bottom: 16px; }
-  .modal-note strong { color: #70cbff; }
-  .btn-modal-submit { width: 100%; background: #70cbff; background: -webkit-linear-gradient(315deg,#70cbff 0%,#70cbff 100%); background: linear-gradient(135deg,#70cbff 0%,#70cbff 100%); color: white; border: none; padding: 13px 20px; font-family: inherit; font-size: 0.95em; font-weight: bold; cursor: pointer; margin-top: 6px; }
+  .bb-accordion-body input:focus, .bb-accordion-body select:focus, .bb-accordion-body textarea:focus { border-color: #0e91e8; }
+  .modal-form-area textarea, .bb-accordion-body textarea { min-height: 88px; resize: vertical; }
+  .modal-note { background: #e6f4ff; border-left: 4px solid #0e91e8; padding: 10px 14px; font-size: 0.82em; color: #1a3a5c; line-height: 1.55; margin-bottom: 16px; }
+  .modal-note strong { color: #0e60a0; }
+  .btn-modal-submit { width: 100%; background: #0e91e8; background: -webkit-linear-gradient(315deg,#0e91e8 0%,#1366a8 100%); background: linear-gradient(135deg,#0e91e8 0%,#1366a8 100%); color: white; border: none; padding: 13px 20px; font-family: inherit; font-size: 0.95em; font-weight: bold; cursor: pointer; margin-top: 6px; }
   .btn-modal-submit:hover { opacity: 0.88; }
   .btn-modal-submit:disabled { opacity: 0.6; cursor: not-allowed; }
-  .modal-success { display: none; background: #fff8e1; border-left: 5px solid #ffc107; padding: 14px 18px; font-size: 0.9em; color: #70cbff; margin-top: 14px; line-height: 1.5; }
-  .modal-back-btn { background: none; border: none; color: #70cbff; font-size: 0.83em; font-weight: bold; cursor: pointer; padding: 4px 0 0; display: block; text-decoration: underline; }
-  .modal-back-btn:hover { color: #70cbff; }
+  .modal-success { display: none; background: #eaf7ec; border-left: 5px solid #28a745; padding: 14px 18px; font-size: 0.9em; color: #155724; margin-top: 14px; line-height: 1.5; }
+  .modal-back-btn { background: none; border: none; color: #0e91e8; font-size: 0.83em; font-weight: bold; cursor: pointer; padding: 4px 0 0; display: block; text-decoration: underline; }
+  .modal-back-btn:hover { color: #1366a8; }
 
   /* ══ RESPONSIVE ══ */
   @media (max-width: 900px) {
@@ -239,6 +261,7 @@
       <a href="/Pages/Category/Games/Games.html">Games</a>
       <a href="/Pages/Category/Themes/Themes.html">Themes</a>
       <a href="/Pages/Category/Tips/Tips.html">Mẹo &amp; Thủ Thuật</a>
+      <a href="/Pages/Category/BlackBerry%2010/BlackBerry-10.html">BB10</a>
       <a href="/Pages/Blog/Blog.html">Tất Cả Bài Viết</a>
     </div>
   </nav>
@@ -258,102 +281,102 @@
         <h2 class="section-title">Tất Cả Bài Viết</h2>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#4fa3d1"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">ỨNG DỤNG</span><span class="tag" style="background:#70cbff;color:#70cbff">BBOS</span><span class="tag" style="background:#70cbff;color:#70cbff">YOUTUBE</span><span class="tag-date">27/07/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e1f5fe;color:#01579b">ỨNG DỤNG</span><span class="tag" style="background:#e0f7fa;color:#00838f">BBOS</span><span class="tag" style="background:#fff3e0;color:#e65100">YOUTUBE</span><span class="tag-date">27/07/2026</span></div>
             <h3><a href="/Pages/Youtube-BBOS.html">YouTube (Không Chính Thức) Cho BlackBerry OS 7 và 7.1</a></h3>
             <p>Client YouTube không chính thức từ Lodestar Networks, cài trực tiếp qua BlackBerry Browser bằng file JAD, giúp tìm kiếm và xem video ngay trên máy BBOS 7/7.1.</p>
-            <a href="/Pages/Youtube-BBOS.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/Youtube-BBOS.html" class="btn-read" style="background:#4fa3d1">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#17a2b8"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">ỨNG DỤNG</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">TELEGRAM</span><span class="tag-date">05/07/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e8f4f8;color:#17a2b8">ỨNG DỤNG</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#e1f5fe;color:#0288d1">TELEGRAM</span><span class="tag-date">05/07/2026</span></div>
             <h3><a href="/Pages/TBBX.html">TBBX - Telegram Native Cho BlackBerry 10</a></h3>
             <p>TBBX 1.0.0 chính thức ra mắt — ứng dụng Telegram native hoàn chỉnh nhất trên BlackBerry 10, bổ sung gọi thoại/video, tin nhắn thoại/video và hỗ trợ proxy SOCKS/MTProto.</p>
-            <a href="/Pages/TBBX.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/TBBX.html" class="btn-read" style="background:#17a2b8">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#17a2b8"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">ỨNG DỤNG</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag-date">02/07/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e8f4f8;color:#17a2b8">ỨNG DỤNG</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag-date">02/07/2026</span></div>
             <h3><a href="/Pages/BerryBrowser.html">Trình duyệt hiện đại Chromium đã được port tới BB10</a></h3>
             <p>BerryBrowser là trình duyệt Chromium lần đầu tiên được port sang BlackBerry 10 — mang trải nghiệm duyệt web hiện đại đến những chiếc máy huyền thoại này, hiện đang trong giai đoạn thử nghiệm sớm.</p>
-            <a href="/Pages/BerryBrowser.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/BerryBrowser.html" class="btn-read" style="background:#17a2b8">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#667eea"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">ỨNG DỤNG</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">TO-DO LIST</span><span class="tag" style="background:#70cbff;color:#70cbff">NATIVE APP</span><span class="tag-date">30/06/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e8eeff;color:#667eea">ỨNG DỤNG</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#f3e5f5;color:#7b1fa2">TO-DO LIST</span><span class="tag" style="background:#e8f5e9;color:#388e3c">NATIVE APP</span><span class="tag-date">30/06/2026</span></div>
             <h3><a href="/Pages/SmartList10.html">SmartList10 — Ứng dụng To-Do List Native cho BlackBerry 10</a></h3>
             <p>Ứng dụng quản lý công việc To-Do List viết hoàn toàn bằng Cascades, chạy native trên BlackBerry 10. Hỗ trợ thêm, sửa, xóa và đánh dấu hoàn thành nhiệm vụ ngay trên thiết bị BB10 của bạn.</p>
-            <a href="/Pages/SmartList10.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/SmartList10.html" class="btn-read" style="background:#667eea">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#667eea"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">ỨNG DỤNG</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag-date">24/06/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e8eeff;color:#667eea">ỨNG DỤNG</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag-date">24/06/2026</span></div>
             <h3><a href="/Pages/Bar-Installer.html">Bar Installer – Cài Đặt File .BAR Trực Tiếp Trên BB10</a></h3>
             <p>Cài đặt file .bar ngay trên thiết bị BB10 mà không cần máy tính. Bản 0.8 vừa cập nhật hỗ trợ thêm ROM Pre-root.</p>
-            <a href="/Pages/Bar-Installer.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/Bar-Installer.html" class="btn-read" style="background:#667eea">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#17a2b8"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">ỨNG DỤNG</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">ZALO</span><span class="tag" style="background:#70cbff;color:#70cbff">NATIVE APP</span><span class="tag-date">22/06/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e8f4f8;color:#17a2b8">ỨNG DỤNG</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#e8f5e9;color:#2e7d32">ZALO</span><span class="tag" style="background:#e8f5e9;color:#388e3c">NATIVE APP</span><span class="tag-date">22/06/2026</span></div>
             <h3><a href="/Pages/Zalo10.html">Zalo10 — Ứng dụng Zalo Native cho BlackBerry 10</a></h3>
             <p>Zalo10 là ứng dụng khách Zalo không chính thức được xây dựng hoàn toàn bằng Cascades, mang lại trải nghiệm chat native mượt mà với hỗ trợ đăng nhập QR, nhắn tin 1-1 và nhóm, emoji, gửi ảnh và thông báo qua BlackBerry Hub.</p>
-            <a href="/Pages/Zalo10.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/Zalo10.html" class="btn-read" style="background:#17a2b8">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#667eea"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">ỨNG DỤNG</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">DISCORD</span><span class="tag-date">20/06/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e8eeff;color:#667eea">ỨNG DỤNG</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">DISCORD</span><span class="tag-date">20/06/2026</span></div>
             <h3><a href="/Pages/BBCord.html">BBCord — Ứng dụng Discord Native cho BlackBerry 10</a></h3>
             <p>BBCord là ứng dụng khách (client) không chính thức dành cho mạng xã hội Discord, được xây dựng hoàn toàn bằng Cascades (Native C++/QML), mang lại trải nghiệm native mượt mà.</p>
-            <a href="/Pages/BBCord.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/BBCord.html" class="btn-read" style="background:#667eea">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#4fa3d1"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">ỨNG DỤNG</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">YOUTUBE</span><span class="tag" style="background:#70cbff;color:#70cbff">PREVIEW</span><span class="tag-date">01/06/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e8f4f8;color:#17a2b8">ỨNG DỤNG</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#fff3e0;color:#e65100">YOUTUBE</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">PREVIEW</span><span class="tag-date">01/06/2026</span></div>
             <h3><a href="/Pages/NativeYT-Preview.html">Ứng dụng YouTube Native cho BB10 (Preview)</a></h3>
             <p>Một client YouTube viết hoàn toàn bằng Cascades, chạy native trên BlackBerry 10 — đã hỗ trợ duyệt kênh, xem danh sách video, tải xuống và phát video trực tiếp. Preview sớm nhất tính đến 19/05/2026.</p>
-            <a href="/Pages/NativeYT-Preview.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/NativeYT-Preview.html" class="btn-read" style="background:#4fa3d1">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#ff5722"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">ROOT</span><span class="tag" style="background:#70cbff;color:#70cbff">ROM</span><span class="tag-date">28/05/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#fce4ec;color:#c62828">ROOT</span><span class="tag" style="background:#e8f5e9;color:#2e7d32">ROM</span><span class="tag-date">28/05/2026</span></div>
             <h3><a href="/Pages/Preroot-Autoloadersv2.html">Pre-rooted Autoloaders V2 – Firmware Đã Được Root Sẵn Cho BlackBerry 10</a></h3>
             <p>Bộ sưu tập Autoloaders V2 cho BB10 tích hợp sẵn root, Term49, mod_nvram và tự động sao lưu, sửa lỗi cài đặt APK.</p>
-            <a href="/Pages/Preroot-Autoloadersv2.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/Preroot-Autoloadersv2.html" class="btn-read" style="background:#ff5722">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#388e3c"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">DEVELOPMENT</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">MOMENTICS IDE</span><span class="tag" style="background:#70cbff;color:#70cbff">NATIVE APP</span><span class="tag-date">16/05/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e8f5e9;color:#388e3c">DEVELOPMENT</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#fce4ec;color:#c2185b">MOMENTICS IDE</span><span class="tag" style="background:#f3e5f5;color:#7b1fa2">NATIVE APP</span><span class="tag-date">16/05/2026</span></div>
             <h3><a href="/Pages/Debug-Token.html">Momentics IDE Mods – Debug &amp; Deploy Unsigned Native Apps cho BB10</a></h3>
             <p>Các plugin Momentics IDE đã được mod để bypass yêu cầu BBID và Debug Token — kết nối thiết bị BB10 thật, deploy và debug ứng dụng native không cần Debug Token.</p>
-            <a href="/Pages/Debug-Token.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/Debug-Token.html" class="btn-read" style="background:#388e3c">Đọc thêm &#8594;</a>
           </div>
         </div>
 
@@ -371,102 +394,102 @@
         <h2 class="section-title">Tất Cả Bài Viết</h2>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#4fa3d1"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">HƯỚNG DẪN</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">PLAYBOOK</span><span class="tag-date">04/05/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e1f5fe;color:#01579b">HƯỚNG DẪN</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#fce4ec;color:#c2185b">PLAYBOOK</span><span class="tag-date">04/05/2026</span></div>
             <h3><a href="/Pages/Bypass-Setup-QNX.html">Hạ Cấp BlackBerry 10 Xuống Bản Thấp Hơn 10.3.0 Và Vượt Initial Setup Cho PlayBook / Làm Debloated ROM 10.3.0 Trở Xuống</a></h3>
             <p>Hướng dẫn vá firmware để bỏ qua màn hình cài đặt ban đầu (initial setup) trên BB10 và PlayBook sau khi factory reset, đồng thời áp dụng cho hạ cấp OS xuống thấp hơn 10.3.0 và làm debloated ROM.</p>
-            <a href="/Pages/Bypass-Setup-QNX.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/Bypass-Setup-QNX.html" class="btn-read" style="background:#4fa3d1">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#17a2b8"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">ỨNG DỤNG</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag-date">23/04/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e8f4f8;color:#17a2b8">ỨNG DỤNG</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag-date">23/04/2026</span></div>
             <h3><a href="/Pages/BerryBus.html">BerryBus – Ứng dụng tra cứu xe buýt Hà Nội Native cho BB10</a></h3>
             <p>Ứng dụng tra cứu tuyến xe buýt Hà Nội được xây dựng native cho BlackBerry 10.</p>
-            <a href="/Pages/BerryBus.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/BerryBus.html" class="btn-read" style="background:#17a2b8">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#ff5722"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">TOOLS</span><span class="tag-date">06/04/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">TOOLS</span><span class="tag-date">06/04/2026</span></div>
             <h3><a href="/Pages/BB10-Tools-10.html">BlackBerry 10 Tools – Cập Nhật Thứ 10</a></h3>
             <p>BlackBerry 10 Tools cập nhật lần thứ 10 với nhiều tính năng mới.</p>
-            <a href="/Pages/BB10-Tools-10.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/BB10-Tools-10.html" class="btn-read" style="background:#ff5722">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#4fa3d1"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">HƯỚNG DẪN</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">PHÁT TRIỂN</span><span class="tag-date">01/03/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e1f5fe;color:#01579b">HƯỚNG DẪN</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">PHÁT TRIỂN</span><span class="tag-date">01/03/2026</span></div>
             <h3><a href="/Pages/BB10-Development.html">Phát Triển Ứng Dụng BlackBerry 10 Trong Năm 2026</a></h3>
             <p>Hướng dẫn đầy đủ thiết lập môi trường phát triển BB10: Momentics IDE, API level files, Simulator.</p>
-            <a href="/Pages/BB10-Development.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/BB10-Development.html" class="btn-read" style="background:#4fa3d1">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#4fa3d1"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">HƯỚNG DẪN</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">BBID</span><span class="tag-date">22/02/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e1f5fe;color:#01579b">HƯỚNG DẪN</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">BBID</span><span class="tag-date">22/02/2026</span></div>
             <h3><a href="/Pages/BBID-Patch.html">Hướng Dẫn Duy Trì Patch &amp; Xóa Thông Báo BBID trên BB10</a></h3>
             <p>Cách duy trì patch getroot và xóa thông báo BBID sau mỗi lần khởi động BB10.</p>
-            <a href="/Pages/BBID-Patch.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/BBID-Patch.html" class="btn-read" style="background:#4fa3d1">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#ff5722"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">UNSIGNED</span><span class="tag-date">15/02/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">UNSIGNED</span><span class="tag-date">15/02/2026</span></div>
             <h3><a href="/Pages/Unsigned-Bars.html">Unsigned Apps Chạy Trên BlackBerry 10!</a></h3>
             <p>Unsigned bars giờ đây có thể chạy trực tiếp trên BlackBerry 10 mà không cần PC!</p>
-            <a href="/Pages/Unsigned-Bars.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/Unsigned-Bars.html" class="btn-read" style="background:#ff5722">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#4fa3d1"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">HƯỚNG DẪN</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">ROOT</span><span class="tag-date">11/02/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e1f5fe;color:#01579b">HƯỚNG DẪN</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">ROOT</span><span class="tag-date">11/02/2026</span></div>
             <h3><a href="/Pages/BB10-Tools-8.html">Hướng Dẫn Root và Cài Đặt Unsigned Bars trên BlackBerry 10</a></h3>
             <p>Hướng dẫn chi tiết root BB10 và cài đặt unsigned bars bằng BlackBerry 10 Tools.</p>
-            <a href="/Pages/BB10-Tools-8.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/BB10-Tools-8.html" class="btn-read" style="background:#4fa3d1">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#4caf50"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">GAMES</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">NATIVE</span><span class="tag-date">09/02/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e8f5e9;color:#2e7d32">GAMES</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">NATIVE</span><span class="tag-date">09/02/2026</span></div>
             <h3><a href="/Pages/BB10-Games.html">10 Games Native Dành Cho BB10</a></h3>
             <p>10 game native chất lượng cao được tuyển chọn dành riêng cho BlackBerry 10.</p>
-            <a href="/Pages/BB10-Games.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/BB10-Games.html" class="btn-read" style="background:#4caf50">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#ff5722"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">ROOT</span><span class="tag-date">05/02/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">ROOT</span><span class="tag-date">05/02/2026</span></div>
             <h3><a href="/Pages/BB10-Root.html">Đột Phá Lịch Sử: BlackBerry 10 Chính Thức Được Root!</a></h3>
             <p>Lần đầu tiên trong lịch sử, BlackBerry 10 chính thức được root thành công!</p>
-            <a href="/Pages/BB10-Root.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/BB10-Root.html" class="btn-read" style="background:#ff5722">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#00bcd4"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">WEATHER</span><span class="tag-date">04/02/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">WEATHER</span><span class="tag-date">04/02/2026</span></div>
             <h3><a href="/Pages/Weather.html">WaitBerry Weather Đổi Giao Diện Mới - Đẹp Hơn, Mượt Hơn!</a></h3>
             <p>WaitBerry Weather ra mắt giao diện mới đẹp mắt và mượt mà hơn cho BB10.</p>
-            <a href="/Pages/Weather.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/Weather.html" class="btn-read" style="background:#00bcd4">Đọc thêm &#8594;</a>
           </div>
         </div>
 
@@ -484,82 +507,82 @@
         <h2 class="section-title">Tất Cả Bài Viết</h2>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#ff5722"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">REDDIT</span><span class="tag-date">30/01/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">REDDIT</span><span class="tag-date">30/01/2026</span></div>
             <h3><a href="/Pages/Reddit.html">Waitberry Reddit Chính Thức Ra Mắt</a></h3>
             <p>Nhà phát triển Ferreira Pablo đang xây dựng webapp Reddit dành riêng cho BB10.</p>
-            <a href="/Pages/Reddit.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/Reddit.html" class="btn-read" style="background:#ff5722">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#4fa3d1"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">HƯỚNG DẪN</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">BLEND</span><span class="tag-date">29/01/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e1f5fe;color:#01579b">HƯỚNG DẪN</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">BLEND</span><span class="tag-date">29/01/2026</span></div>
             <h3><a href="/Pages/BB10-Blend.html">Cách Kết Nối BlackBerry 10 Với PC Qua BlackBerry Blend Không Dây</a></h3>
             <p>Hướng dẫn thiết lập kết nối không dây cho BlackBerry Blend — không cần cắm cáp USB.</p>
-            <a href="/Pages/BB10-Blend.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/BB10-Blend.html" class="btn-read" style="background:#4fa3d1">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#667eea"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">ỨNG DỤNG</span><span class="tag" style="background:#70cbff;color:#70cbff">BBOS 7</span><span class="tag" style="background:#70cbff;color:#70cbff">S60TUBE</span><span class="tag-date">27/01/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e8eeff;color:#667eea">ỨNG DỤNG</span><span class="tag" style="background:#e0f7fa;color:#00838f">BBOS 7</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">S60TUBE</span><span class="tag-date">27/01/2026</span></div>
             <h3><a href="/Pages/S60Tube.html">S60Tube – Giải Pháp Thay Thế Cho Jtube Trên BBOS 7</a></h3>
             <p>S60Tube: giao diện web nhẹ, tối ưu cho trình duyệt đời cũ, xem YouTube mượt trên BBOS 7.</p>
-            <a href="/Pages/S60Tube.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/S60Tube.html" class="btn-read" style="background:#667eea">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#9c27b0"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">ỨNG DỤNG</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">NATIVE</span><span class="tag-date">25/01/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#f3e5f5;color:#9c27b0">ỨNG DỤNG</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">NATIVE</span><span class="tag-date">25/01/2026</span></div>
             <h3><a href="/Pages/BB10-Apps.html">11 Ứng Dụng Hữu Ích Dành Cho BB10</a></h3>
             <p>Khám phá 11 ứng dụng thiết yếu cho BB10: từ công cụ năng suất đến giải trí.</p>
-            <a href="/Pages/BB10-Apps.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/BB10-Apps.html" class="btn-read" style="background:#9c27b0">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#4caf50"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">GAMES</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY OS 7</span><span class="tag-date">22/01/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e8f5e9;color:#2e7d32">GAMES</span><span class="tag" style="background:#e0f7fa;color:#00838f">BLACKBERRY OS 7</span><span class="tag-date">22/01/2026</span></div>
             <h3><a href="/Pages/99xx-Games.html">22 Games Thú Vị Dành Cho BlackBerry 99xx</a></h3>
             <p>22 game thú vị được tuyển chọn dành riêng cho dòng BlackBerry 99xx.</p>
-            <a href="/Pages/99xx-Games.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/99xx-Games.html" class="btn-read" style="background:#4caf50">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#e91e63"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">THEMES</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY OS 6</span><span class="tag-date">17/01/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#fce4ec;color:#c2185b">THEMES</span><span class="tag" style="background:#e1f5fe;color:#006064">BLACKBERRY OS 6</span><span class="tag-date">17/01/2026</span></div>
             <h3><a href="/Pages/97xx-Themes.html">Tổng Hợp 33 Themes Cho BlackBerry 9780 - 9700 (OS 6)</a></h3>
             <p>Bộ sưu tập 33 themes đa dạng cho BB Bold 9780, 9700 và các dòng OS 6.</p>
-            <a href="/Pages/97xx-Themes.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/97xx-Themes.html" class="btn-read" style="background:#e91e63">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#7b1fa2"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">HƯỚNG DẪN</span><span class="tag" style="background:#70cbff;color:#70cbff">BBOS</span><span class="tag" style="background:#70cbff;color:#70cbff">UNLOCK</span><span class="tag-date">16/01/2026</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#f3e5f5;color:#7b1fa2">HƯỚNG DẪN</span><span class="tag" style="background:#e0f7fa;color:#00838f">BBOS</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">UNLOCK</span><span class="tag-date">16/01/2026</span></div>
             <h3><a href="/Pages/MEP-Code.html">Hướng Dẫn Unlock MEP Code Cho BBOS</a></h3>
             <p>Unlock mã MEP để mở khóa mạng cho BlackBerry OS 7.1 và cũ hơn. 2 phương pháp chi tiết.</p>
-            <a href="/Pages/MEP-Code.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/MEP-Code.html" class="btn-read" style="background:#7b1fa2">Đọc thêm &#8594;</a>
           </div>
         </div>
 
         <div class="blog-card">
-          <div class="blog-accent" style="background:#70cbff"></div>
+          <div class="blog-accent" style="background:#4fa3d1"></div>
           <div class="blog-body">
-            <div class="blog-tags"><span class="tag" style="background:#70cbff;color:#70cbff">HƯỚNG DẪN</span><span class="tag" style="background:#70cbff;color:#70cbff">BLACKBERRY 10</span><span class="tag" style="background:#70cbff;color:#70cbff">BERRYCORE</span><span class="tag-date">28/12/2025</span></div>
+            <div class="blog-tags"><span class="tag" style="background:#e3f2fd;color:#1976d2">HƯỚNG DẪN</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">BERRYCORE</span><span class="tag-date">28/12/2025</span></div>
             <h3><a href="/Pages/BerryCore.html">Hướng Dẫn Cài Đặt &amp; Sử Dụng BerryCore Trên BB10</a></h3>
             <p>Hướng dẫn cài đặt BerryCore trên BB10 dùng Term49, BGShell để mở rộng khả năng thiết bị.</p>
-            <a href="/Pages/BerryCore.html" class="btn-read" style="background:#70cbff">Đọc thêm &#8594;</a>
+            <a href="/Pages/BerryCore.html" class="btn-read" style="background:#4fa3d1">Đọc thêm &#8594;</a>
           </div>
         </div>
 
@@ -607,7 +630,44 @@
           <div class="sc-desc">Nhờ tạo Debloated / ROM Root bằng BB10 Tools thay bạn</div>
         </div></div>
       </div></div>
-      
+      <div class="bb-accordion" id="bb-accordion">
+        <div class="bb-accordion-header" onclick="toggleBerryBus()">
+          <span class="bb-acc-arrow" id="bb-arrow">&#9660;</span>
+          <div class="bb-acc-info">
+            <div class="bb-acc-title">Đóng Góp Dữ Liệu BerryBus</div>
+            <div class="bb-acc-desc">Bổ quyến xe buýt hoặc địa điểm cho ứng dụng BB10</div>
+          </div>
+        </div>
+        <div class="bb-accordion-body" id="bb-body">
+          <div class="bb-subtab-bar">
+            <button class="bb-subtab active" id="bbtab-route-btn" onclick="switchBBTab('route')">Tuyến Xe</button>
+            <button class="bb-subtab" id="bbtab-place-btn" onclick="switchBBTab('place')">Địa Điểm</button>
+          </div>
+          <div id="bbtab-route" class="bb-subtab-panel active">
+            <form id="form-berrybus-route" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-route')">
+              <input type="hidden" name="_subject" value="[BerryBus] Đóng góp tuyến xe">
+              <div class="mfg"><label>Số / Tên tuyến <span class="req">*</span></label><input type="text" name="so_tuyen" placeholder="Ví dụ: 01, 150..." required></div>
+              <div class="mfg"><label>Điểm đầu <span class="req">*</span></label><input type="text" name="diem_dau" placeholder="Tên bến/trạm đầu" required></div>
+              <div class="mfg"><label>Điểm cuối <span class="req">*</span></label><input type="text" name="diem_cuoi" placeholder="Tên bến/trạm cuối" required></div>
+              <div class="mfg"><label>Khu vực <span class="req">*</span></label><input type="text" name="khu_vuc" placeholder="Ví dụ: Hà Nội..." required></div>
+              <div class="mfg"><label>Email <span class="opt">(tùy chọn)</span></label><input type="email" name="email" placeholder="email@example.com"></div>
+              <button type="submit" class="btn-modal-submit" id="btn-berrybus-route">Gửi Đóng Góp</button>
+              <div id="success-berrybus-route" class="modal-success"><strong>Cảm ơn!</strong> Đã nhận đóng góp tuyến xe.</div>
+            </form>
+          </div>
+          <div id="bbtab-place" class="bb-subtab-panel">
+            <form id="form-berrybus-place" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'berrybus-place')">
+              <input type="hidden" name="_subject" value="[BerryBus] Đóng góp địa điểm">
+              <div class="mfg"><label>Tên địa điểm <span class="req">*</span></label><input type="text" name="ten_dia_diem" placeholder="Tên địa điểm" required></div>
+              <div class="mfg"><label>Địa chỉ <span class="req">*</span></label><input type="text" name="dia_chi" placeholder="Địa chỉ đầy đủ" required></div>
+              <div class="mfg"><label>Khu vực <span class="req">*</span></label><input type="text" name="khu_vuc" placeholder="Hà Nội, TP. HCM..." required></div>
+              <div class="mfg"><label>Email <span class="opt">(tùy chọn)</span></label><input type="email" name="email" placeholder="email@example.com"></div>
+              <button type="submit" class="btn-modal-submit" id="btn-berrybus-place">Gửi Đóng Góp</button>
+              <div id="success-berrybus-place" class="modal-success"><strong>Cảm ơn!</strong> Đã nhận đóng góp địa điểm.</div>
+            </form>
+          </div>
+        </div>
+      </div>
       <div class="modal-fb-row">
         <div class="mfb-btn-wrap"><a href="https://www.facebook.com/BBerryLife/" target="_blank" class="mfb-btn">Nhắn Tin</a></div>
         <div class="mfb-info">
@@ -615,7 +675,7 @@
           <div class="mfb-desc">Cần chỉ bảo vài bước nhỏ hoặc sửa lỗi nhanh? Nhắn tin trực tiếp!</div>
         </div>
       </div>
-      <div style="padding:8px 26px 20px;text-align:center;color:#70cbff;font-size:.82em">Chọn dịch vụ bạn cần để tiếp tục</div>
+      <div style="padding:8px 26px 20px;text-align:center;color:#4a6a8a;font-size:.82em">Chọn dịch vụ bạn cần để tiếp tục</div>
     </div>
     <div class="modal-form-area" id="step-form">
       <hr class="modal-divider">
@@ -722,6 +782,27 @@ function resetToStep1() {
     var fw = byId('form-wrap-' + fmts[j]); if (fw) fw.style.display = 'none';
     var sc = byId('success-' + fmts[j]); if (sc) sc.style.display = 'none';
   }
+}
+
+/* BerryBus accordion */
+var bbOpen = false;
+function toggleBerryBus() {
+  bbOpen = !bbOpen;
+  var body = byId('bb-body'), arrow = byId('bb-arrow'), acc = byId('bb-accordion');
+  if (body) body.style.display = bbOpen ? 'block' : 'none';
+  if (arrow) arrow.innerHTML = bbOpen ? '&#9650;' : '&#9660;';
+  if (acc) { if (bbOpen) addClass(acc, 'bb-open'); else removeClass(acc, 'bb-open'); }
+}
+function switchBBTab(tab) {
+  var tabs = ['route', 'place'];
+  for (var i = 0; i < tabs.length; i++) {
+    var btn = byId('bbtab-' + tabs[i] + '-btn');
+    var panel = byId('bbtab-' + tabs[i]);
+    if (btn) removeClass(btn, 'active');
+    if (panel) removeClass(panel, 'active');
+  }
+  addClass(byId('bbtab-' + tab + '-btn'), 'active');
+  addClass(byId('bbtab-' + tab), 'active');
 }
 
 /* Form submit — XHR */

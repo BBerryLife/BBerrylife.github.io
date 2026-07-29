@@ -108,6 +108,36 @@ function resetToStep1() {
   }
 }
 
+/* ── BerryBus accordion ── */
+var bbOpen = false;
+function toggleBerryBus() {
+  bbOpen = !bbOpen;
+  var body  = byId('bb-body');
+  var arrow = byId('bb-arrow');
+  var acc   = byId('bb-accordion');
+  if (body)  body.style.display = bbOpen ? 'block' : 'none';
+  if (arrow) arrow.innerHTML    = bbOpen ? '&#9650;' : '&#9660;';
+  if (acc) {
+    if (bbOpen) addClass(acc, 'bb-open');
+    else        removeClass(acc, 'bb-open');
+  }
+}
+
+/* ── BerryBus sub-tabs ── */
+function switchBBTab(tab) {
+  var tabs = ['route', 'stop', 'place'];
+  for (var i = 0; i < tabs.length; i++) {
+    var btn   = byId('bbtab-' + tabs[i] + '-btn');
+    var panel = byId('bbtab-' + tabs[i]);
+    if (btn)   removeClass(btn,   'active');
+    if (panel) removeClass(panel, 'active');
+  }
+  var activeBtn   = byId('bbtab-' + tab + '-btn');
+  var activePanel = byId('bbtab-' + tab);
+  if (activeBtn)   addClass(activeBtn,   'active');
+  if (activePanel) addClass(activePanel, 'active');
+}
+
 /* ── Form submit via XHR (IE / BB10 compatible) ── */
 function handleModalSubmit(e, formId) {
   if (e.preventDefault) e.preventDefault();
