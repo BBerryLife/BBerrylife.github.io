@@ -1,7 +1,25 @@
 {
-  "latestVersion": "1.2.0.0",
-  "downloadUrl": "https://github.com/BBerryLife/BBerryLife.github.io/raw/main/Downloads/Zalo10-1_2_0_0.bar",
+  "latestVersion": "1.3.0.0",
+  "downloadUrl": "https://github.com/BBerryLife/BBerryLife.github.io/raw/main/Downloads/Zalo10-1_3_0_0.bar",
   "changelog": [
+    {
+      "version": "1.3.0",
+      "items": [
+        "NEW: Small strip under each bubble showing whether it's your message or theirs",
+        "NEW: **Pinboard bar** showing pinned messages, plus board activity notifications (pins/note/poll created...)",
+        "NEW: **Forward** messages to another conversation via the new Forward Picker",
+        "NEW: **Copy & Share** messages — copy message text or share it out to other BB10 apps",
+        "NEW: **Reactions** — react to messages right in the chat with the new Reaction Picker",
+        "NEW: Create a calendar event from a message (\"Create today's event\")",
+        "NEW: Redesigned app icon (all sizes: 86/90/96/110/default)",
+        "IMPROVE: Chat bubbles are now split individually instead of being merged into one large bubble",
+        "IMPROVE: Photo messages always stand alone in their own bubble, no longer merged into a large text bubble",
+        "IMPROVE: Various other small interface fixes",
+        "FIX: Not receiving new incoming text messages (real-time WebSocket sync issue in certain cases)",
+        "FIX: Several crashes and QML issues introduced during development (About Sheet, Chat View, Groups Tab...)",
+        "FIX: Images disappearing after logging out and logging back in"
+      ]
+    },
     {
       "version": "1.2.0",
       "items": [
