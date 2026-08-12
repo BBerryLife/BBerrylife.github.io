@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="/icon.png">
+<title>BBHealth — Ứng dụng theo dõi sức khỏe Native cho BlackBerry 10</title>
+<link rel="stylesheet" href="/Pages/src/berrylife.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand"><a href="/index.html"><h1>BerryLife</h1><p>Everything for BlackBerry Users</p></a></div>
+    <div class="header-follow"><a href="https://www.facebook.com/BBerryLife/" target="_blank">Theo Dõi Facebook</a></div>
+  </div>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="/index.html">Trang Chủ</a>
+      <a href="/Pages/Category/Tutorials/Tutorials.html">Hướng Dẫn</a>
+      <a href="/Pages/Category/Apps/Apps.html">Ứng Dụng</a>
+      <a href="/Pages/Category/Games/Games.html">Games</a>
+      <a href="/Pages/Category/Themes/Themes.html">Themes</a>
+      <a href="/Pages/Category/Tips/Tips.html">Mẹo &amp; Thủ Thuật</a>
+      <a href="/Pages/Category/BlackBerry%2010/BlackBerry-10.html">BB10</a>
+      <a href="/Pages/Blog/Blog.html">Tất Cả Bài Viết</a>
+    </div>
+  </nav>
+</header>
+
+<div class="site-wrapper">
+  <main>
+    <article class="article-wrap">
+
+      <div class="cover-img-wrap" id="coverImgWrap">
+        <img class="cover-img" src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BBHealth/IMG_20260801_152624.png" alt="BBHealth Cover">
+      </div>
+
+      <div class="article-header">
+        <div class="article-meta">
+          <span class="tag" style="background:#e8f4f8;color:#17a2b8">ỨNG DỤNG</span>
+          <span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span>
+          <span class="tag" style="background:#e8f5e9;color:#2e7d32">SỨC KHỎE</span>
+        </div>
+        <h1>BBHealth — Ứng dụng theo dõi sức khỏe Native cho BlackBerry 10</h1>
+        <div class="article-date">Cập nhật lần cuối: 12/08/2026</div>
+      </div>
+
+      <div class="article-body">
+
+<div class="note note-success">
+  <strong>BBHealth v1.1.0.x đã ra mắt!</strong> Ứng dụng theo dõi sức khỏe được viết hoàn toàn bằng Cascades, gom bước chân, cân nặng và giấc ngủ vào một nơi duy nhất — dành riêng cho BlackBerry 10.
+</div>
+
+<h2 id="tai-xuong">Tải xuống</h2>
+<p>BBHealth hoàn toàn miễn phí. Nhấn nút bên dưới để tải file <code>.bar</code> phiên bản mới nhất (1.1.0.18):</p>
+<p>Link dành cho thiết bị BB10 (tải trực tiếp)</p>
+<a class="btn-inline btn-primary" href="https://github.com/BBerryLife/BBerrylife.github.io/raw/main/Downloads/BBHealth_1_1_0_18.bar">Tải BBHealth</a>
+<p>Link dành cho các thiết bị hiện đại (Google Drive)</p>
+<a class="btn-inline btn-primary" href="https://drive.google.com/drive/folders/1v3-Lo9NjbwUs3z6TKgygQUbOzp8H4M0L?usp=drive_link">Tải BBHealth - Google Drive</a>
+
+<div class="toc">
+  <div class="toc-title">&#9656; Nội dung bài viết</div>
+  <ol>
+    <li><a href="#gioi-thieu">Giới thiệu — BBHealth là gì?</a></li>
+    <li><a href="#tinh-nang">Tính năng chính</a></li>
+    <li><a href="#cai-dat">Hướng dẫn cài đặt</a></li>
+    <li><a href="#luu-y">Lưu ý</a></li>
+  </ol>
+</div>
+
+<h2 id="gioi-thieu">BBHealth là gì?</h2>
+<p>BBHealth là ứng dụng theo dõi sức khỏe được phát triển bởi <strong>Mikhail Chackouski</strong> (GitHub: <a href="https://github.com/doctorrockter" target="_blank"><strong>doctorrockter</strong></a>) — cùng tác giả với <a href="/Pages/BBWeather.html"><strong>BBWeather</strong></a>. Viết hoàn toàn bằng <strong>Cascades</strong>, ứng dụng mang đến trải nghiệm native mượt mà thay vì các bản port Android nặng nề. Sau khi thiết lập ngôn ngữ và thông tin cá nhân (ngày sinh) ban đầu, ứng dụng sẽ gom toàn bộ chỉ số quan trọng — số bước chân, cân nặng, BMI và giấc ngủ — vào một màn hình tổng quan duy nhất.</p>
+
+<h2 id="tinh-nang">Tính năng chính</h2>
+<ul>
+  <li><strong>Theo dõi bước chân:</strong> Đếm số bước đi trong ngày với vòng tiến trình trực quan, tự đặt mục tiêu (mặc định 8.000 bước/ngày), hiển thị quãng đường (km) và lượng calo tiêu thụ ước tính.</li>
+  <li><strong>Activity Rings:</strong> Ba vòng hoạt động Move / Steps / Active theo phong cách vòng tròn quen thuộc, giúp nhìn nhanh tiến độ vận động trong ngày.</li>
+  <li><strong>Theo dõi cân nặng &amp; BMI:</strong> Ghi lại cân nặng theo thời gian, ứng dụng tự tính chỉ số BMI dựa trên chiều cao và ngày sinh đã thiết lập.</li>
+  <li><strong>Nhật ký giấc ngủ:</strong> Ghi số giờ/phút ngủ mỗi đêm, xem lại theo từng ngày qua nút điều hướng Today / Back / Next.</li>
+  <li><strong>Active Frame riêng cho Steps:</strong> Thu nhỏ app xuống Active Frame vẫn thấy ngay vòng tiến trình số bước chân, không cần mở lại ứng dụng.</li>
+  <li><strong>Đa ngôn ngữ:</strong> Hỗ trợ tiếng Anh và tiếng Nga ngay từ màn hình thiết lập ban đầu.</li>
+</ul>
+
+<p>Hình ảnh thực tế từ BBHealth:</p>
+<div class="image-gallery">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BBHealth/IMG_20260801_152624.png" alt="BBHealth - Màn hình thiết lập ngôn ngữ">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BBHealth/IMG_20260801_152630.png" alt="BBHealth - Thiết lập ngày sinh">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BBHealth/IMG_20260801_152736.png" alt="BBHealth - Màn hình tổng quan Steps, Activity, Weight, Sleep">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BBHealth/IMG_20260801_152751.png" alt="BBHealth - Ghi nhật ký giấc ngủ">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BBHealth/IMG_20260801_152809.png" alt="BBHealth - Chi tiết theo dõi bước chân">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BBHealth/IMG_20260801_152927.png" alt="BBHealth - Active Frame trên màn hình chính BB10">
+</div>
+
+<h2 id="cai-dat">Hướng dẫn cài đặt</h2>
+<p>BBHealth là ứng dụng <strong>unsigned</strong>, vì vậy thiết bị của bạn cần được <strong>root</strong> để cài đặt.</p>
+<ol>
+  <li>Đảm bảo thiết bị BB10 của bạn đã được root thông qua <strong>BB10 Tools</strong> hoặc tải bộ Autoloader root sẵn: <strong><a href="https://drive.google.com/drive/folders/1rNnJdwrTGOTqKaKUdnirx_5cn_RLtF4R?usp=drive_link">Link</a></strong></li>
+  <li>Tải file <code>.bar</code> về máy tính.</li>
+  <li>Dùng <strong>DBBT</strong> hoặc <strong>Bar Installer</strong> để sideload file <code>.bar</code> vào máy.</li>
+  <li>Mở ứng dụng BBHealth từ màn hình chính, chọn ngôn ngữ và nhập thông tin cá nhân để bắt đầu.</li>
+</ol>
+<div class="note note-yellow">
+  <strong>Chưa root?</strong> Nếu thiết bị của bạn chưa root, hãy xem bài hướng dẫn root BB10 bằng BB10 Tools trên trang của chúng tôi, hoặc liên hệ qua Facebook để được hỗ trợ trực tiếp.
+</div>
+
+<h2 id="luu-y">Lưu ý</h2>
+<ul>
+  <li><strong>Yêu cầu:</strong> BlackBerry 10.3.x trở lên (khuyến nghị 10.3.3). Thiết bị cần đã root.</li>
+  <li><strong>Dữ liệu:</strong> Toàn bộ dữ liệu (bước chân, cân nặng, giấc ngủ) được lưu cục bộ trên máy, không gửi lên bất kỳ server nào.</li>
+  <li><strong>Cảm biến:</strong> Độ chính xác của số bước chân phụ thuộc vào cảm biến accelerometer của từng dòng máy BB10.</li>
+</ul>
+
+      </div>
+
+      <div class="article-footer">
+        <a href="/index.html" class="btn-outline">&#8592; Về Trang Chủ</a>
+        <a href="/Pages/Blog/Blog.html" class="btn-solid">Xem Thêm Bài Viết &#8594;</a>
+      </div>
+
+    </article>
+  </main>
+
+  <aside class="sidebar">
+<!-- ═══════════════════════════════════════════════════════════════
+     SIDEBAR — Nguồn dùng chung cho toàn bộ trang BBerryLife
+     Đừng copy/paste block này thủ công vào từng trang nữa!
+     File này được berrylife.js tự động fetch + chèn vào <aside class="sidebar">.
+     Muốn sửa sidebar (danh mục, follow box...) -> chỉ sửa ở đây.
+     ═══════════════════════════════════════════════════════════════ -->
+
+<style>
+.follow-box { margin-bottom: 22px; }
+.follow-box-archive {
+  background: #6b8f3e !important;
+  background: -webkit-linear-gradient(315deg, #7aa346 0%, #567230 100%) !important;
+  background: linear-gradient(135deg, #7aa346 0%, #567230 100%) !important;
+  border-color: #567230 !important;
+}
+.follow-box-archive h3 { color: #fff !important; }
+.follow-box-archive p  { color: #e8f2d8 !important; opacity: 1 !important; }
+.follow-box-archive a  { color: #567230 !important; }
+</style>
+
+<div class="sidebar-sticky">
+  <div class="follow-box">
+    <h3>Theo Dõi Chúng Tôi</h3>
+    <p>Cập nhật tin tức mới nhất về BlackBerry trên Facebook</p>
+    <a href="https://www.facebook.com/BBerryLife/" target="_blank">Theo Dõi Facebook</a>
+  </div>
+  <div class="follow-box follow-box-archive">
+    <h3>Kho Lưu Trữ</h3>
+    <p>Tải xuống ROM, autoloader và tài nguyên BB10 từ archive của chúng tôi</p>
+    <a href="https://drive.google.com/drive/folders/1AeaAt9HJ3sx7v6BJJJf3LbTybAUMaAAp?usp=drive_link" target="_blank">Truy Cập Archive</a>
+  </div>
+  <div class="sidebar-box">
+    <h3 class="sidebar-title">Danh Mục</h3>
+    <div class="cat-group">
+      <div class="cat-group-label">Hệ Điều Hành</div>
+      <div class="cat-links">
+        <a href="/Pages/Category/BlackBerry%2010/BlackBerry-10.html" style="color:#2196f3;border:2px solid #2196f3">BlackBerry 10</a>
+        <a href="/Pages/Category/BlackBerry%207.1/BlackBerry-7-1.html" style="color:#00bcd4;border:2px solid #00bcd4">BlackBerry 7.1</a>
+        <a href="/Pages/Category/BlackBerry%206/BlackBerry-6.html" style="color:#009688;border:2px solid #009688">BlackBerry 6</a>
+      </div>
+    </div>
+  </div>
+</div>
+  </aside>
+
+</div>
+
+<script src="/Pages/src/berrylife.js"></script>
+</body>
+</html>
