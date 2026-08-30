@@ -1,7 +1,23 @@
 {
-  "latestVersion": "1.3.0.0",
-  "downloadUrl": "https://github.com/BBerryLife/BBerryLife.github.io/raw/main/Downloads/Zalo10-1_3_0_0.bar",
+  "latestVersion": "1.4.0.0",
+  "downloadUrl": "https://github.com/BBerryLife/BBerryLife.github.io/raw/main/Downloads/Zalo10-1_4_0_0.bar",
   "changelog": [
+    {
+      "version": "1.4.0",
+      "items": [
+        "NEW: Add support for a variety of file types",
+        "NEW: Added support for GIF and WEBP stickers",
+        "NEW: Add support for links with thumbnails",
+        "NEW: Add UI support for incoming/outgoing call bubbles",
+        "NEW: Add support for sending voice notes (.m4a) and contacts (.vcf)",
+        "NEW: Add Hub Integration — Zalo10 messages no longer appear together with system notifications",
+        "NEW: Notifications now show a banner at the top of the screen (instant preview) and a separate icon on the lock screen",
+        "NEW: The incoming message notification ringtone has been changed from the system's essential.m4a to present.m4a to match BBM",
+        "IMPROVE: The attach button in the chat box has been redone as a sheet with a list",
+        "IMPROVE: Various other small interface fixes",
+        "FIX: Fixed images disappearing after logging out and logging back in"
+      ]
+    },
     {
       "version": "1.3.0",
       "items": [
