@@ -34,7 +34,7 @@
     <article class="article-wrap">
 
       <div class="cover-img-wrap" id="coverImgWrap">
-        <img class="cover-img" src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Preroot-Autoloaders/1.png" alt="Tối ưu hiệu năng và pin cho Pre-rooted Autoloaders" onerror="this.style.display='none'">
+        <img class="cover-img" src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Performance-Preroot/image.png" alt="Tối ưu hiệu năng và pin cho Pre-rooted Autoloaders" onerror="this.style.display='none'">
       </div>
 
       <div class="article-header">
@@ -58,6 +58,15 @@
 <div class="note note-blue">
   <strong>Nguồn:</strong> <a href="https://www.reddit.com/r/PlayBook/comments/1r7sf1r/playbooks_latest_os_rooted_and_ready_for_new_apps/" target="_blank">PlayBook's latest OS rooted and ready for new apps – Psyden (Reddit)</a>
 </div>
+
+<p>Nhìn vào 2 bức ảnh này, ảnh mang số 1 là trước khi tối ưu, số 2 là sau khi tối ưu, có thể thấy đường pin ở hình mang số 2 chạy dài hơn hình mang số 1, chúng chỉ trải dài hơn, không có sự biến đổi quá nhiều về hình dạng, nhưng nó cho thấy mức pin thật sự khá ổn định sau khi tối ưu. Đừng hỏi tại sao pin máy tôi tụt nhanh khi chạy 4 apps ở nền, có kết nối wifi và mạng di động.</p>
+
+<figure class="article-img-wrap">
+    <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Performance-Preroot/1.png" alt="">
+</figure>
+<figure class="article-img-wrap">
+	<img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Performance-Preroot/2.png" alt="">
+</figure>
 
 <p>Bài viết này mình sẽ chia sẻ lại từng bước để các bạn tự làm theo, giúp máy chạy mượt hơn và tiết kiệm pin hơn đáng kể.</p>
 
@@ -91,6 +100,10 @@
   <strong>Lưu ý:</strong> Đừng vội bấm Enter! Hãy kiểm tra lại cho chắc chắn lệnh đã đầy đủ và chính xác như trên, rồi mới nhấn Enter để mở file.
 </div>
 
+<figure class="article-img-wrap">
+    <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Performance-Preroot/3.png" alt="">
+</figure>
+
 <h3>Đối với bàn phím ảo (Z10, Z30, Z3, Passport SE...)</h3>
 <p>Làm tương tự y hệt như bàn phím vật lý ở trên, chỉ khác một chỗ: thay vì giữ Space (vì giữ Space trên bàn phím ảo sẽ đóng luôn bàn phím), hãy <strong>bấm giữ vào vùng góc trái trên cùng của màn hình</strong> để kích hoạt ký tự M màu xanh. Phần còn lại (bấm T để auto-complete, nhập nốt đường dẫn) làm y hệt như hướng dẫn phía trên.</p>
 
@@ -100,10 +113,19 @@
   <li>Giữ Space để kích hoạt ký tự M màu xanh như trên.</li>
   <li>Bấm và giữ phím <strong>L</strong> để di chuyển con trỏ sang phải, tìm đến dòng <code>/usr/sbin/sshd</code>.</li>
 </ol>
+
+<figure class="article-img-wrap">
+	<img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Performance-Preroot/4.png" alt="">
+</figure>
+
 <div class="note note-yellow">
   Việc dò tìm dòng này khá mất thời gian và hơi cực khổ một chút, vì file khá dài. Hãy kiên nhẫn, cứ giữ L cho tới khi thấy đúng dòng cần tìm.
 </div>
 <p>Dòng <code>/usr/sbin/sshd</code> này thường nằm ngay dưới 2 dòng lệnh <code>slay -f ...</code>. Việc bạn cần làm rất đơn giản: <strong>xoá nguyên dòng <code>/usr/sbin/sshd</code> đi</strong>.</p>
+
+<figure class="article-img-wrap">
+	<img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Performance-Preroot/5.png" alt="">
+</figure>
 
 <h2>Bước 5: Lưu File</h2>
 <p>Sau khi xoá xong, để lưu lại file:</p>
