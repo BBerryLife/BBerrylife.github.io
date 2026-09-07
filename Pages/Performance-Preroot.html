@@ -111,23 +111,20 @@
     <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Performance-Preroot/3.png" alt="">
 </figure>
 
-<h3>Đối với bàn phím ảo (Z10, Z30, Z3, Passport SE...)</h3>
+<h3>Đối với bàn phím ảo (Z10, Z30, Z3,...)</h3>
 <p>Làm tương tự y hệt như bàn phím vật lý ở trên, chỉ khác một chỗ: thay vì giữ Space (vì giữ Space trên bàn phím ảo sẽ đóng luôn bàn phím), hãy <strong>bấm giữ vào vùng góc trái trên cùng của màn hình</strong> để kích hoạt ký tự M màu xanh. Phần còn lại (bấm T để auto-complete, nhập nốt đường dẫn) làm y hệt như hướng dẫn phía trên.</p>
 
 <h2>Bước 4: Xoá Dòng Khởi Động Lại SSHD</h2>
 <p>Khi lệnh <code>nano</code> chạy, màn hình text edit của Term49 sẽ hiện ra. Lúc này:</p>
 <ol>
   <li>Giữ Space để kích hoạt ký tự M màu xanh như trên.</li>
-  <li>Bấm và giữ phím <strong>L</strong> để di chuyển con trỏ sang phải, tìm đến dòng <code>/usr/sbin/sshd</code>.</li>
+  <li>Bấm và giữ phím <strong>J</strong> để di chuyển con trỏ xuống dưới, tìm đến dòng <code>/usr/sbin/sshd</code>. Để di chuyển con trỏ sang trái: giữ L, sang phải: giữ H, lên trên: giữ K</li>
 </ol>
 
 <figure class="article-img-wrap">
 	<img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Performance-Preroot/4.png" alt="">
 </figure>
 
-<div class="note note-yellow">
-  Việc dò tìm dòng này khá mất thời gian và hơi cực khổ một chút, vì file khá dài. Hãy kiên nhẫn, cứ giữ L cho tới khi thấy đúng dòng cần tìm.
-</div>
 <p>Dòng <code>/usr/sbin/sshd</code> này thường nằm ngay dưới 2 dòng lệnh <code>slay -f ...</code>. Việc bạn cần làm rất đơn giản: <strong>xoá nguyên dòng <code>/usr/sbin/sshd</code> đi</strong>. Do tôi đã xóa dòng này rồi nên bạn sẽ không thấy dòng đó trong ảnh.</p>
 
 <figure class="article-img-wrap">
