@@ -71,33 +71,25 @@
 <p>Bài viết này mình sẽ chia sẻ lại từng bước để các bạn tự làm theo, giúp máy chạy mượt hơn và tiết kiệm pin hơn đáng kể.</p>
 
 <h2>Bước 1: Chuẩn Bị Firmware Pre-rooted</h2>
-<p>Trước tiên bạn cần flash thiết bị bằng <strong>Pre-rooted Autoloaders bản V1 hoặc V2</strong> (khuyến nghị dùng V2 vì đã có bản vá cài APK hữu ích). Nếu máy bạn chưa root, hãy tải firmware và xem hướng dẫn cài đặt chi tiết tại bài viết dưới đây:</p>
-
-<div style="text-align:center;margin:20px 0">
-  <a href="/Pages/Preroot-Autoloadersv2.html" class="btn-dl">Xem Bài Viết &amp; Tải Pre-rooted Autoloaders V2</a>
-</div>
+<p>Hướng dẫn chỉ dành cho Pre-rooted Autoloaders v1 hoặc v2, ở v3 vấn đề này đã được fix nên không đề cập ở đây.</p>
 
 <h2>Bước 2: Chờ Root Thành Công</h2>
 <p>Sau khi flash xong và máy khởi động lại, hãy kiên nhẫn đợi khoảng <strong>5–10 phút</strong> để thiết bị tự xử lý xong quá trình root. Bạn sẽ nhận được thông báo root thành công ngay trong <strong>BlackBerry Hub</strong>. Lúc này, để ý màn hình chính bạn sẽ thấy xuất hiện một ứng dụng khá lạ mắt tên là <strong>Term49</strong> — đây chính là terminal emulator dùng để thao tác dòng lệnh trên BB10.</p>
 
 <p>Hãy mở Term49 lên, chúng ta sẽ bắt đầu chỉnh sửa file hệ thống.</p>
 
-<h2>Bước 2-1: Cài đặt BerryCore</h2>
-<p>Do chúng ta không có <strong>nano</strong> trên Term49 gốc, việc cài BerryCore là điều cần thiết, BerryCore - hướng dẫn ở bên dưới.</p>
-
-<div style="text-align:center;margin:20px 0">
-  <a href="/Pages/BerryCore.html" class="btn-dl">Xem Bài Viết &amp; Xem hướng dẫn BerryCore</a>
-</div>
-
 <h2>Bước 3: Lệnh Cần Gõ</h2>
-<p>Lệnh đầy đủ mà bạn cần chạy trong Term49 là:</p>
+<p>Nếu máy bạn không cài BerryCore từ đầu, hãy viết đầy đủ lệnh cần chạy:</p>
+<pre><code>sed -i '/^\/usr\/sbin\/sshd$/d' /apps/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/native/system/xbin/btool</code></pre>
+
+<p>Nếu bạn có cài BerryCore, lệnh đầy đủ mà bạn cần chạy trong Term49 là:</p>
 <pre><code>nano /apps/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/native/system/xbin/btool</code></pre>
 
 <p>Tất nhiên bạn sẽ không cần phải gõ thủ công toàn bộ đường dẫn dài dằng dặc này, có một mẹo nhỏ để tự động điền phần tên thư mục phức tạp.</p>
 
 <h3>Đối với bàn phím vật lý (Q10, Passport, Classic...)</h3>
 <ol>
-  <li>Gõ <code>nano /apps/</code> trước.</li>
+  <li>Gõ <code>nano /apps/</code> hoặc <code>sed -i '/^\/usr\/sbin\/sshd$/d' /apps/</code> trước.</li>
   <li>Tiếp theo gõ <code>sys.android.g</code> — chỉ vậy thôi, không gõ thêm.</li>
   <li>Giữ nút <strong>Space</strong> thật lâu, bạn sẽ thấy ký tự <strong style="color:#1976d2">M</strong> màu xanh xuất hiện ở góc phải màn hình.</li>
   <li>Ngay lập tức bấm phím <strong>T</strong> trên bàn phím — đây chính là tổ hợp Tab như trên máy tính. Dòng <code>sys.android.g</code> sẽ lập tức tự động hoàn thành thành <code>sys.android.gYABgKAOw1czN6neiAT72SGO.ns</code>.</li>
