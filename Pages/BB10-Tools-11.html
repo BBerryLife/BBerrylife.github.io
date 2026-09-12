@@ -34,7 +34,7 @@
     <article class="article-wrap">
 
       <div class="cover-img-wrap" id="coverImgWrap">
-        <img class="cover-img" src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Tools%2011/5.png" alt="BlackBerry 10 Tools - Cập Nhật Thứ 11" onerror="this.style.display='none'">
+        <img class="cover-img" src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Tools%2011/cover.png" alt="BlackBerry 10 Tools - Cập Nhật Thứ 11" onerror="this.style.display='none'">
       </div>
 
       <div class="article-header">
@@ -49,7 +49,7 @@
 
       <div class="article-body">
 
-<p>Trước tiên, mình biết bản BlackBerry 10 Tools lần này sẽ khá gây tranh cãi, vì về bản chất đây chính là <strong>v3root</strong> trên trang chính của <strong>oleksandr</strong> được đóng gói lại và đè tem mới. Mình xin nhận điều đó, không giấu diếm gì cả. Tuy nhiên mục tiêu của bộ công cụ này chưa bao giờ thay đổi: làm sao để việc root BB10 trở nên dễ tiếp cận hơn với người dùng phổ thông, những người không quen thuộc với dòng lệnh hay các thao tác kỹ thuật phức tạp.</p>
+<p>Trước tiên, mình biết bản BlackBerry 10 Tools lần này sẽ khá gây tranh cãi, vì về bản chất đây chính là <strong>v3root</strong> trên trang chính của <strong>Oleksandr</strong> được đóng gói lại và đè tem mới. Mình xin nhận điều đó, không giấu diếm gì cả. Tuy nhiên mục tiêu của bộ công cụ này chưa bao giờ thay đổi: làm sao để việc root BB10 trở nên dễ tiếp cận hơn với người dùng phổ thông, những người không quen thuộc với dòng lệnh hay các thao tác kỹ thuật phức tạp.</p>
 
 <p>Vì lý do đó, bản cập nhật lần này sẽ <strong>thay thế Autopatch v6.5 bằng Autopatch v7</strong>. Bản v6.5 trước đây chỉ có thể tạo ra Pre-rooted Autoloaders, nhưng có một nhược điểm khá phiền là người dùng phải tự chạy lệnh mỗi lần khởi động lại máy để giữ quyền root, và vẫn phải tự tay disable SSH nếu muốn đỡ tốn pin (xem thêm bài <a href="/Pages/Performance-Preroot.html">Cách Tối Ưu Hiệu Năng Và Pin Cho Pre-rooted Autoloaders</a>).</p>
 
@@ -57,10 +57,10 @@
   <strong>Điểm mới trên Pre-rooted Autoloader V3:</strong> SSH mặc định đã được tắt sẵn, giúp giảm đáng kể số tiến trình chạy nền — máy hoạt động mát hơn và pin dùng được lâu hơn rõ rệt so với các bản trước.
 </div>
 
-<p>Nhưng tất nhiên, nếu chỉ kể mỗi việc tắt SSH thì mình xứng đáng "chết" vì nói giảm nói tránh — bản V3 còn rất nhiều cải tiến khác nữa mà mình không liệt kê hết ở đây được. Để nắm đầy đủ thông tin, hãy ghé trang chính thức của oleksandr và ủng hộ tác giả, người đã bỏ công sức nghiên cứu ra toàn bộ nền tảng này:</p>
+<p>Nhưng tất nhiên, nếu chỉ kể mỗi việc tắt SSH thì mình xứng đáng "chết" vì nói giảm nói tránh — bản V3 còn rất nhiều cải tiến khác nữa mà mình không liệt kê hết ở đây được. Để nắm đầy đủ thông tin, hãy ghé trang chính thức của Oleksandr và ủng hộ tác giả, người đã bỏ công sức nghiên cứu ra toàn bộ nền tảng này:</p>
 
 <div class="note note-blue">
-  <strong>Nguồn gốc:</strong> <a href="https://bb10.root.sx/blog/pre-rooted-autoloaders-v3" target="_blank">Pre-rooted Autoloaders V3 – oleksandr (bb10.root.sx)</a>
+  <strong>Nguồn gốc:</strong> <a href="https://bb10.root.sx/blog/pre-rooted-autoloaders-v3" target="_blank">Pre-rooted Autoloaders V3</a>
 </div>
 
 <h2>Tải Xuống</h2>
@@ -78,6 +78,7 @@
   <a href="https://drive.google.com/drive/folders/1sock5HKjq44IZMzMUesia7LI0glL_-yd?usp=drive_link" target="_blank" class="btn-dl">Tải ROM Gốc</a>
 </div>
 
+<h2>Nâng cấp v2 lên v3</h2>
 <p>Do bản v3 này chỉ là cải thiện hiệu năng của v2, bạn có thể nâng trực tiếp từ v2 lên v3 mà không mất dữ liệu. Đầu tiên, giải nén AutoPatch_V7 và bạn sẽ thấy thư mục <code>upgrade script</code>, copy file đó vào thư mục tải xuống của điện thoại BlackBerry 10 của bạn (không phải thư mục tải xuống của SD card). Sau đó mở Term49 và gõ <code>sh /accounts/1000/shared/downloads/v2tov3.sh</code>. Khi được hỏi bật SSH thì chọn N cho No, trừ khi bạn cần dùng nó. Root access thì chọn Y.</p>
 
 <figure class="article-img-wrap">
