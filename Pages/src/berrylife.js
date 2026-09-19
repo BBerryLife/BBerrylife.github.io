@@ -37,10 +37,6 @@ function openHelpModal() {
   modal.style.display = 'block';
   clampModalWidth();
   document.body.style.overflow = 'hidden';
-  if (typeof equalizeServiceCards === 'function') {
-    setTimeout(equalizeServiceCards, 80);
-    setTimeout(equalizeServiceCards, 400);
-  }
 }
 function closeHelpModal() {
   var modal = byId('helpModal');
@@ -67,75 +63,17 @@ function onOverlayClick(e) {
   }
 })();
 
-/* ── Service selection (step 1 → step 2) ── */
-function selectService(type) {
-  var cards = ['unlock', 'rom'];
-  for (var i = 0; i < cards.length; i++) {
-    var c = byId('card-' + cards[i]);
-    if (c) removeClass(c, 'selected');
+/* ── Hiện/ẩn ô "Nhà mạng đang bị khóa" khi chọn đúng vấn đề trong dropdown ── */
+function toggleCarrierField(sel) {
+  var wrap  = byId('carrierFieldWrap');
+  var field = byId('carrierField');
+  if (!wrap || !sel) return;
+  var show = sel.value === 'Tôi không thể mở khóa mạng của mình';
+  wrap.style.display = show ? 'block' : 'none';
+  if (field) {
+    if (show) field.setAttribute('required', 'required');
+    else field.removeAttribute('required');
   }
-  var sel = byId('card-' + type);
-  if (sel) addClass(sel, 'selected');
-  var stepForm = byId('step-form');
-  if (stepForm) addClass(stepForm, 'visible');
-  var fmts = ['unlock', 'rom'];
-  for (var j = 0; j < fmts.length; j++) {
-    var fw = byId('form-wrap-' + fmts[j]);
-    if (fw) fw.style.display = 'none';
-  }
-  var target = byId('form-wrap-' + type);
-  if (target) target.style.display = 'block';
-  setTimeout(function() {
-    var sf = byId('step-form');
-    if (sf && sf.scrollIntoView) sf.scrollIntoView(false);
-  }, 80);
-}
-
-function resetToStep1() {
-  var stepForm = byId('step-form');
-  if (stepForm) removeClass(stepForm, 'visible');
-  var cards = ['unlock', 'rom'];
-  for (var i = 0; i < cards.length; i++) {
-    var c = byId('card-' + cards[i]);
-    if (c) removeClass(c, 'selected');
-  }
-  var fmts = ['unlock', 'rom'];
-  for (var j = 0; j < fmts.length; j++) {
-    var fw = byId('form-wrap-' + fmts[j]);
-    if (fw) fw.style.display = 'none';
-    var sc = byId('success-' + fmts[j]);
-    if (sc) sc.style.display = 'none';
-  }
-}
-
-/* ── BerryBus accordion ── */
-var bbOpen = false;
-function toggleBerryBus() {
-  bbOpen = !bbOpen;
-  var body  = byId('bb-body');
-  var arrow = byId('bb-arrow');
-  var acc   = byId('bb-accordion');
-  if (body)  body.style.display = bbOpen ? 'block' : 'none';
-  if (arrow) arrow.innerHTML    = bbOpen ? '&#9650;' : '&#9660;';
-  if (acc) {
-    if (bbOpen) addClass(acc, 'bb-open');
-    else        removeClass(acc, 'bb-open');
-  }
-}
-
-/* ── BerryBus sub-tabs ── */
-function switchBBTab(tab) {
-  var tabs = ['route', 'stop', 'place'];
-  for (var i = 0; i < tabs.length; i++) {
-    var btn   = byId('bbtab-' + tabs[i] + '-btn');
-    var panel = byId('bbtab-' + tabs[i]);
-    if (btn)   removeClass(btn,   'active');
-    if (panel) removeClass(panel, 'active');
-  }
-  var activeBtn   = byId('bbtab-' + tab + '-btn');
-  var activePanel = byId('bbtab-' + tab);
-  if (activeBtn)   addClass(activeBtn,   'active');
-  if (activePanel) addClass(activePanel, 'active');
 }
 
 /* ── Form submit via XHR (IE / BB10 compatible) ── */
@@ -196,25 +134,10 @@ function coverBgInit() {
   };
 }
 
-/* ── Equalize service-card heights ── */
-function equalizeServiceCards() {
-  var picker = byId('servicePicker');
-  if (!picker) return;
-  var cards = picker.getElementsByClassName ? picker.getElementsByClassName('service-card') : [];
-  if (cards.length < 2) return;
-  cards[0].style.height = '';
-  cards[1].style.height = '';
-  var h = Math.max(cards[0].offsetHeight, cards[1].offsetHeight);
-  if (h <= 0) return;
-  cards[0].style.height = h + 'px';
-  cards[1].style.height = h + 'px';
-}
-
 /* ── Window resize handler ── */
 function onWindowResize() {
   clampModalWidth();
-  if (typeof centerCardImages    === 'function') centerCardImages();
-  if (typeof equalizeServiceCards === 'function') equalizeServiceCards();
+  if (typeof centerCardImages === 'function') centerCardImages();
 }
 
 /* ── Fill và center card images trong khung cố định chiều cao (IE/BB10) ── */
@@ -333,8 +256,6 @@ function blInit() {
   injectHelpModal();
   coverBgInit();
   centerCardImages();
-  equalizeServiceCards();
-  setTimeout(equalizeServiceCards, 200);
 }
 
 if (document.addEventListener) {
