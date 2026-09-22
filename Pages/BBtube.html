@@ -13,17 +13,17 @@
 <header class="site-header">
   <div class="header-inner">
     <div class="header-brand"><a href="/index.html"><h1>BerryLife</h1><p>Everything for BlackBerry Users</p></a></div>
-    <div class="header-follow"><a href="https://www.facebook.com/BBerryLife/" target="_blank">Theo Dõi Facebook</a></div>
+    <div class="header-follow"><a href="https://www.facebook.com/BBerryLife/" target="_blank" class="i18n" data-en="Follow Facebook">Theo Dõi Facebook</a></div>
   </div>
   <nav class="site-nav">
     <div class="nav-inner">
-      <a href="/index.html">Trang Chủ</a>
-      <a href="/Pages/Category/Tutorials/Tutorials.html">Hướng Dẫn</a>
-      <a href="/Pages/Category/Apps/Apps.html">Ứng Dụng</a>
-      <a href="/Pages/Category/Games/Games.html">Games</a>
-      <a href="/Pages/Category/Themes/Themes.html">Themes</a>
-      <a href="/Pages/Category/Tips/Tips.html">Mẹo &amp; Thủ Thuật</a>
-      <a href="/Pages/Blog/Blog.html">Tất Cả Bài Viết</a>
+      <a href="/index.html" class="i18n" data-en="Home">Trang Chủ</a>
+      <a href="/Pages/Category/Tutorials/Tutorials.html" class="i18n" data-en="Guides">Hướng Dẫn</a>
+      <a href="/Pages/Category/Apps/Apps.html" class="i18n" data-en="Apps">Ứng Dụng</a>
+      <a href="/Pages/Category/Games/Games.html" class="i18n" data-en="Games">Games</a>
+      <a href="/Pages/Category/Themes/Themes.html" class="i18n" data-en="Themes">Themes</a>
+      <a href="/Pages/Category/Tips/Tips.html" class="i18n" data-en="Tips &amp; Tricks">Mẹo &amp; Thủ Thuật</a>
+      <a href="/Pages/Blog/Blog.html" class="i18n" data-en="All Posts">Tất Cả Bài Viết</a>
     </div>
   </nav>
 </header>
@@ -44,42 +44,42 @@
 
       <div class="article-body">
 
-<h2>BBtube là gì?</h2>
-<p>BBtube là ứng dụng khách (client) YouTube không chính thức dành cho BlackBerry 10, ban đầu được phát triển bởi <strong>Alexey Gurevski</strong> (GitHub: <a href="https://github.com/AlexeyGurevsky" target="_blank"><strong>AlexeyGurevsky</strong></a>) dưới dạng ứng dụng <strong>unsigned</strong>. Phiên bản trên trang này được <strong>BBerryLife fork lại</strong> và sửa chữa một số vấn đề để mang lại trải nghiệm ổn định hơn cho người dùng BB10.</p>
+<h2 class="i18n" data-en="What is BBtube?">BBtube là gì?</h2>
+<p class="i18n" data-en="BBtube is an unofficial YouTube client for BlackBerry 10, originally developed by <strong>Alexey Gurevski</strong> (GitHub: <a href=&quot;https://github.com/AlexeyGurevsky&quot; target=&quot;_blank&quot;><strong>AlexeyGurevsky</strong></a>) as an <strong>unsigned</strong> app. The version on this site is a <strong>fork maintained by BBerryLife</strong>, with several fixes for a more stable experience for BB10 users.">BBtube là ứng dụng khách (client) YouTube không chính thức dành cho BlackBerry 10, ban đầu được phát triển bởi <strong>Alexey Gurevski</strong> (GitHub: <a href="https://github.com/AlexeyGurevsky" target="_blank"><strong>AlexeyGurevsky</strong></a>) dưới dạng ứng dụng <strong>unsigned</strong>. Phiên bản trên trang này được <strong>BBerryLife fork lại</strong> và sửa chữa một số vấn đề để mang lại trải nghiệm ổn định hơn cho người dùng BB10.</p>
 
-<div class="note note-yellow"><strong>Lưu ý:</strong> Đây là unsigned bar, yêu cầu thiết bị BlackBerry 10 của bạn phải chạy rom tạo bởi BlackBerry 10 Tools (11-2-2026) trở lên hoặc ROM pre-root sẵn. Link rom pre-root tại <strong><a href="https://drive.google.com/drive/folders/1rNnJdwrTGOTqKaKUdnirx_5cn_RLtF4R?usp=drive_link">đây</a></strong></div>
+<div class="note note-yellow i18n" data-en="<strong>Note:</strong> This is an unsigned bar, requiring your BlackBerry 10 device to run a ROM made by BlackBerry 10 Tools (11-2-2026) or later, or an existing pre-root ROM. The pre-root ROM link is <strong><a href=&quot;https://drive.google.com/drive/folders/1rNnJdwrTGOTqKaKUdnirx_5cn_RLtF4R?usp=drive_link&quot;>here</a></strong>"><strong>Lưu ý:</strong> Đây là unsigned bar, yêu cầu thiết bị BlackBerry 10 của bạn phải chạy rom tạo bởi BlackBerry 10 Tools (11-2-2026) trở lên hoặc ROM pre-root sẵn. Link rom pre-root tại <strong><a href="https://drive.google.com/drive/folders/1rNnJdwrTGOTqKaKUdnirx_5cn_RLtF4R?usp=drive_link">đây</a></strong></div>
 
-<h2>Những gì BBerryLife đã sửa chữa trong bản fork này</h2>
+<h2 class="i18n" data-en="What BBerryLife fixed in this fork">Những gì BBerryLife đã sửa chữa trong bản fork này</h2>
 <ul>
-  <li><strong>Xem video ở độ phân giải 360p:</strong> Trình phát media của BB10 không thể phát cùng lúc hai luồng media (audio + video riêng biệt), nên chưa thể làm cho độ phân giải 480p hay 720p hoạt động được — có thể do giới hạn của hệ thống, hoặc cũng có thể do mình chưa đủ trình 😄.</li>
-  <li><strong>Lấy danh sách video từ trang kênh (Channel):</strong> Xem được toàn bộ video của một kênh YouTube ngay trong ứng dụng.</li>
-  <li><strong>Lấy danh sách video ở trang Trending:</strong> Do YouTube đã ngừng hỗ trợ trang Trending gốc, ứng dụng hiện lấy dữ liệu từ <a href="https://charts.youtube.com/charts/TopShortsSongs/us/daily" target="_blank">charts.youtube.com/charts/TopShortsSongs/us/daily</a> để thay thế.</li>
+  <li class="i18n" data-en="<strong>360p video playback:</strong> BB10&#39;s media player can&#39;t play two separate media streams at once (separate audio + video), so 480p or 720p isn&#39;t working yet — possibly a system limitation, or maybe we just haven&#39;t figured it out yet 😄."><strong>Xem video ở độ phân giải 360p:</strong> Trình phát media của BB10 không thể phát cùng lúc hai luồng media (audio + video riêng biệt), nên chưa thể làm cho độ phân giải 480p hay 720p hoạt động được — có thể do giới hạn của hệ thống, hoặc cũng có thể do mình chưa đủ trình 😄.</li>
+  <li class="i18n" data-en="<strong>Video list from a channel page:</strong> View all of a YouTube channel&#39;s videos right inside the app."><strong>Lấy danh sách video từ trang kênh (Channel):</strong> Xem được toàn bộ video của một kênh YouTube ngay trong ứng dụng.</li>
+  <li class="i18n" data-en="<strong>Trending page video list:</strong> Since YouTube discontinued the original Trending page, the app now pulls data from <a href=&quot;https://charts.youtube.com/charts/TopShortsSongs/us/daily&quot; target=&quot;_blank&quot;>charts.youtube.com/charts/TopShortsSongs/us/daily</a> instead."><strong>Lấy danh sách video ở trang Trending:</strong> Do YouTube đã ngừng hỗ trợ trang Trending gốc, ứng dụng hiện lấy dữ liệu từ <a href="https://charts.youtube.com/charts/TopShortsSongs/us/daily" target="_blank">charts.youtube.com/charts/TopShortsSongs/us/daily</a> để thay thế.</li>
 </ul>
 
-<h2>Hướng dẫn cài đặt</h2>
-<p>Tương tự như các ứng dụng native khác, BBtube được phân phối dưới dạng file <code>.bar</code>.</p>
+<h2 class="i18n" data-en="Installation guide">Hướng dẫn cài đặt</h2>
+<p class="i18n" data-en="Like other native apps, BBtube is distributed as a <code>.bar</code> file.">Tương tự như các ứng dụng native khác, BBtube được phân phối dưới dạng file <code>.bar</code>.</p>
 <ol>
-  <li>Đảm bảo thiết bị BB10 của bạn đã được bật <strong>Chế độ phát triển (Development Mode)</strong> và đã root (xem lưu ý phía trên).</li>
-  <li>Tải file <code>.bar</code> BBtube về máy tính.</li>
-  <li>Dùng <strong>Sachesi</strong>, <strong>DBBT</strong> hoặc <strong>Bar Installer</strong> để sideload file <code>.bar</code> vào điện thoại của bạn.</li>
-  <li>Mở ứng dụng và tận hưởng!</li>
+  <li class="i18n" data-en="Make sure your BB10 device has <strong>Development Mode</strong> enabled and is rooted (see the note above).">Đảm bảo thiết bị BB10 của bạn đã được bật <strong>Chế độ phát triển (Development Mode)</strong> và đã root (xem lưu ý phía trên).</li>
+  <li class="i18n" data-en="Download the BBtube <code>.bar</code> file to your computer.">Tải file <code>.bar</code> BBtube về máy tính.</li>
+  <li class="i18n" data-en="Use <strong>Sachesi</strong>, <strong>DBBT</strong> or <strong>Bar Installer</strong> to sideload the <code>.bar</code> file onto your phone.">Dùng <strong>Sachesi</strong>, <strong>DBBT</strong> hoặc <strong>Bar Installer</strong> để sideload file <code>.bar</code> vào điện thoại của bạn.</li>
+  <li class="i18n" data-en="Open the app and enjoy!">Mở ứng dụng và tận hưởng!</li>
 </ol>
 
-<h2>Lưu ý</h2>
+<h2 class="i18n" data-en="Notes">Lưu ý</h2>
 <ul>
-  <li><strong>Yêu cầu OS:</strong> BlackBerry 10.3.x trở lên (khuyến nghị 10.3.3). Thiết bị cần đã root, ROM root sẵn ở <a href="https://bberrylife.github.io/Pages/Preroot-Autoloadersv2.html"><strong>đây</strong></a></li>
-  <li><strong>Chất lượng video:</strong> Hiện chỉ hỗ trợ ổn định ở 360p do giới hạn của trình phát media trên BB10.</li>
-  <li><strong>Trang Trending:</strong> Dữ liệu lấy từ bảng xếp hạng charts.youtube.com nên có thể khác với trang Trending gốc trước đây của YouTube.</li>
+  <li class="i18n" data-en="<strong>OS requirement:</strong> BlackBerry 10.3.x or later (10.3.3 recommended). The device needs to be rooted; a pre-rooted ROM is available <a href=&quot;https://bberrylife.github.io/Pages/Preroot-Autoloadersv2.html&quot;><strong>here</strong></a>"><strong>Yêu cầu OS:</strong> BlackBerry 10.3.x trở lên (khuyến nghị 10.3.3). Thiết bị cần đã root, ROM root sẵn ở <a href="https://bberrylife.github.io/Pages/Preroot-Autoloadersv2.html"><strong>đây</strong></a></li>
+  <li class="i18n" data-en="<strong>Video quality:</strong> Only 360p is stably supported currently, due to limitations of BB10&#39;s media player."><strong>Chất lượng video:</strong> Hiện chỉ hỗ trợ ổn định ở 360p do giới hạn của trình phát media trên BB10.</li>
+  <li class="i18n" data-en="<strong>Trending page:</strong> Data comes from the charts.youtube.com rankings, so it may differ from YouTube&#39;s old original Trending page."><strong>Trang Trending:</strong> Dữ liệu lấy từ bảng xếp hạng charts.youtube.com nên có thể khác với trang Trending gốc trước đây của YouTube.</li>
 </ul>
 
-<h2>Tải xuống</h2>
-<p>BBtube hoàn toàn miễn phí. Nhấn nút bên dưới để tải file <code>.bar</code> phiên bản mới nhất (1.3.7.0):</p>
-<p>Link tải trực tiếp:</p>
-<a class="btn-inline btn-primary" href="https://github.com/BBerryLife/BBerrylife.github.io/raw/main/Downloads/BBtube-1_3_7_0.bar">Tải BBtube (.bar)</a>
-<p>Link dự phòng (Google Drive):</p>
-<a class="btn-inline btn-primary" href="https://drive.google.com/drive/folders/1UgybombMRSaPuLscMC0TDKFkBUm6sDxG?usp=drive_link">Tải BBTube - Google Drive</a>
+<h2 class="i18n" data-en="Download">Tải xuống</h2>
+<p class="i18n" data-en="BBtube is completely free. Tap the button below to download the latest <code>.bar</code> file (1.3.7.0):">BBtube hoàn toàn miễn phí. Nhấn nút bên dưới để tải file <code>.bar</code> phiên bản mới nhất (1.3.7.0):</p>
+<p class="i18n" data-en="Direct download link:">Link tải trực tiếp:</p>
+<a class="btn-inline btn-primary i18n" href="https://github.com/BBerryLife/BBerrylife.github.io/raw/main/Downloads/BBtube-1_3_7_0.bar" data-en="Download BBtube (.bar)">Tải BBtube (.bar)</a>
+<p class="i18n" data-en="Backup link (Google Drive):">Link dự phòng (Google Drive):</p>
+<a class="btn-inline btn-primary i18n" href="https://drive.google.com/drive/folders/1UgybombMRSaPuLscMC0TDKFkBUm6sDxG?usp=drive_link" data-en="Download BBtube - Google Drive">Tải BBTube - Google Drive</a>
 
-<p>Hình ảnh thực tế từ BBtube:</p>
+<p class="i18n" data-en="Real screenshots from BBtube:">Hình ảnh thực tế từ BBtube:</p>
 <div class="image-gallery">
   <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BBtube/IMG_20260805_141959.png" alt="BBtube - Trang kênh Caedrel">
   <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BBtube/IMG_20260805_141954.png" alt="BBtube - Kết quả tìm kiếm kênh và video">
@@ -96,7 +96,7 @@
       
 <div class="source-box">
 <p><strong>Tác giả gốc:</strong> Alexey Gurevsky – <a href="https://github.com/AlexeyGurevsky" target="_blank">AlexeyGurevsky</a></p>
-<p>Đăng ngày: 05 tháng 08 năm 2026</p>
+<p class="i18n-datefmt"><span class="i18n" data-en="Published on: ">Đăng ngày: </span>05 tháng 08 năm 2026</p>
 </div>
 <div class="article-footer">
         <a href="/index.html" class="btn-outline">&#8592; Về Trang Chủ</a>
@@ -106,51 +106,7 @@
     </article>
   </main>
 
-  <aside class="sidebar">
-<!-- ═══════════════════════════════════════════════════════════════
-     SIDEBAR — Nguồn dùng chung cho toàn bộ trang BBerryLife
-     Đừng copy/paste block này thủ công vào từng trang nữa!
-     File này được berrylife.js tự động fetch + chèn vào <aside class="sidebar">.
-     Muốn sửa sidebar (danh mục, follow box...) -> chỉ sửa ở đây.
-     ═══════════════════════════════════════════════════════════════ -->
-
-<style>
-.follow-box { margin-bottom: 22px; }
-.follow-box-archive {
-  background: #6b8f3e !important;
-  background: -webkit-linear-gradient(315deg, #7aa346 0%, #567230 100%) !important;
-  background: linear-gradient(135deg, #7aa346 0%, #567230 100%) !important;
-  border-color: #567230 !important;
-}
-.follow-box-archive h3 { color: #fff !important; }
-.follow-box-archive p  { color: #e8f2d8 !important; opacity: 1 !important; }
-.follow-box-archive a  { color: #567230 !important; }
-</style>
-
-<div class="sidebar-sticky">
-  <div class="follow-box">
-    <h3>Theo Dõi Chúng Tôi</h3>
-    <p>Cập nhật tin tức mới nhất về BlackBerry trên Facebook</p>
-    <a href="https://www.facebook.com/BBerryLife/" target="_blank">Theo Dõi Facebook</a>
-  </div>
-  <div class="follow-box follow-box-archive">
-    <h3>Kho Lưu Trữ</h3>
-    <p>Tải xuống ROM, autoloader và tài nguyên BB10 từ archive của chúng tôi</p>
-    <a href="https://drive.google.com/drive/folders/1AeaAt9HJ3sx7v6BJJJf3LbTybAUMaAAp?usp=drive_link" target="_blank">Truy Cập Archive</a>
-  </div>
-  <div class="sidebar-box">
-    <h3 class="sidebar-title">Danh Mục</h3>
-    <div class="cat-group">
-      <div class="cat-group-label">Hệ Điều Hành</div>
-      <div class="cat-links">
-        <a href="/Pages/Category/BlackBerry%2010/BlackBerry-10.html" style="color:#2196f3;border:2px solid #2196f3">BlackBerry 10</a>
-        <a href="/Pages/Category/BlackBerry%207.1/BlackBerry-7-1.html" style="color:#00bcd4;border:2px solid #00bcd4">BlackBerry 7.1</a>
-        <a href="/Pages/Category/BlackBerry%206/BlackBerry-6.html" style="color:#009688;border:2px solid #009688">BlackBerry 6</a>
-      </div>
-    </div>
-  </div>
-</div>
-  </aside>
+  <aside class="sidebar"></aside>
 
 </div>
 

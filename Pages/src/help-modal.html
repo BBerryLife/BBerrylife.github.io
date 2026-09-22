@@ -9,7 +9,7 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
   </svg>
-  Cần Trợ Giúp?
+  <span class="i18n" data-en="Need Help?">Cần Trợ Giúp?</span>
 </button>
 
 <div class="modal-overlay" id="helpModal" style="display:none" onclick="onOverlayClick(event)">
@@ -18,44 +18,44 @@
 
       <div class="modal-header">
         <div class="modal-header-text">
-          <h2 id="modalTitle">Yêu Cầu Trợ Giúp</h2>
-          <p>Không có thời gian hoặc gặp khó khăn khi tự làm? Chúng tôi có thể hỗ trợ bạn trực tiếp!</p>
+          <h2 id="modalTitle" class="i18n" data-en="Help Request">Yêu Cầu Trợ Giúp</h2>
+          <p class="i18n" data-en="No time or having trouble doing it yourself? We can help you directly!">Không có thời gian hoặc gặp khó khăn khi tự làm? Chúng tôi có thể hỗ trợ bạn trực tiếp!</p>
         </div>
-        <button class="modal-close" onclick="closeHelpModal()" aria-label="Đóng">&#10005;</button>
+        <button class="modal-close i18n-aria" onclick="closeHelpModal()" aria-label="Đóng" data-en-aria="Close">&#10005;</button>
       </div>
 
       <div class="modal-form-area visible" id="step-form">
-        <div class="modal-note"><strong>Cho chúng tôi biết bạn đang gặp vấn đề gì</strong> — Điền thông tin bên dưới, chúng tôi sẽ liên hệ và hỗ trợ bạn sớm nhất có thể.</div>
+        <div class="modal-note i18n" data-en="<strong>Tell us what issue you&#39;re having</strong> — Fill in the info below and we&#39;ll get in touch to help you as soon as possible."><strong>Cho chúng tôi biết bạn đang gặp vấn đề gì</strong> — Điền thông tin bên dưới, chúng tôi sẽ liên hệ và hỗ trợ bạn sớm nhất có thể.</div>
         <form id="form-help" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'help')">
           <input type="hidden" name="_subject" value="[BerryLife] Yêu cầu trợ giúp">
-          <div class="mfg"><label>Họ tên / Nickname <span class="req">*</span></label><input type="text" name="ten" placeholder="Tên của bạn" required></div>
-          <div class="mfg"><label>Email liên hệ <span class="req">*</span></label><input type="email" name="email" placeholder="email@example.com" required></div>
-          <div class="mfg"><label>Facebook của bạn <span class="req">*</span></label><input type="text" name="facebook" placeholder="www.facebook.com/example/" required></div>
+          <div class="mfg"><label class="i18n" data-en="Full name / Nickname <span class=&quot;req&quot;>*</span>">Họ tên / Nickname <span class="req">*</span></label><input type="text" name="ten" class="i18n-ph" placeholder="Tên của bạn" data-en-ph="Your name" required></div>
+          <div class="mfg"><label class="i18n" data-en="Contact email <span class=&quot;req&quot;>*</span>">Email liên hệ <span class="req">*</span></label><input type="email" name="email" placeholder="email@example.com" required></div>
+          <div class="mfg"><label class="i18n" data-en="Your Facebook <span class=&quot;req&quot;>*</span>">Facebook của bạn <span class="req">*</span></label><input type="text" name="facebook" placeholder="www.facebook.com/example/" required></div>
           <div class="mfg">
-            <label>Vấn đề bạn gặp phải <span class="req">*</span></label>
+            <label class="i18n" data-en="Issue you&#39;re facing <span class=&quot;req&quot;>*</span>">Vấn đề bạn gặp phải <span class="req">*</span></label>
             <select name="van_de" id="issueSelect" onchange="toggleCarrierField(this)" required>
-              <option value="">-- Chọn vấn đề --</option>
-              <option>Tôi không thể mở khóa mạng của mình</option>
-              <option>Tôi không thể tự tạo ROM</option>
-              <option>Tôi không thể tự tối ưu ROM của mình</option>
-              <option>Tôi không biết cài ROM - cài .Bar</option>
-              <option>Tôi không biết hạ cấp thiết bị của mình (bao quát thêm phần tạo ROM bản cũ hơn 10.3.3)</option>
-              <option>Tôi không biết setup môi trường lập trình momentics để phát triển app cho BB10</option>
+              <option value="" class="i18n" data-en="-- Select an issue --">-- Chọn vấn đề --</option>
+              <option class="i18n" data-en="I can&#39;t unlock my carrier">Tôi không thể mở khóa mạng của mình</option>
+              <option class="i18n" data-en="I can&#39;t build a ROM myself">Tôi không thể tự tạo ROM</option>
+              <option class="i18n" data-en="I can&#39;t optimize my own ROM">Tôi không thể tự tối ưu ROM của mình</option>
+              <option class="i18n" data-en="I don&#39;t know how to install a ROM - flashing .bar">Tôi không biết cài ROM - cài .Bar</option>
+              <option class="i18n" data-en="I don&#39;t know how to downgrade my device (including building ROMs older than 10.3.3)">Tôi không biết hạ cấp thiết bị của mình (bao quát thêm phần tạo ROM bản cũ hơn 10.3.3)</option>
+              <option class="i18n" data-en="I don&#39;t know how to set up the Momentics dev environment for BB10 app development">Tôi không biết setup môi trường lập trình momentics để phát triển app cho BB10</option>
             </select>
           </div>
-          <div class="mfg" id="carrierFieldWrap" style="display:none"><label>Nhà mạng đang bị khóa <span class="req">*</span></label><input type="text" name="nha_mang" id="carrierField" placeholder="Ví dụ: Verizon, AT&amp;T, Rogers..."></div>
-          <div class="mfg"><label>Máy BlackBerry của bạn <span class="opt">(tùy chọn)</span></label><input type="text" name="model_may" placeholder="Ví dụ: BlackBerry Q10, Z30, Passport..."></div>
-          <div class="mfg"><label>Phiên bản OS hiện tại <span class="opt">(tùy chọn)</span></label><input type="text" name="phien_ban_os" placeholder="Ví dụ: 10.3.3.3216"></div>
-          <div class="mfg"><label>Mô tả thêm / Câu hỏi <span class="opt">(tùy chọn)</span></label><textarea name="mo_ta" placeholder="Mô tả chi tiết vấn đề bạn đang gặp phải..."></textarea></div>
-          <button type="submit" class="btn-modal-submit" id="btn-help">Gửi Yêu Cầu</button>
-          <div id="success-help" class="modal-success"><strong>Đã nhận yêu cầu!</strong> Chúng tôi sẽ liên hệ với bạn qua email sớm nhất có thể để hỗ trợ.</div>
+          <div class="mfg" id="carrierFieldWrap" style="display:none"><label class="i18n" data-en="Locked carrier <span class=&quot;req&quot;>*</span>">Nhà mạng đang bị khóa <span class="req">*</span></label><input type="text" name="nha_mang" id="carrierField" class="i18n-ph" placeholder="Ví dụ: Verizon, AT&amp;T, Rogers..." data-en-ph="E.g.: Verizon, AT&amp;T, Rogers..."></div>
+          <div class="mfg"><label class="i18n" data-en="Your BlackBerry device <span class=&quot;opt&quot;>(optional)</span>">Máy BlackBerry của bạn <span class="opt">(tùy chọn)</span></label><input type="text" name="model_may" class="i18n-ph" placeholder="Ví dụ: BlackBerry Q10, Z30, Passport..." data-en-ph="E.g.: BlackBerry Q10, Z30, Passport..."></div>
+          <div class="mfg"><label class="i18n" data-en="Current OS version <span class=&quot;opt&quot;>(optional)</span>">Phiên bản OS hiện tại <span class="opt">(tùy chọn)</span></label><input type="text" name="phien_ban_os" class="i18n-ph" placeholder="Ví dụ: 10.3.3.3216" data-en-ph="E.g.: 10.3.3.3216"></div>
+          <div class="mfg"><label class="i18n" data-en="More details / Question <span class=&quot;opt&quot;>(optional)</span>">Mô tả thêm / Câu hỏi <span class="opt">(tùy chọn)</span></label><textarea name="mo_ta" class="i18n-ph" placeholder="Mô tả chi tiết vấn đề bạn đang gặp phải..." data-en-ph="Describe your issue in detail..."></textarea></div>
+          <button type="submit" class="btn-modal-submit i18n" id="btn-help" data-en="Send Request">Gửi Yêu Cầu</button>
+          <div id="success-help" class="modal-success i18n" data-en="<strong>Request received!</strong> We&#39;ll contact you by email as soon as possible to help."><strong>Đã nhận yêu cầu!</strong> Chúng tôi sẽ liên hệ với bạn qua email sớm nhất có thể để hỗ trợ.</div>
         </form>
 
         <div class="modal-fb-row">
-          <div class="mfb-btn-wrap"><a href="https://www.facebook.com/BBerryLife/" target="_blank" class="mfb-btn">Nhắn Tin</a></div>
+          <div class="mfb-btn-wrap"><a href="https://www.facebook.com/BBerryLife/" target="_blank" class="mfb-btn i18n" data-en="Message">Nhắn Tin</a></div>
           <div class="mfb-info">
-            <div class="mfb-title">Hỏi Nhanh Qua Facebook</div>
-            <div class="mfb-desc">Cần hỗ trợ nhanh? Nhắn tin trực tiếp!</div>
+            <div class="mfb-title i18n" data-en="Quick Question via Facebook">Hỏi Nhanh Qua Facebook</div>
+            <div class="mfb-desc i18n" data-en="Need quick help? Message us directly!">Cần hỗ trợ nhanh? Nhắn tin trực tiếp!</div>
           </div>
         </div>
       </div>

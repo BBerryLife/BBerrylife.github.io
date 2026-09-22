@@ -21,6 +21,120 @@ function removeClass(el, cls) {
 }
 function byId(id) { return document.getElementById(id); }
 
+/* ══════════════════════════════════════════════════════════════
+   NGÔN NGỮ (VI / EN)
+   - Lưu lựa chọn vào localStorage, áp dụng cho mọi trang cho tới
+     khi người dùng chuyển lại. Nội dung dịch được đánh dấu bằng
+     class="i18n" + data-en="..." trực tiếp trong HTML.
+   ══════════════════════════════════════════════════════════════ */
+var BL_LANG_KEY = 'bl_lang';
+
+function getLang() {
+  try {
+    var v = localStorage.getItem(BL_LANG_KEY);
+    return (v === 'en') ? 'en' : 'vi';
+  } catch (e) { return 'vi'; }
+}
+function setLang(lang) {
+  try { localStorage.setItem(BL_LANG_KEY, lang); } catch (e) {}
+}
+
+/* Áp dụng bản dịch cho mọi phần tử .i18n trong 1 vùng (mặc định: toàn trang) */
+function applyTranslations(root) {
+  var scope = root && root.getElementsByClassName ? root : document;
+  var lang = getLang();
+  var list = scope.getElementsByClassName ? scope.getElementsByClassName('i18n') : [];
+  for (var i = 0; i < list.length; i++) {
+    var el = list[i];
+    if (!el.getAttribute('data-vi')) {
+      /* lần đầu chạy: lưu lại nội dung tiếng Việt gốc */
+      el.setAttribute('data-vi', el.innerHTML);
+    }
+    if (lang === 'en') {
+      var en = el.getAttribute('data-en');
+      if (en) el.innerHTML = en;
+    } else {
+      var vi = el.getAttribute('data-vi');
+      if (vi) el.innerHTML = vi;
+    }
+  }
+  /* placeholder: class="i18n-ph" + data-en-ph="..." */
+  var phList = scope.getElementsByClassName ? scope.getElementsByClassName('i18n-ph') : [];
+  for (var j = 0; j < phList.length; j++) {
+    var pel = phList[j];
+    if (!pel.getAttribute('data-vi-ph')) {
+      pel.setAttribute('data-vi-ph', pel.getAttribute('placeholder') || '');
+    }
+    if (lang === 'en') {
+      var enph = pel.getAttribute('data-en-ph');
+      if (enph) pel.setAttribute('placeholder', enph);
+    } else {
+      pel.setAttribute('placeholder', pel.getAttribute('data-vi-ph') || '');
+    }
+  }
+  /* aria-label: class="i18n-aria" + data-en-aria="..." */
+  var arList = scope.getElementsByClassName ? scope.getElementsByClassName('i18n-aria') : [];
+  for (var k = 0; k < arList.length; k++) {
+    var ael = arList[k];
+    if (!ael.getAttribute('data-vi-aria')) {
+      ael.setAttribute('data-vi-aria', ael.getAttribute('aria-label') || '');
+    }
+    if (lang === 'en') {
+      var enar = ael.getAttribute('data-en-aria');
+      if (enar) ael.setAttribute('aria-label', enar);
+    } else {
+      ael.setAttribute('aria-label', ael.getAttribute('data-vi-aria') || '');
+    }
+  }
+  /* Tiêu đề trang */
+  if (!window.BL_ORIG_TITLE) window.BL_ORIG_TITLE = document.title;
+  if (lang === 'en' && window.PAGE_TITLE_EN) {
+    document.title = window.PAGE_TITLE_EN;
+  } else {
+    document.title = window.BL_ORIG_TITLE;
+  }
+  /* thuộc tính lang của thẻ html */
+  if (document.documentElement) document.documentElement.setAttribute('lang', lang);
+  updateLangButtons(lang);
+}
+
+function updateLangButtons(lang) {
+  var btns = document.getElementsByClassName ? document.getElementsByClassName('lang-toggle-btn') : [];
+  for (var i = 0; i < btns.length; i++) {
+    if (lang === 'en') {
+      btns[i].innerHTML = 'VN';
+      btns[i].title = 'Chuyển sang Tiếng Việt';
+    } else {
+      btns[i].innerHTML = 'EN';
+      btns[i].title = 'Switch to English';
+    }
+  }
+}
+
+function toggleLang() {
+  var next = (getLang() === 'en') ? 'vi' : 'en';
+  setLang(next);
+  applyTranslations(document);
+  return false;
+}
+
+/* Chèn nút chuyển ngôn ngữ, nằm dưới nút "Theo Dõi Facebook" trong header */
+function injectLangToggle() {
+  var follow = document.getElementsByClassName ? document.getElementsByClassName('header-follow')[0] : null;
+  if (!follow) return;
+  if (byId('langSwitchWrap')) return;
+  var wrap = document.createElement('div');
+  wrap.className = 'lang-switch';
+  wrap.id = 'langSwitchWrap';
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'lang-toggle-btn';
+  btn.setAttribute('onclick', 'return toggleLang();');
+  btn.innerHTML = (getLang() === 'en') ? 'VN' : 'EN';
+  wrap.appendChild(btn);
+  follow.appendChild(wrap);
+}
+
 /* ── Modal width clamp ── */
 function clampModalWidth() {
   var box = byId('helpModalBox');
@@ -85,7 +199,7 @@ function handleModalSubmit(e, formId) {
   var btn       = byId('btn-' + formId);
   if (!form || !btn) return false;
   btn.disabled  = true;
-  btn.innerHTML = 'Đang gửi...';
+  btn.innerHTML = (getLang() === 'en') ? 'Sending...' : 'Đang gửi...';
   var xhr = new XMLHttpRequest();
   xhr.open('POST', form.action, true);
   xhr.setRequestHeader('Accept', 'application/json');
@@ -94,17 +208,17 @@ function handleModalSubmit(e, formId) {
     if (xhr.status >= 200 && xhr.status < 300) {
       form.reset();
       if (successEl) successEl.style.display = 'block';
-      btn.innerHTML = 'Đã Gửi!';
+      btn.innerHTML = (getLang() === 'en') ? 'Sent!' : 'Đã Gửi!';
     } else {
       btn.disabled  = false;
-      btn.innerHTML = 'Gửi Lại';
-      alert('Có lỗi xảy ra. Vui lòng thử lại.');
+      btn.innerHTML = (getLang() === 'en') ? 'Retry' : 'Gửi Lại';
+      alert((getLang() === 'en') ? 'An error occurred. Please try again.' : 'Có lỗi xảy ra. Vui lòng thử lại.');
     }
   };
   xhr.onerror = function() {
     btn.disabled  = false;
-    btn.innerHTML = 'Gửi Lại';
-    alert('Không thể kết nối. Vui lòng kiểm tra mạng và thử lại.');
+    btn.innerHTML = (getLang() === 'en') ? 'Retry' : 'Gửi Lại';
+    alert((getLang() === 'en') ? 'Could not connect. Please check your network and try again.' : 'Không thể kết nối. Vui lòng kiểm tra mạng và thử lại.');
   };
   xhr.send(new FormData(form));
   return false;
@@ -187,6 +301,7 @@ function injectFooter() {
       while (holder.firstChild) {
         document.body.appendChild(holder.firstChild);
       }
+      applyTranslations(document);
     }
   };
   xhr.open('GET', '/Pages/src/footer.html', true);
@@ -207,6 +322,7 @@ function injectSidebar() {
     if (xhr.readyState !== 4) return;
     if (xhr.status >= 200 && xhr.status < 300) {
       aside.innerHTML = xhr.responseText;
+      applyTranslations(document);
     }
   };
   xhr.open('GET', '/Pages/src/sidebar.html', true);
@@ -228,6 +344,7 @@ function injectHelpModal() {
       while (holder.firstChild) {
         document.body.appendChild(holder.firstChild);
       }
+      applyTranslations(document);
     }
   };
   xhr.open('GET', '/Pages/src/help-modal.html', true);
@@ -244,16 +361,20 @@ function injectAboutUsLink() {
   }
   var a = document.createElement('a');
   a.href = '/Pages/AboutUs.html';
-  a.innerHTML = 'About Us';
+  a.className = 'i18n';
+  a.setAttribute('data-en', 'About Us');
+  a.innerHTML = 'Giới Thiệu';
   follow.insertBefore(a, follow.firstChild);
 }
 
 /* ── Init on DOM ready ── */
 function blInit() {
   injectAboutUsLink();
+  injectLangToggle();
   injectFooter();
   injectSidebar();
   injectHelpModal();
+  applyTranslations(document);
   coverBgInit();
   centerCardImages();
 }

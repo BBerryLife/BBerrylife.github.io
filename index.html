@@ -55,6 +55,26 @@
   }
   .header-follow a:first-child { margin-left: 0; }
   .header-follow a:hover { opacity: 0.85; }
+
+  /* ── LANGUAGE SWITCH (dưới nút Theo Dõi Facebook) ── */
+  .lang-switch { display: block; clear: both; text-align: right; margin-top: 8px; }
+  .lang-toggle-btn {
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.55);
+    color: white;
+    padding: 6px 16px;
+    font-weight: bold;
+    font-size: 0.78em;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 3px;
+    font-family: inherit;
+  }
+  .lang-toggle-btn:hover { background: rgba(255,255,255,0.32); }
+
   .header-brand a { text-decoration: none; color: white; display: block; }
   .header-brand a:hover { opacity: 0.88; }
   .header-brand h1 {
@@ -556,6 +576,7 @@
     .header-follow { float: none; padding-top: 10px; }
     .header-follow a { display: inline-block; text-align: center; padding: 10px 16px; margin-left: 8px; }
     .header-follow a:first-child { margin-left: 0; }
+    .lang-switch { text-align: center; }
     .header-brand a { text-decoration: none; color: white; display: block; }
   .header-brand a:hover { opacity: 0.88; }
   .header-brand h1 { font-size: 2em; }
@@ -601,18 +622,18 @@
     </div>
     <div class="header-follow">
       <a href="/Pages/AboutUs.html">About Us</a>
-      <a href="https://www.facebook.com/BBerryLife/" target="_blank">Theo Dõi Facebook</a>
+      <a href="https://www.facebook.com/BBerryLife/" target="_blank" class="i18n" data-en="Follow Facebook">Theo Dõi Facebook</a>
     </div>
   </div>
   <nav class="site-nav">
     <div class="nav-inner">
-      <a href="/index.html">Trang Chủ</a>
-      <a href="/Pages/Category/Tutorials/Tutorials.html">Hướng Dẫn</a>
-      <a href="/Pages/Category/Apps/Apps.html">Ứng Dụng</a>
-      <a href="/Pages/Category/Games/Games.html">Games</a>
-      <a href="/Pages/Category/Themes/Themes.html">Themes</a>
-      <a href="/Pages/Category/Tips/Tips.html">Mẹo &amp; Thủ Thuật</a>
-      <a href="/Pages/Blog/Blog.html">Tất Cả Bài Viết</a>
+      <a href="/index.html" class="i18n" data-en="Home">Trang Chủ</a>
+      <a href="/Pages/Category/Tutorials/Tutorials.html" class="i18n" data-en="Guides">Hướng Dẫn</a>
+      <a href="/Pages/Category/Apps/Apps.html" class="i18n" data-en="Apps">Ứng Dụng</a>
+      <a href="/Pages/Category/Games/Games.html" class="i18n" data-en="Games">Games</a>
+      <a href="/Pages/Category/Themes/Themes.html" class="i18n" data-en="Themes">Themes</a>
+      <a href="/Pages/Category/Tips/Tips.html" class="i18n" data-en="Tips &amp; Tricks">Mẹo &amp; Thủ Thuật</a>
+      <a href="/Pages/Blog/Blog.html" class="i18n" data-en="All Posts">Tất Cả Bài Viết</a>
     </div>
   </nav>
 </header>
@@ -622,7 +643,7 @@
   <main>
 
     <section class="featured-section">
-      <h2 class="section-title">Dành Cho Bạn</h2>
+      <h2 class="section-title i18n" data-en="For You">Dành Cho Bạn</h2>
       <div class="featured-grid">
 
         <article class="card">
@@ -630,8 +651,8 @@
             <div class="card-img-wrap"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Telega/1-%28cover%29.png" alt="Telega — Ứng dụng Telegram Native cho BlackBerry 10" class="card-img"></div>
           </a>
           <div class="card-body">
-            <span class="card-badge" style="background:#17a2b8">ỨNG DỤNG</span>
-            <h3><a href="/Pages/Telega.html">Telega — Ứng dụng Telegram Native cho BlackBerry 10</a></h3>
+            <span class="card-badge i18n" style="background:#17a2b8" data-en="APP">ỨNG DỤNG</span>
+            <h3><a href="/Pages/Telega.html" class="i18n" data-en="Telega — Native Telegram App for BlackBerry 10">Telega — Ứng dụng Telegram Native cho BlackBerry 10</a></h3>
             <div class="card-date">10/09/2026</div>
           </div>
         </article>
@@ -641,8 +662,8 @@
             <div class="card-img-wrap"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Beeper10/IMG_20260821_093638.png" alt="Beeper10 — Ứng dụng nhắn tin đa mạng xã hội Native cho BlackBerry 10" class="card-img"></div>
           </a>
           <div class="card-body">
-            <span class="card-badge" style="background:#17a2b8">ỨNG DỤNG</span>
-            <h3><a href="/Pages/Beeper10.html">Beeper10 — Ứng dụng nhắn tin đa mạng xã hội Native cho BlackBerry 10</a></h3>
+            <span class="card-badge i18n" style="background:#17a2b8" data-en="APP">ỨNG DỤNG</span>
+            <h3><a href="/Pages/Beeper10.html" class="i18n" data-en="Beeper10 — Native multi-platform messaging app for BlackBerry 10">Beeper10 — Ứng dụng nhắn tin đa mạng xã hội Native cho BlackBerry 10</a></h3>
             <div class="card-date">10/09/2026</div>
           </div>
         </article>
@@ -652,8 +673,8 @@
             <div class="card-img-wrap"><img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BBCord/splash1280x720.png" alt="BBCord — Ứng dụng Discord Native cho BlackBerry 10" class="card-img"></div>
           </a>
           <div class="card-body">
-            <span class="card-badge" style="background:#17a2b8">ỨNG DỤNG</span>
-            <h3><a href="/Pages/BBCord.html">BBCord — Ứng dụng Discord Native cho BlackBerry 10</a></h3>
+            <span class="card-badge i18n" style="background:#17a2b8" data-en="APP">ỨNG DỤNG</span>
+            <h3><a href="/Pages/BBCord.html" class="i18n" data-en="BBCord — Native Discord App for BlackBerry 10">BBCord — Ứng dụng Discord Native cho BlackBerry 10</a></h3>
             <div class="card-date">08/09/2026</div>
           </div>
         </article>
@@ -662,38 +683,38 @@
     </section>
 
     <section class="latest-section">
-      <h2 class="section-title">Bài Viết Mới Nhất</h2>
+      <h2 class="section-title i18n" data-en="Latest Post">Bài Viết Mới Nhất</h2>
       <div class="latest-card">
         <div class="latest-accent" style="background:#4fa3d1"></div>
         <div class="latest-body">
           <div class="tags">
-            <span class="tag" style="background:#e1f5fe;color:#01579b">HƯỚNG DẪN</span>
+            <span class="tag i18n" style="background:#e1f5fe;color:#01579b" data-en="GUIDE">HƯỚNG DẪN</span>
             <span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span>
             <span class="tag" style="background:#fce4ec;color:#c62828">ROOT</span>
             <span style="color:#999;font-size:0.82em">12/09/2026</span>
           </div>
-          <h3><a href="/Pages/BB10-Tools-11.html">BlackBerry 10 Tools - Cập Nhật Thứ 11</a></h3>
-          <p>Bản cập nhật thứ 11 của bộ công cụ root BB10, thay Autopatch v6.5 bằng v7: tắt sẵn SSH mặc định, máy mát hơn và tiết kiệm pin hơn hẳn so với các bản Pre-rooted Autoloader trước đây.</p>
-          <a href="/Pages/BB10-Tools-11.html" class="btn" style="background:#4fa3d1">Xem Ngay →</a>
+          <h3><a href="/Pages/BB10-Tools-11.html" class="i18n" data-en="BlackBerry 10 Tools - 11th Update">BlackBerry 10 Tools - Cập Nhật Thứ 11</a></h3>
+          <p class="i18n" data-en="The 11th update of the BB10 root toolkit replaces Autopatch v6.5 with v7: SSH is now disabled by default, and the device runs cooler and lasts longer on battery than previous Pre-rooted Autoloader builds.">Bản cập nhật thứ 11 của bộ công cụ root BB10, thay Autopatch v6.5 bằng v7: tắt sẵn SSH mặc định, máy mát hơn và tiết kiệm pin hơn hẳn so với các bản Pre-rooted Autoloader trước đây.</p>
+          <a href="/Pages/BB10-Tools-11.html" class="btn i18n" style="background:#4fa3d1" data-en="View Now →">Xem Ngay →</a>
         </div>
       </div>
     </section>
 
     <section class="recent-section">
-      <h2 class="section-title">Bài Viết Gần Đây</h2>
+      <h2 class="section-title i18n" data-en="Recent Posts">Bài Viết Gần Đây</h2>
       <div class="recent-list">
 
         <div class="recent-card">
           <div class="recent-accent" style="background:#4fa3d1"></div>
           <div class="recent-body">
             <div class="tags">
-              <span class="tag" style="background:#e1f5fe;color:#01579b">HƯỚNG DẪN</span>
+              <span class="tag i18n" style="background:#e1f5fe;color:#01579b" data-en="GUIDE">HƯỚNG DẪN</span>
               <span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span>
               <span style="color:#999;font-size:0.8em">12/09/2026</span>
             </div>
-            <h3><a href="/Pages/BB10-Tools-11.html">BlackBerry 10 Tools - Cập Nhật Thứ 11</a></h3>
-            <p>Bản cập nhật thứ 11 của bộ công cụ root BB10, thay Autopatch v6.5 bằng v7: tắt sẵn SSH mặc định, máy mát hơn và tiết kiệm pin hơn hẳn so với các bản Pre-rooted Autoloader trước đây.</p>
-            <a href="/Pages/BB10-Tools-11.html" class="btn" style="background:#4fa3d1">Đọc thêm →</a>
+            <h3><a href="/Pages/BB10-Tools-11.html" class="i18n" data-en="BlackBerry 10 Tools - 11th Update">BlackBerry 10 Tools - Cập Nhật Thứ 11</a></h3>
+            <p class="i18n" data-en="The 11th update of the BB10 root toolkit replaces Autopatch v6.5 with v7: SSH is now disabled by default, and the device runs cooler and lasts longer on battery than previous Pre-rooted Autoloader builds.">Bản cập nhật thứ 11 của bộ công cụ root BB10, thay Autopatch v6.5 bằng v7: tắt sẵn SSH mặc định, máy mát hơn và tiết kiệm pin hơn hẳn so với các bản Pre-rooted Autoloader trước đây.</p>
+            <a href="/Pages/BB10-Tools-11.html" class="btn i18n" style="background:#4fa3d1" data-en="Read more →">Đọc thêm →</a>
           </div>
         </div>
 
@@ -701,13 +722,13 @@
           <div class="recent-accent" style="background:#17a2b8"></div>
           <div class="recent-body">
             <div class="tags">
-              <span class="tag" style="background:#e8f4f8;color:#17a2b8">ỨNG DỤNG</span>
+              <span class="tag i18n" style="background:#e8f4f8;color:#17a2b8" data-en="APP">ỨNG DỤNG</span>
               <span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span>
               <span style="color:#999;font-size:0.8em">10/09/2026</span>
             </div>
-            <h3><a href="/Pages/Telega.html">Telega — Ứng dụng Telegram Native cho BlackBerry 10</a></h3>
-            <p>Telega là client Telegram native khác cho BB10 với giao diện tốt hơn TBBX, hỗ trợ gửi/nhận GIF và sticker, nhưng hiện chỉ hiển thị đẹp trên máy màn hình dài, chưa tối ưu cho Q10/Q20.</p>
-            <a href="/Pages/Telega.html" class="btn" style="background:#17a2b8">Đọc thêm →</a>
+            <h3><a href="/Pages/Telega.html" class="i18n" data-en="Telega — Native Telegram App for BlackBerry 10">Telega — Ứng dụng Telegram Native cho BlackBerry 10</a></h3>
+            <p class="i18n" data-en="Telega is another native Telegram client for BB10 with a better interface than TBBX, supporting GIF and sticker sending, though it currently only looks good on tall-screen devices and isn&#39;t optimized for Q10/Q20 yet.">Telega là client Telegram native khác cho BB10 với giao diện tốt hơn TBBX, hỗ trợ gửi/nhận GIF và sticker, nhưng hiện chỉ hiển thị đẹp trên máy màn hình dài, chưa tối ưu cho Q10/Q20.</p>
+            <a href="/Pages/Telega.html" class="btn i18n" style="background:#17a2b8" data-en="Read more →">Đọc thêm →</a>
           </div>
         </div>
 
@@ -715,13 +736,13 @@
           <div class="recent-accent" style="background:#17a2b8"></div>
           <div class="recent-body">
             <div class="tags">
-              <span class="tag" style="background:#e8f4f8;color:#17a2b8">ỨNG DỤNG</span>
+              <span class="tag i18n" style="background:#e8f4f8;color:#17a2b8" data-en="APP">ỨNG DỤNG</span>
               <span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span>
               <span style="color:#999;font-size:0.8em">10/09/2026</span>
             </div>
-            <h3><a href="/Pages/Beeper10.html">Beeper10 — Ứng dụng nhắn tin đa mạng xã hội Native cho BlackBerry 10</a></h3>
-            <p>Beeper10 kết nối trực tiếp với tài khoản Beeper của bạn, gom mọi cuộc trò chuyện từ Messenger, Telegram, WhatsApp và nhiều nền tảng khác vào một ứng dụng duy nhất ngay trên BlackBerry 10.</p>
-            <a href="/Pages/Beeper10.html" class="btn" style="background:#17a2b8">Đọc thêm →</a>
+            <h3><a href="/Pages/Beeper10.html" class="i18n" data-en="Beeper10 — Native multi-platform messaging app for BlackBerry 10">Beeper10 — Ứng dụng nhắn tin đa mạng xã hội Native cho BlackBerry 10</a></h3>
+            <p class="i18n" data-en="Beeper10 connects directly to your Beeper account, bringing all your conversations from Messenger, Telegram, WhatsApp and more into one single app right on BlackBerry 10.">Beeper10 kết nối trực tiếp với tài khoản Beeper của bạn, gom mọi cuộc trò chuyện từ Messenger, Telegram, WhatsApp và nhiều nền tảng khác vào một ứng dụng duy nhất ngay trên BlackBerry 10.</p>
+            <a href="/Pages/Beeper10.html" class="btn i18n" style="background:#17a2b8" data-en="Read more →">Đọc thêm →</a>
           </div>
         </div>
 
@@ -729,13 +750,13 @@
           <div class="recent-accent" style="background:#17a2b8"></div>
           <div class="recent-body">
             <div class="tags">
-              <span class="tag" style="background:#e8f4f8;color:#17a2b8">ỨNG DỤNG</span>
+              <span class="tag i18n" style="background:#e8f4f8;color:#17a2b8" data-en="APP">ỨNG DỤNG</span>
               <span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span>
               <span style="color:#999;font-size:0.8em">08/09/2026</span>
             </div>
-            <h3><a href="/Pages/BBCord.html">BBCord — Ứng dụng Discord Native cho BlackBerry 10</a></h3>
-            <p>BBCord bản 1.0.2 bổ sung tích hợp BlackBerry Hub, xem Thread trong kênh, và đăng nhập bằng email/mật khẩu kèm MFA — giảm thiểu đáng kể nguy cơ tài khoản bị giới hạn so với dùng Token.</p>
-            <a href="/Pages/BBCord.html" class="btn" style="background:#17a2b8">Đọc thêm →</a>
+            <h3><a href="/Pages/BBCord.html" class="i18n" data-en="BBCord — Native Discord App for BlackBerry 10">BBCord — Ứng dụng Discord Native cho BlackBerry 10</a></h3>
+            <p class="i18n" data-en="BBCord 1.0.2 adds BlackBerry Hub integration, thread viewing in channels, and email/password login with MFA — significantly reducing the risk of account restrictions compared to using a Token.">BBCord bản 1.0.2 bổ sung tích hợp BlackBerry Hub, xem Thread trong kênh, và đăng nhập bằng email/mật khẩu kèm MFA — giảm thiểu đáng kể nguy cơ tài khoản bị giới hạn so với dùng Token.</p>
+            <a href="/Pages/BBCord.html" class="btn i18n" style="background:#17a2b8" data-en="Read more →">Đọc thêm →</a>
           </div>
         </div>
 
@@ -743,13 +764,13 @@
           <div class="recent-accent" style="background:#4caf50"></div>
           <div class="recent-body">
             <div class="tags">
-              <span class="tag" style="background:#e8f5e9;color:#4caf50">MẸO &amp; THỦ THUẬT</span>
+              <span class="tag i18n" style="background:#e8f5e9;color:#4caf50" data-en="TIPS &amp; TRICKS">MẸO &amp; THỦ THUẬT</span>
               <span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span>
               <span style="color:#999;font-size:0.8em">07/09/2026</span>
             </div>
-            <h3><a href="/Pages/Performance-Preroot.html">Cách Tối Ưu Hiệu Năng Và Pin Cho Pre-rooted Autoloaders</a></h3>
-            <p>Hướng dẫn tắt SSH chạy ngầm mặc định trên firmware Pre-rooted Autoloaders qua Term49, giúp máy đỡ nóng và tiết kiệm pin đáng kể so với trước khi tối ưu.</p>
-            <a href="/Pages/Performance-Preroot.html" class="btn" style="background:#4caf50">Đọc thêm →</a>
+            <h3><a href="/Pages/Performance-Preroot.html" class="i18n" data-en="How to Optimize Performance and Battery for Pre-rooted Autoloaders">Cách Tối Ưu Hiệu Năng Và Pin Cho Pre-rooted Autoloaders</a></h3>
+            <p class="i18n" data-en="A guide to disabling the SSH service that runs by default in Pre-rooted Autoloaders firmware via Term49, helping keep the device cooler and noticeably saving battery.">Hướng dẫn tắt SSH chạy ngầm mặc định trên firmware Pre-rooted Autoloaders qua Term49, giúp máy đỡ nóng và tiết kiệm pin đáng kể so với trước khi tối ưu.</p>
+            <a href="/Pages/Performance-Preroot.html" class="btn i18n" style="background:#4caf50" data-en="Read more →">Đọc thêm →</a>
           </div>
         </div>
 
@@ -757,20 +778,20 @@
           <div class="recent-accent" style="background:#17a2b8"></div>
           <div class="recent-body">
             <div class="tags">
-              <span class="tag" style="background:#e8f4f8;color:#17a2b8">ỨNG DỤNG</span>
+              <span class="tag i18n" style="background:#e8f4f8;color:#17a2b8" data-en="APP">ỨNG DỤNG</span>
               <span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span>
               <span style="color:#999;font-size:0.8em">04/09/2026</span>
             </div>
-            <h3><a href="/Pages/Weather10.html">Weather10 — Ứng dụng thời tiết Native cho BlackBerry 10</a></h3>
-            <p>Weather10 là ứng dụng xem thời tiết native đơn giản cho BB10, tái hiện đúng trải nghiệm ứng dụng Weather gốc từ giao diện cho đến Active Frame, điều mà nhiều app thời tiết khác không làm được.</p>
-            <a href="/Pages/Weather10.html" class="btn" style="background:#17a2b8">Đọc thêm →</a>
+            <h3><a href="/Pages/Weather10.html" class="i18n" data-en="Weather10 — Native Weather App for BlackBerry 10">Weather10 — Ứng dụng thời tiết Native cho BlackBerry 10</a></h3>
+            <p class="i18n" data-en="Weather10 is a simple native weather app for BB10 that faithfully recreates the original Weather app experience, from the interface down to the Active Frame — something many other weather apps fail to do.">Weather10 là ứng dụng xem thời tiết native đơn giản cho BB10, tái hiện đúng trải nghiệm ứng dụng Weather gốc từ giao diện cho đến Active Frame, điều mà nhiều app thời tiết khác không làm được.</p>
+            <a href="/Pages/Weather10.html" class="btn i18n" style="background:#17a2b8" data-en="Read more →">Đọc thêm →</a>
           </div>
         </div>
 
       </div>
 
       <div class="view-all">
-        <a href="/Pages/Blog/Blog.html">Xem Tất Cả Bài Viết →</a>
+        <a href="/Pages/Blog/Blog.html" class="i18n" data-en="View All Posts →">Xem Tất Cả Bài Viết →</a>
       </div>
     </section>
 
@@ -799,19 +820,19 @@
 
 <div class="sidebar-sticky">
   <div class="follow-box">
-    <h3>Theo Dõi Chúng Tôi</h3>
-    <p>Cập nhật tin tức mới nhất về BlackBerry trên Facebook</p>
-    <a href="https://www.facebook.com/BBerryLife/" target="_blank">Theo Dõi Facebook</a>
+    <h3 class="i18n" data-en="Follow Us">Theo Dõi Chúng Tôi</h3>
+    <p class="i18n" data-en="Get the latest BlackBerry news on Facebook">Cập nhật tin tức mới nhất về BlackBerry trên Facebook</p>
+    <a href="https://www.facebook.com/BBerryLife/" target="_blank" class="i18n" data-en="Follow Facebook">Theo Dõi Facebook</a>
   </div>
   <div class="follow-box follow-box-archive">
-    <h3>Kho Lưu Trữ</h3>
-    <p>Tải xuống ROM, autoloader và tài nguyên BB10 từ archive của chúng tôi</p>
-    <a href="https://drive.google.com/drive/folders/1AeaAt9HJ3sx7v6BJJJf3LbTybAUMaAAp?usp=drive_link" target="_blank">Truy Cập Archive</a>
+    <h3 class="i18n" data-en="Archive">Kho Lưu Trữ</h3>
+    <p class="i18n" data-en="Download ROMs, autoloaders and BB10 resources from our archive">Tải xuống ROM, autoloader và tài nguyên BB10 từ archive của chúng tôi</p>
+    <a href="https://drive.google.com/drive/folders/1AeaAt9HJ3sx7v6BJJJf3LbTybAUMaAAp?usp=drive_link" target="_blank" class="i18n" data-en="Go to Archive">Truy Cập Archive</a>
   </div>
   <div class="sidebar-box">
-    <h3 class="sidebar-title">Danh Mục</h3>
+    <h3 class="sidebar-title i18n" data-en="Categories">Danh Mục</h3>
     <div class="cat-group">
-      <div class="cat-group-label">Hệ Điều Hành</div>
+      <div class="cat-group-label i18n" data-en="Operating System">Hệ Điều Hành</div>
       <div class="cat-links">
         <a href="/Pages/Category/BlackBerry%2010/BlackBerry-10.html" style="color:#2196f3;border:2px solid #2196f3">BlackBerry 10</a>
         <a href="/Pages/Category/BlackBerry%207.1/BlackBerry-7-1.html" style="color:#00bcd4;border:2px solid #00bcd4">BlackBerry 7.1</a>
@@ -828,7 +849,7 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
   </svg>
-  Cần Trợ Giúp?
+  <span class="i18n" data-en="Need Help?">Cần Trợ Giúp?</span>
 </button>
 
 <div class="modal-overlay" id="helpModal" style="display:none" onclick="onOverlayClick(event)"><div class="modal-overlay-table"><div class="modal-overlay-cell">
@@ -836,69 +857,69 @@
 
     <div class="modal-header">
       <div class="modal-header-text">
-        <h2 id="modalTitle">Yêu Cầu Trợ Giúp</h2>
-        <p>Không có thời gian hoặc gặp khó khăn khi tự làm? Chúng tôi có thể hỗ trợ bạn trực tiếp!</p>
+        <h2 id="modalTitle" class="i18n" data-en="Help Request">Yêu Cầu Trợ Giúp</h2>
+        <p class="i18n" data-en="No time or having trouble doing it yourself? We can help you directly!">Không có thời gian hoặc gặp khó khăn khi tự làm? Chúng tôi có thể hỗ trợ bạn trực tiếp!</p>
       </div>
-      <button class="modal-close" onclick="closeHelpModal()" aria-label="Đóng">✕</button>
+      <button class="modal-close i18n-aria" onclick="closeHelpModal()" aria-label="Đóng" data-en-aria="Close">✕</button>
     </div>
 
     <div class="modal-form-area visible" id="step-form">
-      <div class="modal-note">
+      <div class="modal-note i18n" data-en="<strong>Tell us what issue you&#39;re having</strong> — Fill in the info below and we&#39;ll get in touch to help you as soon as possible.">
         <strong>Cho chúng tôi biết bạn đang gặp vấn đề gì</strong> — Điền thông tin bên dưới, chúng tôi sẽ liên hệ và hỗ trợ bạn sớm nhất có thể.
       </div>
       <form id="form-help" action="https://formspree.io/f/xdawvere" method="POST" onsubmit="handleModalSubmit(event,'help')">
         <input type="hidden" name="_subject" value="[BerryLife] Yêu cầu trợ giúp">
         <div class="mfg">
-          <label>Họ tên / Nickname <span class="req">*</span></label>
-          <input type="text" name="ten" placeholder="Tên của bạn" required>
+          <label class="i18n" data-en="Full name / Nickname <span class=&quot;req&quot;>*</span>">Họ tên / Nickname <span class="req">*</span></label>
+          <input type="text" name="ten" class="i18n-ph" placeholder="Tên của bạn" data-en-ph="Your name" required>
         </div>
         <div class="mfg">
-          <label>Email liên hệ <span class="req">*</span></label>
+          <label class="i18n" data-en="Contact email <span class=&quot;req&quot;>*</span>">Email liên hệ <span class="req">*</span></label>
           <input type="email" name="email" placeholder="email@example.com" required>
         </div>
         <div class="mfg">
-          <label>Facebook của bạn <span class="req">*</span></label>
+          <label class="i18n" data-en="Your Facebook <span class=&quot;req&quot;>*</span>">Facebook của bạn <span class="req">*</span></label>
           <input type="text" name="facebook" placeholder="www.facebook.com/example/" required>
         </div>
         <div class="mfg">
-          <label>Vấn đề bạn gặp phải <span class="req">*</span></label>
+          <label class="i18n" data-en="Issue you&#39;re facing <span class=&quot;req&quot;>*</span>">Vấn đề bạn gặp phải <span class="req">*</span></label>
           <select name="van_de" id="issueSelect" onchange="toggleCarrierField(this)" required>
-            <option value="">-- Chọn vấn đề --</option>
-            <option>Tôi không thể mở khóa mạng của mình</option>
-            <option>Tôi không thể tự tạo ROM</option>
-            <option>Tôi không thể tự tối ưu ROM của mình</option>
-            <option>Tôi không biết cài ROM - cài .Bar</option>
-            <option>Tôi không biết hạ cấp thiết bị của mình (bao quát thêm phần tạo ROM bản cũ hơn 10.3.3)</option>
-            <option>Tôi không biết setup môi trường lập trình momentics để phát triển app cho BB10</option>
+            <option value="" class="i18n" data-en="-- Select an issue --">-- Chọn vấn đề --</option>
+            <option class="i18n" data-en="I can&#39;t unlock my carrier">Tôi không thể mở khóa mạng của mình</option>
+            <option class="i18n" data-en="I can&#39;t build a ROM myself">Tôi không thể tự tạo ROM</option>
+            <option class="i18n" data-en="I can&#39;t optimize my own ROM">Tôi không thể tự tối ưu ROM của mình</option>
+            <option class="i18n" data-en="I don&#39;t know how to install a ROM - flashing .bar">Tôi không biết cài ROM - cài .Bar</option>
+            <option class="i18n" data-en="I don&#39;t know how to downgrade my device (including building ROMs older than 10.3.3)">Tôi không biết hạ cấp thiết bị của mình (bao quát thêm phần tạo ROM bản cũ hơn 10.3.3)</option>
+            <option class="i18n" data-en="I don&#39;t know how to set up the Momentics dev environment for BB10 app development">Tôi không biết setup môi trường lập trình momentics để phát triển app cho BB10</option>
           </select>
         </div>
         <div class="mfg" id="carrierFieldWrap" style="display:none">
-          <label>Nhà mạng đang bị khóa <span class="req">*</span></label>
-          <input type="text" name="nha_mang" id="carrierField" placeholder="Ví dụ: Verizon, AT&T, Rogers...">
+          <label class="i18n" data-en="Locked carrier <span class=&quot;req&quot;>*</span>">Nhà mạng đang bị khóa <span class="req">*</span></label>
+          <input type="text" name="nha_mang" id="carrierField" class="i18n-ph" placeholder="Ví dụ: Verizon, AT&T, Rogers..." data-en-ph="E.g.: Verizon, AT&amp;T, Rogers...">
         </div>
         <div class="mfg">
-          <label>Máy BlackBerry của bạn <span class="opt">(tùy chọn)</span></label>
-          <input type="text" name="model_may" placeholder="Ví dụ: BlackBerry Q10, Z30, Passport...">
+          <label class="i18n" data-en="Your BlackBerry device <span class=&quot;opt&quot;>(optional)</span>">Máy BlackBerry của bạn <span class="opt">(tùy chọn)</span></label>
+          <input type="text" name="model_may" class="i18n-ph" placeholder="Ví dụ: BlackBerry Q10, Z30, Passport..." data-en-ph="E.g.: BlackBerry Q10, Z30, Passport...">
         </div>
         <div class="mfg">
-          <label>Phiên bản OS hiện tại <span class="opt">(tùy chọn)</span></label>
-          <input type="text" name="phien_ban_os" placeholder="Ví dụ: 10.3.3.3216">
+          <label class="i18n" data-en="Current OS version <span class=&quot;opt&quot;>(optional)</span>">Phiên bản OS hiện tại <span class="opt">(tùy chọn)</span></label>
+          <input type="text" name="phien_ban_os" class="i18n-ph" placeholder="Ví dụ: 10.3.3.3216" data-en-ph="E.g.: 10.3.3.3216">
         </div>
         <div class="mfg">
-          <label>Mô tả thêm / Câu hỏi <span class="opt">(tùy chọn)</span></label>
-          <textarea name="mo_ta" placeholder="Mô tả chi tiết vấn đề bạn đang gặp phải..."></textarea>
+          <label class="i18n" data-en="More details / Question <span class=&quot;opt&quot;>(optional)</span>">Mô tả thêm / Câu hỏi <span class="opt">(tùy chọn)</span></label>
+          <textarea name="mo_ta" class="i18n-ph" placeholder="Mô tả chi tiết vấn đề bạn đang gặp phải..." data-en-ph="Describe your issue in detail..."></textarea>
         </div>
-        <button type="submit" class="btn-modal-submit" id="btn-help">Gửi Yêu Cầu</button>
-        <div id="success-help" class="modal-success">
+        <button type="submit" class="btn-modal-submit i18n" id="btn-help" data-en="Send Request">Gửi Yêu Cầu</button>
+        <div id="success-help" class="modal-success i18n" data-en="<strong>Request received!</strong> We&#39;ll contact you by email as soon as possible to help.">
           <strong>Đã nhận yêu cầu!</strong> Chúng tôi sẽ liên hệ với bạn qua email sớm nhất có thể để hỗ trợ.
         </div>
       </form>
 
       <div class="modal-fb-row" id="modalFbRow">
-        <div class="mfb-btn-wrap"><a href="https://www.facebook.com/BBerryLife/" target="_blank" class="mfb-btn">Nhắn Tin</a></div>
+        <div class="mfb-btn-wrap"><a href="https://www.facebook.com/BBerryLife/" target="_blank" class="mfb-btn i18n" data-en="Message">Nhắn Tin</a></div>
         <div class="mfb-info">
-          <div class="mfb-title">Hỏi Nhanh Qua Facebook</div>
-          <div class="mfb-desc">Cần hỗ trợ nhanh? Nhắn tin trực tiếp!</div>
+          <div class="mfb-title i18n" data-en="Quick Question via Facebook">Hỏi Nhanh Qua Facebook</div>
+          <div class="mfb-desc i18n" data-en="Need quick help? Message us directly!">Cần hỗ trợ nhanh? Nhắn tin trực tiếp!</div>
         </div>
       </div>
     </div>
@@ -989,7 +1010,7 @@ function handleModalSubmit(e, formId) {
   if (!form || !btn) return false;
 
   btn.disabled = true;
-  btn.innerHTML = 'Đang gửi...';
+  btn.innerHTML = (typeof getLang === 'function' && getLang() === 'en') ? 'Sending...' : 'Đang gửi...';
 
   var xhr = new XMLHttpRequest();
   xhr.open('POST', form.action, true);
@@ -999,17 +1020,17 @@ function handleModalSubmit(e, formId) {
     if (xhr.status >= 200 && xhr.status < 300) {
       form.reset();
       if (successEl) successEl.style.display = 'block';
-      btn.innerHTML = 'Đã Gửi!';
+      btn.innerHTML = (typeof getLang === 'function' && getLang() === 'en') ? 'Sent!' : 'Đã Gửi!';
     } else {
       btn.disabled = false;
-      btn.innerHTML = 'Gửi Lại';
-      alert('Có lỗi xảy ra. Vui lòng thử lại.');
+      btn.innerHTML = (typeof getLang === 'function' && getLang() === 'en') ? 'Retry' : 'Gửi Lại';
+      alert((typeof getLang === 'function' && getLang() === 'en') ? 'An error occurred. Please try again.' : 'Có lỗi xảy ra. Vui lòng thử lại.');
     }
   };
   xhr.onerror = function() {
     btn.disabled = false;
-    btn.innerHTML = 'Gửi Lại';
-    alert('Không thể kết nối. Vui lòng kiểm tra mạng và thử lại.');
+    btn.innerHTML = (typeof getLang === 'function' && getLang() === 'en') ? 'Retry' : 'Gửi Lại';
+    alert((typeof getLang === 'function' && getLang() === 'en') ? 'Could not connect. Please check your network and try again.' : 'Không thể kết nối. Vui lòng kiểm tra mạng và thử lại.');
   };
   xhr.send(new FormData(form));
   return false;

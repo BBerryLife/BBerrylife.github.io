@@ -18,18 +18,18 @@
       <p>Everything for BlackBerry Users</p></a>
     </div>
     <div class="header-follow">
-      <a href="https://www.facebook.com/BBerryLife/" target="_blank">Theo Dõi Facebook</a>
+      <a href="https://www.facebook.com/BBerryLife/" target="_blank" class="i18n" data-en="Follow Facebook">Theo Dõi Facebook</a>
     </div>
   </div>
   <nav class="site-nav">
     <div class="nav-inner">
-      <a href="/index.html">Trang Chủ</a>
-      <a href="/Pages/Category/Tutorials/Tutorials.html">Hướng Dẫn</a>
-      <a href="/Pages/Category/Apps/Apps.html">Ứng Dụng</a>
-      <a href="/Pages/Category/Games/Games.html">Games</a>
-      <a href="/Pages/Category/Themes/Themes.html">Themes</a>
-      <a href="/Pages/Category/Tips/Tips.html">Mẹo &amp; Thủ Thuật</a>
-      <a href="/Pages/Blog/Blog.html">Tất Cả Bài Viết</a>
+      <a href="/index.html" class="i18n" data-en="Home">Trang Chủ</a>
+      <a href="/Pages/Category/Tutorials/Tutorials.html" class="i18n" data-en="Guides">Hướng Dẫn</a>
+      <a href="/Pages/Category/Apps/Apps.html" class="i18n" data-en="Apps">Ứng Dụng</a>
+      <a href="/Pages/Category/Games/Games.html" class="i18n" data-en="Games">Games</a>
+      <a href="/Pages/Category/Themes/Themes.html" class="i18n" data-en="Themes">Themes</a>
+      <a href="/Pages/Category/Tips/Tips.html" class="i18n" data-en="Tips &amp; Tricks">Mẹo &amp; Thủ Thuật</a>
+      <a href="/Pages/Blog/Blog.html" class="i18n" data-en="All Posts">Tất Cả Bài Viết</a>
     </div>
   </nav>
 </header>
@@ -59,75 +59,75 @@
       <!-- ARTICLE BODY -->
       <div class="article-body">
 
-        <div class="note note-red">
+        <div class="note note-red i18n" data-en="<strong>Warning:</strong> This guide involves editing your device's firmware directly. For advanced users. Doing a step wrong can <strong>permanently brick the device</strong>. The author is not responsible for any damage that happens to your device.">
           <strong>Cảnh Báo:</strong> Hướng dẫn này liên quan đến việc chỉnh sửa trực tiếp vào firmware của thiết bị. Dành cho người dùng nâng cao. Thực hiện sai bước có thể <strong>brick máy</strong> vĩnh viễn. Tác giả không chịu trách nhiệm về bất kỳ thiệt hại nào xảy ra với thiết bị của bạn.
         </div>
 
-        <div class="note note-yellow">
+        <div class="note note-yellow i18n" data-en="Since BlackBerry shut down all its servers in 2022, BB10 and PlayBook devices, after a factory reset or security wipe, get <strong>stuck on the initial setup screen</strong> and can't proceed. This guide helps you patch the firmware to skip that screen entirely, and it also applies to downgrading the OS below 10.3.0 and creating a debloated ROM.">
           Kể từ khi BlackBerry tắt toàn bộ server vào năm 2022, các thiết bị BB10 và PlayBook sau khi factory reset hoặc security wipe sẽ <strong>bị kẹt ở màn hình cài đặt ban đầu</strong> (initial setup) và không thể tiếp tục. Hướng dẫn này giúp bạn vá firmware để bỏ qua hoàn toàn màn hình đó, đồng thời áp dụng cho việc hạ cấp OS xuống thấp hơn 10.3.0 và làm debloated ROM.
         </div>
 
         <!-- TOC -->
         <div class="toc">
-          <div class="toc-title">Mục Lục</div>
+          <div class="toc-title i18n" data-en="Table of Contents">Mục Lục</div>
           <ol>
-            <li><a href="#tested">Thiết bị đã được kiểm tra</a></li>
-            <li><a href="#requirements">Yêu cầu chuẩn bị</a></li>
-            <li><a href="#step1">Bước 1: Tách file Autoloader</a></li>
-            <li><a href="#step2">Bước 2: Giải nén file OS (QCFM)</a></li>
-            <li><a href="#step3">Bước 3: Chỉnh sửa file cấu hình</a></li>
-            <li><a href="#step4">Bước 4: Đóng gói lại file QCFM</a></li>
-            <li><a href="#step5">Bước 5: Tạo Autoloader mới</a></li>
-            <li><a href="#flash">Flash vào thiết bị</a></li>
+            <li><a href="#tested" class="i18n" data-en="Tested devices">Thiết bị đã được kiểm tra</a></li>
+            <li><a href="#requirements" class="i18n" data-en="Preparation requirements">Yêu cầu chuẩn bị</a></li>
+            <li><a href="#step1" class="i18n" data-en="Step 1: Split the Autoloader file">Bước 1: Tách file Autoloader</a></li>
+            <li><a href="#step2" class="i18n" data-en="Step 2: Unpack the OS file (QCFM)">Bước 2: Giải nén file OS (QCFM)</a></li>
+            <li><a href="#step3" class="i18n" data-en="Step 3: Edit the configuration file">Bước 3: Chỉnh sửa file cấu hình</a></li>
+            <li><a href="#step4" class="i18n" data-en="Step 4: Repack the QCFM file">Bước 4: Đóng gói lại file QCFM</a></li>
+            <li><a href="#step5" class="i18n" data-en="Step 5: Build a new Autoloader">Bước 5: Tạo Autoloader mới</a></li>
+            <li><a href="#flash" class="i18n" data-en="Flash to the device">Flash vào thiết bị</a></li>
           </ol>
         </div>
 
         <!-- SECTION: TESTED DEVICES -->
-        <h2 id="tested">Thiết Bị Đã Được Kiểm Tra</h2>
+        <h2 id="tested" class="i18n" data-en="Tested Devices">Thiết Bị Đã Được Kiểm Tra</h2>
         <ul>
-          <li><strong>BlackBerry PlayBook 3G/HSPA+</strong> – OS 2.1.0.1917</li>
-          <li><strong>BlackBerry Z30</strong> – OS 10.3.3.3216 hạ cấp xuống 10.2.1.1057, bị kẹt ở màn hình setup (đã vượt qua bằng hướng dẫn này)</li>
+          <li class="i18n" data-en="<strong>BlackBerry PlayBook 3G/HSPA+</strong> — OS 2.1.0.1917"><strong>BlackBerry PlayBook 3G/HSPA+</strong> – OS 2.1.0.1917</li>
+          <li class="i18n" data-en="<strong>BlackBerry Z30</strong> — OS 10.3.3.3216 downgraded to 10.2.1.1057, got stuck on the setup screen (bypassed using this guide)"><strong>BlackBerry Z30</strong> – OS 10.3.3.3216 hạ cấp xuống 10.2.1.1057, bị kẹt ở màn hình setup (đã vượt qua bằng hướng dẫn này)</li>
         </ul>
 
         <!-- SECTION: REQUIREMENTS -->
-        <h2 id="requirements">Yêu Cầu Chuẩn Bị</h2>
-        <p>Trước khi bắt đầu, hãy chắc chắn bạn đã có đầy đủ các công cụ sau (đa số đã đều ở trong mục <code>10.3.0 Trở Xuống</code> của BlackBerry 10 Tools):</p>
+        <h2 id="requirements" class="i18n" data-en="Preparation Requirements">Yêu Cầu Chuẩn Bị</h2>
+        <p class="i18n" data-en="Before you start, make sure you have all the following tools (most are already in the <code>10.3.0 and below</code> section of BlackBerry 10 Tools):">Trước khi bắt đầu, hãy chắc chắn bạn đã có đầy đủ các công cụ sau (đa số đã đều ở trong mục <code>10.3.0 Trở Xuống</code> của BlackBerry 10 Tools):</p>
         <ul>
-          <li><strong>Cáp USB</strong> chất lượng tốt</li>
-          <li><strong>2 File Autoloader</strong> (.exe) đúng với model thiết bị của bạn. 1 cái là bản bạn muốn xuống <code>10.2, 10.1, 10.0</code> và bản GỐC <a href="https://drive.google.com/drive/folders/1PDbSoBXxEvLIvPXGhn84hYAgFbMAFSKv?usp=drive_link" target="_blank"> 10.3.3.3216</a> để hạ cấp. (nếu bạn dùng PlayBook, chỉ tải mỗi rom PlayBook về)</li>
-          <li><strong>DBBT (Darcy's BlackBerry Tools)</strong> – công cụ extract file từ BlackBerry Autoloader</li>
-          <li><strong>bb10mt</strong> – BlackBerry 10 MultiTool (dùng để unpack/repack QCFM)</li>
+          <li class="i18n" data-en="A good quality <strong>USB cable</strong>"><strong>Cáp USB</strong> chất lượng tốt</li>
+          <li class="i18n" data-en="<strong>2 Autoloader files</strong> (.exe) matching your device model. One is the version you want to go down to <code>10.2, 10.1, 10.0</code> and the ORIGINAL <a href=&quot;https://drive.google.com/drive/folders/1PDbSoBXxEvLIvPXGhn84hYAgFbMAFSKv?usp=drive_link&quot; target=&quot;_blank&quot;>10.3.3.3216</a> for the downgrade. (if you're using a PlayBook, only download the PlayBook rom)"><strong>2 File Autoloader</strong> (.exe) đúng với model thiết bị của bạn. 1 cái là bản bạn muốn xuống <code>10.2, 10.1, 10.0</code> và bản GỐC <a href="https://drive.google.com/drive/folders/1PDbSoBXxEvLIvPXGhn84hYAgFbMAFSKv?usp=drive_link" target="_blank"> 10.3.3.3216</a> để hạ cấp. (nếu bạn dùng PlayBook, chỉ tải mỗi rom PlayBook về)</li>
+          <li class="i18n" data-en="<strong>DBBT (Darcy's BlackBerry Tools)</strong> — a tool to extract files from a BlackBerry Autoloader"><strong>DBBT (Darcy's BlackBerry Tools)</strong> – công cụ extract file từ BlackBerry Autoloader</li>
+          <li class="i18n" data-en="<strong>bb10mt</strong> — BlackBerry 10 MultiTool (used to unpack/repack QCFM)"><strong>bb10mt</strong> – BlackBerry 10 MultiTool (dùng để unpack/repack QCFM)</li>
           <li><strong>Hex Editor</strong></li>
-          <li><strong>DBBT (Darcy's BlackBerry Tools) - Modified</strong> – Chỉnh sửa để load file QCFM chưa ký và tạo Autoloader cuối cùng</li>
+          <li class="i18n" data-en="<strong>DBBT (Darcy's BlackBerry Tools) - Modified</strong> — Modified to load an unsigned QCFM file and build the final Autoloader"><strong>DBBT (Darcy's BlackBerry Tools) - Modified</strong> – Chỉnh sửa để load file QCFM chưa ký và tạo Autoloader cuối cùng</li>
 		  
-		  <strong>QUAN TRỌNG NHẤT (nếu bạn đang ở 10.3.1 trở xuống, nó không quan trọng nữa)</strong>
-		  <li>Bạn phải xóa OS Block, nếu bạn chưa hiểu cách xóa OS Block, hãy tự tạo&chạy ROM Modified tạo bằng BB10 Tools sử dụng bản rom mới nhất <code>10.3.3.3216</code>, rồi xem bước 3 tại trang này <a href="https://bberrylife.github.io/Pages/BBID-Patch.html">BBID-PATCH</a></li>
-          <p>Bạn có thể tải bộ công cụ BlackBerry 10 Tools tại đây:</p>
+		  <strong class="i18n" data-en="MOST IMPORTANT (if you're already on 10.3.1 or below, this no longer matters)">QUAN TRỌNG NHẤT (nếu bạn đang ở 10.3.1 trở xuống, nó không quan trọng nữa)</strong>
+		  <li class="i18n" data-en="You must remove the OS Block. If you don't understand how to remove the OS Block yet, create &amp; run a Modified ROM made with BB10 Tools using the latest ROM <code>10.3.3.3216</code>, then see step 3 on this page <a href=&quot;https://bberrylife.github.io/Pages/BBID-Patch.html&quot;>BBID-PATCH</a>">Bạn phải xóa OS Block, nếu bạn chưa hiểu cách xóa OS Block, hãy tự tạo&chạy ROM Modified tạo bằng BB10 Tools sử dụng bản rom mới nhất <code>10.3.3.3216</code>, rồi xem bước 3 tại trang này <a href="https://bberrylife.github.io/Pages/BBID-Patch.html">BBID-PATCH</a></li>
+          <p class="i18n" data-en="You can download the BlackBerry 10 Tools kit here:">Bạn có thể tải bộ công cụ BlackBerry 10 Tools tại đây:</p>
           <a href="https://drive.google.com/drive/folders/1olUGP0GIbvPx5NfkFvISGZEfWWikjCli?usp=drive_link" class="btn-inline btn-outline btn-primary">BlackBerry 10 Tools</a>
         </ul>
 
-        <div class="note note-yellow">
+        <div class="note note-yellow i18n" data-en="<strong>Skill Requirement:</strong> You need to be comfortable using <strong>Command Prompt</strong> or <strong>PowerShell</strong>. You should know basic commands like <code>cd</code>, <code>dir</code> and how to navigate folders.">
           <strong>Yêu Cầu Kỹ Năng:</strong> Bạn cần quen với việc dùng <strong>Command Prompt</strong> hoặc <strong>PowerShell</strong>. Cần biết các lệnh cơ bản như <code>cd</code>, <code>dir</code> và cách điều hướng thư mục.
         </div>
 
         <!-- STEP 1 -->
         <div class="step-header" id="step1">
           <div class="step-num">1</div>
-          <h2>Tách File Autoloader</h2>
+          <h2 class="i18n" data-en="Split the Autoloader File">Tách File Autoloader</h2>
         </div>
 
-        <p>Đầu tiên, bạn cần extract các file OS và Radio từ file Autoloader chính.</p>
+        <p class="i18n" data-en="First, you need to extract the OS and Radio files from the main Autoloader file.">Đầu tiên, bạn cần extract các file OS và Radio từ file Autoloader chính.</p>
         <ol>
-          <li>Đặt file Autoloader <code>.exe</code> vào một thư mục mới.</li>
-          <li>Mở <strong>DBBT</strong>, chuyển sang tab <strong>Extract</strong>.</li>
-          <li>Nhấn <strong>Browse</strong> và chọn file Autoloader của bạn và bấm tiếp <strong>Split Autoloader</strong> </li>
-          <li>DBBT sẽ xử lý và xuất ra <strong>hai file <code>.signed</code></strong> trong cùng thư mục với Autoloader:
+          <li class="i18n" data-en="Put the <code>.exe</code> Autoloader file in a new folder.">Đặt file Autoloader <code>.exe</code> vào một thư mục mới.</li>
+          <li class="i18n" data-en="Open <strong>DBBT</strong>, switch to the <strong>Extract</strong> tab.">Mở <strong>DBBT</strong>, chuyển sang tab <strong>Extract</strong>.</li>
+          <li class="i18n" data-en="Press <strong>Browse</strong> and choose your Autoloader file, then press <strong>Split Autoloader</strong>">Nhấn <strong>Browse</strong> và chọn file Autoloader của bạn và bấm tiếp <strong>Split Autoloader</strong></li>
+          <li class="i18n" data-en="DBBT will process and output <strong>two <code>.signed</code> files</strong> in the same folder as the Autoloader:">DBBT sẽ xử lý và xuất ra <strong>hai file <code>.signed</code></strong> trong cùng thư mục với Autoloader:
             <ul>
-              <li>File OS (ví dụ: <code>filename@...OS.signed</code>)</li>
-              <li>File Radio (ví dụ: <code>...Radio.signed</code>)</li>
+              <li class="i18n" data-en="An OS file (e.g. <code>filename@...OS.signed</code>)">File OS (ví dụ: <code>filename@...OS.signed</code>)</li>
+              <li class="i18n" data-en="A Radio file (e.g. <code>...Radio.signed</code>)">File Radio (ví dụ: <code>...Radio.signed</code>)</li>
             </ul>
           </li>
-          <li>Để dễ làm việc, hãy đổi tên chúng thành <code>OS.signed</code> và <code>Radio.signed</code>.</li>
+          <li class="i18n" data-en="To make things easier, rename them to <code>OS.signed</code> and <code>Radio.signed</code>.">Để dễ làm việc, hãy đổi tên chúng thành <code>OS.signed</code> và <code>Radio.signed</code>.</li>
         </ol>
 		
 		<figure class="article-img-wrap">
@@ -145,20 +145,21 @@
         <!-- STEP 2 -->
         <div class="step-header" id="step2">
           <div class="step-num">2</div>
-          <h2>Giải Nén File OS (Unpack QCFM)</h2>
+          <h2 class="i18n" data-en="Unpack the OS File (Unpack QCFM)">Giải Nén File OS (Unpack QCFM)</h2>
         </div>
 
-        <p>File <code>.signed</code> chứa OS là một archive QCFM. Dùng <code>bb10mt</code> để giải nén nó. Tuy nhiên, để dễ dàng làm việc và bạn có thể copy phần ví dụ, hãy tạo thư mục <code>BlackBerry</code> trong ổ C:\ và mang <code>bb10mt</code>, <code>2 file .signed</code> đến thư mục đó.</p>
+        <p class="i18n" data-en="The <code>.signed</code> file containing the OS is a QCFM archive. Use <code>bb10mt</code> to unpack it. To make things easier and so you can copy the example, create a <code>BlackBerry</code> folder on the C:\ drive and put <code>bb10mt</code> and both <code>.signed</code> files there.">File <code>.signed</code> chứa OS là một archive QCFM. Dùng <code>bb10mt</code> để giải nén nó. Tuy nhiên, để dễ dàng làm việc và bạn có thể copy phần ví dụ, hãy tạo thư mục <code>BlackBerry</code> trong ổ C:\ và mang <code>bb10mt</code>, <code>2 file .signed</code> đến thư mục đó.</p>
         <ol>
-          <li>Mở <strong>Command Prompt</strong> hoặc <strong>PowerShell</strong> trong thư mục chứa <code>bb10mt.exe</code>.<br>
+          <li class="i18n" data-en="Open <strong>Command Prompt</strong> or <strong>PowerShell</strong> in the folder containing <code>bb10mt.exe</code>.<br>
+          <em>Tip: Hold Shift + right-click the folder → choose &quot;Open PowerShell window here&quot;.</em>">Mở <strong>Command Prompt</strong> hoặc <strong>PowerShell</strong> trong thư mục chứa <code>bb10mt.exe</code>.<br>
           <em>Mẹo: Giữ Shift + chuột phải vào thư mục → chọn "Open PowerShell window here".</em></li>
-          <li>Chạy lệnh sau:</li>
+          <li class="i18n" data-en="Run the following command:">Chạy lệnh sau:</li>
         </ol>
         <pre><code>bb10mt.exe unpack -c "đường_dẫn\đến\OS.signed"</code></pre>
-        <p>Ví dụ:</p>
+        <p class="i18n" data-en="Example:">Ví dụ:</p>
         <pre><code>bb10mt.exe unpack -c C:\BlackBerry\OS.signed</code></pre>
 
-        <div class="note note-blue">
+        <div class="note note-blue i18n" data-en="<strong>Tip:</strong> In Windows Terminal, you can drag and drop a file directly into the terminal window to auto-fill the path.">
           <strong>Mẹo:</strong> Trên Windows Terminal, bạn có thể kéo thả file trực tiếp vào cửa sổ terminal để điền đường dẫn tự động.
         </div>
 		
@@ -174,22 +175,22 @@
             alt=""></picture>
         </figure>
 
-        <p>Sau khi unpack, bạn sẽ có một thư mục chứa nhiều file. Hãy tạo thêm thư mục <code>unpacked</code> và cho tất cả file vừa giải nén (trừ 2 file ban đầu) vào thư mục đó. <strong>Chúng ta chỉ cần file <code>.ufs</code></strong>.</p>
+        <p class="i18n" data-en="After unpacking, you'll have a folder containing several files. Create another folder called <code>unpacked</code> and move every file you just extracted (except the original two) into it. <strong>We only need the <code>.ufs</code> file</strong>.">Sau khi unpack, bạn sẽ có một thư mục chứa nhiều file. Hãy tạo thêm thư mục <code>unpacked</code> và cho tất cả file vừa giải nén (trừ 2 file ban đầu) vào thư mục đó. <strong>Chúng ta chỉ cần file <code>.ufs</code></strong>.</p>
 
         <!-- STEP 3 -->
         <div class="step-header" id="step3">
           <div class="step-num">3</div>
-          <h2>Chỉnh Sửa File Cấu Hình (Quan Trọng Nhất)</h2>
+          <h2 class="i18n" data-en="Edit the Configuration File (Most Important)">Chỉnh Sửa File Cấu Hình (Quan Trọng Nhất)</h2>
         </div>
 
-        <div class="note note-red">
+        <div class="note note-red i18n" data-en="<strong>Be Careful:</strong> This is the key step. Do it carefully to avoid having to repeat the whole process.">
           <strong>Cẩn Thận:</strong> Đây là bước then chốt. Hãy thực hiện cẩn thận để tránh phải lặp lại toàn bộ quy trình.
         </div>
 
         <ol>
-          <li>Mở <strong>Hex Editor</strong> (ví dụ HxD).</li>
-          <li>Mở file <code>.ufs</code> vừa unpack (kéo thả vào Hex Editor).</li>
-          <li>Nhấn <strong>Ctrl+F</strong> để tìm kiếm, nhập chuỗi văn bản: <code>autorun::1</code></li>
+          <li class="i18n" data-en="Open a <strong>Hex Editor</strong> (e.g. HxD).">Mở <strong>Hex Editor</strong> (ví dụ HxD).</li>
+          <li class="i18n" data-en="Open the <code>.ufs</code> file you just unpacked (drag and drop into Hex Editor).">Mở file <code>.ufs</code> vừa unpack (kéo thả vào Hex Editor).</li>
+          <li class="i18n" data-en="Press <strong>Ctrl+F</strong> to search, and type: <code>autorun::1</code>">Nhấn <strong>Ctrl+F</strong> để tìm kiếm, nhập chuỗi văn bản: <code>autorun::1</code></li>
         </ol>
 		
 		<figure class="article-img-wrap">
@@ -198,8 +199,8 @@
             alt=""></picture>
         </figure>
 
-        <h3>Dành cho thiết bị BlackBerry 10:</h3>
-        <p>Tìm <code>autorun::1</code> và đổi giá trị <code>1</code> thành <code>0</code>:</p>
+        <h3 class="i18n" data-en="For BlackBerry 10 devices:">Dành cho thiết bị BlackBerry 10:</h3>
+        <p class="i18n" data-en="Find <code>autorun::1</code> and change the value <code>1</code> to <code>0</code>:">Tìm <code>autorun::1</code> và đổi giá trị <code>1</code> thành <code>0</code>:</p>
         <pre><code>autorun::1  →  autorun::0</code></pre>
 		
 		<figure class="article-img-wrap">
@@ -207,15 +208,9 @@
             src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/05.png"
             alt=""></picture>
         </figure>
-		
-		<figure class="article-img-wrap">
-          <picture><source srcset="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/06.png" type="image/webp"><img
-            src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Bypass%20Setup%20QNX/06.png"
-            alt=""></picture>
-        </figure>
 
-        <h3>Dành cho BlackBerry PlayBook:</h3>
-        <p>Tìm và sửa <strong>cả hai</strong> giá trị sau (lưu ý có <strong>2 entry trùng lặp</strong>, phải sửa hết):</p>
+        <h3 class="i18n" data-en="For BlackBerry PlayBook:">Dành cho BlackBerry PlayBook:</h3>
+        <p class="i18n" data-en="Find and edit <strong>both</strong> of the following values (note there are <strong>2 duplicate entries</strong>, both must be edited):">Tìm và sửa <strong>cả hai</strong> giá trị sau (lưu ý có <strong>2 entry trùng lặp</strong>, phải sửa hết):</p>
         <pre><code>deactivate_mode::1  →  deactivate_mode::0
 autorun::1          →  autorun::0</code></pre>
 
@@ -231,47 +226,47 @@ autorun::1          →  autorun::0</code></pre>
             alt=""></picture>
         </figure>
 
-        <div class="note note-yellow">
+        <div class="note note-yellow i18n" data-en="<strong>PlayBook note:</strong> There are two duplicate <code>autorun::1</code> entries in the file. You must find and change <strong>both</strong>, not just one.">
           <strong>Lưu Ý PlayBook:</strong> Có hai entry <code>autorun::1</code> trùng lặp trong file. Bạn phải tìm và đổi <strong>cả hai</strong>, không chỉ một.
         </div>
 
         <ol start="4">
-          <li>Lưu file sau khi chỉnh sửa (<strong>Ctrl+S</strong>) rồi đóng Hex Editor.</li>
+          <li class="i18n" data-en="Save the file after editing (<strong>Ctrl+S</strong>) then close the Hex Editor.">Lưu file sau khi chỉnh sửa (<strong>Ctrl+S</strong>) rồi đóng Hex Editor.</li>
         </ol>
 
         <!-- STEP 4 -->
         <div class="step-header" id="step4">
           <div class="step-num">4</div>
-          <h2>Đóng Gói Lại File QCFM (Pack)</h2>
+          <h2 class="i18n" data-en="Repack the QCFM File (Pack)">Đóng Gói Lại File QCFM (Pack)</h2>
         </div>
 
-        <p>Sau khi đã vá file, cần đóng gói lại thành file <code>.signed</code> mới. Để cho dễ dàng, tạo thêm 1 thư mục <code>Output</code> bên trong thư mục <code>BlackBerry</code> để tránh việc 2 tệp OS.signed "đánh nhau", nếu bạn không thích thì xóa OS.signed cũ đi cho lẹ;)</p>
+        <p class="i18n" data-en="Once the file is patched, you need to repack it into a new <code>.signed</code> file. To keep things tidy, create an extra <code>Output</code> folder inside the <code>BlackBerry</code> folder so the two OS.signed files don't &quot;collide&quot; — if you don't care, just delete the old OS.signed for simplicity ;)">Sau khi đã vá file, cần đóng gói lại thành file <code>.signed</code> mới. Để cho dễ dàng, tạo thêm 1 thư mục <code>Output</code> bên trong thư mục <code>BlackBerry</code> để tránh việc 2 tệp OS.signed "đánh nhau", nếu bạn không thích thì xóa OS.signed cũ đi cho lẹ;)</p>
         <ol>
-          <li>Quay lại cửa sổ terminal.</li>
-          <li>Gõ lệnh theo cấu trúc sau (CHƯA NHẤN ENTER):</li>
+          <li class="i18n" data-en="Go back to the terminal window.">Quay lại cửa sổ terminal.</li>
+          <li class="i18n" data-en="Type the command in the following structure (DON'T PRESS ENTER YET):">Gõ lệnh theo cấu trúc sau (CHƯA NHẤN ENTER):</li>
         </ol>
         <pre><code>bb10mt.exe pack -c "đường_dẫn\output\Patched_OS.signed" --input</code></pre>
         <ol start="3">
-          <li>Sau <code>--input</code>, <strong>chưa nhấn Enter</strong>. Mở thư mục chứa các file đã unpack.</li>
-          <li>Kéo thả <strong>4 file sau</strong> vào terminal:
+          <li class="i18n" data-en="After <code>--input</code>, <strong>don't press Enter yet</strong>. Open the folder containing the unpacked files.">Sau <code>--input</code>, <strong>chưa nhấn Enter</strong>. Mở thư mục chứa các file đã unpack.</li>
+          <li class="i18n" data-en="Drag and drop the following <strong>4 files</strong> into the terminal:">Kéo thả <strong>4 file sau</strong> vào terminal:
             <ul>
-              <li>File <code>.ufs</code></li>
-              <li>File <code>.ifs</code></li>
-              <li>File <code>.mbr</code></li>
-              <li>File <code>.rcfs</code></li>
+              <li class="i18n" data-en="The <code>.ufs</code> file">File <code>.ufs</code></li>
+              <li class="i18n" data-en="The <code>.ifs</code> file">File <code>.ifs</code></li>
+              <li class="i18n" data-en="The <code>.mbr</code> file">File <code>.mbr</code></li>
+              <li class="i18n" data-en="The <code>.rcfs</code> file">File <code>.rcfs</code></li>
             </ul>
           </li>
-          <li>Thêm dấu phẩy (<code>,</code>) giữa các đường dẫn file. <strong>Bỏ qua</strong> các file <code>.sig</code> và <code>.sig2</code>.</li>
+          <li class="i18n" data-en="Add a comma (<code>,</code>) between the file paths. <strong>Skip</strong> the <code>.sig</code> and <code>.sig2</code> files.">Thêm dấu phẩy (<code>,</code>) giữa các đường dẫn file. <strong>Bỏ qua</strong> các file <code>.sig</code> và <code>.sig2</code>.</li>
         </ol>
 
-        <p>Lệnh hoàn chỉnh sẽ trông như sau (NẾU BẠN TẠO THƯ MỤC Output trong BlackBerry):</p>
+        <p class="i18n" data-en="The full command will look like this (IF YOU CREATED an Output folder inside BlackBerry):">Lệnh hoàn chỉnh sẽ trông như sau (NẾU BẠN TẠO THƯ MỤC Output trong BlackBerry):</p>
         <pre><code>bb10mt.exe pack -c C:\BlackBerry\Output\OS.signed --input C:\BlackBerry\unpacked\OS.ufs,C:\BlackBerry\unpacked\OS.ifs,C:\BlackBerry\unpacked\OS.mbr,C:\BlackBerry\unpacked\OS.rcfs</code></pre>
 		
-		<p>Lệnh hoàn chỉnh sẽ trông như sau (NẾU BẠN <strong>KHÔNG</strong> TẠO THƯ MỤC Output trong BlackBerry):</p>
+		<p class="i18n" data-en="The full command will look like this (IF YOU <strong>DID NOT</strong> create an Output folder inside BlackBerry):">Lệnh hoàn chỉnh sẽ trông như sau (NẾU BẠN <strong>KHÔNG</strong> TẠO THƯ MỤC Output trong BlackBerry):</p>
         <pre><code>bb10mt.exe pack -c C:\BlackBerry\OS.signed --input C:\BlackBerry\unpacked\OS.ufs,C:\BlackBerry\unpacked\OS.ifs,C:\BlackBerry\unpacked\OS.mbr,C:\BlackBerry\unpacked\OS.rcfs</code></pre>
 
         <ol start="6">
-          <li>Nhấn <strong>Enter</strong>. <code>bb10mt</code> sẽ tạo ra file <code>Patched_OS.signed</code> tại đường dẫn bạn chỉ định.</li>
+          <li class="i18n" data-en="Press <strong>Enter</strong>. <code>bb10mt</code> will create a <code>Patched_OS.signed</code> file at the path you specified.">Nhấn <strong>Enter</strong>. <code>bb10mt</code> sẽ tạo ra file <code>Patched_OS.signed</code> tại đường dẫn bạn chỉ định.</li>
         </ol>
 		
 		<figure class="article-img-wrap">
@@ -283,20 +278,20 @@ autorun::1          →  autorun::0</code></pre>
         <!-- STEP 5 -->
         <div class="step-header" id="step5">
           <div class="step-num">5</div>
-          <h2>Tạo Autoloader Cuối Cùng</h2>
+          <h2 class="i18n" data-en="Build the Final Autoloader">Tạo Autoloader Cuối Cùng</h2>
         </div>
 
-        <p>Với file OS đã vá, bước cuối là đóng gói thành một Autoloader <code>.exe</code> hoàn chỉnh.</p>
+        <p class="i18n" data-en="With the patched OS file, the final step is packing it into a complete <code>.exe</code> Autoloader.">Với file OS đã vá, bước cuối là đóng gói thành một Autoloader <code>.exe</code> hoàn chỉnh.</p>
         <ol>
-          <li>Mở <strong>DBBT (Darcy's BlackBerry Tools) - modified</strong>.</li>
-          <li>Trong tab <strong>"Build Autoloader"</strong>:
+          <li class="i18n" data-en="Open <strong>DBBT (Darcy's BlackBerry Tools) - modified</strong>.">Mở <strong>DBBT (Darcy's BlackBerry Tools) - modified</strong>.</li>
+          <li class="i18n" data-en="In the <strong>&quot;Build Autoloader&quot;</strong> tab:">Trong tab <strong>"Build Autoloader"</strong>:
             <ul>
-              <li>Chọn file <code>OS.signed</code> vừa tạo ở Bước 4.</li>
-              <li>Chọn file <code>Radio.signed</code> gốc từ Bước 1 (nếu thiết bị yêu cầu).</li>
+              <li class="i18n" data-en="Select the <code>OS.signed</code> file you just created in Step 4.">Chọn file <code>OS.signed</code> vừa tạo ở Bước 4.</li>
+              <li class="i18n" data-en="Select the original <code>Radio.signed</code> file from Step 1 (if the device needs it).">Chọn file <code>Radio.signed</code> gốc từ Bước 1 (nếu thiết bị yêu cầu).</li>
             </ul>
           </li>
-          <li>Nhập tên cho file Autoloader mới.</li>
-          <li>Nhấn <strong>"Build it!"</strong>. DBBT sẽ tạo ra file Autoloader <code>.exe</code> trong cùng thư mục.</li>
+          <li class="i18n" data-en="Enter a name for the new Autoloader file.">Nhập tên cho file Autoloader mới.</li>
+          <li class="i18n" data-en="Press <strong>&quot;Build it!&quot;</strong>. DBBT will create the <code>.exe</code> Autoloader file in the same folder.">Nhấn <strong>"Build it!"</strong>. DBBT sẽ tạo ra file Autoloader <code>.exe</code> trong cùng thư mục.</li>
         </ol>
 		
 		<figure class="article-img-wrap">
@@ -305,30 +300,30 @@ autorun::1          →  autorun::0</code></pre>
             alt="">
         </figure>
 
-        <div class="note note-green">
+        <div class="note note-green i18n" data-en="<strong>Done!</strong> You now have a custom Autoloader, ready to flash to your device.">
           <strong>Hoàn Tất!</strong> Bạn đã có một Autoloader tùy chỉnh, sẵn sàng để flash vào thiết bị.
         </div>
 
         <!-- FLASH -->
-        <h2 id="flash">Flash Vào Thiết Bị</h2>
+        <h2 id="flash" class="i18n" data-en="Flash to the Device">Flash Vào Thiết Bị</h2>
 
-        <div class="note note-red">
+        <div class="note note-red i18n" data-en="<strong>Back Up Before Flashing:</strong> Back up all important data before proceeding. The flashing process will wipe the device.">
           <strong>Backup Trước Khi Flash:</strong> Hãy sao lưu toàn bộ dữ liệu quan trọng trước khi tiến hành. Quá trình flash sẽ xóa sạch thiết bị.
         </div>
 
         <ol>
-          <li><strong>Tắt</strong> thiết bị BlackBerry.</li>
-          <li>Chạy file <strong>Autoloader <code>.exe</code></strong> vừa tạo.</li>
-          <li>Một cửa sổ command sẽ xuất hiện – <strong>lúc này mới cắm USB</strong> vào máy tính.</li>
-          <li>Đèn LED của thiết bị sẽ chuyển sang <strong>màu xanh lá</strong> – đây là dấu hiệu quá trình flash đang diễn ra.</li>
-          <li>Sau khi hoàn tất, thiết bị sẽ <strong>tự khởi động lại</strong> và vào thẳng <strong>màn hình chính (home screen)</strong>, bỏ qua hoàn toàn initial setup.</li>
+          <li class="i18n" data-en="<strong>Turn off</strong> the BlackBerry device."><strong>Tắt</strong> thiết bị BlackBerry.</li>
+          <li class="i18n" data-en="Run the <strong>Autoloader <code>.exe</code></strong> file you just created.">Chạy file <strong>Autoloader <code>.exe</code></strong> vừa tạo.</li>
+          <li class="i18n" data-en="A command window will appear — <strong>only now plug in the USB</strong> to the computer.">Một cửa sổ command sẽ xuất hiện – <strong>lúc này mới cắm USB</strong> vào máy tính.</li>
+          <li class="i18n" data-en="The device's LED will turn <strong>green</strong> — this signals the flash is in progress.">Đèn LED của thiết bị sẽ chuyển sang <strong>màu xanh lá</strong> – đây là dấu hiệu quá trình flash đang diễn ra.</li>
+          <li class="i18n" data-en="Once complete, the device will <strong>reboot on its own</strong> straight to the <strong>home screen</strong>, skipping the initial setup entirely.">Sau khi hoàn tất, thiết bị sẽ <strong>tự khởi động lại</strong> và vào thẳng <strong>màn hình chính (home screen)</strong>, bỏ qua hoàn toàn initial setup.</li>
         </ol>
 
-        <div class="note note-green">
+        <div class="note note-green i18n" data-en="<strong>Congratulations!</strong> You've successfully downgraded your BlackBerry device. It will boot straight to the home screen without going through the initial setup screen anymore.">
           <strong>Chúc Mừng!</strong> Bạn đã hạ cấp thành công thiết bị BlackBerry của mình. Thiết bị sẽ khởi động thẳng vào home screen mà không cần trải qua màn hình cài đặt ban đầu nữa.
         </div>
 
-        <div class="note note-blue">
+        <div class="note note-blue i18n" data-en="<strong>References:</strong> This technical guide is based on research from the BlackBerry community, including the work of <a href=&quot;https://bb10.root.sx/&quot; target=&quot;_blank&quot;><strong>Oleksandr</strong></a>, <strong>FerreiraPablo</strong> from <a href=&quot;https://www.patreon.com/c/waitberry/&quot; target=&quot;_blank&quot;><strong>WaitBerry</strong></a>, and other community members like Michioxd. The original guide is <strong><a href=&quot;https://blog.michioxd.ch/blog/02-how-to-completely-skip-initial-setup-in-bbqnx/&quot; target=&quot;_blank&quot;>here</a></strong>">
           <strong>Nguồn Tham Khảo:</strong> Hướng dẫn kỹ thuật này dựa trên nghiên cứu của cộng đồng BlackBerry, bao gồm công trình của <a href="https://bb10.root.sx/" target="_blank"><strong>Oleksandr</strong></a>, <strong>FerreiraPablo</strong> từ <a href="https://www.patreon.com/c/waitberry/" target="_blank"><strong>WaitBerry</strong></a>, và các thành viên cộng đồng khác như Michioxd. Hướng dẫn gốc nằm ở <strong><a href="https://blog.michioxd.ch/blog/02-how-to-completely-skip-initial-setup-in-bbqnx/" target="_blank">đây</a></strong> 
         </div>
 
@@ -339,12 +334,12 @@ autorun::1          →  autorun::0</code></pre>
       <!-- FOOTER NAV -->
       
 <div class="source-box">
-<p><strong>Nguồn / Ghi nhận:</strong> Oleksandr – <a href="https://bb10.root.sx/" target="_blank">bb10.root.sx</a> | <a href="https://blog.michioxd.ch/blog/02-how-to-completely-skip-initial-setup-in-bbqnx/" target="_blank">Michioxd</a></p>
-<p>Đăng ngày: 04 tháng 05 năm 2026</p>
+<p><strong class="i18n" data-en="Source / Credits:">Nguồn / Ghi nhận:</strong> Oleksandr – <a href="https://bb10.root.sx/" target="_blank">bb10.root.sx</a> | <a href="https://blog.michioxd.ch/blog/02-how-to-completely-skip-initial-setup-in-bbqnx/" target="_blank">Michioxd</a></p>
+<p class="i18n-datefmt"><span class="i18n" data-en="Published on: ">Đăng ngày: </span>04 tháng 05 năm 2026</p>
 </div>
 <div class="article-footer">
-        <a href="/index.html" class="btn-outline">← Về Trang Chủ</a>
-        <a href="/Pages/Blog/Blog.html" class="btn-solid">Xem Thêm Bài Viết →</a>
+        <a href="/index.html" class="btn-outline i18n" data-en="← Back to Home">← Về Trang Chủ</a>
+        <a href="/Pages/Blog/Blog.html" class="btn-solid i18n" data-en="View More Posts →">Xem Thêm Bài Viết →</a>
       </div>
 
     </article>
