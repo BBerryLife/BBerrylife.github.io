@@ -34,6 +34,25 @@
   .header-follow a:first-child { margin-left: 0; }
   .header-follow a:hover { opacity: 0.85; }
 
+  /* ── LANGUAGE SWITCH (dưới nút Theo Dõi Facebook) ── */
+  .lang-switch { display: block; clear: both; text-align: right; margin-top: 8px; }
+  .lang-toggle-btn {
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.55);
+    color: white;
+    padding: 6px 16px;
+    font-weight: bold;
+    font-size: 0.78em;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 3px;
+    font-family: inherit;
+  }
+  .lang-toggle-btn:hover { background: rgba(255,255,255,0.32); }
+
   /* ── NAV ── */
   .site-nav { background: #4fa3d1; border-top: 2px solid rgba(255,255,255,0.25); overflow: hidden; }
   .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0; display: table; width: 100%; table-layout: fixed; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -208,6 +227,7 @@
     .header-follow { float: none; padding-top: 10px; }
     .header-follow a { display: inline-block; text-align: center; padding: 10px 16px; margin-left: 8px; }
     .header-follow a:first-child { margin-left: 0; }
+    .lang-switch { text-align: center; }
     .header-brand h1 { font-size: 2em; }
     .site-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .nav-inner { display: block; white-space: nowrap; width: auto; }
