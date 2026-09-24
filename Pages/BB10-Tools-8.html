@@ -44,217 +44,225 @@
       </div>
 
       <div class="article-body">
-<div class="note note-yellow"><strong>Lời Khuyên Quan Trọng:</strong>Hướng dẫn này được biên soạn dựa trên video của <strong>Ferreira</strong> <strong>Pablo từ <a href="https://www.patreon.com/c/waitberry/">WaitBerry</a></strong>. Phương pháp root và cài đặt Android apps được phát triển bởi <a href="https://bb10.root.sx/"><strong>Oleksandr</strong></a>. Đây là công trình nghiên cứu của cộng đồng BlackBerry.
+<div class="note note-yellow i18n" data-en="<strong>Important Note:</strong> This guide was put together based on a video by <strong>Ferreira</strong> <strong>Pablo from <a href=&quot;https://www.patreon.com/c/waitberry/&quot;>WaitBerry</a></strong>. The root method and Android app installation process were developed by <a href=&quot;https://bb10.root.sx/&quot;><strong>Oleksandr</strong></a>. This is the product of BlackBerry community research."><strong>Lời Khuyên Quan Trọng:</strong>Hướng dẫn này được biên soạn dựa trên video của <strong>Ferreira</strong> <strong>Pablo từ <a href="https://www.patreon.com/c/waitberry/">WaitBerry</a></strong>. Phương pháp root và cài đặt Android apps được phát triển bởi <a href="https://bb10.root.sx/"><strong>Oleksandr</strong></a>. Đây là công trình nghiên cứu của cộng đồng BlackBerry.
 
 </div>
 
-<h2>Giới Thiệu</h2>Hướng dẫn này sẽ giúp bạn:
+<h2 class="i18n" data-en="Introduction">Giới Thiệu</h2>
+<p class="i18n" data-en="This guide will help you:">Hướng dẫn này sẽ giúp bạn:</p>
 <ul>
- <li><strong>Root thiết bị BlackBerry 10</strong>để có quyền truy cập (read-only)</li>
- <li><strong>Cài đặt native apps không cần sign </strong>(unsigned apps)</li>
- <li><strong>Truy cập SSH</strong>với quyền root (tùy chọn)</li>
- <li><strong>Mở rộng khả năng</strong>của thiết bị BlackBerry 10</li>
+ <li class="i18n" data-en="<strong>Root your BlackBerry 10 device</strong> to gain (read-only) access"><strong>Root thiết bị BlackBerry 10</strong>để có quyền truy cập (read-only)</li>
+ <li class="i18n" data-en="<strong>Install native apps without needing to sign them</strong> (unsigned apps)"><strong>Cài đặt native apps không cần sign </strong>(unsigned apps)</li>
+ <li class="i18n" data-en="<strong>SSH access</strong> with root privileges (optional)"><strong>Truy cập SSH</strong>với quyền root (tùy chọn)</li>
+ <li class="i18n" data-en="<strong>Expand the capabilities</strong> of your BlackBerry 10 device"><strong>Mở rộng khả năng</strong>của thiết bị BlackBerry 10</li>
 </ul>
-<div class="note note-red"><strong>Cảnh Báo:</strong>
+<div class="note note-red i18n" data-en="<strong>Warning:</strong>
+<strong>• This process will reset your device.</strong> Back up any important data before you start.
+<strong>• Only use an official autoloader from BlackBerry.</strong> Don&#39;t use a previously modded autoloader, as it will cause errors.
+<strong>• Follow the instructions carefully.</strong> A wrong step can cause problems with your device."><strong>Cảnh Báo:</strong>
 <strong>• Quá trình này sẽ reset thiết bị của bạn.</strong>Hãy sao lưu dữ liệu quan trọng trước khi bắt đầu.
 <strong>• Chỉ sử dụng autoloader gốc từ BlackBerry.</strong>Không dùng autoloader đã được mod trước đó vì sẽ bị lỗi.
 <strong>• Làm theo hướng dẫn một cách cẩn thận.</strong>Sai bước có thể khiến thiết bị gặp sự cố.
 
 </div>
 
-<h2>Công Cụ Cần Thiết</h2>
+<h2 class="i18n" data-en="Required Tools">Công Cụ Cần Thiết</h2>
 
-<strong>Danh Sách Công Cụ và File:</strong>
+<p class="i18n" data-en="<strong>Tools and Files List:</strong>"><strong>Danh Sách Công Cụ và File:</strong></p>
 <ul>
- <li><a href="https://drive.google.com/drive/folders/1sock5HKjq44IZMzMUesia7LI0glL_-yd?usp=drive_link"><strong>Autoloader gốc</strong></a>- File cài đặt hệ điều hành cho thiết bị của bạn
+ <li><a href="https://drive.google.com/drive/folders/1sock5HKjq44IZMzMUesia7LI0glL_-yd?usp=drive_link"><strong class="i18n" data-en="Original Autoloader">Autoloader gốc</strong></a><span class="i18n" data-en=" – Operating system installer file for your device">- File cài đặt hệ điều hành cho thiết bị của bạn</span>
 <ul>
- <li>Phải là bản gốc từ BlackBerry (KHÔNG dùng bản đã mod)</li>
- <li>Tương thích với model thiết bị của bạn</li>
- <li>Khuyến nghị: Phiên bản mới nhất (ví dụ: 10.3.3)</li>
+ <li class="i18n" data-en="Must be an official version from BlackBerry (do NOT use a modded version)">Phải là bản gốc từ BlackBerry (KHÔNG dùng bản đã mod)</li>
+ <li class="i18n" data-en="Compatible with your device model">Tương thích với model thiết bị của bạn</li>
+ <li class="i18n" data-en="Recommended: the latest version (e.g. 10.3.3)">Khuyến nghị: Phiên bản mới nhất (ví dụ: 10.3.3)</li>
 </ul>
 </li>
- <li><strong>Darcy BB Tools</strong>- Công cụ để extract (tách) file từ autoloader (đã được chúng mình tích hợp luôn vào tools nên không cần tải riêng.)</li>
- <li><b><a href="https://drive.google.com/drive/folders/1olUGP0GIbvPx5NfkFvISGZEfWWikjCli?usp=drive_link">BlackBerry 10 Tools</a></b>- Gói công cụ để mod autoloader và thêm file root
+ <li class="i18n" data-en="<strong>Darcy BB Tools</strong> - Tool for extracting files from the autoloader (already bundled into our tools package, so no need to download it separately.)"><strong>Darcy BB Tools</strong>- Công cụ để extract (tách) file từ autoloader (đã được chúng mình tích hợp luôn vào tools nên không cần tải riêng.)</li>
+ <li><b><a href="https://drive.google.com/drive/folders/1olUGP0GIbvPx5NfkFvISGZEfWWikjCli?usp=drive_link" class="i18n" data-en="BlackBerry 10 Tools">BlackBerry 10 Tools</a></b><span class="i18n" data-en=" – Tool package for modding the autoloader and adding root files">- Gói công cụ để mod autoloader và thêm file root</span>
 <ul>
- <li>Tự động patch các file cần thiết</li>
- <li>Xóa các app không cần thiết</li>
- <li>Cải thiện thời lượng pin</li>
+ <li class="i18n" data-en="Automatically patches the necessary files">Tự động patch các file cần thiết</li>
+ <li class="i18n" data-en="Removes unnecessary apps">Xóa các app không cần thiết</li>
+ <li class="i18n" data-en="Improves battery life">Cải thiện thời lượng pin</li>
 </ul>
 </li>
 </ul>
 <ul>
- <li><strong>SSH và SSH Keys</strong>(Tùy chọn) - Để truy cập vào thiết bị với quyền root</li>
+ <li class="i18n" data-en="<strong>SSH and SSH Keys</strong> (Optional) - To access the device with root privileges"><strong>SSH và SSH Keys</strong>(Tùy chọn) - Để truy cập vào thiết bị với quyền root</li>
 </ul>
-<div class="note note-blue"><strong>Lưu Ý về Autoloader:</strong>Nếu bạn tìm thấy autoloader trên Google từ Pablo, đó có thể là bản đã được clean up và mod. <strong>KHÔNG SỬ DỤNG</strong>những bản này cho quá trình root vì sẽ bị lỗi. Hãy tìm và tải autoloader gốc chính thức từ BlackBerry.
+<div class="note note-blue i18n" data-en="<strong>Note about the Autoloader:</strong> If you find an autoloader on Google from Pablo, it may be a cleaned-up, modded version. <strong>Do NOT use</strong> those for the rooting process, as they will cause errors. Find and download the official, original autoloader from BlackBerry instead."><strong>Lưu Ý về Autoloader:</strong>Nếu bạn tìm thấy autoloader trên Google từ Pablo, đó có thể là bản đã được clean up và mod. <strong>KHÔNG SỬ DỤNG</strong>những bản này cho quá trình root vì sẽ bị lỗi. Hãy tìm và tải autoloader gốc chính thức từ BlackBerry.
 
 </div>
-<h2>Các Bước Thực Hiện</h2>
-<h3><strong>Phần 1: Chuẩn Bị File</strong></h3>
-<h3><strong>Bước 1: Tạo thư mục làm việc</strong></h3>Tạo một thư mục trên máy tính để chứa tất cả các công cụ và file cần thiết. Điều này giúp bạn dễ quản lý và không bị nhầm lẫn.
+<h2 class="i18n" data-en="Steps to Follow">Các Bước Thực Hiện</h2>
+<h3 class="i18n" data-en="<strong>Part 1: Preparing the Files</strong>"><strong>Phần 1: Chuẩn Bị File</strong></h3>
+<h3 class="i18n" data-en="<strong>Step 1: Create a working folder</strong>"><strong>Bước 1: Tạo thư mục làm việc</strong></h3><p class="i18n" data-en="Create a folder on your computer to hold all the necessary tools and files. This makes it easier to keep everything organized and avoid confusion.">Tạo một thư mục trên máy tính để chứa tất cả các công cụ và file cần thiết. Điều này giúp bạn dễ quản lý và không bị nhầm lẫn.</p>
 
-<strong>Trong thư mục này, bạn cần có:</strong>
+<p class="i18n" data-en="<strong>In this folder, you need:</strong>"><strong>Trong thư mục này, bạn cần có:</strong></p>
 <ul>
- <li>Autoloader cho thiết bị của bạn</li>
- <li>Darcy BB Tools (lấy từ trong BlackBerry 10 Tools/10.3.1 trở lên)</li>
- <li>BlackBerry 10 Tools (file nén)</li>
+ <li class="i18n" data-en="The autoloader for your device">Autoloader cho thiết bị của bạn</li>
+ <li class="i18n" data-en="Darcy BB Tools (taken from inside BlackBerry 10 Tools/10.3.1 or later)">Darcy BB Tools (lấy từ trong BlackBerry 10 Tools/10.3.1 trở lên)</li>
+ <li class="i18n" data-en="BlackBerry 10 Tools (compressed file)">BlackBerry 10 Tools (file nén)</li>
 </ul>
-<h3><strong>Bước 2: Tách Autoloader thành OS và Radio</strong></h3>
-<strong>Sử dụng Darcy BB Tools:</strong>
+<h3 class="i18n" data-en="<strong>Step 2: Split the Autoloader into OS and Radio</strong>"><strong>Bước 2: Tách Autoloader thành OS và Radio</strong></h3>
+<p class="i18n" data-en="<strong>Using Darcy BB Tools:</strong>"><strong>Sử dụng Darcy BB Tools:</strong></p>
 <ol>
- <li>Mở <strong>Darcy BB Tools</strong></li>
- <li>Chuyển sang tab <strong>"File Extraction"</strong>(thường là tab mặc định)</li>
- <li>Click chọn file <strong>Autoloader</strong>của bạn</li>
- <li>Click nút <strong>"Split Autoloader"</strong></li>
- <li>Chờ quá trình tách file hoàn tất (rất nhanh)</li>
+ <li class="i18n" data-en="Open <strong>Darcy BB Tools</strong>">Mở <strong>Darcy BB Tools</strong></li>
+ <li class="i18n" data-en="Switch to the <strong>&quot;File Extraction&quot;</strong> tab (usually the default tab)">Chuyển sang tab <strong>"File Extraction"</strong>(thường là tab mặc định)</li>
+ <li class="i18n" data-en="Click to select your <strong>Autoloader</strong> file">Click chọn file <strong>Autoloader</strong>của bạn</li>
+ <li class="i18n" data-en="Click the <strong>&quot;Split Autoloader&quot;</strong> button">Click nút <strong>"Split Autoloader"</strong></li>
+ <li class="i18n" data-en="Wait for the file splitting to finish (very quick)">Chờ quá trình tách file hoàn tất (rất nhanh)</li>
 </ol>
 <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/BB10%20Tools%208/screenshot-2026-02-11-011936.png" alt="" />
 
-<strong>Kết quả:</strong>Trong thư mục chứa autoloader, bạn sẽ thấy 2 file mới:
+<p class="i18n" data-en="<strong>Result:</strong> In the folder containing the autoloader, you&#39;ll see 2 new files:"><strong>Kết quả:</strong>Trong thư mục chứa autoloader, bạn sẽ thấy 2 file mới:</p>
 <ul>
- <li><code>OS.signed</code>- File hệ điều hành</li>
- <li><code>Radio.signed</code>- File radio/modem</li>
+ <li class="i18n" data-en="<code>OS.signed</code> - Operating system file"><code>OS.signed</code>- File hệ điều hành</li>
+ <li class="i18n" data-en="<code>Radio.signed</code> - Radio/modem file"><code>Radio.signed</code>- File radio/modem</li>
 </ul>
-<h3><strong>Bước 3: Giải nén AutoPatch (BlackBerry 10 Tools/10.3.1 Trở Lên/Chuẩn Bị)</strong></h3>Giải nén file <strong>AutoPatcher</strong>(click chuột phải → Extract All)
+<h3 class="i18n" data-en="<strong>Step 3: Extract AutoPatch (BlackBerry 10 Tools/10.3.1 and Above/Preparation)</strong>"><strong>Bước 3: Giải nén AutoPatch (BlackBerry 10 Tools/10.3.1 Trở Lên/Chuẩn Bị)</strong></h3><p class="i18n" data-en="Extract the <strong>AutoPatcher</strong> file (right-click → Extract All)">Giải nén file <strong>AutoPatcher</strong>(click chuột phải → Extract All)</p>
 
-<strong>Bên trong thư mục AutoPatcher bạn sẽ thấy:</strong>
+<p class="i18n" data-en="<strong>Inside the AutoPatcher folder you&#39;ll find:</strong>"><strong>Bên trong thư mục AutoPatcher bạn sẽ thấy:</strong></p>
 <ul>
- <li><strong>Patch</strong>- Danh sách các lệnh sẽ chạy</li>
- <li><strong>Signed folder</strong>- Thư mục quan trọng nhất, nơi bạn đặt file OS và Radio</li>
- <li><strong>Include</strong>- Thư mục chứa các file cấu hình</li>
- <li><strong>BlackBerry System Packer</strong>- File thực thi chính</li>
+ <li class="i18n" data-en="<strong>Patch</strong> - List of commands that will run"><strong>Patch</strong>- Danh sách các lệnh sẽ chạy</li>
+ <li class="i18n" data-en="<strong>Signed folder</strong> - The most important folder, where you place the OS and Radio files"><strong>Signed folder</strong>- Thư mục quan trọng nhất, nơi bạn đặt file OS và Radio</li>
+ <li class="i18n" data-en="<strong>Include</strong> - Folder containing configuration files"><strong>Include</strong>- Thư mục chứa các file cấu hình</li>
+ <li class="i18n" data-en="<strong>BlackBerry System Packer</strong> - The main executable file"><strong>BlackBerry System Packer</strong>- File thực thi chính</li>
 </ul>
-<h3><strong>Bước 4: Đưa file OS và Radio vào thư mục Signed</strong></h3>Di chuyển 2 file <code>OS.signed</code>và <code>Radio.signed</code>vừa tách được vào thư mục <strong>Signed</strong>trong AutoPatcher.
+<h3 class="i18n" data-en="<strong>Step 4: Put the OS and Radio files into the Signed folder</strong>"><strong>Bước 4: Đưa file OS và Radio vào thư mục Signed</strong></h3><p class="i18n" data-en="Move the 2 files <code>OS.signed</code> and <code>Radio.signed</code> you just split out into the <strong>Signed</strong> folder inside AutoPatcher.">Di chuyển 2 file <code>OS.signed</code>và <code>Radio.signed</code>vừa tách được vào thư mục <strong>Signed</strong>trong AutoPatcher.</p>
 
-<strong>Đổi tên file cho đúng:</strong>
+<p class="i18n" data-en="<strong>Rename the files correctly:</strong>"><strong>Đổi tên file cho đúng:</strong></p>
 <ul>
- <li><code>OS.signed</code>→ Giữ nguyên hoặc đảm bảo tên đúng</li>
- <li><code>Radio.signed</code>→ Giữ nguyên hoặc đảm bảo tên đúng</li>
+ <li class="i18n" data-en="<code>OS.signed</code> → Keep as is or make sure the name is correct"><code>OS.signed</code>→ Giữ nguyên hoặc đảm bảo tên đúng</li>
+ <li class="i18n" data-en="<code>Radio.signed</code> → Keep as is or make sure the name is correct"><code>Radio.signed</code>→ Giữ nguyên hoặc đảm bảo tên đúng</li>
 </ul>
-<em>Lưu ý: Tên file phải chính xác như hướng dẫn trong thư mục Signed.</em>
-<h3><strong>Phần 2: Cấu Hình SSH (Tùy Chọn)</strong></h3>
-<div class="note note-blue"><strong>SSH là gì và tại sao cần?</strong>
+<em class="i18n" data-en="Note: File names must exactly match what&#39;s specified in the Signed folder&#39;s instructions.">Lưu ý: Tên file phải chính xác như hướng dẫn trong thư mục Signed.</em>
+<h3 class="i18n" data-en="<strong>Part 2: SSH Configuration (Optional)</strong>"><strong>Phần 2: Cấu Hình SSH (Tùy Chọn)</strong></h3>
+<div class="note note-blue i18n" data-en="<strong>What is SSH and why would you need it?</strong>
+<strong>SSH (Secure Shell)</strong> lets you connect to your BlackBerry device remotely and run commands with root privileges. This step is <strong>completely optional</strong>. If you don&#39;t need SSH, skip this section."><strong>SSH là gì và tại sao cần?</strong>
 <strong>SSH (Secure Shell)</strong>cho phép bạn kết nối từ xa đến thiết bị BlackBerry và chạy các lệnh với quyền root. Đây là bước <strong>hoàn toàn tùy chọn</strong>. Nếu bạn không cần SSH, hãy bỏ qua phần này.</div>
-<h3><strong>Bước 5: Cấu hình SSH Key (Nếu muốn)</strong></h3>Nếu bạn muốn truy cập SSH ngay sau khi root, làm theo các bước sau:
+<h3 class="i18n" data-en="<strong>Step 5: Configure your SSH Key (Optional)</strong>"><strong>Bước 5: Cấu hình SSH Key (Nếu muốn)</strong></h3><p class="i18n" data-en="If you want SSH access right after rooting, follow these steps:">Nếu bạn muốn truy cập SSH ngay sau khi root, làm theo các bước sau:</p>
 <ol>
- <li>Vào thư mục: <code>AutoPatcher → Include → accounts → devuser → .ssh</code></li>
- <li>Mở file cấu hình SSH</li>
- <li>Điền thông tin:
+ <li class="i18n" data-en="Go to the folder: <code>AutoPatcher → Include → accounts → devuser → .ssh</code>">Vào thư mục: <code>AutoPatcher → Include → accounts → devuser → .ssh</code></li>
+ <li class="i18n" data-en="Open the SSH config file">Mở file cấu hình SSH</li>
+ <li>
+<span class="i18n" data-en="Fill in the details:">Điền thông tin:</span>
 <ul>
- <li><strong>Local IP:</strong>Địa chỉ IP của máy tính bạn trên mạng LAN</li>
- <li><strong>Public SSH Key:</strong>Public key RSA của bạn</li>
+ <li class="i18n" data-en="<strong>Local IP:</strong> Your computer&#39;s IP address on the LAN"><strong>Local IP:</strong>Địa chỉ IP của máy tính bạn trên mạng LAN</li>
+ <li class="i18n" data-en="<strong>Public SSH Key:</strong> Your RSA public key"><strong>Public SSH Key:</strong>Public key RSA của bạn</li>
 </ul>
 </li>
- <li>Lưu file</li>
+ <li class="i18n" data-en="Save the file">Lưu file</li>
 </ol>
-<strong>Lợi ích:</strong>Sau khi hoàn tất quá trình, bạn có thể SSH vào thiết bị ngay lập tức với quyền root.
-<div class="note note-yellow"><strong>Mẹo:</strong>Nếu bạn bỏ qua bước này, bạn vẫn có thể thêm SSH key sau bằng cách sử dụng Development Mode. Video riêng sẽ hướng dẫn chi tiết cách làm điều này.</div>
-<h3><strong>Phần 3: Tạo Autoloader Đã Mod</strong></h3>
-<h3><strong>Bước 6: Chạy BlackBerry System Packer</strong></h3>Quay lại thư mục gốc của AutoPatcher và double-click vào <strong>BlackBerry System Packer.exe</strong>
+<p class="i18n" data-en="<strong>Benefit:</strong> Once the process is complete, you can SSH into the device immediately with root privileges."><strong>Lợi ích:</strong>Sau khi hoàn tất quá trình, bạn có thể SSH vào thiết bị ngay lập tức với quyền root.</p>
+<div class="note note-yellow i18n" data-en="<strong>Tip:</strong> If you skip this step, you can still add an SSH key later using Development Mode. A separate video will walk through how to do this in detail."><strong>Mẹo:</strong>Nếu bạn bỏ qua bước này, bạn vẫn có thể thêm SSH key sau bằng cách sử dụng Development Mode. Video riêng sẽ hướng dẫn chi tiết cách làm điều này.</div>
+<h3 class="i18n" data-en="<strong>Part 3: Creating the Modded Autoloader</strong>"><strong>Phần 3: Tạo Autoloader Đã Mod</strong></h3>
+<h3 class="i18n" data-en="<strong>Step 6: Run BlackBerry System Packer</strong>"><strong>Bước 6: Chạy BlackBerry System Packer</strong></h3><p class="i18n" data-en="Go back to the root AutoPatcher folder and double-click <strong>BlackBerry System Packer.exe</strong>">Quay lại thư mục gốc của AutoPatcher và double-click vào <strong>BlackBerry System Packer.exe</strong></p>
 
-<strong>Quá trình này sẽ:</strong>
+<p class="i18n" data-en="<strong>This process will:</strong>"><strong>Quá trình này sẽ:</strong></p>
 <ul>
- <li>Tự động patch các file OS và Radio</li>
- <li>Xóa các app không cần thiết</li>
- <li>Loại bỏ trang setup ban đầu (trang khiến bạn bị stuck)</li>
- <li>Cải thiện thời lượng pin</li>
- <li>Thêm các file root cần thiết</li>
- <li>Tạo autoloader mới đã được mod</li>
+ <li class="i18n" data-en="Automatically patch the OS and Radio files">Tự động patch các file OS và Radio</li>
+ <li class="i18n" data-en="Remove unnecessary apps">Xóa các app không cần thiết</li>
+ <li class="i18n" data-en="Remove the initial setup page (the one that gets you stuck)">Loại bỏ trang setup ban đầu (trang khiến bạn bị stuck)</li>
+ <li class="i18n" data-en="Improve battery life">Cải thiện thời lượng pin</li>
+ <li class="i18n" data-en="Add the necessary root files">Thêm các file root cần thiết</li>
+ <li class="i18n" data-en="Create the new, modded autoloader">Tạo autoloader mới đã được mod</li>
 </ul>
-<strong>Thời gian:</strong>Khoảng 1-2 phút tùy thuộc vào tốc độ máy tính và nơi bạn đặt file (desktop là tốt nhất).
-<h3><strong>Bước 7: Lấy Autoloader đã mod</strong></h3>Sau khi quá trình hoàn tất, vào thư mục <strong>Output</strong>trong AutoPatcher.
+<p class="i18n" data-en="<strong>Time:</strong> About 1-2 minutes depending on your computer&#39;s speed and where you placed the files (desktop is best)."><strong>Thời gian:</strong>Khoảng 1-2 phút tùy thuộc vào tốc độ máy tính và nơi bạn đặt file (desktop là tốt nhất).</p>
+<h3 class="i18n" data-en="<strong>Step 7: Get the modded Autoloader</strong>"><strong>Bước 7: Lấy Autoloader đã mod</strong></h3><p class="i18n" data-en="Once the process is done, go to the <strong>Output</strong> folder inside AutoPatcher.">Sau khi quá trình hoàn tất, vào thư mục <strong>Output</strong>trong AutoPatcher.</p>
 
-Bạn sẽ thấy <strong>Autoloader.exe </strong>mới đã được tạo ra - đây là autoloader đã được mod với đầy đủ tính năng root!
+<p class="i18n" data-en="You&#39;ll see a new <strong>Autoloader.exe</strong> that&#39;s been created — this is the modded autoloader with full root functionality!">Bạn sẽ thấy <strong>Autoloader.exe </strong>mới đã được tạo ra - đây là autoloader đã được mod với đầy đủ tính năng root!</p>
 
-<div class="note note-yellow"><b>Lưu ý: Nếu bạn không thấy tệp Autoloader.exe, hãy bỏ thư mục /Autopatch V6 ra ngoài DESKTOP, xóa tất cả file trong thư mục /output rồi chạy lại nhé.</b>
+<div class="note note-yellow i18n" data-en="<b>Note: If you don&#39;t see the Autoloader.exe file, move the /Autopatch V6 folder outside of DESKTOP, delete all the files in the /output folder, then run it again.</b>"><b>Lưu ý: Nếu bạn không thấy tệp Autoloader.exe, hãy bỏ thư mục /Autopatch V6 ra ngoài DESKTOP, xóa tất cả file trong thư mục /output rồi chạy lại nhé.</b>
 
 </div>
-<div class="note note-green"><strong>Hoàn tất!</strong>Autoloader này có thể được sử dụng nhiều lần cho cùng thiết bị. Hãy lưu lại để dùng cho lần sau.</div>
-<h3><strong>Phần 4: Flash Autoloader lên Thiết Bị</strong></h3>
-<h3><strong>Bước 8: Kết nối thiết bị và chạy Autoloader</strong></h3>
-<strong>Chuẩn bị:</strong>
+<div class="note note-green i18n" data-en="<strong>Done!</strong> This autoloader can be reused multiple times for the same device. Save it for next time."><strong>Hoàn tất!</strong>Autoloader này có thể được sử dụng nhiều lần cho cùng thiết bị. Hãy lưu lại để dùng cho lần sau.</div>
+<h3 class="i18n" data-en="<strong>Part 4: Flashing the Autoloader to your Device</strong>"><strong>Phần 4: Flash Autoloader lên Thiết Bị</strong></h3>
+<h3 class="i18n" data-en="<strong>Step 8: Connect your device and run the Autoloader</strong>"><strong>Bước 8: Kết nối thiết bị và chạy Autoloader</strong></h3>
+<p class="i18n" data-en="<strong>Preparation:</strong>"><strong>Chuẩn bị:</strong></p>
 <ul>
- <li>Kết nối thiết bị BlackBerry 10 với máy tính qua USB</li>
- <li>Đảm bảo pin đủ (khuyến nghị trên 50%)</li>
- <li>Đảm bảo kết nối USB ổn định</li>
+ <li class="i18n" data-en="Connect your BlackBerry 10 device to your computer via USB">Kết nối thiết bị BlackBerry 10 với máy tính qua USB</li>
+ <li class="i18n" data-en="Make sure the battery is charged enough (above 50% recommended)">Đảm bảo pin đủ (khuyến nghị trên 50%)</li>
+ <li class="i18n" data-en="Make sure the USB connection is stable">Đảm bảo kết nối USB ổn định</li>
 </ul>
-<strong>Thực hiện:</strong>
+<p class="i18n" data-en="<strong>Steps:</strong>"><strong>Thực hiện:</strong></p>
 <ol>
- <li>Tắt nguồn BlackBerry của bạn (giữ nút nguồn lâu)</li>
- <li>Double-click vào <strong>autoloader đã mod</strong>trong thư mục Output</li>
- <li>Nhập password thiết bị nếu được yêu cầu</li>
- <li>Autoloader sẽ tự động:
+ <li class="i18n" data-en="Turn off your BlackBerry (hold the power button)">Tắt nguồn BlackBerry của bạn (giữ nút nguồn lâu)</li>
+ <li class="i18n" data-en="Double-click the <strong>modded autoloader</strong> in the Output folder">Double-click vào <strong>autoloader đã mod</strong>trong thư mục Output</li>
+ <li class="i18n" data-en="Enter your device password if prompted">Nhập password thiết bị nếu được yêu cầu</li>
+ <li>
+<span class="i18n" data-en="The autoloader will automatically:">Autoloader sẽ tự động:</span>
 <ul>
- <li>Reset thiết bị</li>
- <li>Flash hệ điều hành mới</li>
- <li>Khởi động lại</li>
+ <li class="i18n" data-en="Reset the device">Reset thiết bị</li>
+ <li class="i18n" data-en="Flash the new operating system">Flash hệ điều hành mới</li>
+ <li class="i18n" data-en="Restart">Khởi động lại</li>
 </ul>
 </li>
 </ol>
-<em><strong>Lưu ý:</strong>Quá trình này có thể mất 5-10 phút. Không ngắt kết nối USB trong quá trình flash! Không thì sẽ phải load lại nhiều lần.</em>
-<h3><strong>Bước 9: Chờ thiết bị khởi động</strong></h3>Sau khi flash hoàn tất:
+<em class="i18n" data-en="<strong>Note:</strong> This process can take 5-10 minutes. Do not disconnect the USB cable during flashing! Otherwise you may have to reload several times."><strong>Lưu ý:</strong>Quá trình này có thể mất 5-10 phút. Không ngắt kết nối USB trong quá trình flash! Không thì sẽ phải load lại nhiều lần.</em>
+<h3 class="i18n" data-en="<strong>Step 9: Wait for the device to boot</strong>"><strong>Bước 9: Chờ thiết bị khởi động</strong></h3><p class="i18n" data-en="Once flashing is complete:">Sau khi flash hoàn tất:</p>
 <ul>
- <li>Autoloader sẽ tự động đóng</li>
- <li>Thiết bị sẽ khởi động lại</li>
- <li>Chờ cho đến khi thiết bị boot up hoàn toàn</li>
-</ul>Bạn có thể thiết lập Wi-Fi và các cài đặt cơ bản nếu cần.
-<h3><strong>Phần 5: Kích Hoạt Root và Android Runtime</strong></h3>
-<h3><strong>Bước 10: Khởi động Amazon App</strong></h3>
-<strong>Bước quan trọng:</strong>Mở ứng dụng <strong>Amazon Appstore</strong>để setup Android runtime.
+ <li class="i18n" data-en="The autoloader will close automatically">Autoloader sẽ tự động đóng</li>
+ <li class="i18n" data-en="The device will restart">Thiết bị sẽ khởi động lại</li>
+ <li class="i18n" data-en="Wait until the device has fully booted up">Chờ cho đến khi thiết bị boot up hoàn toàn</li>
+</ul><p class="i18n" data-en="You can set up Wi-Fi and other basic settings if needed.">Bạn có thể thiết lập Wi-Fi và các cài đặt cơ bản nếu cần.</p>
+<h3 class="i18n" data-en="<strong>Part 5: Enabling Root and Android Runtime</strong>"><strong>Phần 5: Kích Hoạt Root và Android Runtime</strong></h3>
+<h3 class="i18n" data-en="<strong>Step 10: Launch the Amazon App</strong>"><strong>Bước 10: Khởi động Amazon App</strong></h3><p class="i18n" data-en="<strong>Important step:</strong> Open the <strong>Amazon Appstore</strong> app to set up the Android runtime."><strong>Bước quan trọng:</strong>Mở ứng dụng <strong>Amazon Appstore</strong>để setup Android runtime.</p>
 
-<strong>Chờ đợi:</strong>
+<p class="i18n" data-en="<strong>Wait:</strong>"><strong>Chờ đợi:</strong></p>
 <ul>
- <li>Lần đầu tiên sẽ mất một chút thời gian</li>
- <li>Chờ cho đến khi thấy <strong>logo Amazon</strong>xuất hiện</li>
- <li>Đợi qua tất cả các loading bars và messages</li>
+ <li class="i18n" data-en="The first time will take a little while">Lần đầu tiên sẽ mất một chút thời gian</li>
+ <li class="i18n" data-en="Wait until you see the <strong>Amazon logo</strong> appear">Chờ cho đến khi thấy <strong>logo Amazon</strong>xuất hiện</li>
+ <li class="i18n" data-en="Wait through all the loading bars and messages">Đợi qua tất cả các loading bars và messages</li>
 </ul>
-<div class="note note-red"><strong>Quan trọng:</strong>Nếu bạn <strong>không thấy logo Amazon</strong>, nghĩa là quá trình chưa hoàn tất. Hãy tiếp tục chờ!</div>
-<h3><strong>Bước 11: Mở Term49 và chạy lệnh root</strong></h3>Sau khi Amazon app đã load xong, quay về home screen và mở <b>Term49</b>(terminal app).
+<div class="note note-red i18n" data-en="<strong>Important:</strong> If you <strong>don&#39;t see the Amazon logo</strong>, the process isn&#39;t done yet. Keep waiting!"><strong>Quan trọng:</strong>Nếu bạn <strong>không thấy logo Amazon</strong>, nghĩa là quá trình chưa hoàn tất. Hãy tiếp tục chờ!</div>
+<h3 class="i18n" data-en="<strong>Step 11: Open Term49 and run the root command</strong>"><strong>Bước 11: Mở Term49 và chạy lệnh root</strong></h3><p class="i18n" data-en="Once the Amazon app has loaded, go back to the home screen and open <b>Term49</b> (terminal app).">Sau khi Amazon app đã load xong, quay về home screen và mở <b>Term49</b>(terminal app).</p>
 
-<strong>Chạy các lệnh sau theo thứ tự:</strong>
+<p class="i18n" data-en="<strong>Run the following commands in order:</strong>"><strong>Chạy các lệnh sau theo thứ tự:</strong></p>
 
-<code>cd /accounts/1000/shared/.installer</code>Sau đó chạy:
+<p><code>cd /accounts/1000/shared/.installer</code><span class="i18n" data-en=" Then run:">Sau đó chạy:</span></p>
 
 <code>./run.sh</code>
 
-<strong>Điều gì sẽ xảy ra:</strong>
+<p class="i18n" data-en="<strong>What happens next:</strong>"><strong>Điều gì sẽ xảy ra:</strong></p>
 <ul>
- <li>Script sẽ chạy exploit để enable root</li>
- <li>Quá trình có thể mất 1-2 phút</li>
- <li>Hiện thông báo mở/đóng Android Runtime</li>
- <li>Bấm Enter trên bàn phím.</li>
- <li>Cuối cùng sẽ hỏi bạn có muốn chạy script tự động không (chọn có).</li>
+ <li class="i18n" data-en="The script will run the exploit to enable root">Script sẽ chạy exploit để enable root</li>
+ <li class="i18n" data-en="The process may take 1-2 minutes">Quá trình có thể mất 1-2 phút</li>
+ <li class="i18n" data-en="A message about the Android Runtime opening/closing will appear">Hiện thông báo mở/đóng Android Runtime</li>
+ <li class="i18n" data-en="Press Enter on the keyboard.">Bấm Enter trên bàn phím.</li>
+ <li class="i18n" data-en="Finally it will ask if you want to run the script automatically (choose yes).">Cuối cùng sẽ hỏi bạn có muốn chạy script tự động không (chọn có).</li>
 </ul>
-<h3><strong>Bước 12: Thiết lập tự động chạy root mỗi lần boot</strong></h3>
-<strong>Vấn đề:</strong>Root - patch bị xóa mỗi lần khởi động lại thiết bị.
+<h3 class="i18n" data-en="<strong>Step 12: Set up automatic root on every boot</strong>"><strong>Bước 12: Thiết lập tự động chạy root mỗi lần boot</strong></h3>
+<p class="i18n" data-en="<strong>Problem:</strong> The root patch gets wiped every time the device restarts."><strong>Vấn đề:</strong>Root - patch bị xóa mỗi lần khởi động lại thiết bị.</p>
 
-<strong>Giải pháp:</strong>Script tự động sẽ cài lại getroot mỗi lần boot. (<strong>MỚI: Script không phải lúc nào cũng hoạt động, tôi khuyên bạn nên làm thủ công.</strong>)
+<p class="i18n" data-en="<strong>Solution:</strong> An automatic script will reinstall getroot on every boot. (<strong>New: the script doesn&#39;t always work, so I recommend doing it manually.</strong>)"><strong>Giải pháp:</strong>Script tự động sẽ cài lại getroot mỗi lần boot. (<strong>MỚI: Script không phải lúc nào cũng hoạt động, tôi khuyên bạn nên làm thủ công.</strong>)</p>
 
-<strong>Cách hoạt động:</strong>
+<p class="i18n" data-en="<strong>How it works:</strong>"><strong>Cách hoạt động:</strong></p>
 <ul>
- <li>Mỗi lần bạn khởi động lại thiết bị</li>
- <li>Mở <b>Term49</b></li>
- <li>Script sẽ tự động chạy và reinstall patch (nếu nó không chạy, thì phải nhập thủ công như ở trên)</li>
- <li>Patch sẽ được giữ cho lần boot tiếp theo</li>
+ <li class="i18n" data-en="Every time you restart the device">Mỗi lần bạn khởi động lại thiết bị</li>
+ <li class="i18n" data-en="Open <b>Term49</b>">Mở <b>Term49</b></li>
+ <li class="i18n" data-en="The script will automatically run and reinstall the patch (if it doesn&#39;t run, you&#39;ll need to enter the commands manually as above)">Script sẽ tự động chạy và reinstall patch (nếu nó không chạy, thì phải nhập thủ công như ở trên)</li>
+ <li class="i18n" data-en="The patch will be kept for the next boot">Patch sẽ được giữ cho lần boot tiếp theo</li>
 </ul>
-<h3><strong>Phần 6: Kiểm Tra và Sử Dụng</strong></h3>
-<h3><strong>Bước 13: Kiểm tra SSH (Nếu đã cấu hình)</strong></h3>Nếu bạn đã thêm SSH key ở bước 5, giờ bạn có thể test kết nối:
+<h3 class="i18n" data-en="<strong>Part 6: Testing and Usage</strong>"><strong>Phần 6: Kiểm Tra và Sử Dụng</strong></h3>
+<h3 class="i18n" data-en="<strong>Step 13: Test SSH (if configured)</strong>"><strong>Bước 13: Kiểm tra SSH (Nếu đã cấu hình)</strong></h3><p class="i18n" data-en="If you added an SSH key back in step 5, you can now test the connection:">Nếu bạn đã thêm SSH key ở bước 5, giờ bạn có thể test kết nối:</p>
 
-<code>ssh root@[IP_CUA_THIET_BI]</code>Ví dụ:
+<p><code>ssh root@[YOUR_DEVICE_IP]</code><span class="i18n" data-en=" For example:">Ví dụ:</span></p>
 
-<code>ssh <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="01736e6e75413038332f3037392f302f303131">[email&#160;protected]</a></code>Nếu kết nối thành công, bạn sẽ có quyền root truy cập vào thiết bị!
-<h3><strong>Bước 14: Cài đặt Android Apps không cần chữ ký</strong></h3>Bây giờ bạn có thể:
+<p><code>ssh <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="01736e6e75413038332f3037392f302f303131">[email&#160;protected]</a></code><span class="i18n" data-en=" If the connection is successful, you&#39;ll have root access to the device!">Nếu kết nối thành công, bạn sẽ có quyền root truy cập vào thiết bị!</span></p>
+<h3 class="i18n" data-en="<strong>Step 14: Install Android apps without a signature</strong>"><strong>Bước 14: Cài đặt Android Apps không cần chữ ký</strong></h3><p class="i18n" data-en="Now you can:">Bây giờ bạn có thể:</p>
 <ul>
- <li><strong>Sử dụng Darcy BB Tools</strong>để cài đặt unsigned apps</li>
- <li><strong>Modify existing apps</strong>và cài lại chúng</li>
- <li><strong>Sử dụng Momentics</strong>để phát triển apps</li>
- <li><strong>Làm bất cứ điều gì</strong>bạn muốn với thiết bị!</li>
+ <li class="i18n" data-en="<strong>Use Darcy BB Tools</strong> to install unsigned apps"><strong>Sử dụng Darcy BB Tools</strong>để cài đặt unsigned apps</li>
+ <li class="i18n" data-en="<strong>Modify existing apps</strong> and reinstall them"><strong>Modify existing apps</strong>và cài lại chúng</li>
+ <li class="i18n" data-en="<strong>Use Momentics</strong> to develop apps"><strong>Sử dụng Momentics</strong>để phát triển apps</li>
+ <li class="i18n" data-en="<strong>Do whatever</strong> you want with the device!"><strong>Làm bất cứ điều gì</strong>bạn muốn với thiết bị!</li>
 </ul>
-<div class="note note-green"><strong>Chúc Mừng!</strong>Thiết bị BlackBerry 10 của bạn đã được root thành công! Bạn có thể cài đặt mọi ứng dụng native unsigned.</div>
-<div class="note note-yellow"><strong>Lời Cảm Ơn:</strong>Hãy nhớ ủng hộ <a href="https://bb10.root.sx/"><strong>Oleksandr</strong></a>- người phát triển các công cụ này và <strong>Pablo</strong>từ <a href="https://www.patreon.com/c/waitberry/"><strong>WaitBerry</strong></a>- người chia sẻ kiến thức với cộng đồng. Nhờ có họ, cộng đồng BlackBerry mới có thể tiếp tục phát triển!</div>
-<div class="note note-red"><strong>Nhắc Nhở Cuối Cùng:</strong>
+<div class="note note-green i18n" data-en="<strong>Congratulations!</strong> Your BlackBerry 10 device has been successfully rooted! You can now install any unsigned native app."><strong>Chúc Mừng!</strong>Thiết bị BlackBerry 10 của bạn đã được root thành công! Bạn có thể cài đặt mọi ứng dụng native unsigned.</div>
+<div class="note note-yellow i18n" data-en="<strong>Thanks:</strong> Please remember to support <a href=&quot;https://bb10.root.sx/&quot;><strong>Oleksandr</strong></a> - who developed these tools, and <strong>Pablo</strong> from <a href=&quot;https://www.patreon.com/c/waitberry/&quot;><strong>WaitBerry</strong></a> - who shared his knowledge with the community. Thanks to them, the BlackBerry community can keep growing!"><strong>Lời Cảm Ơn:</strong>Hãy nhớ ủng hộ <a href="https://bb10.root.sx/"><strong>Oleksandr</strong></a>- người phát triển các công cụ này và <strong>Pablo</strong>từ <a href="https://www.patreon.com/c/waitberry/"><strong>WaitBerry</strong></a>- người chia sẻ kiến thức với cộng đồng. Nhờ có họ, cộng đồng BlackBerry mới có thể tiếp tục phát triển!</div>
+<div class="note note-red i18n" data-en="<strong>Final Reminder:</strong>
+<strong>Every reboot:</strong> Remember to open Term49 so the script can run automatically and keep root active.
+<strong>Backup:</strong> Always back up important data before making any changes."><strong>Nhắc Nhở Cuối Cùng:</strong>
 <strong>Mỗi lần reboot:</strong>Hãy nhớ mở Term49 để script tự động chạy và giữ root hoạt động.
 <strong>Backup:</strong>Luôn sao lưu dữ liệu quan trọng trước khi thực hiện bất kỳ thay đổi nào.</div>
-<div>Nếu bạn không thích hướng dẫn của chúng mình: <a href="https://www.youtube.com/watch?v=TG2ztbtAvD0">Link Video Gốc</a></div>
+<div class="i18n" data-en="If you don&#39;t like our written guide: <a href=&quot;https://www.youtube.com/watch?v=TG2ztbtAvD0&quot;>Original Video Link</a>">Nếu bạn không thích hướng dẫn của chúng mình: <a href="https://www.youtube.com/watch?v=TG2ztbtAvD0">Link Video Gốc</a></div>
 
 </div>
 
