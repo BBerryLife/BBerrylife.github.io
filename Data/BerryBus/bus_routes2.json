@@ -1,0 +1,324 @@
+[
+  {
+    "num": "100",
+    "route": "Long Biên - Đặng Xá (Gia Lâm)",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h10",
+    "path": "Chiều đi: Long Biên - Yên Phụ - Điểm trung chuyển Long Biên - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Hồng Tiến - Cổ Linh - Thạch Bàn - Nguyễn Văn Linh - Nguyễn Đức Thuận - Nguyễn Bình - KĐT Đặng Xá.\n\nChiều về: KĐT Đặng Xá - Nguyễn Bình - Nguyễn Đức Thuận - Nguyễn Văn Linh - Thạch Bàn - Cổ Linh - Hồng Tiến - Nguyễn Văn Cừ - Cầu Chương Dương - Trần Nhật Duật - Điểm trung chuyển Long Biên - Yên Phụ - Long Biên."
+  },
+  {
+    "num": "101A",
+    "route": "BX Giáp Bát - Vân Đình",
+    "fare": "20.000đ",
+    "time": "5h00 - 21h25",
+    "path": "Chiều đi: BX Giáp Bát - Giải Phóng - Ngọc Hồi - Quốc lộ 1 - Thường Tín - Phú Xuyên - Tỉnh lộ 428 - Chợ Cháy - Vân Đình.\n\nChiều về: Vân Đình - Chợ Cháy - Tỉnh lộ 428 - Phú Xuyên - Thường Tín - Quốc lộ 1 - Ngọc Hồi - Giải Phóng - BX Giáp Bát."
+  },
+  {
+    "num": "102",
+    "route": "BX Yên Nghĩa - Vân Đình",
+    "fare": "15.000đ",
+    "time": "5h00 - 21h20",
+    "path": "Chiều đi: BX Yên Nghĩa - Quốc lộ 6 - Chúc Sơn - Tỉnh lộ 419 - Tỉnh lộ 429B - Quốc lộ 21B - Vân Đình.\n\nChiều về: Vân Đình - Quốc lộ 21B - Tỉnh lộ 429B - Tỉnh lộ 419 - Chúc Sơn - Quốc lộ 6 - BX Yên Nghĩa."
+  },
+  {
+    "num": "103A",
+    "route": "BX Mỹ Đình - Hương Sơn (Chùa Hương)",
+    "fare": "20.000đ",
+    "time": "4h50 - 21h05",
+    "path": "Chiều đi: BX Mỹ Đình - Phạm Hùng - Tố Hữu - Trần Phú (Hà Đông) - Quang Trung (Hà Đông) - Chu Văn An (Hà Đông) - Vạn Phúc - Phúc La - Trục phía Nam - Quốc lộ 21B - Tế Tiêu - Hương Sơn (Bến Đục - Chùa Hương).\n\nChiều về: Hương Sơn - Tế Tiêu - Quốc lộ 21B - Trục phía Nam - Phúc La - Vạn Phúc - Chu Văn An (Hà Đông) - Quang Trung (Hà Đông) - Trần Phú (Hà Đông) - Tố Hữu - Phạm Hùng - BX Mỹ Đình."
+  },
+  {
+    "num": "104",
+    "route": "Mỹ Đình - BX Nước Ngầm",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Làng Tân Mỹ (Mỹ Đình) - Phạm Hùng - Khuất Duy Tiến - Trung Kính - Vũ Tông Phan - Nguyễn Hữu Thọ - Nguyễn Duy Trinh - KĐT Linh Đàm - Ngọc Hồi - BX Nước Ngầm.\n\nChiều về: BX Nước Ngầm - Ngọc Hồi - KĐT Linh Đàm - Nguyễn Duy Trinh - Nguyễn Hữu Thọ - Vũ Tông Phan - Trung Kính - Khuất Duy Tiến - Phạm Hùng - Làng Tân Mỹ (Mỹ Đình)."
+  },
+  {
+    "num": "105",
+    "route": "Đô Nghĩa - Cầu Giấy",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h20",
+    "path": "Chiều đi: Đô Nghĩa - Nguyễn Trác - Nguyễn Thanh Bình - Tố Hữu - Vạn Phúc - Chu Văn An (Hà Đông) - Phúc La - Văn Phú - Đa Sỹ - Hà Trì - Nguyễn Trãi - Lê Văn Lương - Hoàng Minh Giám - Trần Duy Hưng - Nguyễn Chánh - Điểm trung chuyển Cầu Giấy - Cầu Giấy.\n\nChiều về: Cầu Giấy - Điểm trung chuyển Cầu Giấy - Nguyễn Chánh - Trần Duy Hưng - Hoàng Minh Giám - Lê Văn Lương - Nguyễn Trãi - Hà Trì - Đa Sỹ - Văn Phú - Phúc La - Chu Văn An (Hà Đông) - Vạn Phúc - Tố Hữu - Nguyễn Thanh Bình - Nguyễn Trác - Đô Nghĩa."
+  },
+  {
+    "num": "106",
+    "route": "KĐT Mỗ Lao - Aeon Mall Long Biên",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: KĐT Mỗ Lao - KĐT Văn Quán - Kim Giang - Định Công - Giải Phóng - KĐT Linh Đàm - Nguyễn Hữu Thọ - Trương Định - Tân Mai - Minh Khai - Cầu Vĩnh Tuy - Cổ Linh - TTTM Aeon Mall Long Biên.\n\nChiều về: TTTM Aeon Mall Long Biên - Cổ Linh - Cầu Vĩnh Tuy - Minh Khai - Tân Mai - Trương Định - Nguyễn Hữu Thọ - KĐT Linh Đàm - Giải Phóng - Định Công - Kim Giang - KĐT Văn Quán - KĐT Mỗ Lao."
+  },
+  {
+    "num": "107",
+    "route": "Kim Mã - Làng văn hóa dân tộc VN",
+    "fare": "20.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Kim Mã (số 1 Kim Mã) - Giảng Võ - Đê La Thành - Nguyễn Chí Thanh - Trần Duy Hưng - Khuất Duy Tiến - Phạm Hùng - Lê Quang Đạo - Đại lộ Thăng Long - Quốc lộ 21 - Làng văn hóa các dân tộc Việt Nam.\n\nChiều về: Làng văn hóa các dân tộc Việt Nam - Quốc lộ 21 - Đại lộ Thăng Long - Lê Quang Đạo - Phạm Hùng - Khuất Duy Tiến - Trần Duy Hưng - Nguyễn Chí Thanh - Đê La Thành - Giảng Võ - Kim Mã."
+  },
+  {
+    "num": "109",
+    "route": "BX Mỹ Đình - Sân bay Nội Bài",
+    "fare": "12.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Mỹ Đình - Phạm Hùng - Phạm Văn Đồng - Cầu Thăng Long - Võ Văn Kiệt - Sân bay Nội Bài (Nhà ga T1).\n\nChiều về: Sân bay Nội Bài (Nhà ga T1) - Võ Văn Kiệt - Cầu Thăng Long - Phạm Văn Đồng - Phạm Hùng - BX Mỹ Đình."
+  },
+  {
+    "num": "110",
+    "route": "BX Sơn Tây - Minh Quang (Ba Vì)",
+    "fare": "12.000đ",
+    "time": "5h00 - 19h30",
+    "path": "Chiều đi: BX Sơn Tây - Phố Chùa Thông - Xuân Khanh - Đường 414 - Tản Lĩnh - Ba Trại - Minh Quang (Ba Vì).\n\nChiều về: Minh Quang (Ba Vì) - Ba Trại - Tản Lĩnh - Đường 414 - Xuân Khanh - Phố Chùa Thông - BX Sơn Tây."
+  },
+  {
+    "num": "111",
+    "route": "BX Sơn Tây - Bất Bạt",
+    "fare": "12.000đ",
+    "time": "4h30 - 20h20",
+    "path": "Chiều đi: BX Sơn Tây - Phố Chùa Thông - Tỉnh lộ 413 - Bất Bạt (Ba Vì).\n\nChiều về: Bất Bạt (Ba Vì) - Tỉnh lộ 413 - Phố Chùa Thông - BX Sơn Tây."
+  },
+  {
+    "num": "112",
+    "route": "Nam Thăng Long - Thạch Đà (Mê Linh)",
+    "fare": "10.000đ",
+    "time": "4h45 - 20h16",
+    "path": "Chiều đi: Nam Thăng Long (điểm đỗ xe buýt trên đường Đỗ Nhuận, cạnh cổng CV Hòa Bình) - Đỗ Nhuận - Phạm Văn Đồng - Cầu Thăng Long - Võ Văn Kiệt - KCN Bắc Thăng Long - Đê tả sông Hồng - Thạch Đà (Mê Linh).\n\nChiều về: Thạch Đà (Mê Linh) - Đê tả sông Hồng - KCN Bắc Thăng Long - Võ Văn Kiệt - Cầu Thăng Long - Phạm Văn Đồng - Đỗ Nhuận - Nam Thăng Long."
+  },
+  {
+    "num": "113",
+    "route": "BX Thường Tín - Bến đò Vườn Chuối",
+    "fare": "12.000đ",
+    "time": "5h00 - 20h00",
+    "path": "Chiều đi: BX Thường Tín - Quốc lộ 1A - Nghiêm Xuyên - Tỉnh lộ 429 - Đê Sông Hồng - Bến đò Vườn Chuối.\n\nChiều về: Bến đò Vườn Chuối - Đê Sông Hồng - Tỉnh lộ 429 - Nghiêm Xuyên - Quốc lộ 1A - BX Thường Tín."
+  },
+  {
+    "num": "114",
+    "route": "BX Yên Nghĩa - Miếu Môn",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Yên Nghĩa - Quốc lộ 6 - Cầu Mai Lĩnh - Chúc Sơn - Tỉnh lộ 419 - Tốt Động - Đường Hồ Chí Minh - Miếu Môn.\n\nChiều về: Miếu Môn - Đường Hồ Chí Minh - Tốt Động - Tỉnh lộ 419 - Chúc Sơn - Cầu Mai Lĩnh - Quốc lộ 6 - BX Yên Nghĩa."
+  },
+  {
+    "num": "115",
+    "route": "Vân Đình - ĐH Lâm Nghiệp",
+    "fare": "20.000đ",
+    "time": "5h15 - 20h30",
+    "path": "Chiều đi: Vân Đình - Quốc lộ 21B - Tỉnh lộ 429 - Đường Hồ Chí Minh - Xuân Mai - ĐH Lâm Nghiệp.\n\nChiều về: ĐH Lâm Nghiệp - Xuân Mai - Đường Hồ Chí Minh - Tỉnh lộ 429 - Quốc lộ 21B - Vân Đình."
+  },
+  {
+    "num": "116",
+    "route": "BX Yên Nghĩa - Yên Xuân",
+    "fare": "20.000đ",
+    "time": "4h50 - 21h00",
+    "path": "Chiều đi: BX Yên Nghĩa - Quốc lộ 6 - Cầu Mai Lĩnh - Chúc Sơn - Hòa Sơn - Phú Cát - Vai Réo - Yên Xuân.\n\nChiều về: Yên Xuân - Vai Réo - Phú Cát - Hòa Sơn - Chúc Sơn - Cầu Mai Lĩnh - Quốc lộ 6 - BX Yên Nghĩa."
+  },
+  {
+    "num": "117",
+    "route": "Hòa Lạc - Nhổn",
+    "fare": "15.000đ",
+    "time": "5h30 - 20h30",
+    "path": "Chiều đi: Hòa Lạc (KCN cao Hòa Lạc) - Quốc lộ 21A - Tỉnh lộ 419 - Tỉnh lộ 420 (Hương Ngải) - Tỉnh lộ 421 - Quốc lộ 32 - Nhổn (Điểm trung chuyển xe buýt Nhổn).\n\nChiều về: Nhổn (Điểm trung chuyển xe buýt Nhổn) - Quốc lộ 32 - Tỉnh lộ 421 - Tỉnh lộ 420 (Hương Ngải) - Tỉnh lộ 419 - Quốc lộ 21A - Hòa Lạc."
+  },
+  {
+    "num": "118",
+    "route": "BX Sơn Tây - Bất Bạt (qua QL32)",
+    "fare": "20.000đ",
+    "time": "5h00 - 20h00",
+    "path": "Chiều đi: BX Sơn Tây - Quốc lộ 32 - Thị trấn Tây Đằng - Vật Lại - Cẩm Lĩnh - Tỉnh lộ 92 - Bất Bạt (Ba Vì).\n\nChiều về: Bất Bạt (Ba Vì) - Tỉnh lộ 92 - Cẩm Lĩnh - Vật Lại - Thị trấn Tây Đằng - Quốc lộ 32 - BX Sơn Tây."
+  },
+  {
+    "num": "119",
+    "route": "Hòa Lạc - Bất Bạt",
+    "fare": "20.000đ",
+    "time": "5h00 - 20h30",
+    "path": "Chiều đi: Hòa Lạc (KCN cao Hòa Lạc) - Quốc lộ 21A - Đại lộ Thăng Long (kéo dài) - Đường ĐT87A - Đường ĐT86 - Bất Bạt (Ba Vì).\n\nChiều về: Bất Bạt (Ba Vì) - Đường ĐT86 - Đường ĐT87A - Đại lộ Thăng Long (kéo dài) - Quốc lộ 21A - Hòa Lạc."
+  },
+  {
+    "num": "122",
+    "route": "BX Gia Lâm - KCN Bắc Thăng Long",
+    "fare": "15.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Gia Lâm - Ngô Gia Khảm - Ngọc Lâm - Ngô Gia Tự - Cầu Đuống - Quốc lộ 3 - Võng La - KCN Bắc Thăng Long.\n\nChiều về: KCN Bắc Thăng Long - Võng La - Quốc lộ 3 - Cầu Đuống - Ngô Gia Tự - Ngọc Lâm - Ngô Gia Khảm - BX Gia Lâm."
+  },
+  {
+    "num": "123",
+    "route": "BX Yên Nghĩa - Hồng Dương",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Yên Nghĩa - Quốc lộ 6 - Đê Đồng Mai - Thanh Cao - Kim Bài - Hồng Dương (Thanh Oai).\n\nChiều về: Hồng Dương (Thanh Oai) - Kim Bài - Thanh Cao - Đê Đồng Mai - Quốc lộ 6 - BX Yên Nghĩa."
+  },
+  {
+    "num": "124",
+    "route": "BX Yên Nghĩa - Kim Bài",
+    "fare": "12.000đ",
+    "time": "N/A",
+    "path": "Chiều đi: BX Yên Nghĩa - Quốc lộ 6 - Chúc Sơn - Đê Thụy Hương - Phương Trung - Kim Bài (TT Kim Bài, Thanh Oai).\n\nChiều về: Kim Bài - Phương Trung - Đê Thụy Hương - Chúc Sơn - Quốc lộ 6 - BX Yên Nghĩa."
+  },
+  {
+    "num": "125",
+    "route": "BX Thường Tín - Tế Tiêu",
+    "fare": "20.000đ",
+    "time": "5h00 - 19h35",
+    "path": "Chiều đi: BX Thường Tín - Tỉnh lộ 427B - Tỉnh lộ 429 - Tỉnh lộ 419 - Bến xe Tế Tiêu (Mỹ Đức).\n\nChiều về: Bến xe Tế Tiêu (Mỹ Đức) - Tỉnh lộ 419 - Tỉnh lộ 429 - Tỉnh lộ 427B - BX Thường Tín."
+  },
+  {
+    "num": "126",
+    "route": "BX Sơn Tây - Trung Hà",
+    "fare": "15.000đ",
+    "time": "5h00 - 20h00",
+    "path": "Chiều đi: BX Sơn Tây - La Thành (Sơn Tây) - Đê Hữu Hồng - Đường Lâm - Thị trấn Tây Đằng - Cổ Đô - Trung Hà (Ba Vì).\n\nChiều về: Trung Hà (Ba Vì) - Cổ Đô - Thị trấn Tây Đằng - Đường Lâm - Đê Hữu Hồng - La Thành (Sơn Tây) - BX Sơn Tây."
+  },
+  {
+    "num": "142",
+    "route": "Nam Thăng Long - Vincom Long Biên",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Nam Thăng Long (điểm đỗ xe buýt trên đường Đỗ Nhuận, cạnh cổng CV Hòa Bình) - Xuân Tảo - Hoàng Quốc Việt - Bưởi - Đào Tấn - Kim Mã - Cát Linh - Tôn Đức Thắng - Xã Đàn - Đại La - Minh Khai - Cầu Vĩnh Tuy - Cổ Linh - Vincom Long Biên.\n\nChiều về: Vincom Long Biên - Cổ Linh - Cầu Vĩnh Tuy - Minh Khai - Đại La - Xã Đàn - Tôn Đức Thắng - Cát Linh - Kim Mã - Đào Tấn - Bưởi - Hoàng Quốc Việt - Xuân Tảo - Nam Thăng Long."
+  },
+  {
+    "num": "143",
+    "route": "Ga Cát Linh - TT Đông Anh",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Ga Cát Linh - Hào Nam - Giảng Võ - Kim Mã - Nguyễn Thái Học - Hàng Đậu - Điểm trung chuyển Long Biên - Yên Phụ - Nghi Tàm - Âu Cơ - An Dương Vương - Cầu Nhật Tân - Võ Nguyên Giáp - Quốc lộ 3 - TT Đông Anh.\n\nChiều về: TT Đông Anh - Quốc lộ 3 - Võ Nguyên Giáp - Cầu Nhật Tân - An Dương Vương - Âu Cơ - Nghi Tàm - Yên Phụ - Điểm trung chuyển Long Biên - Hàng Đậu - Nguyễn Thái Học - Kim Mã - Giảng Võ - Hào Nam - Ga Cát Linh."
+  },
+  {
+    "num": "144",
+    "route": "ĐH Mỏ - Trần Khánh Dư",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: ĐH Mỏ Địa Chất - Nguyễn Đình Tứ - Phạm Văn Đồng - Hoàng Quốc Việt - Hoàng Hoa Thám - Đội Cấn - Liễu Giai - Kim Mã - Cát Linh - Tôn Đức Thắng - Khâm Thiên - Lê Duẩn - Trần Nhân Tông - Tây Sơn - Trần Khát Chân - Trần Khánh Dư (Điểm trung chuyển xe buýt Trần Khánh Dư).\n\nChiều về: Trần Khánh Dư - Trần Khát Chân - Tây Sơn - Trần Nhân Tông - Lê Duẩn - Khâm Thiên - Tôn Đức Thắng - Cát Linh - Kim Mã - Liễu Giai - Đội Cấn - Hoàng Hoa Thám - Hoàng Quốc Việt - Phạm Văn Đồng - Nguyễn Đình Tứ - ĐH Mỏ Địa Chất."
+  },
+  {
+    "num": "146",
+    "route": "Hào Nam - Phù Đổng",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Hào Nam (điểm đỗ xe buýt - ga Cát Linh) - Hào Nam - Giảng Võ - Kim Mã - Nguyễn Thái Học - Phan Bội Châu - Hai Bà Trưng - Phan Chu Trinh - Lý Thái Tổ - Ngô Quyền - Hàng Vôi - Hàng Tre - Hàng Muối - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Ngô Gia Tự - Cầu Đuống - Hà Huy Tập - Đặng Phúc Thông - Phù Đổng (Gia Lâm).\n\nChiều về: Phù Đổng (Gia Lâm) - Đặng Phúc Thông - Hà Huy Tập - Cầu Đuống - Ngô Gia Tự - Nguyễn Văn Cừ - Cầu Chương Dương - Trần Nhật Duật - Hàng Muối - Hàng Tre - Hàng Vôi - Ngô Quyền - Lý Thái Tổ - Phan Chu Trinh - Hai Bà Trưng - Phan Bội Châu - Nguyễn Thái Học - Kim Mã - Giảng Võ - Hào Nam."
+  },
+  {
+    "num": "157",
+    "route": "BX Mỹ Đình - BX Sơn Tây",
+    "fare": "20.000đ",
+    "time": "5h00 - 20h00",
+    "path": "Chiều đi: BX Mỹ Đình - Phạm Hùng - Lê Quang Đạo - Đại lộ Thăng Long - Cầu vượt Chùa Thầy - Thạch Thất - Quốc lộ 21A - BX Sơn Tây.\n\nChiều về: BX Sơn Tây - Quốc lộ 21A - Thạch Thất - Cầu vượt Chùa Thầy - Đại lộ Thăng Long - Lê Quang Đạo - Phạm Hùng - BX Mỹ Đình."
+  },
+  {
+    "num": "158",
+    "route": "BX Yên Nghĩa - KĐT Đặng Xá",
+    "fare": "15.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Yên Nghĩa - Quốc lộ 6 - Tô Hiệu (Hà Đông) - Phùng Hưng (Hà Đông) - Đường Cầu Bươu - KĐT Linh Đàm - BX Giáp Bát - Giải Phóng - Đại La - Minh Khai - Cầu Vĩnh Tuy - Cổ Linh - Thạch Bàn - Nguyễn Văn Linh - Nguyễn Bình - KĐT Đặng Xá.\n\nChiều về: KĐT Đặng Xá - Nguyễn Bình - Nguyễn Văn Linh - Thạch Bàn - Cổ Linh - Cầu Vĩnh Tuy - Minh Khai - Đại La - Giải Phóng - BX Giáp Bát - KĐT Linh Đàm - Đường Cầu Bươu - Phùng Hưng (Hà Đông) - Tô Hiệu (Hà Đông) - Quốc lộ 6 - BX Yên Nghĩa."
+  },
+  {
+    "num": "159",
+    "route": "BV Nhiệt đới TW 2 - Times City",
+    "fare": "12.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BV Nhiệt đới TW CS2 - Đường nội bộ KCN Bắc Thăng Long - Hoàng Sa - Võ Nguyên Giáp - Cầu Nhật Tân - Võ Chí Công - Lạc Long Quân - Bưởi - Đào Tấn - Kim Mã - Giảng Võ - Hào Nam - Ô Chợ Dừa - Khâm Thiên - Lê Duẩn - Bà Triệu - Lê Đại Hành - Times City.\n\nChiều về: Times City - Lê Đại Hành - Bà Triệu - Lê Duẩn - Khâm Thiên - Ô Chợ Dừa - Hào Nam - Giảng Võ - Kim Mã - Đào Tấn - Bưởi - Lạc Long Quân - Võ Chí Công - Cầu Nhật Tân - Võ Nguyên Giáp - Hoàng Sa - Đường nội bộ KCN Bắc Thăng Long - BV Nhiệt đới TW CS2."
+  },
+  {
+    "num": "160",
+    "route": "Kim Lũ - Nam Thăng Long",
+    "fare": "15.000đ",
+    "time": "5h00 - 20h00",
+    "path": "Chiều đi: Kim Lũ (Sóc Sơn) - Quốc lộ 3 - Bắc Hồng - Vân Trì - KCN Bắc Thăng Long - Võ Văn Kiệt - Cầu Thăng Long - Phạm Văn Đồng - Đỗ Nhuận - Nam Thăng Long.\n\nChiều về: Nam Thăng Long - Đỗ Nhuận - Phạm Văn Đồng - Cầu Thăng Long - Võ Văn Kiệt - KCN Bắc Thăng Long - Vân Trì - Bắc Hồng - Quốc lộ 3 - Kim Lũ (Sóc Sơn)."
+  },
+  {
+    "num": "161",
+    "route": "Cầu Giấy - Tam Hiệp",
+    "fare": "10.000đ",
+    "time": "5h00 - 20h00",
+    "path": "Chiều đi: Bãi đỗ xe Cầu Giấy - Điểm trung chuyển Cầu Giấy - Đường Láng - Ngã Tư Sở - Trường Chinh - Nguyễn Xiển - Nghiêm Xuân Yêm - Nguyễn Hữu Thọ - Phan Trọng Tuệ - Cầu Bươu - Tam Hiệp (Thanh Trì).\n\nChiều về: Tam Hiệp (Thanh Trì) - Cầu Bươu - Phan Trọng Tuệ - Nguyễn Hữu Thọ - Nghiêm Xuân Yêm - Nguyễn Xiển - Trường Chinh - Ngã Tư Sở - Đường Láng - Điểm trung chuyển Cầu Giấy - Bãi đỗ xe Cầu Giấy."
+  },
+  {
+    "num": "162",
+    "route": "Nhổn - Thọ An (Đan Phượng)",
+    "fare": "10.000đ",
+    "time": "5h00 - 19h30",
+    "path": "Chiều đi: Nhổn (Điểm trung chuyển xe buýt Nhổn) - Cầu Diễn - Tây Tựu - Tân Hội - Quốc lộ 32 - Thị trấn Phùng (Đan Phượng) - Đê Hữu Hồng - Thọ An - Phà Thọ An.\n\nChiều về: Phà Thọ An - Thọ An - Đê Hữu Hồng - Thị trấn Phùng (Đan Phượng) - Quốc lộ 32 - Tân Hội - Tây Tựu - Cầu Diễn - Nhổn."
+  },
+  {
+    "num": "163",
+    "route": "BX Yên Nghĩa - Nhổn",
+    "fare": "15.000đ",
+    "time": "5h00 - 20h00",
+    "path": "Chiều đi: BX Yên Nghĩa - Quốc lộ 6 - Cầu Mai Lĩnh - Chùa Trăm Gian - Quốc Oai - Chùa Thầy - Sơn Đồng - Hoài Đức - Nhổn (Điểm trung chuyển xe buýt Nhổn).\n\nChiều về: Nhổn (Điểm trung chuyển xe buýt Nhổn) - Hoài Đức - Sơn Đồng - Chùa Thầy - Quốc Oai - Chùa Trăm Gian - Cầu Mai Lĩnh - Quốc lộ 6 - BX Yên Nghĩa."
+  },
+  {
+    "num": "E01",
+    "route": "BX Mỹ Đình - Vinhomes Ocean Park",
+    "fare": "12.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Mỹ Đình - Phạm Hùng - Khuất Duy Tiến - Nguyễn Trãi - Trường Chinh - Đại La - Minh Khai - Cầu Vĩnh Tuy - Cổ Linh - Vinhomes Ocean Park.\n\nChiều về: Vinhomes Ocean Park - Cổ Linh - Cầu Vĩnh Tuy - Minh Khai - Đại La - Trường Chinh - Nguyễn Trãi - Khuất Duy Tiến - Phạm Hùng - BX Mỹ Đình."
+  },
+  {
+    "num": "E02",
+    "route": "Ga Cát Linh - Vinhomes Ocean Park",
+    "fare": "12.000đ",
+    "time": "5h00 - 22h00",
+    "path": "Chiều đi: Ga Cát Linh - Hào Nam - Giảng Võ - Kim Mã - Nguyễn Thái Học - Tràng Tiền - Điểm trung chuyển Long Biên - Yên Phụ - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Ngô Gia Tự - Cổ Linh - Vinhomes Ocean Park.\n\nChiều về: Vinhomes Ocean Park - Cổ Linh - Ngô Gia Tự - Nguyễn Văn Cừ - Cầu Chương Dương - Trần Nhật Duật - Điểm trung chuyển Long Biên - Tràng Tiền - Nguyễn Thái Học - Kim Mã - Giảng Võ - Hào Nam - Ga Cát Linh."
+  },
+  {
+    "num": "E03",
+    "route": "Mỹ Đình (Hàm Nghi) - Ocean Park",
+    "fare": "15.000đ",
+    "time": "5h00 - 22h30",
+    "path": "Chiều đi: Hàm Nghi (Mỹ Đình) - Nguyễn Cơ Thạch - Nguyễn Hoàng - Phạm Hùng - Khuất Duy Tiến - Nguyễn Chí Thanh - Đê La Thành - Thái Hà - Xã Đàn - Đại La - Minh Khai - Cầu Vĩnh Tuy - Cổ Linh - Vinhomes Ocean Park.\n\nChiều về: Vinhomes Ocean Park - Cổ Linh - Cầu Vĩnh Tuy - Minh Khai - Đại La - Xã Đàn - Thái Hà - Đê La Thành - Nguyễn Chí Thanh - Khuất Duy Tiến - Phạm Hùng - Nguyễn Hoàng - Nguyễn Cơ Thạch - Hàm Nghi (Mỹ Đình)."
+  },
+  {
+    "num": "E04",
+    "route": "Smart City - Vincom Long Biên",
+    "fare": "12.000đ",
+    "time": "5h00 - 21h30",
+    "path": "Chiều đi: KĐT Smart City (Tây Hồ Tây) - Đại lộ Thăng Long - Phạm Hùng - Khuất Duy Tiến - Vạn Phúc - Nguyễn Trãi - Trường Chinh - Đại La - Minh Khai - Cầu Vĩnh Tuy - Vincom Long Biên.\n\nChiều về: Vincom Long Biên - Cầu Vĩnh Tuy - Minh Khai - Đại La - Trường Chinh - Nguyễn Trãi - Vạn Phúc - Khuất Duy Tiến - Phạm Hùng - Đại lộ Thăng Long - KĐT Smart City."
+  },
+  {
+    "num": "E05",
+    "route": "Long Biên - KĐT Smart City",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h30",
+    "path": "Chiều đi: Long Biên - Điểm trung chuyển Long Biên - Yên Phụ - Đường Thanh Niên - Hùng Vương - Liễu Giai - Đào Tấn - Bưởi - Điểm trung chuyển Cầu Giấy - Xuân Thủy - Phạm Hùng - Đại lộ Thăng Long - KĐT Smart City.\n\nChiều về: KĐT Smart City - Đại lộ Thăng Long - Phạm Hùng - Xuân Thủy - Điểm trung chuyển Cầu Giấy - Bưởi - Đào Tấn - Liễu Giai - Hùng Vương - Đường Thanh Niên - Yên Phụ - Điểm trung chuyển Long Biên - Long Biên."
+  },
+  {
+    "num": "E06",
+    "route": "BX Giáp Bát - KĐT Smart City",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h30",
+    "path": "Chiều đi: BX Giáp Bát - Giải Phóng - Nguyễn Hữu Thọ - KĐT Linh Đàm - Nguyễn Xiển - Nguyễn Trãi - Khuất Duy Tiến - Phạm Hùng - Quang Trung (Hà Đông) - Đại lộ Thăng Long - KĐT Smart City.\n\nChiều về: KĐT Smart City - Đại lộ Thăng Long - Quang Trung (Hà Đông) - Phạm Hùng - Khuất Duy Tiến - Nguyễn Trãi - Nguyễn Xiển - KĐT Linh Đàm - Nguyễn Hữu Thọ - Giải Phóng - BX Giáp Bát."
+  },
+  {
+    "num": "E07",
+    "route": "Long Biên - KĐT Smart City",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h30",
+    "path": "Chiều đi: Long Biên - Điểm trung chuyển Long Biên - Hàng Đậu - Quán Thánh - Phan Đình Phùng - Hoàng Diệu - Trần Phú - Kim Mã - Nguyễn Chí Thanh - Trần Duy Hưng - Phạm Hùng - Đại lộ Thăng Long - KĐT Smart City.\n\nChiều về: KĐT Smart City - Đại lộ Thăng Long - Phạm Hùng - Trần Duy Hưng - Nguyễn Chí Thanh - Kim Mã - Trần Phú - Hoàng Diệu - Phan Đình Phùng - Quán Thánh - Hàng Đậu - Điểm trung chuyển Long Biên - Long Biên."
+  },
+  {
+    "num": "E08",
+    "route": "Lạc Long Quân - Times City",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h10",
+    "path": "Chiều đi: Vườn hoa Lạc Long Quân - Lạc Long Quân - Võ Chí Công - Cầu Nhật Tân - Nguyễn Văn Huyên - Bưởi - Cầu Giấy - Kim Mã - Nguyễn Thái Học - Lê Duẩn - Giải Phóng - Lê Thanh Nghị - Đại Cồ Việt - Trần Khát Chân - Lê Đại Hành - Times City.\n\nChiều về: Times City - Lê Đại Hành - Trần Khát Chân - Đại Cồ Việt - Lê Thanh Nghị - Giải Phóng - Lê Duẩn - Nguyễn Thái Học - Kim Mã - Cầu Giấy - Bưởi - Nguyễn Văn Huyên - Cầu Nhật Tân - Võ Chí Công - Lạc Long Quân - Vườn hoa Lạc Long Quân."
+  },
+  {
+    "num": "E09",
+    "route": "Smart City - Lạc Long Quân",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h30",
+    "path": "Chiều đi: KĐT Smart City - Đại lộ Thăng Long - Phạm Hùng - Khuất Duy Tiến - Nguyễn Trãi - Tây Sơn - Cát Linh - Điện Biên Phủ - Trần Phú - Hùng Vương - Cầu Long Biên - Đê Long Biên - Âu Cơ - Lạc Long Quân.\n\nChiều về: Lạc Long Quân - Âu Cơ - Đê Long Biên - Cầu Long Biên - Hùng Vương - Trần Phú - Điện Biên Phủ - Cát Linh - Tây Sơn - Nguyễn Trãi - Khuất Duy Tiến - Phạm Hùng - Đại lộ Thăng Long - KĐT Smart City."
+  },
+  {
+    "num": "E10",
+    "route": "Vinhomes Ocean Park - Sân bay Nội Bài",
+    "fare": "20.000đ",
+    "time": "5h00 - 22h00",
+    "path": "Chiều đi: Vinhomes Ocean Park - Cổ Linh - Nguyễn Văn Cừ - Lý Sơn - Cầu Đông Trù - Võ Nguyên Giáp - Sân bay Nội Bài (Nhà ga T1 - Nhà ga T2).\n\nChiều về: Sân bay Nội Bài (Nhà ga T2 - Nhà ga T1) - Võ Nguyên Giáp - Cầu Đông Trù - Lý Sơn - Nguyễn Văn Cừ - Cổ Linh - Vinhomes Ocean Park."
+  },
+  {
+    "num": "E11",
+    "route": "Yên Phụ - Bờ Hồ - Lăng Bác (Tuyến City Tour)",
+    "fare": "0đ",
+    "time": "7h00 - 18h00",
+    "path": "Chiều đi: Yên Phụ - Điểm trung chuyển Long Biên - Cầu Long Biên - Trần Nhật Duật - Tràng Tiền - Hàng Khay - Đinh Tiên Hoàng - Lý Thái Tổ - Tràng Thi - Cửa Nam - Phùng Hưng - Lý Nam Đế - Trần Phú - Điện Biên Phủ - Hùng Vương - Lăng Bác - Đường Bách Thảo - Hoàng Hoa Thám - Đường Thanh Niên - Yên Phụ.\n\nChiều về: Ngược chiều đi (một vòng kín, không có chiều về riêng)."
+  }
+]

@@ -1,0 +1,707 @@
+[
+  {
+    "num": "01",
+    "route": "BX Gia Lâm - BX Yên Nghĩa",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Gia Lâm - Ngô Gia Khảm - Ngọc Lâm - Nguyễn Văn Cừ - Cầu Chương Dương - Trần Nhật Duật - Yên Phụ - Điểm trung chuyển Long Biên - Hàng Đậu - Quán Thánh - Nguyễn Biểu - Hoàng Diệu - Nguyễn Thái Học - Lê Duẩn - Khâm Thiên - Nguyễn Lương Bằng - Tây Sơn - Ngã Tư Sở - Nguyễn Trãi - Trần Phú (Hà Đông) - Quang Trung (Hà Đông) - Ba La - Quốc lộ 6 - BX Yên Nghĩa.\n\nChiều về: BX Yên Nghĩa - Quang Trung - Trần Phú - Nguyễn Trãi - Ngã Tư Sở - Khâm Thiên - Trần Hưng Đạo - Tràng Thi - Phan Đình Phùng - Cầu Chương Dương - BX Gia Lâm.",
+    "stops": [
+        "BX Gia Lâm",
+        "549 Nguyễn Văn Cừ",
+        "Trường THPT Nguyễn Gia Thiều",
+        "Trường tiểu học Ái Mộ - 135B Nguyễn Văn Cừ",
+        "Điểm trung chuyển Long Biên (E3.1)",
+        "50 Hàng Cót",
+        "28 Đường Thành",
+        "Bệnh viện Phụ sản TW",
+        "Bệnh viện Phụ sản Trung ương",
+        "Tổng công ty Đường sắt Việt Nam",
+        "Ga Hà Nội",
+        "46 Khâm Thiên",
+        "274-276 Khâm Thiên",
+        "142-144 Nguyễn Lương Bằng",
+        "Gò Đống Đa",
+        "290 Tây Sơn",
+        "Số 108 Nguyễn Trãi",
+        "Chợ Thượng Đình, Nguyễn Trãi",
+        "ĐH Khoa học - Tự nhiên, Nguyễn Trãi",
+        "Cục Sở hữu trí tuệ, Nguyễn Trãi",
+        "Bách hóa Thanh Xuân, Nguyễn Trãi",
+        "216 Nguyễn Trãi - Nhà Văn hóa tổ dân phố số 8 & 9 Phường Trung Văn",
+        "Công ty CP Công trình GT, Nguyễn Trãi",
+        "Số 10 Trần Phú - Siêu Thị Nguyễn Kim",
+        "Học viện Bưu chính viễn thông, Trần Phú (HĐ)",
+        "Big C Hà Đông - Hồ Gươm Plaza, Trần Phú (HĐ)",
+        "ĐD Sở Tư pháp Hà Nội - Trần Phú (HĐ)",
+        "Bưu điện Hà Đông",
+        "80 Quang Trung",
+        "Nhà thi đấu Hà Đông",
+        "Ga La Khê - 350 - 352 Quang Trung",
+        "Giữa số 428 - 430 Quang Trung",
+        "BRT Văn La - 530 - 532 Quang Trung",
+        "678 - 680 Quang Trung",
+        "Nissan Hà Đông",
+        "Đối diện Trường TH Kinh tế Hà Tây",
+        "BX Yên Nghĩa - điểm đầu cuối số 4",
+        "BX Yên Nghĩa"
+    ]
+  },
+  {
+    "num": "02TC",
+    "route": "BX Yên Nghĩa - TT triển lãm VN",
+    "fare": "10.000đ",
+    "time": "Đầu A: 7h00-20h00; Đầu B: 8h30-21h30",
+    "path": "Chiều đi: BX Yên Nghĩa - Quang Trung - Trần Phú - Nguyễn Trãi - Ngã tư Sở - đường Láng - Điểm trung chuyển Cầu Giấy - đường Vành đai 2 - Võ Chí Công - Cầu Nhật Tân - Võ Nguyên Giáp - Trường Sa - TT triển lãm VN.\n\nChiều về: Ngược lại."
+  },
+  {
+    "num": "03A",
+    "route": "BX Giáp Bát - BX Gia Lâm",
+    "fare": "10.000đ",
+    "time": "5h03 - 21h00",
+    "path": "Chiều đi: BX Giáp Bát - Giải Phóng - Lê Duẩn - Trần Nhân Tông - Trần Bình Trọng - Trần Hưng Đạo - Trần Khánh Dư - Trần Quang Khải - Trần Nhật Duật - Long Biên (Điểm quay đầu trước phố Hàng Khoai) - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Nguyễn Sơn - Ngọc Lâm - Ngô Gia Khảm - BX Gia Lâm.\n\nChiều về: BX Gia Lâm - Ngô Gia Khảm - Ngọc Lâm - Nguyễn Văn Cừ - Cầu Chương Dương - Trần Nhật Duật - Long Biên - Trần Nhật Duật - Trần Quang Khải - Trần Khánh Dư - Trần Hưng Đạo - Giải Phóng - BX Giáp Bát."
+  },
+  {
+    "num": "03B",
+    "route": "BX Nước Ngầm - Giang Biên",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h10",
+    "path": "Chiều đi: BX Nước Ngầm - Giải Phóng - BX Giáp Bát - Giải Phóng - Đại La - Minh Khai - Cầu Vĩnh Tuy - Đàm Quang Trung - Chu Huy Mân - Nguyễn Lam - Vũ Đức Thận - Việt Hưng - Đào Hinh - Việt Hưng - Ngô Viết Thụ - Bùi Thiện Ngộ - Lưu Khánh Đàm - Phúc Lợi - Giang Biên.\n\nChiều về: Giang Biên - Phúc Lợi - Việt Hưng - Chu Huy Mân - Cầu Vĩnh Tuy - Minh Khai - Đại La - Trường Chinh - Giải Phóng - BX Nước Ngầm."
+  },
+  {
+    "num": "04",
+    "route": "Long Biên - BV Nội tiết TW 2",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Long Biên - Quay đầu tại đối diện phố Hàng Than - Yên Phụ - Điểm trung chuyển Long Biên - Trần Nhật Duật - Nguyễn Hữu Huân - Lý Thái Tổ - Ngô Quyền - Hai Bà Trưng - Lê Thánh Tông - Trần Thánh Tông - Tăng Bạt Hổ - Yecxanh - Lò Đúc - Kim Ngưu - Cầu Mai Động - Tam Trinh - Lĩnh Nam - Đường dẫn cầu Thanh Trì - Pháp Vân - Ngọc Hồi - Trần Thủ Độ - Nguyễn Bồ - BV Nội tiết TW 2.\n\nChiều về: Ngược lại."
+  },
+  {
+    "num": "05",
+    "route": "Mai Động - ĐH Tài nguyên & Môi trường",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h25",
+    "path": "Chiều đi: Mai Động (bãi đỗ xe Đền Lừ) - Tân Mai - Trương Định - Giải Phóng - Nguyễn Hữu Thọ - Nghiêm Xuân Yêm - Kim Giang - Khương Đình - Nguyễn Trãi - Vũ Trọng Phụng - Ngụy Như Kon Tum - Hoàng Đạo Thúy - Trần Duy Hưng - Nguyễn Chánh - Mạc Thái Tông - Trung Kính - Phạm Văn Bạch - Tôn Thất Thuyết - Nguyễn Hoàng - Hàm Nghi - Nguyễn Cơ Thạch - Hồ Tùng Mậu - Cầu Diễn - Phú Diễn - ĐH Tài nguyên và Môi trường.\n\nChiều về: Ngược lại."
+  },
+  {
+    "num": "06A",
+    "route": "BX Giáp Bát - Cầu Giẽ",
+    "fare": "15.000đ",
+    "time": "5h00 - 21h05",
+    "path": "Chiều đi: BX Giáp Bát - Giải Phóng - Ngọc Hồi - Quốc Lộ 1 - Liên Ninh - Quán Gánh - Thị trấn Thường Tín - Tía - Đỗ Xá - Nghệ - Thị trấn Phú Xuyên - Guột - Cầu Giẽ.\n\nChiều về: Cầu Giẽ - Quốc Lộ 1A - Guột - Thị trấn Phú Xuyên - Nghệ - Đỗ Xá - Tía - Thị trấn Thường Tín - Quán Gánh - Liên Ninh - Ngọc Hồi - Giải Phóng - BX Giáp Bát."
+  },
+  {
+    "num": "06B",
+    "route": "BX Giáp Bát - Hồng Vân",
+    "fare": "10.000đ",
+    "time": "5h15 - 20h36",
+    "path": "Chiều đi: BX Giáp Bát - Giải Phóng - Ngọc Hồi - Thường Tín - đường 427 - đê Sông Hồng - Hồng Vân (thôn Cẩm Cơ, xã Hồng Vân, Thường Tín).\n\nChiều về: Hồng Vân - đê Sông Hồng - đường 427 - Thường Tín - Ngọc Hồi - Giải Phóng - BX Giáp Bát."
+  },
+  {
+    "num": "06C",
+    "route": "BX Giáp Bát - Phú Minh",
+    "fare": "12.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Giáp Bát - Giải Phóng - Ngọc Hồi - Thường Tín - Tía - Ngã ba Đỗ Xá - đường 429 (phía Đông) - Phú Minh (Phú Xuyên).\n\nChiều về: Phú Minh - đường 429 (phía Đông) - Ngã ba Đỗ Xá - Tía - Thường Tín - Ngọc Hồi - Giải Phóng - BX Giáp Bát."
+  },
+  {
+    "num": "06D",
+    "route": "BX Giáp Bát - Tân Dân",
+    "fare": "15.000đ",
+    "time": "5h15 - 20h15",
+    "path": "Chiều đi: BX Giáp Bát - Giải Phóng - Ngọc Hồi - Thường Tín - Tía - Quốc lộ 1 - Rẽ phải vào đường trục huyện Thao Chính - Tân Dân (đối diện cổng thôn Đại Nghiệp, xã Tân Dân, huyện Phú Xuyên).\n\nChiều về: Tân Dân - Đường trục huyện Thao Chính - Quốc lộ 1 - Tía - Thường Tín - Ngọc Hồi - Giải Phóng - BX Giáp Bát."
+  },
+  {
+    "num": "06E",
+    "route": "BX Giáp Bát - Phú Túc",
+    "fare": "15.000đ",
+    "time": "5h15 - 20h15",
+    "path": "Chiều đi: BX Giáp Bát - Giải Phóng - Ngọc Hồi - Thường Tín - Tía - đường 429 (phía Tây) - Rẽ trái đường trục huyện Phú Túc, Hoàng Long - Phú Túc (cạnh nhà văn hóa thôn Lưu Đông).\n\nChiều về: Phú Túc - Đường trục huyện Phú Túc, Hoàng Long - Đường 429 (phía Tây) - Tía - Thường Tín - Ngọc Hồi - Giải Phóng - BX Giáp Bát."
+  },
+  {
+    "num": "07",
+    "route": "Cầu Giấy - Sân bay Nội Bài",
+    "fare": "12.000đ",
+    "time": "5h00 - 22h35",
+    "path": "Chiều đi: Bãi đỗ xe Cầu Giấy - Điểm trung chuyển Cầu Giấy - Nguyễn Văn Huyên - Cầu vượt Nguyễn Văn Huyên - Xuân Tảo - Hoàng Minh Thảo - đường ven công viên Hòa Bình - Đỗ Nhuận - Phạm Văn Đồng - Cầu Thăng Long - Võ Văn Kiệt - Sân bay Nội Bài (điểm đỗ xe buýt, nhà ga T1).\n\nChiều về: Ngược lại."
+  },
+  {
+    "num": "08A",
+    "route": "Long Biên - Đông Mỹ",
+    "fare": "10.000đ",
+    "time": "5h00 - 22h30",
+    "path": "Chiều đi: Long Biên - Yên Phụ - Điểm trung chuyển Long Biên - Trần Nhật Duật - Nguyễn Hữu Huân - Lý Thái Tổ - Ngô Quyền - Lý Thường Kiệt - Bà Triệu - Lê Đại Hành - Bạch Mai - Lê Thanh Nghị - Trần Đại Nghĩa - Đại La - Giải Phóng - Ngọc Hồi - Ngũ Hiệp - Đông Mỹ.\n\nChiều về: Ngược lại."
+  },
+  {
+    "num": "08B",
+    "route": "Long Biên - Vạn Phúc",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h05",
+    "path": "Chiều đi: Long Biên - Quay đầu tại đối diện phố Hàng Than - Yên Phụ - Điểm trung chuyển Long Biên - Trần Nhật Duật - Nguyễn Hữu Huân - Lý Thái Tổ - Ngô Quyền - Hai Bà Trưng - Lê Duẩn - Giải Phóng - Nút giao Pháp Vân - Đường vành đai 3 - Trần Thủ Độ - Đường nội bộ KĐT Pháp Vân, Tứ Hiệp - Cầu Tứ Hiệp - Nguyễn Bặc - Vũ Lăng - Ngũ Hiệp - Đông Mỹ - Đê Hữu Hồng - Vạn Phúc.\n\nChiều về: Ngược lại."
+  },
+  {
+    "num": "09A",
+    "route": "Bờ Hồ - ĐH Mỏ",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h05",
+    "path": "Chiều đi: BĐX Trần Khánh Dư - Trần Hưng Đạo - Lê Thánh Tông - Hai Bà Trưng - Quang Trung - Tràng Thi - Điện Biên Phủ - Lê Hồng Phong - Đội Cấn - Liễu Giai - Nguyễn Chí Thanh - La Thành - Cầu Giấy - Điểm trung chuyển Cầu Giấy - Bưởi - Võ Chí Công - Nguyễn Hoàng Tôn - Phạm Văn Đồng - Quay đầu tại vòng xuyến đối diện Ciputra - Phạm Văn Đồng - Nguyễn Đình Tứ - Phố Viên - ĐH Mỏ Địa Chất.\n\nChiều về: Ngược lại."
+  },
+  {
+    "num": "09B",
+    "route": "Bờ Hồ - BX Mỹ Đình",
+    "fare": "8.000đ",
+    "time": "5h01 - 22h05",
+    "path": "Chiều đi: Trần Khánh Dư - Trần Hưng Đạo - Lê Thánh Tông - Lý Thái Tổ - Lê Thạch - Ngô Quyền - Hai Bà Trưng - Bà Triệu - Hồ Xuân Hương - Nguyễn Bỉnh Khiêm - Trần Nhân Tông - Quang Trung - Nguyễn Du - Lê Duẩn - Khâm Thiên - Nguyễn Lương Bằng - Tây Sơn - Thái Thịnh - Láng Hạ - Huỳnh Thúc Kháng - Nguyễn Chí Thanh - Chùa Láng - Huỳnh Thúc Kháng (kéo dài) - ĐTC Cầu Giấy - Xuân Thủy - Phạm Hùng - BX Mỹ Đình.\n\nChiều về: Ngược lại."
+  },
+  {
+    "num": "11",
+    "route": "CV Thống Nhất - HV Nông Nghiệp VN",
+    "fare": "10.000đ",
+    "time": "5h00 - 22h00",
+    "path": "Chiều đi: Công viên Thống Nhất - Trần Nhân Tông - Quang Trung - Trần Hưng Đạo - Phan Chu Trinh - Lý Thái Tổ - Ngô Quyền - Hàng Vôi - Hàng Tre - Hàng Muối - Long Biên (Điểm quay đầu trước phố Hàng Khoai) - Trần Nhật Duật - Cầu Chương Dương - Đê Gia Thượng - Ngọc Lâm - Nguyễn Văn Cừ - Nguyễn Văn Linh - Nguyễn Đức Thuận - Ngô Xuân Quảng - HV Nông nghiệp Việt Nam.\n\nChiều về: HV Nông Nghiệp VN - Nguyễn Văn Linh - Nguyễn Văn Cừ - Ngọc Lâm - Cầu Chương Dương - Long Biên - Trần Hưng Đạo - CV Thống Nhất."
+  },
+  {
+    "num": "12",
+    "route": "CV Nghĩa Đô - Khánh Hà",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Công viên Nghĩa Đô - Nguyễn Văn Huyên - Nguyễn Khánh Toàn - Bưởi - Cầu Giấy - Huỳnh Thúc Kháng - Thái Hà - Chùa Bộc - Tôn Thất Tùng - Lê Trọng Tấn - Trần Điền - Định Công - Giải Phóng - Ngọc Hồi - Quốc lộ 1 - Cầu Ngọc Hồi - Xã Ngọc Hồi - Đường mới xã Đại Áng - Khánh Hà (Thường Tín).\n\nChiều về: Khánh Hà (Thường Tín) - Đường mới xã Đại Áng - Quốc lộ 1 - Ngọc Hồi - Giải Phóng - Định Công - Lê Trọng Tấn - Tôn Thất Tùng - Chùa Bộc - Thái Hà - Huỳnh Thúc Kháng - Cầu Giấy - Bưởi - Nguyễn Khánh Toàn - Nguyễn Văn Huyên - CV Nghĩa Đô."
+  },
+  {
+    "num": "13",
+    "route": "CV nước Hồ Tây - Cổ Nhuế",
+    "fare": "8.000đ",
+    "time": "5h00 - 21h06",
+    "path": "Chiều đi: Công viên nước Hồ Tây - Lạc Long Quân - Hoàng Quốc Việt - Nguyễn Văn Huyên - Tô Hiệu - Trần Quốc Hoàn - Phạm Văn Đồng - Quay đầu tại điểm mở đối diện 158 Phạm Văn Đồng - Phạm Văn Đồng - Hồ Tùng Mậu - Cầu Diễn - Hoàng Công Chất - Phan Bá Vành - Cầu Noi - Cổ Nhuế.\n\nChiều về: Cổ Nhuế - Cầu Noi - Phan Bá Vành - Hoàng Công Chất - Cầu Diễn - Hồ Tùng Mậu - Phạm Văn Đồng - Trần Quốc Hoàn - Tô Hiệu - Nguyễn Văn Huyên - Hoàng Quốc Việt - Bưởi - Lạc Long Quân - CV nước Hồ Tây."
+  },
+  {
+    "num": "15",
+    "route": "BX Gia Lâm - Phố Nỉ",
+    "fare": "15.000đ",
+    "time": "5h00 - 21h05",
+    "path": "Chiều đi: BX Gia Lâm - Ngô Gia Khảm - Ngọc Lâm - Nguyễn Văn Cừ - Ngô Gia Tự - Cầu Đuống - Quốc Lộ 3 - Dốc Vân - Cổ Loa - Đường cải tránh Quốc lộ 3 - Quốc lộ 3 - Đông Anh - Nguyên Khê - Phủ Lỗ - Đa Phúc - Phố Nỉ.\n\nChiều về: Phố Nỉ - Đa Phúc - Phủ Lỗ - Nguyên Khê - Đông Anh - Quốc lộ 3 - Cổ Loa - Dốc Vân - Quốc lộ 3 - Cầu Đuống - Ngô Gia Tự - Nguyễn Văn Cừ - Ngô Gia Khảm - BX Gia Lâm."
+  },
+  {
+    "num": "16",
+    "route": "BX Mỹ Đình - BX Nước Ngầm",
+    "fare": "8.000đ",
+    "time": "4h50 - 21h20",
+    "path": "Chiều đi: BX Mỹ Đình - Phạm Hùng - Quay đầu tại Đình Thôn - Phạm Hùng - Xuân Thủy - Cầu Giấy - Đường Láng - Ngã tư Sở - Trường Chinh - Ngã tư Vọng - Giải Phóng - Ngọc Hồi - Quay đầu tại đối diện công ty ABB - Ngọc Hồi - BX Nước Ngầm.\n\nChiều về: BX Nước Ngầm - Ngọc Hồi - Giải Phóng - Quảng trường BX Giáp Bát - Giải Phóng - Ngã tư Vọng - Trường Chinh - Ngã tư Sở - Đường Láng - Cầu Giấy - Xuân Thủy - Phạm Hùng - BX Mỹ Đình."
+  },
+  {
+    "num": "17",
+    "route": "Long Biên - Sân bay Nội Bài",
+    "fare": "15.000đ",
+    "time": "5h00 - 22h00",
+    "path": "Chiều đi: Long Biên - Yên Phụ - Điểm trung chuyển Long Biên - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Ngô Gia Tự - Cầu Đuống - Thiên Đức - Dốc Vân - Quốc lộ 3 - Nguyên Khê - Phủ Lỗ - Quốc lộ 2 - Đường nối Quốc lộ 2 và đường Võ Văn Kiệt - Võ Nguyên Giáp - Võ Văn Kiệt - Sân bay Nội Bài (điểm đỗ xe buýt, Nhà ga T1).\n\nChiều về: Sân bay Nội Bài (Nhà ga T1) - Trạm thu phí - Võ Văn Kiệt - Quay đầu tại điểm mở - Võ Văn Kiệt - Đường nối Quốc lộ 2 - Quốc lộ 2 - Phủ Lỗ - Nguyên Khê - Đông Anh - Quốc lộ 3 - Thiên Đức - Cầu Đuống - Ngô Gia Tự - Nguyễn Văn Cừ - Cầu Chương Dương - Long Biên."
+  },
+  {
+    "num": "19",
+    "route": "Trần Khánh Dư - Học viện Chính sách và Phát triển",
+    "fare": "12.000đ",
+    "time": "5h00 - 21h35",
+    "path": "Chiều đi: Trần Khánh Dư - Nguyễn Khoái - Vĩnh Tuy - Minh Khai - Đại La - Trường Chinh - Nguyễn Trãi - Trần Phú (Hà Đông) - Quang Trung (Hà Đông) - Chu Văn An (Hà Đông) - Vạn Phúc (Hà Đông) - Tố Hữu - Nguyễn Văn Luyện - đường Nội - Lê Trọng Tấn (Hà Đông) - đường nội bộ KĐT Nam An Khánh - Cổng số 2 KĐT Vinhomes Thăng Long - đường nội bộ Liên khu 8 - Học viện Chính sách và Phát triển.\n\nChiều về: Học viện Chính sách và Phát triển - đường nội bộ Liên khu 8 - KĐT Nam An Khánh - Lê Trọng Tấn (Hà Đông) - đường Nội - Nguyễn Văn Luyện - Tố Hữu - Vạn Phúc (Hà Đông) - Chu Văn An (Hà Đông) - Quang Trung (Hà Đông) - Nguyễn Trãi - Ngã tư Sở - Trường Chinh - Đại La - Minh Khai - Nguyễn Khoái - Trần Khánh Dư."
+  },
+  {
+    "num": "20A",
+    "route": "Nhổn - Bến xe Sơn Tây",
+    "fare": "12.000đ",
+    "time": "5h00 - 22h05",
+    "path": "Chiều đi: Nhổn (Điểm trung chuyển xe buýt Nhổn) - Phố Nhổn - Trôi - Phùng - Phúc Thọ - Phố Chùa Thông (Sơn Tây) - BX Sơn Tây.\n\nChiều về: BX Sơn Tây - Phố Chùa Thông (Sơn Tây) - Phúc Thọ - Phùng - Trôi - Phố Nhổn - Nhổn."
+  },
+  {
+    "num": "20ATC",
+    "route": "Nhổn - Minh Châu",
+    "fare": "20.000đ",
+    "time": "4h40 - 19h50",
+    "path": "Chiều đi: Nhổn (điểm trung chuyển Nhổn) - Nhổn - Trôi - Phùng - Phúc Thọ - Chùa Thông (Sơn Tây) - Quốc lộ 21A - Cầu Vĩnh Thịnh - Quốc lộ 2C - Vòng xuyến cầu Vĩnh Thịnh (xã Vĩnh Tường, tỉnh Phú Thọ) - Đê tả sông Hồng (tỉnh Phú Thọ) - Đường qua thôn Thủ Độ (xã Vĩnh Phú, tỉnh Phú Thọ) - Đường đập tràn Minh Châu - Minh Châu.\n\nChiều về: Minh Châu - Đường đập tràn Minh Châu - Đường qua thôn Thủ Độ - Đê tả sông Hồng - Đường nối đi cầu Vĩnh Thịnh - Quốc lộ 2C - Cầu Vĩnh Thịnh - Quốc lộ 21A - Chùa Thông - Phúc Thọ - Phùng - Trôi - Nhổn."
+  },
+  {
+    "num": "20B",
+    "route": "Nhổn - Võng Xuyên - BX Sơn Tây",
+    "fare": "15.000đ",
+    "time": "5h00 - 20h04",
+    "path": "Chiều đi: Nhổn (Điểm trung chuyển xe buýt Nhổn) - Cầu Diễn - Tây Tựu - Thượng Cát - Đê Liên Trì - Đê Hữu Hồng (đi qua các xã Liên Trung, Liên Hà, Liên Hồng, Hồng Hà) - Tiên Tân - Trung Châu - Hát Môn - Võng Xuyên - Tỉnh lộ 418 (DT82) - Quốc lộ 32 - Chùa Thông (Sơn Tây) - BX Sơn Tây.\n\nChiều về: BX Sơn Tây - Chùa Thông (Sơn Tây) - Quốc lộ 32 - Tỉnh lộ 418 (DT82) - Võng Xuyên - Hát Môn - Trung Châu - Tiên Tân - Đê Hữu Hồng - Thượng Cát - Tây Tựu - Nhổn."
+  },
+  {
+    "num": "21A",
+    "route": "BX Giáp Bát - BX Yên Nghĩa",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Giáp Bát - Giải Phóng - Cầu vượt ngã tư Vọng - Giải Phóng - Xã Đàn - Phạm Ngọc Thạch - Chùa Bộc - Tây Sơn - Ngã tư Sở - Nguyễn Trãi - Trần Phú (Hà Đông) - Quang Trung (Hà Đông) - Ba La - Quốc Lộ 6 - BX Yên Nghĩa.\n\nChiều về: BX Yên Nghĩa - Quang Trung - Trần Phú - Nguyễn Trãi - Ngã Tư Sở - Tây Sơn - Chùa Bộc - Phạm Ngọc Thạch - Đào Duy Anh - Giải Phóng - Ngã 3 Đuôi Cá - BX Giáp Bát."
+  },
+  {
+    "num": "21B",
+    "route": "Duyên Thái - BX Mỹ Đình",
+    "fare": "12.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Duyên Thái (cạnh UBND xã Duyên Thái, Thường Tín) - Đường làng Hạ Thái - Đường gom Cao tốc Pháp Vân, Cầu Giẽ - Ngũ Hiệp - Cầu vượt Tự Khoát - Vũ Lăng - Nguyễn Bặc - Cầu Trần Thủ Độ - Đường nội bộ KĐT Pháp Vân, Tứ Hiệp - Ngõ 15 Ngọc Hồi - BX Nước Ngầm - Ngọc Hồi - Giải Phóng - Quảng trường BX Giáp Bát - Giải Phóng - Cầu vượt Ngã tư Vọng - Xã Đàn - Phạm Ngọc Thạch - Chùa Bộc - Tây Sơn - Ngã tư Sở - Nguyễn Trãi - Khuất Duy Tiến - Phạm Hùng - BX Mỹ Đình.\n\nChiều về: BX Mỹ Đình - Phạm Hùng - Khuất Duy Tiến - Nguyễn Trãi - Ngã tư Sở - Tây Sơn - Chùa Bộc - Phạm Ngọc Thạch - Đào Duy Anh - Giải Phóng - Ngã tư Vọng - Giải Phóng - Nút giao Pháp Vân - Trần Thủ Độ - KĐT Pháp Vân, Tứ Hiệp - Cầu Trần Thủ Độ - Nguyễn Bặc - Vũ Lăng - Ngũ Hiệp - Đường gom cao tốc Pháp Vân, Cầu Giẽ - Đường làng Hạ Thái - Duyên Thái."
+  },
+  {
+    "num": "22A",
+    "route": "BX Gia Lâm - KĐT Kiến Hưng",
+    "fare": "10.000đ",
+    "time": "5h00 - 22h05",
+    "path": "Chiều đi: BX Gia Lâm - Ngô Gia Khảm - Ngọc Lâm - Nguyễn Văn Cừ - Cầu Chương Dương - Trần Nhật Duật - Điểm trung chuyển Long Biên - Hàng Đậu - Quán Thánh - Nguyễn Biểu - Hoàng Diệu - Trần Phú - Kim Mã (đường dưới) - Đào Tấn - Liễu Giai - Nguyễn Chí Thanh - Trần Duy Hưng - Khuất Duy Tiến - Nguyễn Trãi - Trần Phú (Hà Đông) - Phùng Hưng (Hà Đông) - đường Phúc La, Văn Phú - đường Mậu Lương - KĐT Kiến Hưng.\n\nChiều về: KĐT Kiến Hưng - đường Mậu Lương - đường Phúc La, Văn Phú - Phùng Hưng (Hà Đông) - Trần Phú (Hà Đông) - Nguyễn Trãi - Khuất Duy Tiến - Trần Duy Hưng - Nguyễn Chí Thanh - Liễu Giai - Đào Tấn - Kim Mã - Nguyễn Thái Học - Hoàng Diệu - Phan Đình Phùng - Hàng Đậu - Long Biên - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Ngọc Lâm - Ngô Gia Khảm - BX Gia Lâm."
+  },
+  {
+    "num": "22B",
+    "route": "BX Giáp Bát - KĐT Đô Nghĩa",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h30",
+    "path": "Chiều đi: BX Giáp Bát - Giải Phóng - Nguyễn Hữu Thọ - Cầu Dậu - Nghiêm Xuân Yêm - Nguyễn Xiển - Nguyễn Trãi - Trần Phú (Hà Đông) - Quang Trung (Hà Đông) - Chu Văn An (Hà Đông) - Vạn Phúc - Tố Hữu - Nguyễn Thanh Bình - Nguyễn Trác - Đô Nghĩa.\n\nChiều về: Đô Nghĩa - Nguyễn Trác - Nguyễn Thanh Bình - Tố Hữu - Vạn Phúc - Chu Văn An (Hà Đông) - Quang Trung (Hà Đông) - Trần Phú (Hà Đông) - Nguyễn Trãi - Nguyễn Xiển - Nghiêm Xuân Yêm - Cầu Dậu - Nguyễn Hữu Thọ - Giải Phóng - BX Giáp Bát."
+  },
+  {
+    "num": "23",
+    "route": "Nguyễn Công Trứ - Vòng quanh nội đô",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h15",
+    "path": "Chiều đi: Nguyễn Công Trứ - Phố Huế - Tuệ Tĩnh - Bà Triệu - Lê Đại Hành - Hoa Lư - Đại Cồ Việt - Tạ Quang Bửu - Lê Thanh Nghị - Giải Phóng - Phương Mai - Lương Định Của - Đông Tác - Chùa Bộc - Tây Sơn - Đặng Tiến Đông - Trần Quang Diệu - Võ Văn Dũng - Hoàng Cầu - Đê La Thành - Giảng Võ - Giang Văn Minh - Kim Mã - Nguyễn Thái Học - Cửa Nam - Phùng Hưng - Phan Đình Phùng - Hàng Đậu - Trần Nhật Duật - Nguyễn Hữu Huân - Lý Thái Tổ - Ngô Quyền - Hai Bà Trưng - Lê Thánh Tông - Trần Hưng Đạo - Phan Huy Chú - Hàn Thuyên - Lê Văn Hưu - Ngô Thì Nhậm - Nguyễn Công Trứ.\n\nChiều về: Nguyễn Công Trứ - Lò Đúc - Phan Chu Trinh - Trần Hưng Đạo - Lê Thánh Tông - Lý Thái Tổ - Ngô Quyền - Hàng Vôi - Hàng Tre - Hàng Muối - Trần Nhật Duật - Điểm trung chuyển Long Biên - Yên Phụ - Hàng Than - Quán Thánh - Hòe Nhai - Phan Đình Phùng - Lý Nam Đế - Trần Phú - Kim Mã - Giảng Võ - Đê La Thành - Hoàng Cầu - Võ Văn Dũng - Trần Quang Diệu - Đặng Tiến Đông - Tây Sơn - Chùa Bộc - Lương Định Của - Phương Mai - Giải Phóng - Lê Thanh Nghị - Tạ Quang Bửu - Đại Cồ Việt - Hoa Lư - Lê Đại Hành - Thái Phiên - Phố Huế - Nguyễn Công Trứ."
+  },
+  {
+    "num": "24",
+    "route": "Long Biên - Ngã Tư Sở - Cầu Giấy",
+    "fare": "10.000đ",
+    "time": "5h00 - 22h00",
+    "path": "Chiều đi: Long Biên - Trần Nhật Duật - Trần Quang Khải - Trần Khánh Dư - Trung chuyển xe buýt Trần Khánh Dư - Nguyễn Khoái - Minh Khai - Đại La - Trường Chinh - Ngã tư Sở - Đường Láng - Cầu Giấy.\n\nChiều về: Cầu Giấy - Đường Láng - Trường Chinh - Đại La - Minh Khai - Vĩnh Tuy - Minh Khai - Nguyễn Khoái - Trần Khánh Dư - Trần Quang Khải - Trần Nhật Duật - Long Biên."
+  },
+  {
+    "num": "25",
+    "route": "BV Nhiệt đới TW 2 - BX Giáp Bát",
+    "fare": "12.000đ",
+    "time": "5h09 - 21h00",
+    "path": "Chiều đi: BV Nhiệt đới TW CS2 - Đường nội bộ KCN Bắc Thăng Long - Hoàng Sa - Võ Nguyên Giáp - Cầu Nhật Tân - Võ Chí Công - Nguyễn Hoàng Tôn - Lạc Long Quân - Đường Bưởi - Đào Tấn - Kim Mã - Giảng Võ - Hào Nam - Ô Chợ Dừa - Xã Đàn - Phạm Ngọc Thạch - Đào Duy Anh - Giải Phóng - BX Giáp Bát.\n\nChiều về: BX Giáp Bát - Giải Phóng - Xã Đàn - Ô Chợ Dừa - Hào Nam - Giảng Võ - Núi Trúc - Kim Mã - Đào Tấn - Đường Bưởi - Lạc Long Quân - Nguyễn Hoàng Tôn - Võ Chí Công - Cầu Nhật Tân - Võ Nguyên Giáp - Hoàng Sa - Đường nội bộ KCN Bắc Thăng Long - BV Nhiệt đới TW CS2."
+  },
+  {
+    "num": "26",
+    "route": "Mai Động - SVĐ Quốc gia",
+    "fare": "10.000đ",
+    "time": "5h00 - 22h00",
+    "path": "Chiều đi: Mai Động (gần cổng vào Xí nghiệp xe khách Nam) - Nguyễn Tam Trinh - Đông Kim Ngưu - Cầu Lạc Trung - Thanh Nhàn - Lê Thanh Nghị - Giải Phóng - Xã Đàn - Phạm Ngọc Thạch - Chùa Bộc - Thái Hà - Huỳnh Thúc Kháng - Nguyễn Chí Thanh - Đê La Thành - Cầu Giấy - Điểm trung chuyển Cầu Giấy - Cầu Giấy - Xuân Thủy - Hồ Tùng Mậu - Quay đầu tại điểm mở đối diện cổng chính Nghĩa trang Mai Dịch - Hồ Tùng Mậu - Lê Đức Thọ - Sân vận động Quốc gia Mỹ Đình.\n\nChiều về: SVĐ Quốc gia Mỹ Đình - Lê Đức Thọ - Hồ Tùng Mậu - Xuân Thủy - Cầu Giấy - Điểm trung chuyển Cầu Giấy - Cầu Giấy (đường dưới) - Đê La Thành - Nguyễn Chí Thanh - Huỳnh Thúc Kháng - Thái Hà - Chùa Bộc - Phạm Ngọc Thạch - Xã Đàn - Hầm Kim Liên - Đại Cồ Việt - Tạ Quang Bửu - Lê Thanh Nghị - Thanh Nhàn - Kim Ngưu - Minh Khai - Tam Trinh - Nguyễn Tam Trinh - Mai Động."
+  },
+  {
+    "num": "27",
+    "route": "BX Yên Nghĩa - BX Nam Thăng Long",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Yên Nghĩa - Quốc lộ 6 - Ba La - Quang Trung (Hà Đông) - Trần Phú (Hà Đông) - Nguyễn Trãi - Cầu vượt Ngã Tư Sở - Tây Sơn - Quay đầu tại nút giao Tây Sơn, Thái Thịnh - Tây Sơn - Đường Láng - Nguyễn Chí Thanh - Chùa Láng - Huỳnh Thúc Kháng - Cầu Giấy (đường trên) - Điểm trung chuyển Cầu Giấy - Cầu Giấy - Xuân Thủy - Phạm Văn Đồng - Đỗ Nhuận - Nam Thăng Long.\n\nChiều về: Nam Thăng Long - Đỗ Nhuận - Phạm Văn Đồng - Xuân Thủy - Cầu Giấy - Điểm trung chuyển Cầu Giấy - Cầu Giấy (đường dưới) - Huỳnh Thúc Kháng - Chùa Láng - Nguyễn Chí Thanh - Đường Láng - Nguyễn Trãi - Trần Phú (Hà Đông) - Quang Trung (Hà Đông) - Ba La - Quốc Lộ 6 - BX Yên Nghĩa."
+  },
+  {
+    "num": "28",
+    "route": "BX Nước Ngầm - Đông Ngạc - ĐH Mỏ",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h30",
+    "path": "Chiều đi: BX Nước Ngầm - Ngọc Hồi - Giải Phóng - Quảng trường BX Giáp Bát - Giải Phóng - Xã Đàn - Ô Chợ Dừa - Hoàng Cầu - Đê La Thành - Giảng Võ - Ngọc Khánh - Kim Mã - Kim Mã (đường dưới) - Liễu Giai - Nguyễn Chí Thanh - Đê La Thành - Cầu Giấy (đường trên) - Điểm trung chuyển Cầu Giấy - Cầu Giấy - Trần Đăng Ninh - Nguyễn Khánh Toàn - Đường mới cạnh CV Nghĩa Đô - Chùa Hà - Tô Hiệu - Nguyễn Phong Sắc - Trần Cung - Phạm Văn Đồng - Nguyễn Đình Tứ - Đức Thắng - ĐH Mỏ Địa Chất.\n\nChiều về: ĐH Mỏ Địa Chất - Phố Viên - Đức Thắng - Nguyễn Đình Tứ - Phạm Văn Đồng - Trần Cung - Nguyễn Phong Sắc - Tô Hiệu - Chùa Hà - Trần Đăng Ninh - Cầu Giấy - Điểm trung chuyển Cầu Giấy - Cầu Giấy (đường dưới) - Kim Mã - Liễu Giai - Kim Mã - Ngọc Khánh - Giảng Võ - Đê La Thành - Hoàng Cầu - Ô Chợ Dừa - Xã Đàn - Phạm Ngọc Thạch - Đào Duy Anh - Giải Phóng - Ngọc Hồi - BX Nước Ngầm."
+  },
+  {
+    "num": "29",
+    "route": "BX Giáp Bát - Tân Lập",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Giáp Bát - Giải Phóng - Nguyễn Hữu Thọ - Nghiêm Xuân Yêm - Nguyễn Xiển - Nguyễn Trãi - Quay đầu tại đối diện ngõ 241 Nguyễn Trãi - Nguyễn Trãi - Nguyễn Tuân - Hoàng Minh Giám - Nguyễn Chánh - Vòng xuyến Nguyễn Chánh - Nguyễn Chánh - Dương Đình Nghệ - Phạm Hùng - Hồ Tùng Mậu - Đường Cầu Diễn - Phố Nhổn - Quốc lộ 32 - Ngã 4 Trạm Trôi - Tân Lập.\n\nChiều về: Tân Lập - Tỉnh lộ 422 - Ngã tư Trạm Trôi - Quốc lộ 32 - Phố Nhổn - Đường Cầu Diễn - Hồ Tùng Mậu - Phạm Hùng - Quay đầu tại Landmark 72 - Phạm Hùng - Dương Đình Nghệ - Nguyễn Chánh - Hoàng Minh Giám - Nguyễn Tuân - Nguyễn Trãi - Nguyễn Xiển - Nghiêm Xuân Yêm - Cầu Dậu - Nguyễn Hữu Thọ - Giải Phóng - BX Giáp Bát."
+  },
+  {
+    "num": "30",
+    "route": "KĐT Gamuda - BX Mỹ Đình",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h25",
+    "path": "Chiều đi: KĐT Gamuda (đối diện tòa nhà CT1 Gamuda) - Đường nội bộ KĐT Gamuda - Đường nội bộ KĐT Geleximco - Nguyễn Tam Trinh - Đông Kim Ngưu - Lò Đúc - Trần Xuân Soạn - Trần Nhân Tông - Lê Duẩn - Khâm Thiên - Ô Chợ Dừa - Hoàng Cầu - Thái Hà - Láng Hạ - Lê Văn Lương - Hoàng Minh Giám - Nguyễn Chánh - Vòng xuyến Nguyễn Chánh - Nguyễn Chánh - Dương Đình Nghệ - Phạm Hùng - Quay đầu trước BX Mỹ Đình - BX Mỹ Đình.\n\nChiều về: BX Mỹ Đình - Phạm Hùng - Quay đầu tại đối diện Landmark 72 - Phạm Hùng - Dương Đình Nghệ - Nguyễn Chánh - Hoàng Minh Giám - Nguyễn Thị Thập - Hoàng Đạo Thúy - Lê Văn Lương - Láng Hạ - Thái Hà - Yên Lãng - Hoàng Cầu - Ô Chợ Dừa - Xã Đàn - Khâm Thiên - Lê Duẩn - Trần Nhân Tông - Trần Xuân Soạn - Lò Đúc - Kim Ngưu - Tam Trinh - Nguyễn Tam Trinh - Đường nội bộ KĐT Geleximco - Đường nội bộ KĐT Gamuda - KĐT Gamuda."
+  },
+  {
+    "num": "31",
+    "route": "Bách Khoa - Chèm (ĐH Mỏ)",
+    "fare": "10.000đ",
+    "time": "5h05 - 21h00",
+    "path": "Chiều đi: ĐH Bách Khoa - Trần Đại Nghĩa - Lê Thanh Nghị - Tạ Quang Bửu - Đại Cồ Việt - Phố Huế - Hàng Bài - Lý Thường Kiệt - Phan Chu Trinh - Lý Thái Tổ - Ngô Quyền - Hàng Vôi - Hàng Tre - Hàng Muối - Trần Nhật Duật - Điểm trung chuyển Long Biên - Yên Phụ - Nghi Tàm - Âu Cơ - Nhật Tân - An Dương Vương - Đường Đông Ngạc - Thụy Phương - Đức Thắng, Cổ Nhuế - Chèm (ĐH Mỏ).\n\nChiều về: Chèm (ĐH Mỏ) - Đường 69 (Đức Thắng, Cổ Nhuế) - Đường Thụy Phương - Đường Đông Ngạc - Tân Xuân - An Dương Vương - Âu Cơ - Nghi Tàm - Yên Phụ - Điểm trung chuyển Long Biên - Hàng Đậu - Quán Thánh - Hàng Cót - Hàng Lược - Chả Cá - Hàng Cân - Lương Văn Can - Hàng Gai - Hàng Trống - Lê Thái Tổ - Bà Triệu - Đại Cồ Việt - Tạ Quang Bửu - Lê Thanh Nghị - Trần Đại Nghĩa - ĐH Bách Khoa."
+  },
+  {
+    "num": "32",
+    "route": "BX Giáp Bát - Nhổn",
+    "fare": "10.000đ",
+    "time": "5h00 - 22h30",
+    "path": "Chiều đi: BX Giáp Bát - Giải Phóng - Lê Duẩn - Trần Nhân Tông - Trần Bình Trọng - Trần Hưng Đạo - Quán Sứ - Hai Bà Trưng - Thợ Nhuộm - Điện Biên Phủ - Trần Phú - Kim Mã - Đào Tấn - Đường Bưởi - Điểm trung chuyển Cầu Giấy - Cầu Giấy - Xuân Thủy - Hồ Tùng Mậu - Đường Cầu Diễn - Nhổn (điểm trung chuyển xe buýt Nhổn).\n\nChiều về: Nhổn (điểm trung chuyển xe buýt Nhổn) - Đường Cầu Diễn - Hồ Tùng Mậu - Xuân Thủy - Cầu Giấy - Điểm trung chuyển Cầu Giấy - Kim Mã - Nguyễn Thái Học - Lê Duẩn - Giải Phóng - BX Giáp Bát."
+  },
+  {
+    "num": "32TC",
+    "route": "BX Giáp Bát - Triển lãm Việt Nam",
+    "fare": "10.000đ",
+    "time": "7h30 - 20h30",
+    "path": "Chiều đi: BX Giáp Bát - Giải Phóng - Đại La - Minh Khai - Cầu Vĩnh Tuy - Đàm Quang Trung - Nguyễn Văn Linh - Lý Sơn - Trường Sa - Triển lãm Việt Nam (Đông Anh).\n\nChiều về: Trung tâm triển lãm Việt Nam - Trường Sa - Lý Sơn - Nguyễn Văn Linh - Đàm Quang Trung - Cầu Vĩnh Tuy - Minh Khai - Đại La - Giải Phóng - BX Giáp Bát."
+  },
+  {
+    "num": "33",
+    "route": "CCN Thanh Oai - Xuân Đỉnh",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h05",
+    "path": "Chiều đi: Cụm công nghiệp Thanh Oai (cạnh tường rào cổng ty B. Braun Việt Nam) - Đường nội bộ CCN Thanh Oai - Quốc lộ 21B - Quang Trung (Hà Đông) - Chu Văn An (Hà Đông) - Tố Hữu - Trung Văn - Đường Cương Kiên - Cầu vượt Mễ Trì - Đường Miếu Đầm - Đỗ Đức Dục - Phạm Hùng - Phạm Văn Đồng - Hoàng Quốc Việt - Điểm trung chuyển Hoàng Quốc Việt - Hoàng Quốc Việt - Bưởi - Lạc Long Quân - Xuân La - Xuân Đỉnh (Trường ĐH Nội vụ Hà Nội).\n\nChiều về: Xuân Đỉnh - Xuân La - Lạc Long Quân - Hoàng Quốc Việt - Phạm Văn Đồng - Phạm Hùng - BX Mỹ Đình - Phạm Hùng - Đỗ Đức Dục - Đường Miếu Đầm - Cầu vượt Mễ Trì - Đường Cương Kiên - Trung Văn - Tố Hữu - Chu Văn An (Hà Đông) - Quang Trung (Hà Đông) - Quốc lộ 21B - Đường nội bộ CCN Thanh Oai - CCN Thanh Oai."
+  },
+  {
+    "num": "34",
+    "route": "BX Mỹ Đình - BX Gia Lâm",
+    "fare": "10.000đ",
+    "time": "5h00 - 22h30",
+    "path": "Chiều đi: BX Mỹ Đình - Phạm Hùng - Xuân Thủy - Cầu Giấy - Điểm trung chuyển Cầu Giấy - Kim Mã - Liễu Giai - Kim Mã - Nguyễn Thái Học - Phan Bội Châu - Hai Bà Trưng - Phan Chu Trinh - Lý Thái Tổ - Ngô Quyền - Hàng Vôi - Hàng Tre - Hàng Muối - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Nguyễn Sơn - Ngọc Lâm - Ngô Gia Khảm - BX Gia Lâm.\n\nChiều về: BX Gia Lâm - Ngô Gia Khảm - Ngọc Lâm - Nguyễn Văn Cừ - Cầu Chương Dương - Trần Quang Khải - Tràng Tiền - Ngô Quyền - Hai Bà Trưng - Thợ Nhuộm - Điện Biên Phủ - Trần Phú - Kim Mã - Đào Tấn - Bưởi - Điểm trung chuyển Cầu Giấy - Cầu Giấy - Xuân Thủy - Phạm Hùng - BX Mỹ Đình."
+  },
+  {
+    "num": "35A",
+    "route": "Trần Khánh Dư - Nam Thăng Long",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Trần Khánh Dư - Trần Hưng Đạo - Bà Triệu - Đại Cồ Việt - Hầm Kim Liên - Xã Đàn - Phạm Ngọc Thạch - Chùa Bộc - Thái Hà - Huỳnh Thúc Kháng - Nguyễn Chí Thanh - Trần Duy Hưng - Phạm Hùng - Phạm Văn Đồng - Đỗ Nhuận - Nam Thăng Long.\n\nChiều về: Nam Thăng Long - Đỗ Nhuận - Phạm Văn Đồng - Phạm Hùng - Trần Duy Hưng - Nguyễn Chí Thanh - Huỳnh Thúc Kháng - Thái Hà - Chùa Bộc - Phạm Ngọc Thạch - Đào Duy Anh - Xã Đàn - Hầm Kim Liên - Đại Cồ Việt - Phố Huế - Hàng Bài - Trần Hưng Đạo - Phan Chu Trinh - Tràng Tiền - Trần Khánh Dư."
+  },
+  {
+    "num": "35B",
+    "route": "Nam Thăng Long - Thanh Lâm",
+    "fare": "10.000đ",
+    "time": "5h05 - 20h00",
+    "path": "Chiều đi: Nam Thăng Long (Điểm đỗ xe buýt trên đường Đỗ Nhuận, cạnh công viên Hòa Bình) - Đỗ Nhuận - Phạm Văn Đồng - Cầu Thăng Long - Võ Văn Kiệt - Ngã Tư Nam Hồng - Rẽ phải vào Quốc lộ 23B - Quay đầu tại đảo tròn phía Đông Anh - Cầu Vượt Nam Hồng - Quốc lộ 23B - Thanh Lâm (Mê Linh).\n\nChiều về: Thanh Lâm - Quốc lộ 23B - Ngã tư Nam Hồng - Võ Văn Kiệt - Cầu Thăng Long - Phạm Văn Đồng - Quay đầu tại điểm mở đối diện OCT3 khu đô thị Handivesco - Phạm Văn Đồng - Đỗ Nhuận - Nam Thăng Long."
+  },
+  {
+    "num": "36",
+    "route": "Yên Phụ - KĐT Linh Đàm",
+    "fare": "8.000đ",
+    "time": "5h00 - 21h10",
+    "path": "Chiều đi: Yên Phụ - Hàng Đậu - Quán Thánh - Hòe Nhai - Phan Đình Phùng - Lý Nam Đế - Trần Phú - Phùng Hưng - Hàng Bông - Phan Bội Châu - Hai Bà Trưng - Bà Triệu - Lê Đại Hành - Đại Cồ Việt - Bạch Mai - Trương Định - Giải Phóng - Nguyễn Hữu Thọ - Nguyễn Duy Trinh - KĐT Linh Đàm.\n\nChiều về: KĐT Linh Đàm - Nguyễn Duy Trinh - Nguyễn Hữu Thọ - Giải Phóng - Trương Định - Bạch Mai - Phố Huế - Hàng Bài - Hai Bà Trưng - Quán Sứ - Tràng Thi - Thợ Nhuộm - Hàng Bông - Phùng Hưng - Phan Đình Phùng - Hàng Đậu - Trần Nhật Duật - Điểm trung chuyển Long Biên - Yên Phụ."
+  },
+  {
+    "num": "37",
+    "route": "BX Giáp Bát - Chương Mỹ",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h05",
+    "path": "Chiều đi: BX Giáp Bát - Giải Phóng - Kim Đồng - Trương Định - Giải Phóng - Ngọc Hồi - Nút giao Ngọc Hồi, Hoàng Liệt - Hoàng Liệt - KĐT Linh Đàm - Nguyễn Duy Trinh - Nguyễn Hữu Thọ - Nghiêm Xuân Yêm - Đại lộ Chu Văn An - Ngã ba Xa La - Viện 103 - Phùng Hưng (Hà Đông) - Cầu Đen - Tô Hiệu - Quang Trung (Hà Đông) - Ba La - Quốc Lộ 6 - Yên Nghĩa - Đồng Mai - Cầu Mai Lĩnh - Biên Giang - Chương Mỹ.\n\nChiều về: Chương Mỹ - Biên Giang - Cầu Mai Lĩnh - Đồng Mai - Yên Nghĩa - Quốc Lộ 6 - Ba La - Quang Trung (Hà Đông) - Tô Hiệu - Cầu Đen - Phùng Hưng (Hà Đông) - Viện 103 - Đường Cầu Bươu - Ngã ba Xa La - Đại lộ Chu Văn An - Nghiêm Xuân Yêm - Nguyễn Hữu Thọ - Nguyễn Duy Trinh - KĐT Linh Đàm - Hoàng Liệt - Ngọc Hồi - Giải Phóng - BX Giáp Bát."
+  },
+  {
+    "num": "38",
+    "route": "Tân Xuân - Mai Động",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Tân Xuân (gần phố Nhật Tảo, phường Phú Thượng) - Phạm Văn Đồng - Hoàng Quốc Việt - Nguyễn Văn Huyên - Nguyễn Khánh Toàn - Bưởi - Cầu Giấy - Điểm trung chuyển Cầu Giấy - Kim Mã - Liễu Giai - Đào Tấn - Kim Mã - Trần Huy Liệu - Giảng Võ - Giang Văn Minh - Kim Mã - Nguyễn Thái Học - Lê Duẩn - Lý Thường Kiệt - Bà Triệu - Lê Đại Hành - Bạch Mai - Minh Khai - Tam Trinh - Cầu Voi - Nguyễn Tam Trinh - Mai Động.\n\nChiều về: Mai Động - Nguyễn Tam Trinh - Minh Khai - Bạch Mai - Phố Huế - Trần Nhân Tông - Quang Trung - Hai Bà Trưng - Nguyễn Khuyến - Văn Miếu - Quốc Tử Giám - Cát Linh - Trịnh Hoài Đức - Lê Trực - Trần Phú - Sơn Tây - Kim Mã - Giảng Võ - Núi Trúc - Kim Mã - Đào Tấn - Nguyễn Khánh Toàn - Nguyễn Văn Huyên - Hoàng Quốc Việt - Phạm Văn Đồng - Tân Xuân."
+  },
+  {
+    "num": "39",
+    "route": "Công viên Nghĩa Đô - Mai Động",
+    "fare": "12.000đ",
+    "time": "5h00 - 21h20",
+    "path": "Chiều đi: Công viên Nghĩa Đô - Nguyễn Văn Huyên - Nguyễn Khánh Toàn - Trần Đăng Ninh - Nguyễn Phong Sắc - Xuân Thủy - Phạm Hùng - Khuất Duy Tiến - Nguyễn Trãi - Trần Phú - Phùng Hưng - Cầu Tó - Phan Trọng Tuệ - Ngọc Hồi - Nguyễn Bồ - Trần Thủ Độ - Đỗ Mười - Bùi Huy Bích - Đường nội bộ KĐT mới Ao Sào - Đường ven sông Kim Ngưu - Mai Động (bãi đỗ xe Đền Lừ).\n\nChiều về: Mai Động - Đường ven sông Kim Ngưu - Đường nội bộ KĐT mới Ao Sào - Bùi Huy Bích - Đỗ Mười - Trần Thủ Độ - Nguyễn Bồ - Ngọc Hồi - Phan Trọng Tuệ - Cầu Tó - Phùng Hưng - Trần Phú - Nguyễn Trãi - Khuất Duy Tiến - Phạm Hùng - Xuân Thủy - Nguyễn Phong Sắc - Trần Đăng Ninh - Nguyễn Khánh Toàn - Nguyễn Văn Huyên - CV Nghĩa Đô."
+  },
+  {
+    "num": "40",
+    "route": "Công viên Thống Nhất - Văn Lâm",
+    "fare": "10.000đ",
+    "time": "5h00 - 22h00",
+    "path": "Chiều đi: Công viên Thống Nhất - Quang Trung - Lý Thường Kiệt - Quán Sứ - Hai Bà Trưng - Phan Chu Trinh - Tràng Tiền - Trần Khánh Dư - Nguyễn Khoái - Cầu Vĩnh Tuy - Đường Cổ Linh - Thạch Bàn - Nguyễn Văn Linh - Nguyễn Đức Thuận - Nguyễn Bình - Như Quỳnh - Văn Lâm (Đường 5).\n\nChiều về: Văn Lâm (đường 5) - Như Quỳnh - Nguyễn Bình - Nguyễn Đức Thuận - Nguyễn Văn Linh - Thạch Bàn - Đường Cổ Linh - Cầu Vĩnh Tuy - Nguyễn Khoái - Trần Hưng Đạo - Lê Thánh Tông - Hai Bà Trưng - Ga Hà Nội - Lê Duẩn - Công Viên Thống Nhất."
+  },
+  {
+    "num": "41",
+    "route": "Nam Thăng Long - BX Giáp Bát",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Nam Thăng Long - Đỗ Nhuận - Minh Tảo - Xuân La - Võ Chí Công - An Dương Vương - Đường Âu Cơ - Nghi Tàm - Yên Phụ - Yên Phụ (đường riêng cho xe buýt) - Trung chuyển Long Biên - Hàng Đậu - Quán Thánh - Cửa Bắc - Nguyễn Tri Phương - Điện Biên Phủ - Chu Văn An - Tôn Đức Thắng - Khâm Thiên - Lê Duẩn - Giải Phóng - Quay đầu tại ngã ba đuôi cá - Giải Phóng - BX Giáp Bát.\n\nChiều về: BX Giáp Bát - Giải Phóng - Lê Duẩn - Khâm Thiên - Tôn Đức Thắng - Chu Văn An - Lê Hồng Phong - Hoàng Diệu - Nguyễn Biểu - Quán Thánh - Thanh Niên - Nghi Tàm - Âu Cơ - An Dương Vương - Võ Chí Công - Xuân La - Minh Tảo - Hoàng Minh Thảo - Đỗ Nhuận - Nam Thăng Long."
+  },
+  {
+    "num": "42",
+    "route": "BX Giáp Bát - Trung Mầu",
+    "fare": "12.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Giáp Bát - Giải Phóng - Kim Đồng - Tân Mai - Tam Trinh - Kim Ngưu - Lò Đúc - Yecxanh - Trần Thánh Tông - Trần Hưng Đạo - Trần Quang Khải - Trần Nhật Duật - Long Biên (quay đầu trước phố Hàng Khoai) - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Ngô Gia Tự - Cầu Đuống - Hà Huy Tập - Đặng Phúc Thông - Dốc Lã - Ninh Hiệp - Phù Đổng - Trung Mầu (Gia Lâm).\n\nChiều về: Trung Mầu (Gia Lâm) - Phù Đổng - Ninh Hiệp - Dốc Lã - Đặng Phúc Thông - Hà Huy Tập - Cầu Đuống - Ngô Gia Tự - Nguyễn Văn Cừ - Cầu Chương Dương - Trần Nhật Duật - Điểm trung chuyển Long Biên - Yên Phụ - Trần Nhật Duật - Trần Quang Khải - Trần Hưng Đạo - Tăng Bạt Hổ - Lò Đúc - Kim Ngưu - Tam Trinh - Tân Mai - Kim Đồng - Giải Phóng - BX Giáp Bát."
+  },
+  {
+    "num": "43",
+    "route": "Kim Mã - TT Đông Anh",
+    "fare": "12.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Kim Mã (số 1 Kim Mã) - Giảng Võ - Hào Nam - Ô Chợ Dừa - Khâm Thiên - Nguyễn Thượng Hiền - Trần Bình Trọng - Trần Hưng Đạo - Quang Trung - Lý Thường Kiệt - Phan Chu Trinh - Lý Thái Tổ - Ngô Quyền - Hàng Vôi - Hàng Tre - Hàng Muối - Trần Nhật Duật - Yên Phụ - Điểm trung chuyển Long Biên - Yên Phụ - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Lý Sơn - Cầu Đông Trù - Trường Sa - Ngã 3 Dâu Canh - Quốc lộ 3 - Cao Lỗ - TT Đông Anh.\n\nChiều về: TT Đông Anh - Cao Lỗ - Quốc lộ 3 - Ngã 3 Dâu Canh - Trường Sa - Cầu Đông Trù - Lý Sơn - Nguyễn Văn Cừ - Cầu Chương Dương - Trần Nhật Duật - Điểm trung chuyển Long Biên - Nguyễn Hữu Huân - Lý Thái Tổ - Lý Thường Kiệt - Lê Duẩn - Khâm Thiên - Hào Nam - Kim Mã."
+  },
+  {
+    "num": "46",
+    "route": "BX Mỹ Đình - TT Đông Anh",
+    "fare": "12.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Mỹ Đình - Phạm Hùng - Quay đầu tại làng Đình Thôn - Phạm Hùng - Phạm Văn Đồng - Cầu Thăng Long - Đường 6 km (Vĩnh Ngọc) - Vân Trì - Đường 5 kéo dài - Đường 6 km (Vĩnh Ngọc) - Quốc lộ 3 - Đường Cổ Loa - TT Đông Anh.\n\nChiều về: TT Đông Anh - Đường Cổ Loa - Quốc lộ 3 - Đường 6 km (Vĩnh Ngọc) - Đường 5 kéo dài - Quay đầu tại điểm mở - Đường 5 kéo dài - Vân Trì - Đường 6 km (Vĩnh Ngọc) - Cầu Thăng Long - Phạm Văn Đồng - Phạm Hùng - BX Mỹ Đình."
+  },
+  {
+    "num": "47A",
+    "route": "Long Biên - Bát Tràng",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Long Biên - Yên Phụ - Điểm trung chuyển Long Biên - Trần Nhật Duật - Cầu Chương Dương - Đê Long Biên, Xuân Quan - Đường Đa Tốn - Đường tỉnh 379 - Đường nội bộ KĐT Ecopark (đường Rừng Thông - Quay đầu tại vòng xuyến đường Rừng Thông - Rừng Thông - Rừng Cọ) - Đê Long Biên, Xuân Quan - Bát Tràng (điểm đỗ xe buýt, cách cổng chợ gốm Bát Tràng 100m).\n\nChiều về: Bát Tràng - Đê Long Biên, Xuân Quan - Đường nội bộ KĐT Ecopark - Đường tỉnh 379 - Đường Đa Tốn - Đê Long Biên, Xuân Quan - Gầm cầu Chương Dương - Ngọc Thụy - Cầu Chương Dương - Trần Nhật Duật - Điểm trung chuyển Long Biên - Yên Phụ."
+  },
+  {
+    "num": "47B",
+    "route": "ĐH Kinh tế Quốc dân - Kiêu Kỵ",
+    "fare": "12.000đ",
+    "time": "5h00 - 21h10",
+    "path": "Chiều đi: ĐH Kinh tế Quốc dân - Đại La - Giải Phóng - Lê Thanh Nghị - Thanh Nhàn - Kim Ngưu - Minh Khai - Cầu Vĩnh Tuy - Cổ Linh - Thạch Bàn - Đê Xuân Quan - Đông Dư - Văn Đức - Đường ĐT378 - Văn Giang - Đường ĐT179 - Kiêu Kỵ.\n\nChiều về: Kiêu Kỵ - Đường ĐT179 - Văn Giang - Đường ĐT378 - Văn Đức - Đông Dư - Đê Xuân Quan - Thạch Bàn - Cổ Linh - Cầu Vĩnh Tuy - Minh Khai - Kim Ngưu - Thanh Nhàn - Lê Thanh Nghị - Trần Đại Nghĩa - ĐH Kinh tế Quốc dân."
+  },
+  {
+    "num": "48",
+    "route": "BX Nước Ngầm - Phúc Lợi",
+    "fare": "12.000đ",
+    "time": "5h00 - 21h30",
+    "path": "Chiều đi: BX Nước Ngầm - Ngọc Hồi - Đỗ Mười - Nguyễn Khoái - Trần Khánh Dư (đường trên) - Trần Quang Khải (đường trên) - Cầu Chương Dương - Nguyễn Văn Cừ - Ngô Gia Tự - Trường Lâm - Đoàn Khuê - Vạn Hạnh - Nguyễn Cao Luyện - Lưu Khánh Đàm - Phúc Lợi (Chung cư Ruby City).\n\nChiều về: Phúc Lợi - Lưu Khánh Đàm - Nguyễn Cao Luyện - Vạn Hạnh - Đoàn Khuê - Trường Lâm - Ngô Gia Tự - Nguyễn Văn Cừ - Cầu Chương Dương - Trần Quang Khải (đường dưới) - Điểm trung chuyển Trần Khánh Dư - Nguyễn Khoái - Lĩnh Nam - Đỗ Mười - Ngọc Hồi - BX Nước Ngầm."
+  },
+  {
+    "num": "49",
+    "route": "Trần Khánh Dư - Nhổn",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Trần Khánh Dư (Điểm trung chuyển xe buýt Trần Khánh Dư) - Trần Hưng Đạo - Lê Thánh Tông - Lý Thường Kiệt - Lê Duẩn - Khâm Thiên - Ô Chợ Dừa - La Thành - Cầu Giấy - Xuân Thủy - Hồ Tùng Mậu - Quay đầu tại điểm mở đối diện 143 Hồ Tùng Mậu - Nguyễn Cơ Thạch - Trần Hữu Dực - Đường mới (đoạn gần tòa nhà Hateco Apollo) - Nhổn (Điểm trung chuyển xe buýt Nhổn).\n\nChiều về: Nhổn - Cầu Diễn - Quay đầu tại điểm mở - Cầu Diễn - Đường mới - Trần Hữu Dực - Nguyễn Cơ Thạch - Hồ Tùng Mậu - Xuân Thủy - Cầu Giấy - Điểm trung chuyển Cầu Giấy - La Thành - Thành Công - Láng Hạ - La Thành - Hoàng Cầu mới - Xã Đàn - Khâm Thiên - Nguyễn Thượng Hiền - Yết Kiêu - Trần Hưng Đạo - Quán Sứ - Lý Thường Kiệt - Phan Chu Trinh - Tràng Tiền - Trần Khánh Dư."
+  },
+  {
+    "num": "50",
+    "route": "Long Biên - KĐT An Lạc",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Long Biên - Yên Phụ - Trần Nhật Duật - Quay đầu tại nút giao phố Hàng Khoai - Trần Nhật Duật - Yên Phụ - Điểm trung chuyển Long Biên - Đường Thanh Niên - Hùng Vương - Phan Đình Phùng - Hoàng Diệu - Trần Phú - Kim Mã - Giảng Võ - Núi Trúc - Kim Mã - Liễu Giai - Nguyễn Chí Thanh - Trần Duy Hưng - Phạm Hùng - Mễ Trì - Lê Quang Đạo - Lê Đức Thọ - Trần Hữu Dực - Trịnh Văn Bô - Đường 70 - KĐT Vân Canh - Đường vào KĐT An Lạc - KĐT An Lạc.\n\nChiều về: KĐT An Lạc - Đường vào KĐT An Lạc - KĐT Vân Canh - Đường 70 - Trịnh Văn Bô - Trần Hữu Dực - Lê Đức Thọ - Lê Quang Đạo - Mễ Trì - Phạm Hùng - Trần Duy Hưng - Nguyễn Chí Thanh - Liễu Giai - Kim Mã - Trần Huy Liệu - Giảng Võ - Giang Văn Minh - Kim Mã - Nguyễn Thái Học - Hoàng Diệu - Nguyễn Biểu - Quán Thánh - Đường Thanh Niên - Yên Phụ - Điểm trung chuyển Long Biên - Trần Nhật Duật - Quay đầu tại nút giao phố Hàng Khoai - Long Biên."
+  },
+  {
+    "num": "51",
+    "route": "BX Gia Lâm - Học viện Tư Pháp",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h10",
+    "path": "Chiều đi: BX Gia Lâm - Ngô Gia Khảm - Ngọc Lâm - Nguyễn Văn Cừ - Cầu Chương Dương - Trần Quang Khải - Trần Khánh Dư (Điểm trung chuyển xe buýt Trần Khánh Dư) - Nguyễn Khoái - Minh Khai - Lạc Trung - Thanh Nhàn - Võ Thị Sáu - Trần Khát Chân - Đại Cổ Việt - Xã Đàn - Phạm Ngọc Thạch - Chùa Bộc - Tây Sơn - Thái Thịnh - Yên Lãng - Đường Láng - Trần Duy Hưng - Trung Hòa - Vũ Phạm Hàm - Trung Kính - Phạm Văn Bạch - Trần Thái Tông - Xuân Thủy - Hồ Tùng Mậu - Trần Vỹ - Trần Vỹ (Cổng Học Viện Tư Pháp).\n\nChiều về: Trần Vỹ (Cổng Học Viện Tư Pháp) - Trần Vỹ - Hồ Tùng Mậu - Xuân Thủy - Trần Thái Tông - Phạm Văn Bạch - Trung Kính - Vũ Phạm Hàm - Trần Duy Hưng - Đường Láng - Yên Lãng - Thái Thịnh - Tây Sơn - Chùa Bộc - Phạm Ngọc Thạch - Xã Đàn - Hầm Kim Liên - Đại Cổ Việt - Trần Khát Chân - Võ Thị Sáu - Thanh Nhàn - Lạc Trung - Minh Khai - Nguyễn Khoái - Trần Khánh Dư - Trần Quang Khải - Cầu Chương Dương - Nguyễn Văn Cừ - Ngọc Lâm - Ngô Gia Khảm - BX Gia Lâm."
+  },
+  {
+    "num": "52",
+    "route": "CV Thống Nhất - Lệ Chi (Gia Lâm)",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h15",
+    "path": "Chiều đi: CV Thống Nhất - Trần Nhân Tông - Bà Triệu - Lê Đại Hành - Bạch Mai - Minh Khai - Cầu Mai Động - Minh Khai - Cầu Vĩnh Tuy - Đàm Quang Trung - Cổ Linh - Thạch Bàn - Nguyễn Văn Linh - Nguyễn Đức Thuận - Nguyễn Bình - Cầu vượt Phú Thị - Ỷ Lan - Dương Xá - Ngã tư Sủi - Kim Sơn - Đường 181 - Phú Thị - Keo - Kim Sơn - Lệ Chi (Gia Lâm).\n\nChiều về: Lệ Chi (Gia Lâm) - Kim Sơn - Keo - Phú Thị - Ngã tư Sủi - Ỷ Lan - Dương Xá - Cầu vượt Phú Thị - Nguyễn Bình - Nguyễn Đức Thuận - Nguyễn Văn Linh - Thạch Bàn - Cổ Linh - Đàm Quang Trung - Cầu Vĩnh Tuy - Minh Khai - Cầu Mai Động - Minh Khai - Bạch Mai - Phố Huế - Nguyễn Du - Trần Bình Trọng - Trần Nhân Tông - CV Thống Nhất."
+  },
+  {
+    "num": "53A",
+    "route": "Hoàng Quốc Việt - Đông Anh",
+    "fare": "10.000đ",
+    "time": "5h00 - 20h35",
+    "path": "Chiều đi: Hoàng Quốc Việt (Điểm đỗ xe buýt Hoàng Quốc Việt) - Hoàng Quốc Việt - Quay đầu tại ngã ba Hoàng Quốc Việt, Phạm Tuấn Tài - Hoàng Quốc Việt - Điểm trung chuyển Hoàng Quốc Việt - Hoàng Quốc Việt - Phạm Văn Đồng - Cầu Thăng Long - Võ Văn Kiệt - Quốc lộ 23 - Cầu tránh Vân Trì - Quốc lộ 23 - Đường Cao Lỗ - TT Đông Anh.\n\nChiều về: TT Đông Anh - Đường Cao Lỗ - Quốc lộ 23 - Cầu tránh Vân Trì - Quốc lộ 23 - Võ Văn Kiệt - Cầu Thăng Long - Phạm Văn Đồng - Hoàng Quốc Việt - Hoàng Quốc Việt (Điểm đỗ xe buýt Hoàng Quốc Việt)."
+  },
+  {
+    "num": "53B",
+    "route": "BX Mỹ Đình - Kim Hoa (Mê Linh)",
+    "fare": "10.000đ",
+    "time": "5h00 - 20h35",
+    "path": "Chiều đi: BX Mỹ Đình - Phạm Hùng - Quay đầu tại điểm mở (giữa trụ T296-T297 đường vành đai 3 trên cao) - Phạm Hùng - Phạm Văn Đồng - Cầu Thăng Long - Võ Văn Kiệt - Quay đầu tại điểm mở đối diện Mê Linh Plaza - Võ Văn Kiệt - KCN Quang Minh - Đường Chi Đông - Ngô Miên - Kim Hoa (cạnh UBND xã Kim Hoa, Mê Linh).\n\nChiều về: Kim Hoa (cạnh UBND xã Kim Hoa, Mê Linh) - Ngô Miên - Đường Chi Đông - Đường trục chính KCN Quang Minh - Võ Văn Kiệt - Cầu Thăng Long - Phạm Văn Đồng - Phạm Hùng - BX Mỹ Đình."
+  },
+  {
+    "num": "54",
+    "route": "Long Biên - Thành phố Bắc Ninh",
+    "fare": "15.000đ",
+    "time": "4h45 - 21h15",
+    "path": "Chiều đi: Long Biên - Yên Phụ - Điểm trung chuyển Long Biên - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Ngô Gia Tự - Cầu Đuống - Hà Huy Tập - Đặng Phúc Thông - Trần Phú (Từ Sơn) - Minh Khai (Từ Sơn) - Hai Bà Trưng (Tiên Du) - Nguyễn Văn Cừ (Bắc Ninh) - Ngô Gia Tự (Bắc Ninh) - Đường Kinh Dương Vương - Thành phố Bắc Ninh.\n\nChiều về: Thành phố Bắc Ninh - Đường Kinh Dương Vương - Suối Hoa - Ngô Gia Tự (Bắc Ninh) - BX Bắc Ninh - Nguyễn Văn Cừ (Bắc Ninh) - Hòa Đình - Võ Cường - Ó - Lim - Nội Duệ - Tương Giang - Viềng - Đồng Nguyên - Từ Sơn - Dốc Lã - Hà Huy Tập - Cầu Đuống - Ngô Gia Tự - Nguyễn Văn Cừ - Cầu Chương Dương - Long Biên."
+  },
+  {
+    "num": "55",
+    "route": "Aeon Mall Long Biên - Cầu Giấy",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: TTTM Aeon Mall Long Biên - Nguyễn Ngọc Chân - Cổ Linh - Hồng Tiến - Nguyễn Văn Cừ - Cầu Chương Dương - Trần Nhật Duật - Điểm trung chuyển Long Biên - Yên Phụ - Nghi Tàm - Âu Cơ - Lạc Long Quân - Bưởi - Cầu Giấy - Điểm trung chuyển Cầu Giấy - Điểm đỗ xe buýt Cầu Giấy.\n\nChiều về: Điểm đỗ xe buýt Cầu Giấy - Điểm trung chuyển Cầu Giấy - Bưởi - Lạc Long Quân - Âu Cơ - Nghi Tàm - Yên Phụ - Điểm trung chuyển Long Biên - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Hồng Tiến - Cổ Linh - Đàm Quang Trung - TTTM Aeon Mall Long Biên."
+  },
+  {
+    "num": "56A",
+    "route": "BX Mỹ Đình - Núi Đôi (Sóc Sơn)",
+    "fare": "15.000đ",
+    "time": "5h30 - 20h40",
+    "path": "Chiều đi: Mỹ Đình (đối diện cổng làng Tân Mỹ) - Đỗ Xuân Hợp - Nguyễn Cơ Thạch - Hồ Tùng Mậu - Phạm Văn Đồng - Cầu Thăng Long - Võ Văn Kiệt - Quốc lộ 2 - Đường mới dọc hầm chui QL2 - Tỉnh lộ 131 - KCN Nội Bài - TT Sóc Sơn - Đường Núi Đôi - Núi Đôi (ĐH Điện Lực).\n\nChiều về: Núi Đôi (ĐH Điện Lực) - Đường Núi Đôi - TT Sóc Sơn - KCN Nội Bài - Tỉnh lộ 131 - Đường mới dọc hầm chui QL2 - Quốc Lộ 2 - Võ Văn Kiệt - Cầu Thăng Long - Phạm Văn Đồng - Hồ Tùng Mậu - Nguyễn Cơ Thạch - Đỗ Xuân Hợp - Mỹ Đình."
+  },
+  {
+    "num": "57",
+    "route": "Nam Thăng Long - KCN Phú Nghĩa",
+    "fare": "20.000đ",
+    "time": "5h00 - 21h15",
+    "path": "Chiều đi: Nam Thăng Long (điểm đỗ xe buýt trên đường Đỗ Nhuận, cạnh cổng CV Hòa Bình) - Phạm Văn Đồng - Tân Xuân - Hoàng Tăng Bí - Phố Tân Phong - Yên Nội - Văn Tiến Dũng - Quốc lộ 32 - Điểm trung chuyển Nhổn - Tỉnh lộ 70A - Đường Xuân Phương - Tây Mỗ - Đại Mỗ - Vạn Phúc - Quang Trung (Hà Đông) - BX Yên Nghĩa - Cầu Mai Lĩnh - Chúc Sơn - KCN Phú Nghĩa.\n\nChiều về: KCN Phú Nghĩa - Chúc Sơn - Cầu Mai Lĩnh - BX Yên Nghĩa - Quang Trung (Hà Đông) - Vạn Phúc - Đại Mỗ - Tây Mỗ - Đường Xuân Phương - Tỉnh lộ 70A - Điểm trung chuyển Nhổn - Quốc lộ 32 - Văn Tiến Dũng - Yên Nội - Phố Tân Phong - Hoàng Tăng Bí - Tân Xuân - Phạm Văn Đồng - Nam Thăng Long."
+  },
+  {
+    "num": "58",
+    "route": "Long Biên - Thạch Đà (Mê Linh)",
+    "fare": "20.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Điểm trung chuyển Long Biên - Yên Phụ - Nghi Tàm - Âu Cơ - An Dương Vương - Cầu Thăng Long - Võ Văn Kiệt - Quốc lộ 02 - Hai Bà Trưng (Phúc Yên) - Lý Nam Đế (Phúc Yên) - Lê Ngọc Hân (Phúc Yên) - Lý Thường Kiệt (Phúc Yên) - Triệu Thị Khoan Hòa (Phúc Yên) - Nguyễn Trãi (Phúc Yên) - Quốc lộ 23B - Đường 35 (Tam Đồng, Tam Báo) - Thạch Đà (Trước cổng BVĐK Mê Linh mới).\n\nChiều về: Thạch Đà - Đường 35 - Quốc lộ 23B - Nguyễn Trãi (Phúc Yên) - Lý Thường Kiệt (Phúc Yên) - Lê Ngọc Hân (Phúc Yên) - Lý Nam Đế (Phúc Yên) - Hai Bà Trưng (Phúc Yên) - Quốc lộ 02 - Võ Văn Kiệt - Cầu Thăng Long - An Dương Vương - Âu Cơ - Nghi Tàm - Yên Phụ - Điểm trung chuyển Long Biên."
+  },
+  {
+    "num": "59",
+    "route": "Đông Anh - Học viện Nông nghiệp",
+    "fare": "15.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Đông Anh (điểm đỗ xe cạnh điếm canh đê số 23 xã Xuân Nộn) - Đường đi qua UBND xã Xuân Nộn - Nguyên Khê - Uy Nỗ - Đản Dị - Cao Lỗ - Quốc lộ 03 - Cầu Đuống - Ngô Gia Tự - Nguyễn Cao Luyện - Đoàn Khuê - Lệ Mật - Việt Hưng - Vũ Đức Thận - Nguyễn Lam - Huỳnh Văn Nghệ - Hoàng Thế Thiện - Sài Đồng - Nguyễn Văn Linh - Nguyễn Đức Thuận - Ngô Xuân Quảng - HV Nông Nghiệp Việt Nam.\n\nChiều về: HV Nông Nghiệp Việt Nam - Ngô Xuân Quảng - Nguyễn Đức Thuận - Nguyễn Văn Linh - Sài Đồng - Hoàng Thế Thiện - Huỳnh Văn Nghệ - Nguyễn Lam - Vũ Đức Thận - Việt Hưng - Lệ Mật - Đoàn Khuê - Nguyễn Cao Luyện - Ngô Gia Tự - Cầu Đuống - Quốc lộ 3 - Cao Lỗ - Đản Dị - Uy Nỗ - Nguyên Khê - Đường vào UBND xã Xuân Nộn - Đông Anh."
+  },
+  {
+    "num": "60A",
+    "route": "KĐT Pháp Vân - CV Nước Hồ Tây",
+    "fare": "12.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: KĐT Pháp Vân, Tứ Hiệp - Trần Thủ Độ - Ngõ 83 Ngọc Hồi - Ngọc Hồi - Giải Phóng - Quay đầu tại Chùa Pháp Vân - Giải Phóng - Ngọc Hồi - Rẽ phải Hoàng Liệt - Đạm Phương - Nam Sơn - Nguyễn Phan Chánh - Nguyễn Hữu Thọ - Nghiêm Xuân Yêm - Nguyễn Xiển - Nguyễn Trãi - Quay đầu tại số nhà 332 Nguyễn Trãi - Nguyễn Trãi - Nguyễn Tuân - Hoàng Minh Giám - Trần Duy Hưng - Phạm Hùng - Phạm Văn Đồng - Nguyễn Hoàng Tôn - Lạc Long Quân - CV nước Hồ Tây.\n\nChiều về: CV nước Hồ Tây - Lạc Long Quân - Nguyễn Hoàng Tôn - Phạm Văn Đồng - Phạm Hùng - Trần Duy Hưng - Hoàng Minh Giám - Nguyễn Tuân - Nguyễn Trãi - Nguyễn Xiển - Nghiêm Xuân Yêm - Nguyễn Hữu Thọ - Nguyễn Phan Chánh - Nam Sơn - Nguyễn Duy Trinh - Nam Sơn - Hoàng Liệt - Ngọc Hồi - Ngõ 83 Ngọc Hồi - Trần Thủ Độ - KĐT Pháp Vân, Tứ Hiệp."
+  },
+  {
+    "num": "61",
+    "route": "Dục Tú (Đông Anh) - CV Cầu Giấy",
+    "fare": "15.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Dục Tú (cạnh Doanh trại quân đội, Đông Anh) - Vân Hà - Liên Hà - Việt Hùng - Cao Lỗ - Ngã 4 Đông Anh - Tiên Dương - Vân Trì - Nam Hồng - Quốc lộ 23B - Võ Văn Kiệt - KCN Bắc Thăng Long - Cầu Thăng Long - Phạm Văn Đồng - Phạm Hùng - BX Mỹ Đình - Tôn Thất Thuyết - Trần Thái Tông - Thành Thái - CV Cầu Giấy.\n\nChiều về: CV Cầu Giấy - Thành Thái - Trần Thái Tông - Tôn Thất Thuyết - BX Mỹ Đình - Phạm Hùng - Phạm Văn Đồng - Cầu Thăng Long - KCN Bắc Thăng Long - Võ Văn Kiệt - Quốc lộ 23B - Nam Hồng - Vân Trì - Tiên Dương - Ngã 4 Đông Anh - Cao Lỗ - Việt Hùng - Liên Hà - Vân Hà - Dục Tú."
+  },
+  {
+    "num": "62",
+    "route": "BX Yên Nghĩa - BX Thường Tín",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Yên Nghĩa - Quốc lộ 6 - Ba La - Quang Trung (Hà Đông) - Tô Hiệu (Hà Đông) - Cầu Đen - Phùng Hưng (Hà Đông) - Đường Cầu Bươu - Đường 70 - Phan Trọng Tuệ - Ngọc Hồi - Quốc Lộ 1 - Liên Ninh - Quán Gánh - BX Thường Tín.\n\nChiều về: BX Thường Tín - Quốc lộ 1 - Quán Gánh - Liên Ninh - Ngọc Hồi - Phan Trọng Tuệ - Đường 70 - Đường Cầu Bươu - Phùng Hưng (Hà Đông) - Cầu Đen - Tô Hiệu (Hà Đông) - Quang Trung (Hà Đông) - Ba La - Quốc lộ 6 - BX Yên Nghĩa."
+  },
+  {
+    "num": "63",
+    "route": "KCN Bắc Thăng Long - Tiến Thịnh",
+    "fare": "12.000đ",
+    "time": "5h00 - 21h30",
+    "path": "Chiều đi: KCN Bắc Thăng Long - Đường nội bộ KCN Bắc Thăng Long - TL23 (xã Kim Chung) - Vòng xoay cầu vượt Kim Chung - TL23 - Đại Mạch - Yên Nhân - Quốc lộ 23B - Nguyễn Trãi (Phúc Yên) - Hai Bà Trưng (Phúc Yên) - Quốc lộ 2 - Đạm Nội - Bạch Trữ - Cầu Soi - Quay đầu tại điểm mở (gần BV Giao thông vận tải) - Cầu Soi - Bạch Trữ - Tự Lập - Liên Mạc - Tiến Thịnh (Mê Linh).\n\nChiều về: Tiến Thịnh (Mê Linh) - Liên Mạc - Tự Lập - Bạch Trữ - Cầu Soi - Quay đầu tại điểm mở - Cầu Soi - Bạch Trữ - Đạm Nội - Quốc lộ 2 - Hai Bà Trưng (Phúc Yên) - Nguyễn Trãi (Phúc Yên) - Quốc lộ 23B - Yên Nhân - Đại Mạch - Đường nội bộ KCN Bắc Thăng Long - KCN Bắc Thăng Long."
+  },
+  {
+    "num": "64",
+    "route": "BX Mỹ Đình - Phố Nỉ (TTTM Bình An)",
+    "fare": "20.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Mỹ Đình - Phạm Văn Đồng - KCN Bắc Thăng Long - Cao tốc Bắc Thăng Long Nội Bài - Quốc Lộ 2 - Tỉnh Lộ 35 - Quốc lộ 3 - Phố Nỉ (TTTM Bình An).\n\nChiều về: Phố Nỉ (TTTM Bình An) - Quốc lộ 3 - Quốc lộ 35 - Quốc lộ 2 - Cao tốc Bắc Thăng Long Nội Bài - KCN Bắc Thăng Long - Phạm Văn Đồng - BX Mỹ Đình."
+  },
+  {
+    "num": "65",
+    "route": "Thụy Lâm (Đông Anh) - Long Biên",
+    "fare": "12.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Thụy Lâm (Trường tiểu học Thụy Lâm A) - Thư Lâm - Đản Dị - Cao Lỗ (BV Đa khoa Đông Anh) - Dục Nội - Gia Lương - Dục Tú - Quốc Lộ 3 - Đông Hội - Đường nội bộ KCN Eurowindow River Park - Quay đầu tại gầm cầu Đông Trù - Đường rẽ phải lên cầu Đông Trù - Cầu Đông Trù - Lý Sơn - Nguyễn Văn Cừ - Cầu Chương Dương - Trần Nhật Duật (đường trên) - Điểm trung chuyển Long Biên - Yên Phụ - Long Biên.\n\nChiều về: Long Biên - Quay đầu tại đối diện phố Hàng Than - Yên Phụ - Điểm trung chuyển Long Biên - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Lý Sơn - Cầu Đông Trù - Trường Sa - Đường nội bộ KCN Eurowindow River Park - Đông Hội - Quốc Lộ 3 - Dục Tú - Gia Lương - Dục Nội - Cao Lỗ (BV Đa khoa Đông Anh) - Đản Dị - Thư Lâm - Thụy Lâm."
+  },
+  {
+    "num": "66",
+    "route": "BX Yên Nghĩa - Đan Phượng",
+    "fare": "12.000đ",
+    "time": "5h00 - 20h30",
+    "path": "Chiều đi: BX Yên Nghĩa - Quang Trung (Hà Đông) - Lê Trọng Tấn - Đường nội bộ KĐT Sudico Nam An Khánh - Đường qua thôn An Thọ, Vân Lũng (xã An Khánh) - Cầu vượt An Khánh - Đại lộ Thăng Long - Đê Song Phương (qua các xã Song Phương, Tiền Lệ, Xóm Bến, Cát Quế, Dương Liễu, Minh Khai, Song Phượng) - Quốc lộ 32 - Quay đầu tại điểm mở đối diện công an Đan Phượng - Đan Phượng (BX Đan Phượng cũ).\n\nChiều về: Đan Phượng (BX Đan Phượng cũ) - Quốc lộ 32 - Đê Song Phương (qua các xã Song Phương, Tiền Lệ, Xóm Bến, Cát Quế, Dương Liễu, Minh Khai, Song Phượng) - Đại lộ Thăng Long - Cầu vượt Song Phương - Đại lộ Thăng Long - Đường qua thôn An Thọ, Vân Lũng - Đường nội bộ KĐT Sudico Nam An Khánh - Lê Trọng Tấn - Quang Trung (Hà Đông) - BX Yên Nghĩa."
+  },
+  {
+    "num": "67",
+    "route": "BX Đan Phượng - Đoài Phương",
+    "fare": "15.000đ",
+    "time": "4h50 - 20h30",
+    "path": "Chiều đi: Đan Phượng (BX Đan Phượng cũ) - Quốc lộ 32 - Nguyễn Thái Học (thị trấn Phùng) - Đường đê, Tỉnh lộ 417 (qua các xã Phương Đình, Thọ An, Trung Châu, Vân Nam, Vân Phúc, Cẩm Đình, Xuân Đình, Sen Phương) - Phố Cổng Ô - Trưng Vương (Sơn Tây) - Phạm Ngũ Lão (Sơn Tây) - Hoàng Diệu (Sơn Tây) - Phùng Khắc Khoan (Sơn Tây) - Chùa Thông - Quốc lộ 21 - Đường ĐT 416 - Đoài Phương (lề đường cạnh hồ Đồng Mô).\n\nChiều về: Đoài Phương - Đường ĐT 416 - Quốc lộ 21 - Chùa Thông - Phùng Khắc Khoan (Sơn Tây) - Hoàng Diệu (Sơn Tây) - Phạm Ngũ Lão (Sơn Tây) - Trưng Vương (Sơn Tây) - Phố Cổng Ô - Đường đê, Tỉnh lộ 417 (qua các xã Sen Phương, Xuân Đình, Cẩm Đình, Vân Phúc, Vân Nam, Trung Châu, Thọ An, Phương Đình) - Nguyễn Thái Học (thị trấn Phùng) - Quốc lộ 32 - Đan Phượng."
+  },
+  {
+    "num": "69",
+    "route": "Long Biên - Dương Quang (Gia Lâm)",
+    "fare": "15.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Long Biên - Yên Phụ - Điểm trung chuyển Long Biên - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Hồng Tiến - Phú Hựu - Hoàng Như Tiếp - Lâm Hạ - Hồng Tiến - Cổ Linh - Quốc lộ 1A mới (đường dưới) - Giáp Hải (ĐT 379) - Đường nội bộ KĐT Ecopark (khu Aquabay, Westbay, Thủy Nguyên) - ĐT 379 - Văn Giang - ĐT 179 - Cầu vượt Phú Thụy - Ỷ Lan - Dương Xã - Dương Quang (chợ Yên Mỹ, Dương Quang, Gia Lâm).\n\nChiều về: Dương Quang (Gia Lâm) - Dương Xá - Ỷ Lan - Cầu vượt Phú Thụy - ĐT 179 - Văn Giang - ĐT 379 - Đường nội bộ KĐT Ecopark - Giáp Hải (ĐT 379) - Rẽ phải đường gom dọc QL 1A - Cổ Linh - Hồng Tiến - Lâm Hạ - Hoàng Như Tiếp - Phú Hựu - Hồng Tiến - Nguyễn Văn Cừ - Cầu Chương Dương - Trần Nhật Duật - Điểm trung chuyển Long Biên - Yên Phụ - Long Biên."
+  },
+  {
+    "num": "72",
+    "route": "BX Yên Nghĩa - Xuân Mai",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Yên Nghĩa - Quốc lộ 6 - Cầu Mai Lĩnh - Biên Giang - Chúc Sơn - Phú Nghĩa - Xuân Mai (Công ty thức ăn chăn nuôi).\n\nChiều về: Xuân Mai - Phú Nghĩa - Chúc Sơn - Biên Giang - Cầu Mai Lĩnh - QL 6 - BX Yên Nghĩa."
+  },
+  {
+    "num": "74",
+    "route": "BX Mỹ Đình - Xuân Khanh (Sơn Tây)",
+    "fare": "20.000đ",
+    "time": "5h00 - 20h30",
+    "path": "Chiều đi: BX Mỹ Đình - Phạm Hùng - Đường Mễ Trì - Lê Quang Đạo - Đại lộ Thăng Long - KCN cao Hòa Lạc - Quốc lộ 21 - Viện 105 - Đường 414 - Xuân Khanh (Đối diện cổng trường ĐH Lao động xã hội - Cơ sở II).\n\nChiều về: Xuân Khanh - Đường 414 - Viện 105 - Quốc lộ 21 - KCN cao Hòa Lạc - Đại lộ Thăng Long - Lê Quang Đạo - Đường Mễ Trì - Phạm Hùng - BX Mỹ Đình."
+  },
+  {
+    "num": "84",
+    "route": "Cầu Diễn - KĐT Linh Đàm",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Cầu Diễn (cạnh Trạm y tế phường Cầu Diễn) - Nguyễn Văn Giáp - Hàm Nghi - Nguyễn Cơ Thạch - Trần Hữu Dực - Lê Đức Thọ - Nguyễn Hoàng - Phạm Hùng - BX Mỹ Đình - Phạm Hùng - Quay đầu tại điểm mở đối diện Landmark 72 - Phạm Hùng - Dương Đình Nghệ - Trung Kính - Hạ Yên - Trần Kim Xuyến - Trung Hòa - Trần Duy Hưng - Nguyễn Thị Định - Lê Văn Lương - Láng - Yên Lãng - Thái Hà - Tây Sơn - Trường Chinh - Vương Thừa Vũ - Hoàng Văn Thái - Lê Trọng Tấn - Đường ven sông Lừ - Nguyễn Cảnh Dị - Nguyễn Hữu Thọ - Nguyễn Duy Trinh - KĐT Linh Đàm.\n\nChiều về: KĐT Linh Đàm - Nguyễn Duy Trinh - Nguyễn Hữu Thọ - Nguyễn Cảnh Dị - Đường ven sông Lừ - Lê Trọng Tấn - Hoàng Văn Thái - Vương Thừa Vũ - Trường Chinh - Tây Sơn - Thái Hà - Hoàng Cầu - Yên Lãng - Láng - Lê Văn Lương - Nguyễn Thị Định - Trần Duy Hưng - Trung Hòa - Trần Kim Xuyến - Hạ Yên - Trung Kính - Dương Đình Nghệ - Phạm Hùng - Nguyễn Hoàng - Lê Đức Thọ - Trần Hữu Dực - Nguyễn Cơ Thạch - Hàm Nghi - Nguyễn Văn Giáp - Cầu Diễn."
+  },
+  {
+    "num": "85",
+    "route": "CV Nghĩa Đô - KĐT Thanh Hà",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Công viên Nghĩa Đô - Nguyễn Văn Huyên - Nguyễn Khánh Toàn - Trần Đăng Ninh - Cầu Giấy - Khúc Thừa Dụ - Thành Thái - Đường ven Công viên Cầu Giấy - Dương Đình Nghệ - Trung Kính - Mạc Thái Tổ - Nguyễn Chánh - Hoàng Minh Giám - Lê Văn Lương - Tố Hữu - Vũ Trọng Khánh - Nguyễn Văn Lộc - Trần Phú (Hà Đông) - Nguyễn Khuyến (Hà Đông) - Đường 19/5 - Tô Hiệu (Hà Đông) - Đường Hà Cầu (Metro Hà Đông) - Đường ven KĐT Văn Phú - Lê Trọng Tấn (Hà Đông) - Đường Cienco5 - Đường nội bộ KĐT Thanh Hà - KĐT Thanh Hà.\n\nChiều về: KĐT Thanh Hà - Đường nội bộ KĐT Thanh Hà - Đường Cienco 5 - Lê Trọng Tấn (Hà Đông) - Đường ven KĐT Văn Phú - Đường Hà Cầu (Metro Hà Đông) - Tô Hiệu (Hà Đông) - Đường 19/5 - Nguyễn Khuyến (Hà Đông) - Trần Phú (Hà Đông) - Nguyễn Văn Lộc - Vũ Trọng Khánh - Tố Hữu - Lê Văn Lương - Hoàng Minh Giám - Nguyễn Chánh - Mạc Thái Tổ - Trung Kính - Dương Đình Nghệ - Đường ven CV Cầu Giấy - Thành Thái - Trương Công Giai - Cầu Giấy - Trần Đăng Ninh - Nguyễn Khánh Toàn - Nguyễn Văn Huyên - CV Nghĩa Đô."
+  },
+  {
+    "num": "87",
+    "route": "BX Mỹ Đình - Quốc Oai - Xuân Mai",
+    "fare": "15.000đ",
+    "time": "5h00 - 19h45",
+    "path": "Chiều đi: BX Mỹ Đình - Phạm Hùng - Đại lộ Thăng Long (đường gom) - Cầu vượt Hoàng Xá (TT Quốc Oai) - Quốc Oai - Thạch Thán - Tỉnh lộ 421B - Quốc lộ 6 - TT Xuân Mai (Đối diện Nhà máy thức ăn chăn nuôi CP - điểm cuối tuyến 72).\n\nChiều về: TT Xuân Mai - Quốc lộ 6 - Tỉnh lộ 421B - Thạch Thán - Quốc Oai - Đại lộ Thăng Long (đường gom) - Yên Lũng (Xã An Khánh) - Nam An Khánh - Lê Trọng Tấn - Đại lộ Thăng Long (đường gom) - Phạm Hùng - BX Mỹ Đình."
+  },
+  {
+    "num": "88",
+    "route": "BX Mỹ Đình - Hòa Lạc - Xuân Mai",
+    "fare": "20.000đ",
+    "time": "5h00 - 21h25",
+    "path": "Chiều đi: BX Mỹ Đình - Phạm Hùng - Mễ Trì - Lê Quang Đạo - Đại lộ Thăng Long (làn đường gom) - Đường nội bộ KCN cao Hòa Lạc - Quốc lộ 21 - Đường Hồ Chí Minh - Xuân Mai (Trường Cao đẳng Cộng đồng Hà Tây).\n\nChiều về: Xuân Mai - Đường Hồ Chí Minh - Quốc lộ 21 - Cầu vượt Hòa Lạc - Quốc lộ 21 - Đường nội bộ KCN cao Hòa Lạc - Cầu vượt Phú Cát - Đại lộ Thăng Long (làn đường gom) - Lê Quang Đạo - Mễ Trì - Phạm Hùng - Quay đầu tại ngã 4 Phạm Hùng, Tôn Thất Thuyết - Phạm Hùng - BX Mỹ Đình."
+  },
+  {
+    "num": "89",
+    "route": "BX Yên Nghĩa - BX Sơn Tây",
+    "fare": "20.000đ",
+    "time": "4h45 - 21h20",
+    "path": "Chiều đi: BX Yên Nghĩa - Quang Trung (Hà Đông) - Chu Văn An (Hà Đông) - Vạn Phúc - Đại Mỗ - Đường 169 Đại Mỗ - Đường Nội - Lê Trọng Tấn (Hà Đông) - Tỉnh lộ 72 - Phố Đông - An Khánh - Đường gom Đại lộ Thăng Long - Đường Cầu Phú Cát - Đường nội khu Công nghệ cao Hòa Lạc (qua đường N11, N14, N16 FPT) - Đường N19 - Đường Thạch Sanh (N18) - Quốc lộ 21A (qua các khu Yên Bình, Lục Quân, Đoàn Kết, Sơn Đông) - Trung Sơn - Phố Chùa Thông - BX Sơn Tây.\n\nChiều về: BX Sơn Tây - Phố Chùa Thông - Trung Sơn - Quốc lộ 21A (qua các khu Sơn Đông, Đoàn Kết, Lục Quân, Yên Bình) - Đường Thạch Sanh (N18) - Đường N19 - Đường nội khu Công nghệ cao Hòa Lạc (qua các khu ĐHFPT N16, N14, N11) - Đường Cầu Phú Cát - Cầu vượt Phú Cát - Đường gom Đại lộ Thăng Long - Đê Đào Nguyên - Tỉnh lộ 72 - Lê Trọng Tấn (Hà Đông) - Đường Nội - Đường 169 Đại Mỗ - Đại Mỗ - Vạn Phúc - Chu Văn An (Hà Đông) - Quang Trung (Hà Đông) - BX Yên Nghĩa."
+  },
+  {
+    "num": "90",
+    "route": "Hào Nam - Sân bay Nội Bài",
+    "fare": "15.000đ",
+    "time": "5h30 - 22h30",
+    "path": "Chiều đi: Hào Nam (điểm đỗ xe buýt - ga Cát Linh) - Hào Nam - Giảng Võ - Núi Trúc - Kim Mã - Kim Mã dưới - Đào Tấn - Đường Bưởi - Lạc Long Quân - Nguyễn Hoàng Tôn - Võ Chí Công - Cầu Nhật Tân - Võ Nguyên Giáp - Đường nội bộ trong sân bay Nội Bài - Sảnh tầng 1 Nhà ga nội địa T1 - Đường nội bộ trong sân bay Nội Bài - Võ Nguyên Giáp - Bãi đỗ xe Nhà ga quốc tế T2.\n\nChiều về: Sân bay Nội Bài (Bãi đỗ xe Nhà ga quốc tế T2) - Cầu vượt đường Võ Nguyên Giáp - Võ Nguyên Giáp - Quay đầu tại điểm mở đối diện Hải quan cửa khẩu sân bay quốc tế Nội Bài - Võ Nguyên Giáp - Đường nội bộ trong sân bay Nội Bài - Sảnh tầng 1 Nhà ga nội địa T1 - Đường nội bộ trong sân bay Nội Bài - Võ Nguyên Giáp - Cầu Nhật Tân - Võ Chí Công - Nguyễn Hoàng Tôn - Lạc Long Quân - Đường Bưởi dưới (làn xe dọc sông Tô Lịch) - Cầu Giấy - Kim Mã - Giảng Võ - Hào Nam."
+  },
+  {
+    "num": "91",
+    "route": "BX Yên Nghĩa - Phú Túc",
+    "fare": "12.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Yên Nghĩa - Quốc lộ 6 - Ba La - Phố Xốm - Quốc lộ 21B (qua Thạch Bích, Bình Đà, TT Kim Bài - huyện Thanh Oai) - Tỉnh lộ 429 (qua các xã Quảng Nguyên, Đạo Tú, Phú Hạ - huyện Phú Xuyên) - Phú Túc (bãi đỗ xe xã Phú Túc, huyện Phú Xuyên).\n\nChiều về: Phú Túc - Tỉnh lộ 429 (qua các xã Phú Hạ, Đạo Tú, Quảng Nguyên - huyện Phú Xuyên) - Quốc lộ 21B (qua TT Kim Bài, Bình Đà, Thạch Bích) - Phố Xốm - Ba La - Quốc lộ 6 - BX Yên Nghĩa."
+  },
+  {
+    "num": "92",
+    "route": "Nhổn - Phú Sơn (Ba Vì)",
+    "fare": "20.000đ",
+    "time": "4h30 - 21h00",
+    "path": "Chiều đi: Nhổn (Điểm trung chuyển xe buýt Nhổn) - Đường Cầu Diễn - Quay đầu tại điểm mở (cụm công nghiệp vừa và nhỏ Từ Liêm) - Đường Cầu Diễn - Phố Nhổn - Quốc Lộ 32 (đi qua các huyện, khu vực: Hoài Đức, Đan Phượng, Phúc Thọ, Thị xã Sơn Tây, xã Đường Lâm, Tây Đằng) - Thị trấn Tây Đằng (Ba Vì) - Đường 411 - Phú Sơn (điểm đỗ xe buýt cạnh nghĩa trang Yên Kỳ, Ba Vì).\n\nChiều về: Phú Sơn - Đường 411 - Thị trấn Tây Đằng (Ba Vì) - Quốc lộ 32 (đi qua các huyện, khu vực: Tây Đằng, xã Đường Lâm, Thị xã Sơn Tây, Phúc Thọ, Đan Phượng, Thị trấn Phùng, Hoài Đức, Trạm Trôi) - Phố Nhổn - Đường Cầu Diễn - Nhổn."
+  },
+  {
+    "num": "93",
+    "route": "Nam Thăng Long - Bắc Sơn (Sóc Sơn)",
+    "fare": "20.000đ",
+    "time": "5h05 - 20h45",
+    "path": "Chiều đi: Nam Thăng Long (Điểm đỗ xe buýt trên đường Đỗ Nhuận, cạnh cổng CV Hòa Bình) - Đỗ Nhuận - Quay đầu tại điểm mở - Đỗ Nhuận - Phạm Văn Đồng - Cầu Thăng Long - Võ Văn Kiệt - Quốc lộ 2 - Quốc lộ 3 - Tỉnh lộ 35 - Đường nối xã Bắc Sơn, Hồng Kỳ - Bắc Sơn (bãi đỗ xe thôn Đa Hội, xã Bắc Sơn, huyện Sóc Sơn).\n\nChiều về: Bắc Sơn - Đường nối xã Bắc Sơn, Hồng Kỳ - Tỉnh lộ 35 - Quốc lộ 3 - Quốc lộ 2 - Võ Văn Kiệt - Cầu Thăng Long - Phạm Văn Đồng - Đỗ Nhuận - Nam Thăng Long."
+  },
+  {
+    "num": "94",
+    "route": "BX Giáp Bát - Kim Bài",
+    "fare": "12.000đ",
+    "time": "5h05 - 21h20",
+    "path": "Chiều đi: BX Giáp Bát - Giải Phóng - Kim Đồng - Trương Định - Giải Phóng - Ngọc Hồi - Quốc lộ 1 - TT Thường Tín - Tỉnh lộ 427 - Quốc lộ 21B - Kim Bài (phía trước bách hóa tổng hợp TT Kim Bài).\n\nChiều về: Kim Bài - Quốc lộ 21B - Tỉnh lộ 427 - TT Thường Tín - Quốc lộ 1 - Ngọc Hồi - Giải Phóng - BX Giáp Bát."
+  },
+  {
+    "num": "95",
+    "route": "Nam Thăng Long - Xuân Hòa",
+    "fare": "12.000đ",
+    "time": "5h00 - 20h30",
+    "path": "Chiều đi: Nam Thăng Long (điểm đỗ xe buýt trên đường Đỗ Nhuận, cạnh cổng CV Hòa Bình) - Đỗ Nhuận - Quay đầu tại điểm mở - Đỗ Nhuận - Phạm Văn Đồng - Cầu Thăng Long - Võ Văn Kiệt - Quốc lộ 2 - Đường nối quốc lộ 2, Xuân Hoà (qua các xã Thanh Xuân, xã Tân Dân, xã Minh Trí) - Cầu Tre - Trường Chinh (Phúc Yên) - Nguyễn Văn Linh (Phúc Yên) - Xuân Hòa (khu giảng đường E, trường ĐH Sư phạm Hà Nội 2).\n\nChiều về: Xuân Hòa - Nguyễn Văn Linh (Phúc Yên) - Trường Chinh (Phúc Yên) - Cầu Tre - Đường nối quốc lộ 2, Xuân Hoà (qua các xã Minh Trí, xã Tân Dân, xã Thanh Xuân) - Quốc lộ 2 - Võ Văn Kiệt - Cầu Thăng Long - Phạm Văn Đồng - Đỗ Nhuận - Nam Thăng Long."
+  },
+  {
+    "num": "96",
+    "route": "Cầu Giấy - Đông Anh",
+    "fare": "15.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Cầu Giấy (Bãi đỗ xe buýt Cầu Giấy) - Cầu Giấy (đường trên) - Điểm trung chuyển Cầu Giấy - Cầu Giấy - Nguyễn Văn Huyên - Hoàng Quốc Việt - Vòng xuyến Bưởi - Bưởi - Võ Chí Công - Cầu Nhật Tân - Võ Nguyên Giáp - Hoàng Sa - Vân Trì - Quốc lộ 23 - Nam Hồng - Đường 12 (qua trường THCS Bắc Hồng) - Ngã ba Bắc Hồng - Nguyên Khê - Cầu vượt Nguyên Khê - Đường Nguyên Khê - Lê Hữu Tựu - Ngã tư Quốc lộ 3 (Nguyên Khê) - Quốc lộ 3 - Ngã tư 1/5 (quốc lộ 3) - Đường nội bộ TT Đông Anh - Đường Uy Nỗ - Đông Anh (BV đa khoa Bắc Thăng Long).\n\nChiều về: Đông Anh (BV đa khoa Bắc Thăng Long) - Đường Uy Nỗ - Đường nội bộ TT Đông Anh - Ngã tư 1/5 (Quốc lộ 3) - Quốc lộ 3 - Ngã tư Quốc lộ 3 (Nguyên Khê) - Lê Hữu Tựu - Đường Nguyên Khê - Cầu vượt Nguyên Khê - Nguyên Khê - Ngã ba Bắc Hồng - Đường 12 - Nam Hồng - Quốc lộ 23 - Vân Trì - Rẽ trái tại ngã tư Hoàng Sa, Vân Trì - Hoàng Sa - Quay đầu tại điểm mở - Hoàng Sa - Võ Nguyên Giáp - Cầu Nhật Tân - Võ Chí Công - Hoàng Quốc Việt - Nguyễn Văn Huyên - Nguyễn Khánh Toàn - Bưởi - Cầu Giấy - Điểm trung chuyển Cầu Giấy - Điểm đỗ xe buýt Cầu Giấy."
+  },
+  {
+    "num": "97",
+    "route": "Hoài Đức - CV Nghĩa Đô",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: BX Hoài Đức - Tỉnh lộ 422 - Ngã tư Sơn Đồng - Tỉnh lộ 422B - Đường Vân Canh - Ngã tư Canh - Đường Xuân Phương (Tỉnh lộ 70) - Phố Trịnh Văn Bô - Trần Hữu Dực kéo dài - Trần Hữu Dực - Lê Đức Thọ - Nguyễn Hoàng - Phạm Hùng - Duy Tân - Thành Thái - Trương Công Giai - Trần Quý Kiên - Trần Đăng Ninh - Quay đầu tại vòng xuyến Trần Đăng Ninh - Trần Đăng Ninh - Nguyễn Phong Sắc - Tô Hiệu - Nguyễn Văn Huyên - CV Nghĩa Đô.\n\nChiều về: CV Nghĩa Đô - Nguyễn Văn Huyên - Quay đầu tại điểm mở (Nguyễn Văn Huyên) - Nguyễn Văn Huyên - Tô Hiệu - Nguyễn Phong Sắc - Trần Đăng Ninh - Trần Quý Kiên - Trương Công Giai - Thành Thái - Duy Tân - Phạm Hùng - Quay đầu tại gầm cầu vượt Mai Dịch - Phạm Hùng - Nguyễn Hoàng - Hàm Nghi - Nguyễn Cơ Thạch - Trần Hữu Dực - Phố Trịnh Văn Bô - Đường Xuân Phương (Tỉnh lộ 70) - Ngã tư Canh - Đường Vân Canh - Tỉnh lộ 422B - Ngã tư Sơn Đồng - Tỉnh lộ 422 - Quốc lộ 32 - BX Hoài Đức."
+  },
+  {
+    "num": "98",
+    "route": "Long Biên - Aeon Mall Long Biên",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h00",
+    "path": "Chiều đi: Long Biên - Điểm trung chuyển Long Biên - Yên Phụ - Trần Nhật Duật - Cầu Chương Dương - Đê Xuân Quan - Ngọc Thụy - Đức Giang - Ngô Gia Tự - Nguyễn Cao Luyện - Vạn Hạnh - Đường BT7, BT8 khu đô thị Việt Hưng - Lưu Khánh Đàm - Phúc Lợi - Vũ Xuân Thiều - Thạch Bàn - Cổ Linh - TTTM Aeon Mall Long Biên.\n\nChiều về: TTTM Aeon Mall Long Biên - Cổ Linh - Quay đầu tại gầm cầu vượt Aeon Mall đường Cổ Linh - Cổ Linh - Thạch Bàn - Vũ Xuân Thiều - Phúc Lợi - Lưu Khánh Đàm - Đường BT7, BT8 khu đô thị Việt Hưng - Vạn Hạnh - Nguyễn Cao Luyện - Ngô Gia Tự - Đức Giang - Ngọc Thụy (đường trên) - Đê Xuân Quan - Cầu Chương Dương - Trần Nhật Duật - Yên Phụ - Điểm trung chuyển Long Biên - Yên Phụ - Quay đầu tại nút giao phố Hàng Than - Long Biên."
+  },
+  {
+    "num": "99",
+    "route": "Kim Mã - Ngũ Hiệp (Thanh Trì)",
+    "fare": "10.000đ",
+    "time": "5h00 - 21h10",
+    "path": "Chiều đi: Kim Mã (số 1 Kim Mã) - Giảng Võ - Hào Nam - Hoàng Cầu - Ô Chợ Dừa - Xã Đàn - Nam Đồng - Đặng Văn Ngữ - Phạm Ngọc Thạch - Đông Tác - Lương Định Của - Phương Mai - Giải Phóng - Trường Chinh - Phố Vọng - Nguyễn An Ninh - Trương Định - Kim Đồng - Giải Phóng - Ngọc Hồi - Ngõ 15 Ngọc Hồi - Trần Thủ Độ - Cổ Điển - Quang Lai - Trần Thủ Độ - Ngũ Hiệp (điểm đỗ xe buýt - UBND xã Ngũ Hiệp, Thanh Trì).\n\nChiều về: Ngũ Hiệp - Trần Thủ Độ - Quang Lai - Cổ Điển - Trần Thủ Độ - Ngõ 15 Ngọc Hồi - Ngọc Hồi - Giải Phóng - Kim Đồng - Tân Mai - Quay đầu điểm mở ngõ 50 Tân Mai - Tân Mai - Trương Định - Nguyễn An Ninh - Trần Đại Nghĩa - Đại La - Phố Vọng - Giải Phóng - Phương Mai - Lương Định Của - Phạm Ngọc Thạch - Đặng Văn Ngữ - Nam Đồng - Xã Đàn - Ô Chợ Dừa - Hoàng Cầu - Hào Nam - Giang Văn Minh - Kim Mã (số 1 Kim Mã)."
+  }
+]
