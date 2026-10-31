@@ -267,6 +267,16 @@
         <h2 class="section-title i18n" data-en="All Posts">Tất Cả Bài Viết</h2>
 
         <div class="blog-card">
+          <div class="blog-accent" style="background:#17a2b8"></div>
+          <div class="blog-body">
+            <div class="blog-tags"><span class="tag i18n" style="background:#e8f4f8;color:#17a2b8" data-en="APP">ỨNG DỤNG</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">DISCORD</span><span class="tag-date">28/09/2026</span></div>
+            <h3><a href="/Pages/BBCord.html" class="i18n" data-en="BBCord — Native Discord App for BlackBerry 10">BBCord — Ứng dụng Discord Native cho BlackBerry 10</a></h3>
+            <p class="i18n" data-en="BBCord is an unofficial client for the Discord social network, built entirely with Cascades (Native C++/QML), delivering a smooth native experience.">BBCord là ứng dụng khách (client) không chính thức dành cho mạng xã hội Discord, được xây dựng hoàn toàn bằng Cascades (Native C++/QML), mang lại trải nghiệm native mượt mà.</p>
+            <a href="/Pages/BBCord.html" class="btn-read" i18n" style="background:#17a2b8" data-en="Read more &amp;#8594;">Đọc thêm &#8594;</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
           <div class="blog-accent" style="background:#4fa3d1"></div>
           <div class="blog-body">
             <div class="blog-tags"><span class="tag i18n" style="background:#e1f5fe;color:#01579b" data-en="GUIDE">HƯỚNG DẪN</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#fce4ec;color:#c62828">ROOT</span><span class="tag-date">12/09/2026</span></div>
@@ -293,16 +303,6 @@
             <h3><a href="/Pages/Beeper10.html" class="i18n" data-en="Beeper10 — Native Multi-Platform Messaging App for BlackBerry 10">Beeper10 — Ứng dụng nhắn tin đa nền tảng Native cho BlackBerry 10</a></h3>
             <p class="i18n" data-en="Beeper10 connects directly to your Beeper account, bringing all your conversations from Messenger, Telegram, WhatsApp and more into a single app right on BlackBerry 10.">Beeper10 kết nối trực tiếp với tài khoản Beeper của bạn, gom mọi cuộc trò chuyện từ Messenger, Telegram, WhatsApp và nhiều nền tảng khác vào một ứng dụng duy nhất ngay trên BlackBerry 10.</p>
             <a href="/Pages/Beeper10.html" class="btn-read" i18n" style="background:#17a2b8" data-en="Read more &amp;#8594;">Đọc thêm &#8594;</a>
-          </div>
-        </div>
-
-        <div class="blog-card">
-          <div class="blog-accent" style="background:#17a2b8"></div>
-          <div class="blog-body">
-            <div class="blog-tags"><span class="tag i18n" style="background:#e8f4f8;color:#17a2b8" data-en="APP">ỨNG DỤNG</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span><span class="tag" style="background:#e8f4f8;color:#17a2b8">DISCORD</span><span class="tag-date">08/09/2026</span></div>
-            <h3><a href="/Pages/BBCord.html" class="i18n" data-en="BBCord — Native Discord App for BlackBerry 10">BBCord — Ứng dụng Discord Native cho BlackBerry 10</a></h3>
-            <p class="i18n" data-en="BBCord is an unofficial client for the Discord social network, built entirely with Cascades (Native C++/QML), delivering a smooth native experience.">BBCord là ứng dụng khách (client) không chính thức dành cho mạng xã hội Discord, được xây dựng hoàn toàn bằng Cascades (Native C++/QML), mang lại trải nghiệm native mượt mà.</p>
-            <a href="/Pages/BBCord.html" class="btn-read" i18n" style="background:#17a2b8" data-en="Read more &amp;#8594;">Đọc thêm &#8594;</a>
           </div>
         </div>
 
@@ -667,7 +667,51 @@
     </div>
 
 </main>
-  <aside class="sidebar"></aside>
+  <aside class="sidebar">
+<!-- ═══════════════════════════════════════════════════════════════
+     SIDEBAR — Nguồn dùng chung cho toàn bộ trang BBerryLife
+     Đừng copy/paste block này thủ công vào từng trang nữa!
+     File này được berrylife.js tự động fetch + chèn vào <aside class="sidebar">.
+     Muốn sửa sidebar (danh mục, follow box...) -> chỉ sửa ở đây.
+     ═══════════════════════════════════════════════════════════════ -->
+
+<style>
+.follow-box { margin-bottom: 22px; }
+.follow-box-archive {
+  background: #6b8f3e !important;
+  background: -webkit-linear-gradient(315deg, #7aa346 0%, #567230 100%) !important;
+  background: linear-gradient(135deg, #7aa346 0%, #567230 100%) !important;
+  border-color: #567230 !important;
+}
+.follow-box-archive h3 { color: #fff !important; }
+.follow-box-archive p  { color: #e8f2d8 !important; opacity: 1 !important; }
+.follow-box-archive a  { color: #567230 !important; }
+</style>
+
+<div class="sidebar-sticky">
+  <div class="follow-box">
+    <h3 class="i18n" data-en="Follow Us">Theo Dõi Chúng Tôi</h3>
+    <p class="i18n" data-en="Get the latest BlackBerry news on Facebook">Cập nhật tin tức mới nhất về BlackBerry trên Facebook</p>
+    <a href="https://www.facebook.com/BBerryLife/" target="_blank" class="i18n" data-en="Follow Facebook">Theo Dõi Facebook</a>
+  </div>
+  <div class="follow-box follow-box-archive">
+    <h3 class="i18n" data-en="Archive">Kho Lưu Trữ</h3>
+    <p class="i18n" data-en="Download ROMs, autoloaders and BB10 resources from our archive">Tải xuống ROM, autoloader và tài nguyên BB10 từ archive của chúng tôi</p>
+    <a href="https://drive.google.com/drive/folders/1AeaAt9HJ3sx7v6BJJJf3LbTybAUMaAAp?usp=drive_link" target="_blank" class="i18n" data-en="Go to Archive">Truy Cập Archive</a>
+  </div>
+  <div class="sidebar-box">
+    <h3 class="sidebar-title i18n" data-en="Categories">Danh Mục</h3>
+    <div class="cat-group">
+      <div class="cat-group-label i18n" data-en="Operating System">Hệ Điều Hành</div>
+      <div class="cat-links">
+        <a href="/Pages/Category/BlackBerry%2010/BlackBerry-10.html" style="color:#2196f3;border:2px solid #2196f3">BlackBerry 10</a>
+        <a href="/Pages/Category/BlackBerry%207.1/BlackBerry-7-1.html" style="color:#00bcd4;border:2px solid #00bcd4">BlackBerry 7.1</a>
+        <a href="/Pages/Category/BlackBerry%206/BlackBerry-6.html" style="color:#009688;border:2px solid #009688">BlackBerry 6</a>
+      </div>
+    </div>
+  </div>
+</div>
+</aside>
 </div>
 
 <button class="help-fab" onclick="openHelpModal()">
