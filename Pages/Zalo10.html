@@ -42,7 +42,7 @@
           <span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span>
         </div>
         <h1>Zalo10 — Ứng dụng Zalo Native cho BlackBerry 10</h1>
-        <div class="article-date">Cập nhật lần cuối: 31/08/2026</div>
+        <div class="article-date">Cập nhật lần cuối: 16/10/2026</div>
       </div>
 
       <div class="article-body">
@@ -75,15 +75,16 @@
 </ul>
 
 <h2 class="i18n" data-en="Download">Tải xuống</h2>
-<p class="i18n" data-en="Zalo10 is completely free. Tap the button below to download the latest <code>.bar</code> file (1.4.0.0):">Zalo10 hoàn toàn miễn phí. Nhấn nút bên dưới để tải file <code>.bar</code> phiên bản mới nhất (1.4.0.0):</p>
+<p class="i18n" data-en="Zalo10 is completely free. Tap the button below to download the latest <code>.bar</code> file (1.5.0.0):">Zalo10 hoàn toàn miễn phí. Nhấn nút bên dưới để tải file <code>.bar</code> phiên bản mới nhất (1.5.0.0):</p>
 <p class="i18n" data-en="Direct download link:">Link tải trực tiếp:</p>
-<a class="btn-inline btn-primary i18n" href="https://myblackberry.ru/wp-json/blackberry-world/v1/download/50" data-en="Download Zalo10 (.bar)">Tải Zalo10 (.bar)</a>
+<a class="btn-inline btn-primary i18n" href="https://myblackberry.ru/wp-json/blackberry-world/v1/download/209" data-en="Download Zalo10 (.bar)">Tải Zalo10 (.bar)</a>
 <p class="i18n" data-en="Backup link (Google Drive):">Link dự phòng (Google Drive):</p>
 <a class="btn-inline btn-primary i18n" href="https://drive.google.com/drive/folders/1iYQUIf5Q2f9xwzfEnnKPG64M0IEGWPwJ?usp=drive_link" data-en="Download Zalo10 - Google Drive">Tải Zalo10 - Google Drive</a>
 
 <div class="toc">
   <div class="toc-title i18n" data-en="&#9656; Change List">&#9656; Change List</div>
   <ol>
+    <li><a href="#changelog-150" class="i18n" data-en="Changelog — Version 1.5.0.x">Changelog — Phiên bản 1.5.0.x</a></li>
     <li><a href="#changelog-140" class="i18n" data-en="Changelog — Version 1.4.0.x">Changelog — Phiên bản 1.4.0.x</a></li>
     <li><a href="#changelog-130" class="i18n" data-en="Changelog — Version 1.3.0.x">Changelog — Phiên bản 1.3.0.x</a></li>
     <li><a href="#changelog-120" class="i18n" data-en="Changelog — Version 1.2.0.x">Changelog — Phiên bản 1.2.0.x</a></li>
@@ -91,6 +92,34 @@
     <li><a href="#changelog-100" class="i18n" data-en="Changelog — Version 1.0.0.x">Changelog — Phiên bản 1.0.0.x</a></li>
   </ol>
 </div>
+
+<h2 id="changelog-150" class="i18n" data-en="Changelog — Version 1.5.0.x">Changelog — Phiên bản 1.5.0.x</h2>
+<div class="article-date i18n" style="margin-bottom:16px" data-en="Updated on 10/16/2026">Cập nhật ngày 16/10/2026</div>
+
+<h3 class="i18n" data-en="New features">Tính năng mới</h3>
+<ul>
+  <li class="i18n" data-en="<strong>Message status indicators:</strong> Shows Sent / Delivered / Read / Failed status on your messages."><strong>Chỉ báo trạng thái tin nhắn:</strong> Hiển thị trạng thái Đã gửi / Đã nhận / Đã xem / Gửi lỗi cho tin nhắn của bạn.</li>
+  <li class="i18n" data-en="<strong>Full Polls support:</strong> View options and vote right in the chat. Closed polls are hidden and only active polls are shown; if there are too many active polls, you can close them with the “Delete for me only” action button."><strong>Hỗ trợ bình chọn (Poll) đầy đủ:</strong> Xem lựa chọn và bình chọn ngay trong chat. Poll đã đóng sẽ được ẩn, chỉ hiển thị poll đang hoạt động; nếu có quá nhiều poll đang hoạt động, bạn có thể đóng bớt bằng nút “Delete for me only”.</li>
+  <li class="i18n" data-en="<strong>Sync messages from phone:</strong> Only fetches messages from conversations that already have at least 1 message (needed to get the chat ID, since an empty chat can’t provide a valid ID)."><strong>Đồng bộ tin nhắn từ điện thoại:</strong> Chỉ lấy tin nhắn từ các cuộc trò chuyện đã có ít nhất 1 tin nhắn (cần để lấy chat ID, vì cuộc trò chuyện trống không cung cấp được ID hợp lệ).</li>
+  <li class="i18n" data-en="<strong>Load older messages:</strong> To keep things fast with thousands of messages, each chat loads a fixed amount of data; scrolling up lazy-loads older messages, keeping the app smooth and preventing crashes."><strong>Tải tin nhắn cũ:</strong> Để tối ưu hiệu năng với hàng nghìn tin nhắn, mỗi cuộc trò chuyện chỉ tải một lượng dữ liệu cố định; kéo lên trên để tải dần (lazy loading) các tin nhắn cũ hơn, giúp app mượt và tránh crash.</li>
+</ul>
+
+<h3 class="i18n" data-en="Improvements">Cải thiện</h3>
+<ul>
+  <li class="i18n" data-en="<strong>Cookie persistence:</strong> Cookies are now stored via QSettings, so you can close the app or restart the device and still keep fetching 1-1 and group chats seamlessly."><strong>Lưu cookie bền vững:</strong> Cookie được lưu qua QSettings, bạn có thể đóng app hoặc khởi động lại máy mà vẫn tiếp tục nhận được tin nhắn 1-1 và nhóm liền mạch.</li>
+  <li class="i18n" data-en="<strong>Pin Board bar:</strong> Completely redesigned."><strong>Thanh Pin Board:</strong> Được thiết kế lại hoàn toàn.</li>
+  <li class="i18n" data-en="<strong>Interactive Hub notifications:</strong> Tap to open straight into the specific chat, or mark as read/unread and delete directly from the Hub."><strong>Thông báo Hub tương tác:</strong> Chạm để mở thẳng vào đúng cuộc trò chuyện, hoặc đánh dấu đã đọc/chưa đọc và xóa trực tiếp từ Hub.</li>
+  <li class="i18n" data-en="<strong>Rebuilt Zalo10Headless:</strong> The experimental headless service from v1.3.0.x was reworked for v1.5.0.x to deliver messages in the background even when the app is closed."><strong>Làm lại Zalo10Headless:</strong> Dịch vụ headless thử nghiệm từ v1.3.0.x được làm lại cho v1.5.0.x để nhận tin nhắn ở chế độ nền kể cả khi đã đóng app.</li>
+  <li class="i18n" data-en="Added Terms of Service (ToS).">Thêm Điều khoản dịch vụ (ToS).</li>
+  <li class="i18n" data-en="A few other minor UI tweaks.">Một số chỉnh sửa giao diện nhỏ khác.</li>
+</ul>
+
+<h3 class="i18n" data-en="Bug fixes">Sửa lỗi</h3>
+<ul>
+  <li class="i18n" data-en="Fixed sent/received images leaving awkward gray space at the top and bottom.">Sửa lỗi ảnh gửi/nhận bị thừa khoảng xám ở trên và dưới.</li>
+  <li class="i18n" data-en="<strong>Message bubbles:</strong> Bubbles now calculate their own size instead of relying on a placeholder safe-zone that stretched out with a laggy animation."><strong>Bong bóng tin nhắn:</strong> Bong bóng giờ tự tính kích thước thay vì dùng vùng an toàn giả (placeholder) giãn ra bằng animation bị giật.</li>
+  <li class="i18n" data-en="<strong>Auto-scroll (partially fixed):</strong> Fixed the glitch where incoming messages made the chat jump back up to the first message before scrolling back down."><strong>Tự cuộn (sửa một phần):</strong> Khắc phục lỗi khi có tin nhắn mới, khung chat nhảy ngược lên tin nhắn đầu tiên rồi mới cuộn xuống lại.</li>
+</ul>
 
 <h2 id="changelog-140" class="i18n" data-en="Changelog — Version 1.4.0.x">Changelog — Phiên bản 1.4.0.x</h2>
 <div class="article-date i18n" style="margin-bottom:16px" data-en="Updated on 08/31/2026">Cập nhật ngày 31/08/2026</div>
@@ -299,7 +328,51 @@
     </article>
   </main>
 
-  <aside class="sidebar"></aside>
+  <aside class="sidebar">
+<!-- ═══════════════════════════════════════════════════════════════
+     SIDEBAR — Nguồn dùng chung cho toàn bộ trang BBerryLife
+     Đừng copy/paste block này thủ công vào từng trang nữa!
+     File này được berrylife.js tự động fetch + chèn vào <aside class="sidebar">.
+     Muốn sửa sidebar (danh mục, follow box...) -> chỉ sửa ở đây.
+     ═══════════════════════════════════════════════════════════════ -->
+
+<style>
+.follow-box { margin-bottom: 22px; }
+.follow-box-archive {
+  background: #6b8f3e !important;
+  background: -webkit-linear-gradient(315deg, #7aa346 0%, #567230 100%) !important;
+  background: linear-gradient(135deg, #7aa346 0%, #567230 100%) !important;
+  border-color: #567230 !important;
+}
+.follow-box-archive h3 { color: #fff !important; }
+.follow-box-archive p  { color: #e8f2d8 !important; opacity: 1 !important; }
+.follow-box-archive a  { color: #567230 !important; }
+</style>
+
+<div class="sidebar-sticky">
+  <div class="follow-box">
+    <h3 class="i18n" data-en="Follow Us">Theo Dõi Chúng Tôi</h3>
+    <p class="i18n" data-en="Get the latest BlackBerry news on Facebook">Cập nhật tin tức mới nhất về BlackBerry trên Facebook</p>
+    <a href="https://www.facebook.com/BBerryLife/" target="_blank" class="i18n" data-en="Follow Facebook">Theo Dõi Facebook</a>
+  </div>
+  <div class="follow-box follow-box-archive">
+    <h3 class="i18n" data-en="Archive">Kho Lưu Trữ</h3>
+    <p class="i18n" data-en="Download ROMs, autoloaders and BB10 resources from our archive">Tải xuống ROM, autoloader và tài nguyên BB10 từ archive của chúng tôi</p>
+    <a href="https://drive.google.com/drive/folders/1AeaAt9HJ3sx7v6BJJJf3LbTybAUMaAAp?usp=drive_link" target="_blank" class="i18n" data-en="Go to Archive">Truy Cập Archive</a>
+  </div>
+  <div class="sidebar-box">
+    <h3 class="sidebar-title i18n" data-en="Categories">Danh Mục</h3>
+    <div class="cat-group">
+      <div class="cat-group-label i18n" data-en="Operating System">Hệ Điều Hành</div>
+      <div class="cat-links">
+        <a href="/Pages/Category/BlackBerry%2010/BlackBerry-10.html" style="color:#2196f3;border:2px solid #2196f3">BlackBerry 10</a>
+        <a href="/Pages/Category/BlackBerry%207.1/BlackBerry-7-1.html" style="color:#00bcd4;border:2px solid #00bcd4">BlackBerry 7.1</a>
+        <a href="/Pages/Category/BlackBerry%206/BlackBerry-6.html" style="color:#009688;border:2px solid #009688">BlackBerry 6</a>
+      </div>
+    </div>
+  </div>
+</div>
+</aside>
 
 </div>
 

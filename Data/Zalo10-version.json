@@ -1,7 +1,25 @@
 {
-  "latestVersion": "1.4.0.0",
-  "downloadUrl": "https://github.com/BBerryLife/BBerryLife.github.io/raw/main/Downloads/Zalo10-1_4_0_0.bar",
+  "latestVersion": "1.5.0.0",
+  "downloadUrl": "https://github.com/BBerryLife/BBerryLife.github.io/raw/main/Downloads/Zalo10-1_5_0_0.bar",
   "changelog": [
+    {
+      "version": "1.5.0",
+      "items": [
+        "NEW: Add msg status indicators (Sent / Delivered / Read / Failed)",
+        "NEW: Add full support for Polls (options & voting): closed polls are hidden, only active polls are displayed; if too many active polls exist, they can be closed via the \"Delete for me only\" action button",
+        "NEW: Sync msgs from phone: only fetch msgs from conversations with at least 1 existing msg (required to retrieve the chat ID, as empty chats cannot provide a valid ID)",
+        "NEW: Load older msgs: to optimize performance with thousands of msgs, each chat loads a fixed amount of data; scrolling up triggers lazy loading for older msgs, keeping the app smooth and preventing crashes",
+        "IMPROVE: Cookie persistence via QSettings: you can now close the app or restart the device while still fetching 1-1 and group chats seamlessly",
+        "IMPROVE: Pin Board bar has been completely redesigned",
+        "IMPROVE: Zalo10 Hub notifications are now interactive: tap to open directly into the specific chat, or mark as read/unread and delete directly from the Hub",
+        "IMPROVE: Rebuilt Zalo10Headless: the experimental headless service from v1.3.0.x has been reworked for v1.5.0.x to handle background msg delivery even when the app is closed",
+        "IMPROVE: Add Terms of Service (ToS)",
+        "IMPROVE: Various other small interface fixes",
+        "FIX: Fixed sent/received images creating awkward gray space at the top and bottom",
+        "FIX: Fixed msg bubbles UI: bubbles now dynamically calculate their own size instead of using a placeholder safe-zone that stretches out via a laggy animation",
+        "FIX: Partially fixed auto-scroll bug: resolved the glitch where incoming msgs caused the chat window to jump back up to the first msg before scrolling back down"
+      ]
+    },
     {
       "version": "1.4.0",
       "items": [
