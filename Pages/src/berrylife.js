@@ -40,6 +40,13 @@ function setLang(lang) {
 }
 
 /* Áp dụng bản dịch cho mọi phần tử .i18n trong 1 vùng (mặc định: toàn trang) */
+/* giải mã thực thể HTML (&amp; ...) thành văn bản thường */
+function blDecode(s) {
+  var d = document.createElement('div');
+  d.innerHTML = s;
+  return d.textContent || d.innerText || '';
+}
+
 function applyTranslations(root) {
   var scope = root && root.getElementsByClassName ? root : document;
   var lang = getLang();
@@ -88,11 +95,23 @@ function applyTranslations(root) {
   }
   /* Tiêu đề trang */
   if (!window.BL_ORIG_TITLE) window.BL_ORIG_TITLE = document.title;
-  if (lang === 'en' && window.PAGE_TITLE_EN) {
-    document.title = window.PAGE_TITLE_EN;
-  } else {
-    document.title = window.BL_ORIG_TITLE;
+  var newTitle = window.BL_ORIG_TITLE;
+  if (lang === 'en') {
+    if (window.PAGE_TITLE_EN) {
+      newTitle = window.PAGE_TITLE_EN;
+    } else {
+      /* bài viết: thay phần tiêu đề tiếng Việt trong <title> bằng tiêu đề tiếng Anh của h1 */
+      var hd = document.getElementsByClassName('article-header')[0];
+      var h1 = hd ? hd.getElementsByTagName('h1')[0] : null;
+      if (h1 && h1.getAttribute('data-en')) {
+        /* tab = tiêu đề tiếng Anh của bài, giữ nguyên hậu tố thương hiệu nếu có */
+        var enT = blDecode(h1.getAttribute('data-en'));
+        var suffix = /\s+[\u2013\u2014-]\s+BBerryLife\s*$/.exec(window.BL_ORIG_TITLE);
+        newTitle = enT + (suffix ? suffix[0] : '');
+      }
+    }
   }
+  document.title = newTitle;
   /* thuộc tính lang của thẻ html */
   if (document.documentElement) document.documentElement.setAttribute('lang', lang);
   updateLangButtons(lang);
@@ -401,21 +420,43 @@ function injectFooter() {
    Mọi trang chỉ cần: <aside class="sidebar"></aside>
    Nội dung sidebar sẽ tự được tải từ sidebar.html và chèn vào trong.
 */
+/* Bản dự phòng của Pages/src/sidebar.html — dùng khi không tải được file (mạng lỗi, mở trực tiếp bằng file://...).
+   Nếu sửa sidebar.html thì nhớ cập nhật cả chuỗi này. */
+var BL_SIDEBAR_FALLBACK = "<style>\n.follow-box { margin-bottom: 22px; }\n.follow-box-archive {\n  background: #6b8f3e !important;\n  background: -webkit-linear-gradient(315deg, #7aa346 0%, #567230 100%) !important;\n  background: linear-gradient(135deg, #7aa346 0%, #567230 100%) !important;\n  border-color: #567230 !important;\n}\n.follow-box-archive h3 { color: #fff !important; }\n.follow-box-archive p  { color: #e8f2d8 !important; opacity: 1 !important; }\n.follow-box-archive a  { color: #567230 !important; }\n</style>\n<div class=\"sidebar-sticky\">\n  <div class=\"follow-box\">\n    <h3 class=\"i18n\" data-en=\"Follow Us\">Theo Dõi Chúng Tôi</h3>\n    <p class=\"i18n\" data-en=\"Get the latest BlackBerry news on Facebook\">Cập nhật tin tức mới nhất về BlackBerry trên Facebook</p>\n    <a href=\"https://www.facebook.com/BBerryLife/\" target=\"_blank\" class=\"i18n\" data-en=\"Follow Facebook\">Theo Dõi Facebook</a>\n  </div>\n  <div class=\"follow-box follow-box-archive\">\n    <h3 class=\"i18n\" data-en=\"Archive\">Kho Lưu Trữ</h3>\n    <p class=\"i18n\" data-en=\"Download ROMs, autoloaders and BB10 resources from our archive\">Tải xuống ROM, autoloader và tài nguyên BB10 từ archive của chúng tôi</p>\n    <a href=\"https://drive.google.com/drive/folders/1AeaAt9HJ3sx7v6BJJJf3LbTybAUMaAAp?usp=drive_link\" target=\"_blank\" class=\"i18n\" data-en=\"Go to Archive\">Truy Cập Archive</a>\n  </div>\n  <div class=\"sidebar-box\">\n    <h3 class=\"sidebar-title i18n\" data-en=\"Categories\">Danh Mục</h3>\n    <div class=\"cat-group\">\n      <div class=\"cat-group-label i18n\" data-en=\"Operating System\">Hệ Điều Hành</div>\n      <div class=\"cat-links\">\n        <a href=\"/Pages/Category/BlackBerry%2010/BlackBerry-10.html\" style=\"color:#2196f3;border:2px solid #2196f3\">BlackBerry 10</a>\n        <a href=\"/Pages/Category/BlackBerry%207.1/BlackBerry-7-1.html\" style=\"color:#00bcd4;border:2px solid #00bcd4\">BlackBerry 7.1</a>\n        <a href=\"/Pages/Category/BlackBerry%206/BlackBerry-6.html\" style=\"color:#009688;border:2px solid #009688\">BlackBerry 6</a>\n      </div>\n    </div>\n  </div>\n</div>";
+
 function injectSidebar() {
   var aside = document.getElementsByTagName('aside')[0];
   if (!aside) return;
-  /* Nếu đã có nội dung (trang cũ chưa dọn) -> không chèn trùng */
-  if (aside.innerHTML.replace(/\s/g, '') !== '') return;
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState !== 4) return;
-    if (xhr.status >= 200 && xhr.status < 300) {
-      aside.innerHTML = xhr.responseText;
-      applyTranslations(document);
+  /* Tự sửa: nếu HTML trang bị lệch thẻ khiến <aside> rơi ra ngoài .site-wrapper thì đưa lại vào */
+  var wrap = document.getElementsByClassName('site-wrapper')[0];
+  if (wrap && aside.parentNode !== wrap) wrap.appendChild(aside);
+  /* Nếu đã có nội dung thật (bỏ qua khoảng trắng và comment) -> không chèn trùng */
+  var existing = aside.innerHTML.replace(/<!--[\s\S]*?-->/g, '').replace(/\s/g, '');
+  if (existing !== '') return;
+  var fill = function(html) {
+    aside.innerHTML = html;
+    applyTranslations(document);
+  };
+  var load = function(tries) {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== 4) return;
+      if (xhr.status >= 200 && xhr.status < 300 && xhr.responseText) {
+        fill(xhr.responseText);
+      } else if (tries < 2) {
+        setTimeout(function() { load(tries + 1); }, 700);   /* thử lại */
+      } else {
+        fill(BL_SIDEBAR_FALLBACK);                          /* vẫn lỗi -> dùng bản dự phòng */
+      }
+    };
+    try {
+      xhr.open('GET', '/Pages/src/sidebar.html', true);
+      xhr.send(null);
+    } catch (e) {
+      fill(BL_SIDEBAR_FALLBACK);
     }
   };
-  xhr.open('GET', '/Pages/src/sidebar.html', true);
-  xhr.send(null);
+  load(0);
 }
 
 /* ── Auto-inject Help Modal (dùng chung, tránh copy/paste HTML mỗi trang) ──
