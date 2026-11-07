@@ -20,6 +20,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+a { color: #000000; }
+.source-box a { text-decoration: underline; }
+
 ::selection { background: #000000; color: #ffffff; }
 ::-moz-selection { background: #000000; color: #ffffff; }
 
@@ -837,7 +840,8 @@ body .site-footer .site-footer-copy { opacity: 1; border-top: 1px solid #ffffff;
 }
 
 /* ── GHI ĐÈ MÀU INLINE CÒN SÓT TRONG BÀI VIẾT (giữ đúng 2 màu đen/trắng) ── */
-.article-body [style*="color"]:not(.btn-dl):not(.btn-inline):not(.tag) { color: #000000 !important; }
+.article-wrap [style*="color"]:not(.btn-dl):not(.btn-inline):not(.tag) { color: #000000 !important; }
+.article-body code[style] { background: #ffffff !important; color: #000000 !important; border: 1px solid #000000; border-radius: 6px; }
 .note-red [style*="color"], .note-dark [style*="color"], .article-body pre [style*="color"], .article-body th [style*="color"] { color: #ffffff !important; }
 .article-body span[style*="background"]:not(.tag) {
   background: #ffffff !important;
