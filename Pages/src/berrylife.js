@@ -96,6 +96,7 @@ function applyTranslations(root) {
   /* thuộc tính lang của thẻ html */
   if (document.documentElement) document.documentElement.setAttribute('lang', lang);
   updateLangButtons(lang);
+  if (typeof updateThemeButtons === 'function') updateThemeButtons();
 }
 
 function updateLangButtons(lang) {
@@ -134,6 +135,94 @@ function injectLangToggle() {
   wrap.appendChild(btn);
   follow.appendChild(wrap);
 }
+
+
+/* ══════════════════════════════════════════════════════════════
+   GIAO DIỆN SÁNG / TỐI
+   - Mặc định tự theo cài đặt của thiết bị (CSS @media prefers-color-scheme).
+   - Người dùng bấm nút để chọn thủ công; lựa chọn lưu vào localStorage.
+   - Nếu bấm về đúng chế độ của thiết bị thì xoá lựa chọn -> quay lại tự động.
+   ══════════════════════════════════════════════════════════════ */
+var BL_THEME_KEY = 'bl_theme';
+var BL_ICON_MOON = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+var BL_ICON_SUN = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+
+function systemPrefersDark() {
+  try {
+    return !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  } catch (e) { return false; }
+}
+function getThemeChoice() {
+  try {
+    var v = localStorage.getItem(BL_THEME_KEY);
+    return (v === 'dark' || v === 'light') ? v : 'auto';
+  } catch (e) { return 'auto'; }
+}
+function effectiveTheme() {
+  var c = getThemeChoice();
+  if (c === 'auto') return systemPrefersDark() ? 'dark' : 'light';
+  return c;
+}
+function applyThemeClass() {
+  var h = document.documentElement;
+  removeClass(h, 'theme-dark');
+  removeClass(h, 'theme-light');
+  var c = getThemeChoice();
+  if (c !== 'auto') addClass(h, 'theme-' + c);
+}
+function updateThemeButtons() {
+  var btns = document.getElementsByClassName ? document.getElementsByClassName('theme-toggle-btn') : [];
+  var dark = (effectiveTheme() === 'dark');
+  var vi = (getLang() !== 'en');
+  for (var i = 0; i < btns.length; i++) {
+    /* đang tối -> hiện mặt trời (bấm để sáng); đang sáng -> hiện mặt trăng (bấm để tối) */
+    btns[i].innerHTML = dark ? BL_ICON_SUN : BL_ICON_MOON;
+    var label = dark ? (vi ? 'Chuyển sang giao diện sáng' : 'Switch to light mode')
+                     : (vi ? 'Chuyển sang giao diện tối' : 'Switch to dark mode');
+    btns[i].title = label;
+    btns[i].setAttribute('aria-label', label);
+  }
+}
+function toggleTheme() {
+  var next = (effectiveTheme() === 'dark') ? 'light' : 'dark';
+  var sys = systemPrefersDark() ? 'dark' : 'light';
+  var stored = false;
+  try {
+    if (next === sys) localStorage.removeItem(BL_THEME_KEY);
+    else localStorage.setItem(BL_THEME_KEY, next);
+    stored = true;
+  } catch (e) {}
+  applyThemeClass();
+  if (!stored) { /* không lưu được (vd. chế độ riêng tư) -> vẫn đổi cho phiên này */
+    var h = document.documentElement;
+    removeClass(h, 'theme-dark'); removeClass(h, 'theme-light');
+    addClass(h, 'theme-' + next);
+  }
+  updateThemeButtons();
+  return false;
+}
+/* Nút đổi giao diện, nằm cạnh nút ngôn ngữ trong header */
+function injectThemeToggle() {
+  var wrap = byId('langSwitchWrap');
+  if (!wrap || byId('themeToggleBtn')) return;
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.id = 'themeToggleBtn';
+  btn.className = 'lang-toggle-btn theme-toggle-btn';
+  btn.setAttribute('onclick', 'return toggleTheme();');
+  wrap.appendChild(btn);
+  updateThemeButtons();
+}
+/* Thiết bị đổi sáng/tối khi đang ở chế độ tự động -> cập nhật icon */
+(function watchSystemTheme() {
+  try {
+    var mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+    if (!mq) return;
+    var cb = function() { updateThemeButtons(); };
+    if (mq.addEventListener) mq.addEventListener('change', cb);
+    else if (mq.addListener) mq.addListener(cb);
+  } catch (e) {}
+})();
 
 /* ── Modal width clamp ── */
 function clampModalWidth() {
@@ -354,6 +443,7 @@ function injectHelpModal() {
 /* ── Init on DOM ready ── */
 function blInit() {
   injectLangToggle();
+  injectThemeToggle();
   injectFooter();
   injectSidebar();
   injectHelpModal();

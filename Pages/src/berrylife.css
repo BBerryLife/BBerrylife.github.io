@@ -84,7 +84,11 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
 .header-follow a[href*="facebook"]:hover { background: #ffffff; color: #000000; }
 
 /* Nút ngôn ngữ */
-.lang-switch { display: block; clear: both; text-align: right; margin-top: 8px; }
+.lang-switch { display: block; clear: both; text-align: right; margin-top: 0; }
+.lang-switch .lang-toggle-btn { margin-left: 6px; }
+.lang-switch .lang-toggle-btn:first-child { margin-left: 0; }
+.theme-toggle-btn { padding-left: 12px; padding-right: 12px; line-height: 1; }
+.theme-toggle-btn svg { display: inline-block; }
 .lang-toggle-btn {
   background: #ffffff;
   border: 1px solid #000000;
@@ -849,3 +853,35 @@ body .site-footer .site-footer-copy { opacity: 1; border-top: 1px solid #ffffff;
 }
 .note-dark { background: #000000 !important; color: #ffffff; }
 .article-body img[style*="border"] { border: 1px solid #000000 !important; border-radius: 14px; -webkit-box-shadow: none !important; box-shadow: none !important; }
+
+/* ═══════════════════════════════════════════════════════════════
+   DARK MODE — vì site chỉ có đúng 2 màu (đen/trắng) nên chỉ cần đảo màu.
+   - Tự theo thiết bị: @media (prefers-color-scheme: dark)
+   - Chọn thủ công: class .theme-dark / .theme-light trên <html> (do nút đổi giao diện đặt)
+   - Ảnh và ảnh bìa được đảo lại để giữ nguyên màu gốc.
+   ═══════════════════════════════════════════════════════════════ */
+html.theme-dark { -webkit-filter: invert(1); filter: invert(1); }
+html.theme-dark img,
+html.theme-dark .cover-img-wrap { -webkit-filter: invert(1); filter: invert(1); }
+html.theme-dark .cover-img-wrap { border-bottom-color: #ffffff; }
+html.theme-dark .article-body img,
+html.theme-dark .image-gallery img,
+html.theme-dark .article-img-wrap img,
+html.theme-dark .article-body img[style*="border"] { border-color: #ffffff !important; }
+html.theme-dark .modal-overlay { background: rgba(255,255,255,0.6); }
+html.theme-dark .help-fab,
+html.theme-dark .modal-box { -webkit-box-shadow: 0 8px 28px rgba(255,255,255,0.4); box-shadow: 0 8px 28px rgba(255,255,255,0.4); }
+
+@media (prefers-color-scheme: dark) {
+  html:not(.theme-light) { -webkit-filter: invert(1); filter: invert(1); }
+  html:not(.theme-light) img,
+  html:not(.theme-light) .cover-img-wrap { -webkit-filter: invert(1); filter: invert(1); }
+  html:not(.theme-light) .cover-img-wrap { border-bottom-color: #ffffff; }
+  html:not(.theme-light) .article-body img,
+  html:not(.theme-light) .image-gallery img,
+  html:not(.theme-light) .article-img-wrap img,
+  html:not(.theme-light) .article-body img[style*="border"] { border-color: #ffffff !important; }
+  html:not(.theme-light) .modal-overlay { background: rgba(255,255,255,0.6); }
+  html:not(.theme-light) .help-fab,
+  html:not(.theme-light) .modal-box { -webkit-box-shadow: 0 8px 28px rgba(255,255,255,0.4); box-shadow: 0 8px 28px rgba(255,255,255,0.4); }
+}
