@@ -1,4 +1,4 @@
-/* === BerryLife Shared JS ===
+/* === BBerryLife Shared JS ===
    BB10 / IE compatible:
    - No classList
    - No querySelectorAll
@@ -351,25 +351,8 @@ function injectHelpModal() {
   xhr.send(null);
 }
 
-/* ── Auto-inject "About Us" link vào header-follow (đồng bộ mọi trang) ── */
-function injectAboutUsLink() {
-  var follow = document.getElementsByClassName ? document.getElementsByClassName('header-follow')[0] : null;
-  if (!follow) return;
-  var links = follow.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (links[i].href && links[i].href.indexOf('AboutUs.html') >= 0) return; /* đã có sẵn */
-  }
-  var a = document.createElement('a');
-  a.href = '/Pages/AboutUs.html';
-  a.className = 'i18n';
-  a.setAttribute('data-en', 'About Us');
-  a.innerHTML = 'Giới Thiệu';
-  follow.insertBefore(a, follow.firstChild);
-}
-
 /* ── Init on DOM ready ── */
 function blInit() {
-  injectAboutUsLink();
   injectLangToggle();
   injectFooter();
   injectSidebar();
