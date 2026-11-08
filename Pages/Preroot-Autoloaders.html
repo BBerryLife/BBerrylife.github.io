@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="/icon.png">
+<title>Pre-rooted Autoloaders – BBerryLife</title>
+<link rel="stylesheet" href="/Pages/src/berrylife.css">
+<script>(function(){try{var t=localStorage.getItem("bl_theme");if(t==="dark"||t==="light"){document.documentElement.className+=" theme-"+t;}}catch(e){}})();</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand"><a href="/index.html"><h1>BBerryLife</h1><p class="i18n" data-en="Everything for BlackBerry Users">Mọi Thứ Cho Người Dùng BlackBerry</p></a></div>
+    <div class="header-follow"></div>
+  </div>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="/index.html" class="i18n" data-en="Home">Trang Chủ</a>
+      <a href="/Pages/Category/Tutorials/Tutorials.html" class="i18n" data-en="Guides">Hướng Dẫn</a>
+      <a href="/Pages/Category/Apps/Apps.html" class="i18n" data-en="Apps">Ứng Dụng</a>
+      <a href="/Pages/Category/Games/Games.html" class="i18n" data-en="Games">Games</a>
+      <a href="/Pages/Category/Themes/Themes.html" class="i18n" data-en="Themes">Themes</a>
+      <a href="/Pages/Category/Tips/Tips.html" class="i18n" data-en="Tips &amp; Tricks">Mẹo &amp; Thủ Thuật</a>
+      <a href="/Pages/Blog/Blog.html" class="i18n" data-en="All Posts">Tất Cả Bài Viết</a>
+    </div>
+  </nav>
+</header>
+
+<div class="site-wrapper">
+  <main>
+    <article class="article-wrap">
+
+      <div class="cover-img-wrap" id="coverImgWrap">
+        <img class="cover-img" src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Preroot-Autoloaders/1.png" alt="Pre-rooted Autoloaders cho BlackBerry 10" onerror="this.style.display='none'">
+      </div>
+
+      <div class="article-header">
+        <div class="article-meta"><span class="tag i18n" style="background:#e1f5fe;color:#01579b" data-en="GUIDE">HƯỚNG DẪN</span><span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span></div>
+        <h1 class="i18n" data-en="Pre-rooted Autoloaders – Pre-Rooted Firmware for BlackBerry 10">Pre-rooted Autoloaders – Firmware Đã Được Root Sẵn Cho BlackBerry 10</h1>
+        <div class="article-date">Cập nhật lần cuối: 22/10/2026</div>
+      </div>
+
+      <div class="article-body">
+
+<div class="note note-red i18n" data-en="<strong>Caution:</strong> Use at your own risk. The author is not responsible for any direct or indirect damage arising from using these modified builds. Also, give a huge, heartfelt thanks to the &quot;father&quot; of BB10 rooting - <strong><a href=&quot;https://bb10.root.sx/&quot; target=&quot;_blank&quot;>Oleksandr</a></strong>.">
+  <strong>Caution – Cảnh báo:</strong> Sử dụng theo rủi ro của bạn. Tác giả không chịu trách nhiệm về bất kỳ thiệt hại trực tiếp hoặc gián tiếp nào phát sinh từ việc sử dụng các phiên bản đã chỉnh sửa này. Ngoài ra, hãy dành 1 sự cảm ơn to lớn và sâu sắc đến "cha đẻ" của việc root trên BB10 - <strong><a href="https://bb10.root.sx/" target="_blank">Oleksandr</a></strong>.
+</div>
+
+<h2 class="i18n" data-en="What Are Pre-rooted Autoloaders?">Pre-rooted Autoloaders Là Gì?</h2>
+<p class="i18n" data-en="This is a collection of BlackBerry 10 firmware with root access already built in. Instead of going through complicated rooting steps after install, you just flash this firmware and the device automatically has root right after the first boot.">Đây là bộ sưu tập các firmware BlackBerry 10 đã được tích hợp sẵn quyền root. Thay vì phải thực hiện các bước root phức tạp sau khi cài đặt, bạn chỉ cần flash firmware này và thiết bị sẽ tự động có root ngay sau khi khởi động lần đầu.</p>
+
+<div class="article-img-wrap">
+  <img src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Preroot-Autoloaders/1.png" alt="Pre-rooted Autoloaders" />
+</div>
+
+<h2 class="i18n" data-en="What's New in V4">Điểm Mới Trên Bản V4 (What's New)</h2>
+<ul>
+  <li class="i18n" data-en="<strong>New system integration method:</strong> uses the <em>Dynamic Library Hijacking</em> vulnerability in BlackBerry 10 (<a href=&quot;https://bb10.root.sx/blog/dynamic-library-hijacking-vulnerability-in-bb10&quot; target=&quot;_blank&quot;>technical write-up</a>). Root now persists across reboots — rebooting the device before obtaining root no longer breaks the process.">  <strong>Phương pháp tích hợp hệ thống mới:</strong> sử dụng lỗ hổng <em>Dynamic Library Hijacking</em> trên BlackBerry 10 (<a href="https://bb10.root.sx/blog/dynamic-library-hijacking-vulnerability-in-bb10" target="_blank">bài phân tích kỹ thuật</a>). Root được giữ nguyên sau khi khởi động lại — việc reboot thiết bị trước khi có root sẽ không còn làm hỏng quá trình.</li>
+  <li class="i18n" data-en="<strong>Important:</strong> the integration works through <code>AppWorld</code>. <strong>Do not</strong> add <code>sys.appworld</code> to the <code>removeapp</code> command, or the mechanism will break.">  <strong>Lưu ý quan trọng:</strong> cơ chế tích hợp hoạt động thông qua <code>AppWorld</code>. <strong>Không</strong> thêm <code>sys.appworld</code> vào lệnh <code>removeapp</code>, nếu không cơ chế sẽ bị hỏng.</li>
+  <li class="i18n" data-en="<strong>Stability &amp; code optimization:</strong> <code>switchzone</code> is no longer used as a trigger for launching root-privileged code, and <code>btool</code> has been completely rewritten in C, fixing Android Runtime crashes and unexpected device reboots.">  <strong>Ổn định &amp; tối ưu mã:</strong> loại bỏ hoàn toàn việc dùng <code>switchzone</code> làm trigger chạy mã có quyền root, đồng thời viết lại toàn bộ <code>btool</code> bằng C, khắc phục các lỗi crash Android Runtime và thiết bị tự khởi động lại.</li>
+  <li class="i18n" data-en="<strong>Expanded <code>btool</code>:</strong> the C-based <code>btool</code> now natively includes a <code>pathtrust</code> patcher, a <code>launcher</code> patcher and an NVRAM backup tool.">  <strong>Mở rộng <code>btool</code>:</strong> <code>btool</code> viết bằng C nay tích hợp sẵn trình patch <code>pathtrust</code>, trình patch <code>launcher</code> và công cụ sao lưu NVRAM.</li>
+  <li class="i18n" data-en="<strong>Security &amp; system tweaks:</strong> most unnecessary <code>suid</code>/<code>sgid</code> helpers were removed, keeping only the bare minimum for privilege escalation. Unsigned BAR apps can be installed right after the root confirmation notification appears.">  <strong>Bảo mật &amp; tinh chỉnh hệ thống:</strong> gỡ bỏ phần lớn các helper <code>suid</code>/<code>sgid</code> không cần thiết, chỉ giữ lại mức tối thiểu để nâng quyền. Có thể cài ứng dụng BAR unsigned ngay khi nhận được thông báo xác nhận root.</li>
+</ul>
+
+<h2 class="i18n" data-en="System Patch Installer (Active Development)">Trình Cài Đặt Patch Hệ Thống (Đang Phát Triển)</h2>
+<p class="i18n" data-en="V4 introduces a system patch installer that can modify read-only system files, binaries and dynamic libraries.">V4 giới thiệu trình cài đặt patch hệ thống, có khả năng chỉnh sửa các tệp hệ thống chỉ đọc, file nhị phân và thư viện động.</p>
+<div class="note note-yellow i18n" data-en="<strong>Not released yet:</strong> this makes it possible to revive legacy services — including <strong>BBID, Weather, AppWorld and BBM</strong> — by redirecting them to custom community-driven servers instead of the defunct RIM/BlackBerry infrastructure. Special thanks to <a href=&quot;https://t.me/He11kern&quot; target=&quot;_blank&quot;>@He11kern</a> for these contributions.">
+  <strong>Chưa phát hành:</strong> tính năng này cho phép hồi sinh các dịch vụ cũ — gồm <strong>BBID, Weather, AppWorld và BBM</strong> — bằng cách chuyển hướng chúng sang các máy chủ cộng đồng thay cho hạ tầng RIM/BlackBerry đã ngừng hoạt động. Đặc biệt cảm ơn <a href="https://t.me/He11kern" target="_blank">@He11kern</a> vì những đóng góp này.
+</div>
+
+<h2 class="i18n" data-en="How to Use">Cách Sử Dụng</h2>
+<p class="i18n" data-en="The installation process is very simple:">Quy trình cài đặt rất đơn giản:</p>
+<ol>
+  <li class="i18n" data-en="Flash your device with the autoloader matching your model.">Flash thiết bị bằng autoloader phù hợp với model của bạn.</li>
+  <li class="i18n" data-en="Wait for the device to boot and the notification <strong>&quot;The device has been successfully rooted!&quot;</strong> to appear.">Chờ thiết bị khởi động và thông báo <strong>"The device has been successfully rooted!"</strong> xuất hiện.</li>
+  <li class="i18n" data-en="Done — your device now has root and is ready to use!">Xong — thiết bị của bạn đã có root và sẵn sàng sử dụng!</li>
+</ol>
+
+<h2 class="i18n" data-en="SSH Access">Truy Cập SSH</h2>
+<h3 class="i18n" data-en="Add authorized SSH keys">Thêm Authorized SSH Keys</h3>
+<p class="i18n" data-en="The default private key is stored in <a href=&quot;https://bb10.root.sx/downloads/id_rsa4x&quot; target=&quot;_blank&quot;>id_rsa4x</a>. To use your own SSH key(s), place your public key(s) in:">Private key mặc định được lưu trong <a href="https://bb10.root.sx/downloads/id_rsa4x" target="_blank">id_rsa4x</a>. Nếu muốn dùng SSH key riêng, hãy đặt public key của bạn vào:</p>
+<pre><code>patchdata/var/etc/ssh/authorized_keys2</code></pre>
+<p class="i18n" data-en="Then uncomment the following lines in <code>patch.txt</code>:">Sau đó bỏ comment các dòng sau trong <code>patch.txt</code>:</p>
+<pre><code>push "patchdata/var/etc/ssh/authorized_keys2" "/var/etc/ssh/authorized_keys2"
+chmod 644 "/var/etc/ssh/authorized_keys2"
+chown 0:0 "/var/etc/ssh/authorized_keys2"</code></pre>
+
+<h3 class="i18n" data-en="Persist SSH host keys">Giữ Nguyên SSH Host Keys</h3>
+<p class="i18n" data-en="By default, SSH host keys may change after reflashing, so clients show a new host fingerprint warning. To persist them across firmware flashes, uncomment:">Theo mặc định, SSH host key có thể thay đổi sau khi flash lại, khiến client hiện cảnh báo fingerprint mới. Để giữ nguyên host key qua các lần flash, hãy bỏ comment:</p>
+<pre><code>push "patchdata/var/etc/ssh/ssh_host_rsa_key" "/var/etc/ssh/ssh_host_rsa_key"
+push "patchdata/var/etc/ssh/ssh_host_rsa_key.pub" "/var/etc/ssh/ssh_host_rsa_key.pub"
+chmod 600 "/var/etc/ssh/ssh_host_rsa_key"
+chown 0:0 "/var/etc/ssh/ssh_host_rsa_key"
+chmod 644 "/var/etc/ssh/ssh_host_rsa_key.pub"
+chown 0:0 "/var/etc/ssh/ssh_host_rsa_key.pub"</code></pre>
+<p class="i18n" data-en="You can also replace these files with your <strong>existing SSH host key pair</strong> to keep the same fingerprint.">Bạn cũng có thể thay các file này bằng <strong>cặp SSH host key sẵn có</strong> của mình để giữ nguyên fingerprint.</p>
+
+<h2 class="i18n" data-en="Single-Step Custom Firmware Builder (bb10mt)">Tạo Firmware Tùy Chỉnh Trong 1 Bước (bb10mt)</h2>
+<p class="i18n" data-en="The new <code>batch</code> parameter in <code>bb10mt</code> lets you patch and root an autoloader firmware image in one automated step, without manual scripting.">Tham số <code>batch</code> mới của <code>bb10mt</code> cho phép patch và root một file autoloader firmware chỉ trong một bước tự động, không cần viết script thủ công.</p>
+<p><strong class="i18n" data-en="Windows:">Windows:</strong></p>
+<pre><code>bb10mt.exe batch -i Z30_10.3.03.3216_STA100-1-2-3-4-5-6.exe -s patch.txt -o \tmp\z30root</code></pre>
+<p><strong class="i18n" data-en="Linux / macOS:">Linux / macOS:</strong></p>
+<pre><code>./bb10mt batch -i Z30_10.3.03.3216_STA100-1-2-3-4-5-6.exe -s patch.txt -o /tmp/z30root</code></pre>
+<p class="i18n" data-en="After it finishes, the output directory (<code>-o</code>) contains files ending in <code>_os.exe</code> and <code>_radio.exe</code>; the rest are just intermediate results and can be deleted. To install, first run <code>_os.exe</code> (it shows an error at the end — this is normal, ignore it), then run <code>_radio.exe</code>.">Sau khi chạy xong, trong thư mục đầu ra (<code>-o</code>) sẽ có các file kết thúc bằng <code>_os.exe</code> và <code>_radio.exe</code>; các file còn lại chỉ là kết quả trung gian và có thể xóa. Để cài đặt, chạy <code>_os.exe</code> trước (cuối quá trình sẽ hiện lỗi — đây là bình thường, hãy bỏ qua), rồi chạy <code>_radio.exe</code>.</p>
+
+<h2 class="i18n" data-en="User Partition Patch Configuration (patch.txt)">Cấu Hình Patch Phân Vùng User (patch.txt)</h2>
+<p class="i18n" data-en="The <code>patch.txt</code> file passed via <code>-s</code> contains the directives used to modify the <code>user</code> partition when the image is assembled or the system boots:">File <code>patch.txt</code> truyền qua tham số <code>-s</code> chứa các chỉ thị dùng để chỉnh sửa phân vùng <code>user</code> khi dựng image hoặc khi hệ thống khởi động:</p>
+<ul>
+  <li class="i18n" data-en="<code>touch /var/rootdata/use.root</code> — enables the base root helpers; adds the <code>__root</code> and <code>u_root</code> SUID/SGID binaries to <code>pathtrust</code>."><code>touch /var/rootdata/use.root</code> — bật các helper root cơ bản; thêm các binary SUID/SGID <code>__root</code> và <code>u_root</code> vào <code>pathtrust</code>.</li>
+  <li class="i18n" data-en="<code>touch /var/rootdata/use.sshd</code> — automatically runs the <code>sshd</code> daemon with <code>root</code> privileges at boot."><code>touch /var/rootdata/use.sshd</code> — tự động chạy <code>sshd</code> với quyền <code>root</code> khi khởi động.</li>
+  <li class="i18n" data-en="<code>#touch /var/rootdata/use.berrycore</code> — adds the root directory (<code>/</code>) to <code>pathtrust</code> so BerryCore-dependent apps can run as <code>root</code> (disabled by default; future releases will only trust explicit BerryCore binaries)."><code>#touch /var/rootdata/use.berrycore</code> — thêm thư mục gốc (<code>/</code>) vào <code>pathtrust</code> để các ứng dụng phụ thuộc BerryCore chạy được với quyền <code>root</code> (tắt theo mặc định; các bản sau sẽ chỉ tin cậy các binary BerryCore cụ thể).</li>
+</ul>
+<pre><code># Enable base root helpers (__root, u_root)
+touch /var/rootdata/use.root
+
+# Auto-start SSH daemon as root
+touch /var/rootdata/use.sshd
+
+# BerryCore application execution (disabled by default)
+#touch /var/rootdata/use.berrycore</code></pre>
+
+<h2 class="i18n" data-en="Upgrade Without Reflashing">Nâng Cấp Không Cần Flash Lại</h2>
+<p class="i18n" data-en="<strong>Supporters and contributors</strong> can request an upgrade script to move an existing AutoRoot installation to <strong>V4 without reflashing the firmware</strong>. Copy <code>v2tov4.sh</code> or <code>v3tov4.sh</code> to the device and run it with <code>sh /path/to/file/v2tov4.sh</code> (or <code>v3tov4.sh</code>). You may be asked whether root access and <code>sshd</code> are needed; once the script succeeds, reboot the device.">Những <strong>người ủng hộ (supporter) và contributor</strong> có thể xin script nâng cấp để chuyển bản AutoRoot đã cài sang <strong>V4 mà không cần flash lại firmware</strong>. Chép file <code>v2tov4.sh</code> hoặc <code>v3tov4.sh</code> vào thiết bị rồi chạy bằng <code>sh /path/to/file/v2tov4.sh</code> (hoặc <code>v3tov4.sh</code>). Script có thể hỏi bạn có cần quyền root và <code>sshd</code> hay không; sau khi chạy thành công, hãy khởi động lại thiết bị.</p>
+<p class="i18n" data-en="<strong>If you are connected over SSH as root,</strong> do not run the script directly as root. Run it through the <code>__devuser</code> shell wrapper, or add the script to <code>pathtrust</code>:">Nếu bạn đang <strong>kết nối SSH với quyền root</strong>, đừng chạy script trực tiếp bằng user root. Hãy chạy qua shell wrapper <code>__devuser</code>, hoặc thêm script vào <code>pathtrust</code>:</p>
+<pre><code>/proc/boot/pathtrust !/path/to/script/v2tov4.sh
+/proc/boot/pathtrust !/path/to/script/v3tov4.sh</code></pre>
+
+<h2 class="i18n" data-en="System Package Specification">Đặc Tả Gói Hệ Thống (System Package)</h2>
+<p class="i18n" data-en="A package contains configuration files, scripts and target resources, organized into execution stages:">Một gói chứa các file cấu hình, script và tài nguyên đích, được chia theo từng giai đoạn thực thi:</p>
+<pre><code>pkg.bar             # Original BAR package (optional)
+MANIFEST            # Package manifest file
+
+├── data/           # Main installation payload
+│   ├── file1..fileN# Payload files
+│   ├── perms       # File permissions for data/
+│   ├── links       # Symlinks, copies, PPS objects, folder creation
+│   ├── patch       # Binary byte-patching instructions
+│   └── trusted     # Paths to be added to trustpath
+│
+└── init/           # Initialization stage (root startup)
+    ├── file1..fileN# Required startup files
+    ├── start.sh    # Shell script triggered on root start
+    ├── perms       # File permissions for init/
+    ├── links       # Symlinks/copies for the init stage
+    ├── patch       # Binary patches applied during init
+    └── trusted     # Trustpath rules for the init stage</code></pre>
+<ul>
+  <li class="i18n" data-en="<code>links</code> — file system operations: <code>ln:src:dst</code> (symlink), <code>cp:src:dst</code> (copy), <code>pps:src:dst</code> (create/update a PPS object), <code>md:dst</code> (create a directory)."><code>links</code> — thao tác hệ thống tệp: <code>ln:src:dst</code> (symlink), <code>cp:src:dst</code> (sao chép), <code>pps:src:dst</code> (tạo/cập nhật đối tượng PPS), <code>md:dst</code> (tạo thư mục).</li>
+  <li class="i18n" data-en="<code>perms</code> — ownership and mode (like <code>chmod</code>/<code>chown</code>), format <code>/path/to/target:UID:GID:MODE</code>, e.g. <code>/accounts/1000/appdata/test:0:0:0755</code>."><code>perms</code> — quyền sở hữu và chế độ truy cập (tương đương <code>chmod</code>/<code>chown</code>), định dạng <code>/path/to/target:UID:GID:MODE</code>, ví dụ <code>/accounts/1000/appdata/test:0:0:0755</code>.</li>
+  <li class="i18n" data-en="<code>patch</code> — byte-level substitutions in target binaries: a file path line followed by <code>0xADDR: 0xOLD 0xNEW</code> lines, e.g. <code>0x0001A2F0: 0x89 0x90</code>."><code>patch</code> — thay thế ở mức byte trong file nhị phân đích: một dòng đường dẫn file, theo sau là các dòng <code>0xADDR: 0xOLD 0xNEW</code>, ví dụ <code>0x0001A2F0: 0x89 0x90</code>.</li>
+  <li class="i18n" data-en="<code>trusted</code> — a plain text file; each line is an absolute path to a binary or library to add to the system <code>trustpath</code>."><code>trusted</code> — file văn bản thuần; mỗi dòng là đường dẫn tuyệt đối tới binary hoặc thư viện cần thêm vào <code>trustpath</code> của hệ thống.</li>
+</ul>
+
+<h2 class="i18n" data-en="Download">Tải Xuống</h2>
+<p class="i18n" data-en="All pre-rooted firmware is hosted on Google Drive. Press the button below to access the download folder:">Tất cả các firmware pre-rooted được lưu trữ trên Google Drive. Nhấn nút bên dưới để truy cập thư mục tải xuống:</p>
+<div style="text-align:center;margin:20px 0">
+  <a href="https://drive.google.com/drive/folders/1rNnJdwrTGOTqKaKUdnirx_5cn_RLtF4R?usp=drive_link" target="_blank" class="btn-dl i18n" data-en="Download Firmware V4">Tải Xuống Firmware V4</a>
+</div>
+<p class="i18n" style="text-align:center" data-en="Original link (Telegram):">Link gốc (Telegram):</p>
+<div style="text-align:center;margin:20px 0">
+  <a href="https://t.me/bb10root/32" target="_blank" class="btn-dl i18n" data-en="Download Firmware V4 (Original Link)">Tải Xuống Firmware V4 (Link Gốc)</a>
+</div>
+
+<div class="source-box">
+  <p><strong class="i18n" data-en="Source:">Nguồn:</strong> <a href="https://bb10.root.sx/blog/autoroot-v4">Autoroot V4 – 22nd Oct 2026</a></p>
+  <p class="i18n-datefmt"><span class="i18n" data-en="Published on: ">Đăng ngày: </span>22 tháng 10 năm 2026</p>
+</div>
+
+      </div>
+
+      <div class="article-footer">
+        <a href="/index.html" class="btn-outline i18n" data-en="← Back to Home">← Về Trang Chủ</a>
+        <a href="/Pages/Blog/Blog.html" class="btn-solid i18n" data-en="View More Posts →">Xem Thêm Bài Viết →</a>
+      </div>
+
+    </article>
+  </main>
+
+  <aside class="sidebar">
+<style>
+.follow-box { margin-bottom: 22px; }
+.follow-box-archive {
+  background: #6b8f3e !important;
+  background: -webkit-linear-gradient(315deg, #7aa346 0%, #567230 100%) !important;
+  background: linear-gradient(135deg, #7aa346 0%, #567230 100%) !important;
+  border-color: #567230 !important;
+}
+.follow-box-archive h3 { color: #fff !important; }
+.follow-box-archive p  { color: #e8f2d8 !important; opacity: 1 !important; }
+.follow-box-archive a  { color: #567230 !important; }
+</style>
+<div class="sidebar-sticky">
+  <div class="follow-box">
+    <h3 class="i18n" data-en="Follow Us">Theo Dõi Chúng Tôi</h3>
+    <p class="i18n" data-en="Get the latest BlackBerry news on Facebook">Cập nhật tin tức mới nhất về BlackBerry trên Facebook</p>
+    <a href="https://www.facebook.com/BBerryLife/" target="_blank" class="i18n" data-en="Follow Facebook">Theo Dõi Facebook</a>
+  </div>
+  <div class="follow-box follow-box-archive">
+    <h3 class="i18n" data-en="Archive">Kho Lưu Trữ</h3>
+    <p class="i18n" data-en="Download ROMs, autoloaders and BB10 resources from our archive">Tải xuống ROM, autoloader và tài nguyên BB10 từ archive của chúng tôi</p>
+    <a href="https://drive.google.com/drive/folders/1AeaAt9HJ3sx7v6BJJJf3LbTybAUMaAAp?usp=drive_link" target="_blank" class="i18n" data-en="Go to Archive">Truy Cập Archive</a>
+  </div>
+  <div class="sidebar-box">
+    <h3 class="sidebar-title i18n" data-en="Categories">Danh Mục</h3>
+    <div class="cat-group">
+      <div class="cat-group-label i18n" data-en="Operating System">Hệ Điều Hành</div>
+      <div class="cat-links">
+        <a href="/Pages/Category/BlackBerry%2010/BlackBerry-10.html" style="color:#2196f3;border:2px solid #2196f3">BlackBerry 10</a>
+        <a href="/Pages/Category/BlackBerry%207.1/BlackBerry-7-1.html" style="color:#00bcd4;border:2px solid #00bcd4">BlackBerry 7.1</a>
+        <a href="/Pages/Category/BlackBerry%206/BlackBerry-6.html" style="color:#009688;border:2px solid #009688">BlackBerry 6</a>
+      </div>
+    </div>
+  </div>
+</div>
+</aside>
+
+</div>
+
+<script src="/Pages/src/berrylife.js"></script>
+</body>
+</html>
