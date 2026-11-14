@@ -26,6 +26,63 @@ a { color: #000000; }
 ::selection { background: #000000; color: #ffffff; }
 ::-moz-selection { background: #000000; color: #ffffff; }
 
+/* Bôi chọn trên nền đen: đảo thành chữ đen trên nền trắng để không bị chìm */
+.btn::selection,
+.btn *::selection,
+.card-badge::selection,
+.view-all a::selection,
+.view-all a *::selection,
+.article-body pre::selection,
+.article-body pre *::selection,
+.note-red::selection,
+.note-red *::selection,
+.btn-dl::selection,
+.btn-dl *::selection,
+.btn-primary::selection,
+.btn-primary *::selection,
+.tag:first-child::selection,
+.tag:first-child *::selection,
+.step-num::selection,
+.step-num *::selection,
+.article-body table th::selection,
+.article-body table th *::selection,
+.nav-inner a.active::selection,
+.nav-inner a.active *::selection,
+.header-follow a:hover::selection,
+.header-follow a:hover *::selection,
+.lang-toggle-btn:hover::selection,
+.lang-toggle-btn:hover *::selection,
+.article-body a:hover::selection,
+.article-body a:hover *::selection { background: #ffffff; color: #000000; }
+
+.btn::-moz-selection,
+.btn *::-moz-selection,
+.card-badge::-moz-selection,
+.view-all a::-moz-selection,
+.view-all a *::-moz-selection,
+.article-body pre::-moz-selection,
+.article-body pre *::-moz-selection,
+.note-red::-moz-selection,
+.note-red *::-moz-selection,
+.btn-dl::-moz-selection,
+.btn-dl *::-moz-selection,
+.btn-primary::-moz-selection,
+.btn-primary *::-moz-selection,
+.tag:first-child::-moz-selection,
+.tag:first-child *::-moz-selection,
+.step-num::-moz-selection,
+.step-num *::-moz-selection,
+.article-body table th::-moz-selection,
+.article-body table th *::-moz-selection,
+.nav-inner a.active::-moz-selection,
+.nav-inner a.active *::-moz-selection,
+.header-follow a:hover::-moz-selection,
+.header-follow a:hover *::-moz-selection,
+.lang-toggle-btn:hover::-moz-selection,
+.lang-toggle-btn:hover *::-moz-selection,
+.article-body a:hover::-moz-selection,
+.article-body a:hover *::-moz-selection { background: #ffffff; color: #000000; }
+
 a:focus, button:focus, input:focus, select:focus, textarea:focus {
   outline: 2px solid #000000;
   outline-offset: 2px;
