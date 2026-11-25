@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="/icon.png">
+<title>Những Root Tweaks Thú Vị Dành Cho BB10 – BBerryLife</title>
+<link rel="stylesheet" href="/Pages/src/berrylife.css">
+<script>(function(){try{var t=localStorage.getItem("bl_theme");if(t==="dark"||t==="light"){document.documentElement.className+=" theme-"+t;}}catch(e){}})();</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand"><a href="/index.html"><h1>BBerryLife</h1><p class="i18n" data-en="Everything for BlackBerry Users">Mọi Thứ Cho Người Dùng BlackBerry</p></a></div>
+    <div class="header-follow"></div>
+  </div>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="/index.html" class="i18n" data-en="Home">Trang Chủ</a>
+      <a href="/Pages/Category/Tutorials/Tutorials.html" class="i18n" data-en="Guides">Hướng Dẫn</a>
+      <a href="/Pages/Category/Apps/Apps.html" class="i18n" data-en="Apps">Ứng Dụng</a>
+      <a href="/Pages/Category/Games/Games.html" class="i18n" data-en="Games">Games</a>
+      <a href="/Pages/Category/Themes/Themes.html" class="i18n" data-en="Themes">Themes</a>
+      <a href="/Pages/Category/Tips/Tips.html" class="i18n" data-en="Tips &amp; Tricks">Mẹo &amp; Thủ Thuật</a>
+      <a href="/Pages/Blog/Blog.html" class="i18n" data-en="All Posts">Tất Cả Bài Viết</a>
+    </div>
+  </nav>
+</header>
+
+<div class="site-wrapper">
+
+  <main>
+    <article class="article-wrap">
+
+      <div class="cover-img-wrap" id="coverImgWrap">
+        <img class="cover-img" src="https://raw.githubusercontent.com/BBerryLife/BBerrylife.github.io/main/Media/Root-Tweaks/cover.png" alt="Những Root Tweaks Thú Vị Dành Cho BB10" onerror="this.style.display='none'">
+      </div>
+
+      <div class="article-header">
+        <div class="article-meta">
+          <span class="tag i18n" style="background:#fff8e1;color:#b28704" data-en="TIPS &amp; TRICKS">MẸO &amp; THỦ THUẬT</span>
+          <span class="tag" style="background:#e3f2fd;color:#1976d2">BLACKBERRY 10</span>
+          <span class="tag" style="background:#fce4ec;color:#c62828">ROOT</span>
+        </div>
+        <h1 class="i18n" data-en="Interesting Root Tweaks for BB10">Những Root Tweaks Thú Vị Dành Cho BB10</h1>
+        <div class="article-date">Cập nhật lần cuối: 25/11/2026</div>
+      </div>
+
+      <div class="article-body">
+
+        <div class="note note-red i18n" data-en="<strong>Warning:</strong> These are root tweaks for people with a solid understanding of BlackBerry 10. They are not for anyone without enough knowledge, because of the risks these tweaks carry. Your device <strong>must be rooted</strong> (tweak 2 requires root v4). The pre-rooted ROM can be downloaded <a href=&quot;https://bberrylife.github.io/Pages/Preroot-Autoloaders.html&quot;><strong>here</strong></a>.">
+          <strong>Cảnh báo:</strong> Đây là những root tweaks dành cho người có trình độ am hiểu nhất định về BlackBerry 10. Không dành cho người chưa đủ kiến thức vì những rủi ro mà những tweaks này mang lại. Thiết bị của bạn <strong>bắt buộc phải được root</strong> (tweak số 2 yêu cầu root v4). ROM root sẵn tải tại <a href="https://bberrylife.github.io/Pages/Preroot-Autoloaders.html"><strong>đây</strong></a>.
+        </div>
+
+        <h2 class="i18n" data-en="Introduction">Giới Thiệu</h2>
+
+        <p class="i18n" data-en="This post collects 3 root tweaks for <strong>BlackBerry 10</strong>: <strong>Backup Fix</strong>, <strong>BBID, Weather, Maps Fix</strong> and <strong>Headless Memory</strong>. Backup Fix and Headless Memory are installed with <code>/var/rootdata/installer</code> directly on the device, while BBID, Weather, Maps Fix is installed from a PC over SSH.">Bài viết tổng hợp 3 root tweaks dành cho <strong>BlackBerry 10</strong>: <strong>Backup Fix</strong>, <strong>BBID, Weather, Maps Fix</strong> và <strong>Headless Memory</strong>. Backup Fix và Headless Memory được cài bằng <code>/var/rootdata/installer</code> ngay trên thiết bị, còn BBID, Weather, Maps Fix được cài từ máy tính qua SSH.</p>
+
+        <h2 class="i18n" data-en="Download">Tải Xuống</h2>
+
+        <p class="i18n" data-en="Download link for the tweak files (Google Drive):">Link tải các file tweak (Google Drive):</p>
+
+        <a class="btn-inline btn-primary i18n" href="https://drive.google.com/drive/folders/1jlemGoTk8MPxhCYx6rWb9PTAIk6g7_vN" data-en="Download Root Tweaks - Google Drive">Tải Root Tweaks - Google Drive</a>
+
+        <div class="toc">
+          <div class="toc-title i18n" data-en="&#9656; Contents">&#9656; Nội dung bài viết</div>
+          <ol>
+            <li><a href="#backup-fix" class="i18n" data-en="Backup Fix">Backup Fix</a></li>
+            <li><a href="#bbid-weather-maps" class="i18n" data-en="BBID, Weather, Maps Fix">BBID, Weather, Maps Fix</a></li>
+            <li><a href="#headless-memory" class="i18n" data-en="Headless Memory">Headless Memory</a></li>
+          </ol>
+        </div>
+
+        <h2 id="backup-fix" class="i18n" data-en="1. Backup Fix">1. Backup Fix</h2>
+
+        <p class="i18n" data-en="This addon / tweak lets you make backups on BlackBerry 10.">Đây là một addon / tweak giúp bạn có thể thực hiện backup trên BlackBerry 10.</p>
+
+        <p class="i18n" data-en="Just place <code>backup-fix.zip</code> in the device's Downloads folder and run:">Chỉ cần đặt file <code>backup-fix.zip</code> vào thư mục Downloads của thiết bị và gõ lệnh:</p>
+
+        <pre><code>/var/rootdata/installer /accounts/1000/shared/downloads/backup-fix.zip</code></pre>
+
+        <p class="i18n" data-en="Wait for a success message, or simply for it to finish running, and you are done. A <code>bbid.txt</code> file will appear in your Documents folder.">Đợi báo success, hoặc đơn giản là nó chạy xong thì bạn đã thành công. Một file <code>bbid.txt</code> sẽ xuất hiện trong thư mục Documents của bạn.</p>
+
+        <p class="i18n" data-en="Now open DBBT and try making a backup!">Giờ hãy mở DBBT lên và thử làm một bản backup!</p>
+
+        <div class="note note-yellow i18n" data-en="<strong>Note:</strong> there is still a limitation: backups can't be restored yet, and DBBT will report that it doesn't share the same BBID as your device. You can change the email in <code>backup-fix.zip\data\bbid.txt</code> to any email you like, anything works.">
+          <strong>Lưu ý:</strong> vẫn còn hạn chế là chưa thể restore các bản backup: DBBT sẽ báo rằng nó không chung BBID với thiết bị của bạn. Bạn có thể sửa email trong <code>backup-fix.zip\data\bbid.txt</code> thành email bạn muốn, đơn giản là như nào cũng được.
+        </div>
+
+        <h2 id="bbid-weather-maps" class="i18n" data-en="2. BBID, Weather, Maps Fix">2. BBID, Weather, Maps Fix</h2>
+
+        <p class="i18n" data-en="This addon / tweak lets you sign in to BBID and patches Weather and Maps so they work again on BlackBerry 10. The <code>patch1</code> set contains the <code>bbid</code>, <code>neo-bridge</code>, <code>geolocation</code>, <code>weather</code> and <code>maps</code> packages, installed from Windows PowerShell. Every command below can be pasted as-is; the only thing you may need to edit is your device's IP address.">Đây là một addon / tweak giúp bạn đăng nhập BBID, đồng thời patch lại Weather và Maps để chúng hoạt động trở lại trên BlackBerry 10. Bộ <code>patch1</code> gồm các gói <code>bbid</code>, <code>neo-bridge</code>, <code>geolocation</code>, <code>weather</code>, <code>maps</code>, cài từ Windows PowerShell. Mọi lệnh bên dưới đều dán thẳng được; chỗ duy nhất có thể phải sửa là địa chỉ IP của máy.</p>
+
+        <div class="note note-yellow i18n" data-en="<strong>Note:</strong> the original <code>patch1.zip</code> also contains a patch for AppWorld, but it conflicts with Oleksandr's root v4 and makes you lose root, so it has been temporarily removed so you can install safely.">
+          <strong>Lưu ý:</strong> <code>patch1.zip</code> gốc còn có cả patch cho AppWorld, tuy nhiên chúng gây xung đột với root v4 của Oleksandr và làm bạn mất root, nên mình tạm xóa chúng đi để các bạn có thể cài đặt an toàn.
+        </div>
+
+        <h3 class="i18n" data-en="Before You Start">Trước Khi Bắt Đầu</h3>
+
+        <ul>
+          <li class="i18n" data-en="Your BB10 device is rooted with AutoRoot v4.">Máy BB10 đã root bằng AutoRoot v4.</li>
+          <li class="i18n" data-en="The battery is full, and the connection must not be unplugged during installation.">Pin máy đầy, không rút kết nối khi đang cài.</li>
+          <li class="i18n" data-en="Back up any important data on the device. The patch set is experimental; the author states clearly that results are not guaranteed and takes no responsibility for anything this patch causes.">Backup dữ liệu quan trọng trên máy. Bộ patch là bản thử nghiệm, tác giả nói rõ không đảm bảo kết quả và cũng không chịu trách nhiệm với những gì patch này gây ra.</li>
+          <li class="i18n" data-en="Find the device's Wi-Fi IP at <strong>About &rarr; Category &rarr; Network &rarr; Wi-Fi</strong> (for example <code>192.168.0.101</code>). The IP can change after the network reassigns it, so check it again if you can't connect next time.">Xem IP Wi-Fi của máy ở <strong>About &rarr; Category &rarr; Network &rarr; Wi-Fi</strong> (ví dụ <code>192.168.0.101</code>). IP có thể đổi sau khi mạng cấp lại, nên hãy kiểm tra lại nếu lần sau không kết nối được.</li>
+          <li class="i18n" data-en="On your PC, put the two files <code>id_rsa4x</code> and <code>patch1.zip</code> in the Downloads folder.">Trên máy tính, để hai file <code>id_rsa4x</code> và <code>patch1.zip</code> ra thư mục Downloads.</li>
+        </ul>
+
+        <h3 class="i18n" data-en="Step 1: Prepare the Key File (Do Once)">Bước 1: Chuẩn Bị File Key (Làm Một Lần)</h3>
+
+        <p class="i18n" data-en="Paste into PowerShell (terminal):">Dán vào PowerShell (terminal):</p>
+
+        <pre><code>New-Item -ItemType Directory -Force "$HOME\.ssh" | Out-Null
+Copy-Item "$HOME\Downloads\id_rsa4x" "$HOME\.ssh\id_rsa4x" -Force
+icacls "$HOME\.ssh\id_rsa4x" /inheritance:r
+icacls "$HOME\.ssh\id_rsa4x" /grant:r "$($env:USERNAME):(R)"
+ssh-keygen -y -f "$HOME\.ssh\id_rsa4x" | ssh-keygen -lf -</code></pre>
+
+        <p class="i18n" data-en="The last line must print this fingerprint:">Dòng cuối phải in ra fingerprint:</p>
+
+        <pre><code>SHA256:mAt+dEp0OIUj1ruXOCgzEcKdVnsyYKColywBHPFWE+M</code></pre>
+
+        <p class="i18n" data-en="If it differs, this is not the right key. Compare it with the <code>ssh-keygen -lf</code> output of the file <code>patchdata\var\etc\ssh\authorized_keys2</code> in your autoroot folder.">Nếu khác, đây không phải key đúng. Hãy so với kết quả <code>ssh-keygen -lf</code> của file <code>patchdata\var\etc\ssh\authorized_keys2</code> trong thư mục autoroot của bạn.</p>
+
+        <h3 class="i18n" data-en="Step 2: The Startup Block (Paste Every Time You Open a New PowerShell)">Bước 2: Khối Khởi Động (Dán Mỗi Khi Mở PowerShell Mới)</h3>
+
+        <p class="i18n" data-en="Edit <code>$ip</code> if your device's IP is different (replace <code>xxx</code> with the number you found above, for example <code>192.168.0.101</code>), then paste:">Sửa <code>$ip</code> nếu IP máy bạn khác (thay <code>xxx</code> bằng số bạn tìm được ở trên, ví dụ <code>192.168.0.101</code>), rồi dán:</p>
+
+        <pre><code>$ip = "192.168.0.xxx"
+$env:Path = "C:\Windows\System32\OpenSSH;" + $env:Path
+$key = "$HOME\.ssh\id_rsa4x"
+$SshOpt = @('-i', $key, '-o', 'IdentitiesOnly=yes', '-o', 'HostKeyAlgorithms=+ssh-rsa', '-o', 'PubkeyAcceptedKeyTypes=+ssh-rsa', '-o', 'MACs=+hmac-sha1')</code></pre>
+
+        <h3 class="i18n" data-en="Step 3: Test the Connection and Check the Device">Bước 3: Thử Kết Nối Và Kiểm Tra Máy</h3>
+
+        <p class="i18n" data-en="If you only want to SSH into the device, just run <code>ssh @SshOpt root@$ip</code>. Here we are installing the patch, so run the two commands below:">Nếu bạn chỉ muốn SSH vào máy thì chỉ cần chạy <code>ssh @SshOpt root@$ip</code>. Tuy nhiên ở đây là cài patch, nên hãy chạy hai lệnh dưới:</p>
+
+        <pre><code>ssh @SshOpt root@$ip "/base/bin/pidin -p `$`$ -F '%W'"
+ssh @SshOpt root@$ip "cksum /var/rootdata/installer"</code></pre>
+
+        <p class="i18n" data-en="Correct results:">Kết quả đúng:</p>
+
+        <ul>
+          <li class="i18n" data-en="The first command prints <code>euid</code> then <code>0</code>: you are root.">Lệnh đầu in <code>euid</code> rồi <code>0</code>: bạn đang là root.</li>
+          <li class="i18n" data-en="The second command prints <code>179555522 35156 /var/rootdata/installer</code>: the exact installer version the patch requires. If the numbers differ, <strong>stop and do not install</strong>.">Lệnh sau in <code>179555522 35156 /var/rootdata/installer</code>: đúng bản installer mà patch yêu cầu. Nếu số khác, <strong>dừng lại, không cài</strong>.</li>
+        </ul>
+
+        <p class="i18n" data-en="The first time you connect, SSH asks &quot;continue connecting?&quot;: type <code>yes</code>. If it later reports that the host key has changed (for example after reflashing the device), remove the old entry with:">Lần đầu kết nối SSH hỏi "continue connecting?" thì gõ <code>yes</code>. Nếu sau này báo host key đã đổi (ví dụ sau khi flash lại máy), xoá dấu cũ bằng:</p>
+
+        <pre><code>ssh-keygen -R $ip</code></pre>
+
+        <h3 class="i18n" data-en="Step 4: Extract the Patch and Create a Working Script">Bước 4: Giải Nén Patch Và Tạo Script Chạy Được</h3>
+
+        <pre><code>Expand-Archive "$HOME\Downloads\patch1.zip" "$HOME\Desktop\patch1" -Force
+cd "$HOME\Desktop\patch1"
+dir
+$s = Get-Content .\scripts\install.ps1 -Raw
+$s = $s.Replace("'PubkeyAcceptedAlgorithms=+ssh-rsa'","'PubkeyAcceptedKeyTypes=+ssh-rsa'").Replace("@('-O', '-P',","@('-P',")
+Set-Content .\scripts\install-legacy.ps1 $s -NoNewline -Encoding ASCII
+Select-String -Path .\scripts\install-legacy.ps1 -Pattern "PubkeyAccepted|ScpOptions ="</code></pre>
+
+        <ul>
+          <li class="i18n" data-en="<code>dir</code> must show <code>dist</code>, <code>scripts</code> and <code>readme.md</code>. If they are inside a subfolder, <code>cd</code> into it and run again from the <code>$s = ...</code> line."><code>dir</code> phải thấy <code>dist</code>, <code>scripts</code>, <code>readme.md</code>. Nếu chúng nằm trong một thư mục con, <code>cd</code> vào đó rồi chạy lại từ dòng <code>$s = ...</code>.</li>
+          <li class="i18n" data-en="The <code>Select-String</code> line must show <code>PubkeyAcceptedKeyTypes=+ssh-rsa</code> and <code>$ScpOptions = @('-P', ...</code>.">Dòng <code>Select-String</code> phải hiện <code>PubkeyAcceptedKeyTypes=+ssh-rsa</code> và <code>$ScpOptions = @('-P', ...</code>.</li>
+        </ul>
+
+        <h3 class="i18n" data-en="Step 5: Install">Bước 5: Cài Đặt</h3>
+
+        <p class="i18n" data-en="Run in the same window (you pasted the block from Step 2 and are in the <code>patch1</code> folder):">Chạy trong cùng cửa sổ (đã dán khối ở Bước 2, và đang ở thư mục <code>patch1</code>):</p>
+
+        <pre><code>powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install-legacy.ps1 -DeviceHost $ip -Identity $key bbid neo-bridge geolocation weather maps</code></pre>
+
+        <ul>
+          <li class="i18n" data-en="The <code>-ExecutionPolicy Bypass</code> flag only applies to this run and does not change system settings.">Cờ <code>-ExecutionPolicy Bypass</code> chỉ có tác dụng cho lần chạy này, không đổi cài đặt hệ thống.</li>
+          <li class="i18n" data-en="It takes about 5 minutes. The script uploads each package and then calls the installer on the device.">Khoảng 5 phút. Script upload từng gói rồi gọi installer trên máy.</li>
+          <li class="i18n" data-en="It succeeded when every package shows <code>Installation completed successfully</code> and there is no <code>Error:</code> or <code>Warning:</code> line.">Thành công khi mỗi gói đều có dòng <code>Installation completed successfully</code> và không có dòng <code>Error:</code> hay <code>Warning:</code>.</li>
+          <li class="i18n" data-en="The script stops immediately on an error or warning. <strong>Do not rerun it right away</strong>: reinstalling on an already patched device can corrupt its state (the patch readme warns about this clearly). Send the full output to whoever is helping you.">Script dừng ngay khi gặp lỗi hoặc cảnh báo. <strong>Không chạy lại ngay</strong>: cài lại trên máy đã patch có thể làm hỏng trạng thái (readme của patch cảnh báo rõ). Hãy gửi toàn bộ output cho người hỗ trợ.</li>
+          <li class="i18n" data-en="If you get an error starting with <code>Stale ...</code> or <code>Active addon overlay</code>: the device has been patched before. Do not delete the <code>/var/addons</code> folder and do not force the install.">Nếu gặp lỗi bắt đầu bằng <code>Stale ...</code> hoặc <code>Active addon overlay</code>: máy đã từng cài patch. Đừng xoá thư mục <code>/var/addons</code>, đừng ép cài.</li>
+        </ul>
+
+        <h3 class="i18n" data-en="Step 6: Check After Installing">Bước 6: Kiểm Tra Sau Khi Cài</h3>
+
+        <p class="i18n" data-en="Wait a few minutes for initialization to finish, then look at the bridge log:">Đợi vài phút cho khởi tạo xong, rồi xem log của bridge:</p>
+
+        <pre><code>ssh @SshOpt root@$ip "tail -30 /var/addons/neo-bridge/init/startup.log"
+ssh @SshOpt root@$ip "ls /var/addons"</code></pre>
+
+        <p class="i18n" data-en="You must see all the addon folders: <code>bbid-fix</code>, <code>geolocation</code>, <code>maps</code>, <code>neo-bridge</code> and the weather folder. Then try each app on the device:">Phải thấy đủ các thư mục addon: <code>bbid-fix</code>, <code>geolocation</code>, <code>maps</code>, <code>neo-bridge</code> và thư mục của weather. Rồi thử từng app trên máy:</p>
+
+        <ul>
+          <li class="i18n" data-en="<strong>Maps:</strong> does it draw the map."><strong>Maps:</strong> có vẽ bản đồ không.</li>
+          <li class="i18n" data-en="<strong>Weather:</strong> does it show a forecast, and is the provider logo/footer hidden."><strong>Weather:</strong> có dự báo không, logo/footer nhà cung cấp đã ẩn chưa.</li>
+          <li class="i18n" data-en="<strong>BBID:</strong> see the BlackBerry ID registration section below."><strong>BBID:</strong> xem mục đăng ký BlackBerry ID bên dưới.</li>
+          <li class="i18n" data-en="<strong>Location:</strong> it is only a rough network-based estimate, not satellite GPS."><strong>Vị trí:</strong> chỉ là vị trí mạng ước lượng thô, không phải GPS vệ tinh.</li>
+        </ul>
+
+        <p class="i18n" data-en="Do not run a second bridge, because the bridge already starts by itself through AutoRoot.">Không chạy thêm bản bridge thứ hai, vì bridge đã tự khởi động qua AutoRoot.</p>
+
+        <h3 class="i18n" data-en="Registering a BlackBerry ID">Đăng Ký BlackBerry ID</h3>
+
+        <p class="i18n" data-en="When you are done, go to <strong>Settings &rarr; BlackBerry ID</strong> and tap register. Remember your password! After registering, a confirmation email will be sent to the address you registered with: confirm it, then sign in again on BlackBerry 10 and it works. The account may need to be verified manually, so check your email for a &quot;BBID Verification&quot; message.">Sau khi xong, hãy vào <strong>Cài đặt &rarr; BlackBerry ID</strong> và bấm đăng ký. Hãy ghi nhớ mật khẩu nhé! Sau khi đăng ký xong, một email xác nhận sẽ được gửi vào email bạn đăng ký: bấm xác nhận, rồi đăng nhập lại trên BlackBerry 10 là đã thành công. Tài khoản có thể phải kiểm tra thủ công, hãy xem trong email của bạn có thư "BBID Verification" không.</p>
+
+        <p class="i18n" data-en="Also, try opening the stock Weather and Maps apps to see whether they work!">Ngoài ra, hãy thử mở app Weather và Maps gốc xem chúng có hoạt động không nhé!</p>
+
+        <div class="note note-blue i18n" data-en="<strong>Interesting:</strong> if you combine tweak 2 with tweak 1, can you restore after editing the email so that it matches the email you use? The answer is no: I tried on a BlackBerry Classic and it did not work, it still reports a different BBID. You can try it and report back, in case I am wrong.">
+          <strong>Thú vị:</strong> nếu bạn kết hợp tweak 2 với tweak 1, liệu bạn có thể restore sau khi sửa email để chúng trùng với email bạn dùng không? Câu trả lời là không: mình đã thử trên BlackBerry Classic và không thành công, nó vẫn báo khác BBID. Bạn có thể thử và phản hồi lại, nhỡ ý kiến của mình sai.
+        </div>
+
+        <h2 id="headless-memory" class="i18n" data-en="3. Headless Memory">3. Headless Memory</h2>
+
+        <p class="i18n" data-en="This may be the tweak most people will want to use: it raises the RAM available to Headless apps from 30MB (with the xlarge cap permission, far too low) to 128MB, helping Headless apps run more stably.">Đây có thể sẽ là tweak mà nhiều người muốn dùng nhất: tăng dung lượng RAM dành cho các ứng dụng Headless từ 30MB (với xlarge cap permission, quá thấp) lên 128MB, giúp các ứng dụng Headless chạy ổn định hơn.</p>
+
+        <p class="i18n" data-en="Just place <code>headless-mem.zip</code> in the device's Downloads folder and run:">Chỉ cần đặt file <code>headless-mem.zip</code> vào thư mục Downloads của thiết bị và gõ lệnh:</p>
+
+        <pre><code>/var/rootdata/installer /accounts/1000/shared/downloads/headless-mem.zip</code></pre>
+
+        <div class="source-box">
+          <p class="i18n-datefmt"><span class="i18n" data-en="Published on: ">Đăng ngày: </span>25 tháng 11 năm 2026</p>
+        </div>
+
+      </div>
+
+      <div class="article-footer">
+        <a href="/index.html" class="btn-outline i18n" data-en="← Back to Home">← Về Trang Chủ</a>
+        <a href="/Pages/Blog/Blog.html" class="btn-solid i18n" data-en="View More Posts →">Xem Thêm Bài Viết →</a>
+      </div>
+
+    </article>
+  </main>
+
+  <aside class="sidebar">
+<style>
+.follow-box { margin-bottom: 22px; }
+.follow-box-archive {
+  background: #6b8f3e !important;
+  background: -webkit-linear-gradient(315deg, #7aa346 0%, #567230 100%) !important;
+  background: linear-gradient(135deg, #7aa346 0%, #567230 100%) !important;
+  border-color: #567230 !important;
+}
+.follow-box-archive h3 { color: #fff !important; }
+.follow-box-archive p  { color: #e8f2d8 !important; opacity: 1 !important; }
+.follow-box-archive a  { color: #567230 !important; }
+.follow-box-bbworld {
+  background: #2f6fb0 !important;
+  background: -webkit-linear-gradient(315deg, #3a82cc 0%, #1f4f86 100%) !important;
+  background: linear-gradient(135deg, #3a82cc 0%, #1f4f86 100%) !important;
+  border-color: #1f4f86 !important;
+}
+.follow-box-bbworld h3 { color: #fff !important; }
+.follow-box-bbworld p  { color: #dcebfa !important; opacity: 1 !important; }
+.follow-box-bbworld a  { color: #1f4f86 !important; }
+</style>
+<div class="sidebar-sticky">
+  <div class="follow-box">
+    <h3 class="i18n" data-en="Follow Us">Theo Dõi Chúng Tôi</h3>
+    <p class="i18n" data-en="Get the latest BlackBerry news on Facebook">Cập nhật tin tức mới nhất về BlackBerry trên Facebook</p>
+    <a href="https://www.facebook.com/BBerryLife/" target="_blank" class="i18n" data-en="Follow Facebook">Theo Dõi Facebook</a>
+  </div>
+  <div class="follow-box follow-box-archive">
+    <h3 class="i18n" data-en="Archive">Kho Lưu Trữ</h3>
+    <p class="i18n" data-en="Download ROMs, autoloaders and BB10 resources from our archive">Tải xuống ROM, autoloader và tài nguyên BB10 từ archive của chúng tôi</p>
+    <a href="https://drive.google.com/drive/folders/1AeaAt9HJ3sx7v6BJJJf3LbTybAUMaAAp?usp=drive_link" target="_blank" class="i18n" data-en="Go to Archive">Truy Cập Archive</a>
+  </div>
+  <div class="sidebar-box">
+    <h3 class="sidebar-title i18n" data-en="Categories">Danh Mục</h3>
+    <div class="cat-group">
+      <div class="cat-group-label i18n" data-en="Operating System">Hệ Điều Hành</div>
+      <div class="cat-links">
+        <a href="/Pages/Category/BlackBerry%2010/BlackBerry-10.html" style="color:#2196f3;border:2px solid #2196f3">BlackBerry 10</a>
+        <a href="/Pages/Category/BlackBerry%207.1/BlackBerry-7-1.html" style="color:#00bcd4;border:2px solid #00bcd4">BlackBerry 7.1</a>
+        <a href="/Pages/Category/BlackBerry%206/BlackBerry-6.html" style="color:#009688;border:2px solid #009688">BlackBerry 6</a>
+      </div>
+    </div>
+  </div>
+  <div class="follow-box follow-box-bbworld" style="margin-top:22px">
+    <h3 class="i18n" data-en="BlackBerry World">BlackBerry World</h3>
+    <p class="i18n" data-en="Apps for BlackBerry 10 — the original app store, restored by myblackberry.ru">Apps for BlackBerry 10 — kho ứng dụng gốc được myblackberry.ru khôi phục</p>
+    <a href="https://myblackberry.ru/blackberry-world/" target="_blank" rel="noopener" class="i18n" data-en="Go to BlackBerry World">Truy Cập BlackBerry World</a>
+  </div>
+</div>
+</aside>
+
+</div>
+
+<script src="/Pages/src/berrylife.js"></script>
+</body>
+</html>
