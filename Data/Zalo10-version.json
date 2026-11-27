@@ -1,7 +1,41 @@
 {
-  "latestVersion": "1.5.0.0",
-  "downloadUrl": "https://github.com/BBerryLife/BBerryLife.github.io/raw/main/Downloads/Zalo10-1_5_0_0.bar",
+  "latestVersion": "1.6.0.0",
+  "downloadUrl": "https://github.com/BBerryLife/Zalo10/releases/download/1.6.0.0/Zalo10-1_6_0_0.bar",
   "changelog": [
+    {
+      "version": "1.6.0",
+      "items": [
+        "NEW: Add experimental 1:1 voice calling (Zalo10 <-> Zalo): tap the call button in a chat to dial, new call screen with accept / decline, mute, hang up and call timer, plus ringtone and ringback. Group and video calls are not supported yet",
+        "NEW: Incoming calls bring the app to the foreground; if the app is minimized and the device is locked, a ringtone announces the incoming call",
+        "NEW: Add Feeds tab: see when contacts change their profile picture, cover photo, bio or birthday. Filter by All / Info / Photos, clear the list at any time, and optionally get a \"Zalo10 Feeds\" notification in BlackBerry Hub",
+        "NEW: Add Sticker Shop: download sticker packs and use them from the new sticker bar in the chat box (emoji | shop | packs | settings), reorder or hide packs in sticker settings, preview a pack's stickers before installing. Supports PNG, JPG, WEBP and animated GIF stickers",
+        "NEW: Add Reply card in Hub: long-press a Zalo10 message in BlackBerry Hub and tap Reply to read the latest messages and answer from a small card over the Hub. A short tap opens the chat directly",
+        "NEW: Add My Profile page: change your profile picture and edit your status / bio",
+        "NEW: Much richer contact profiles: status, gender, birthday, last active, join date, business info (address, website, email), full-size avatar and a live online indicator",
+        "NEW: Add group management: create groups, add members, rename a group and change its picture",
+        "NEW: Group Board is now enabled from the chat title bar. Polls live inside the board with a Vote button and a voter list",
+        "NEW: Add Mark as Read / Unread to the long-press menu in Chats and Groups, plus Mark all as read. Read / unread state syncs with the official Zalo app both ways",
+        "NEW: Add New Chat: start a conversation with any friend by searching their name (accent-insensitive: \"nguyen\" finds \"Nguyễn\"). Chats are built from your actual conversations and appear once they have a message",
+        "NEW: Add \"N Active Chats\", \"N Contacts\" and \"N Groups\" subtitles and unread indicators on the tabs",
+        "NEW: Group member names are looked up in the background and saved, so they show right after a restart",
+        "IMPROVE: Tabs moved onto the action bar (Chats, Contacts, Groups, Feeds, Invites, Shop), with the rest in the overflow menu",
+        "IMPROVE: Settings redesigned as a list of categories: General, Appearance, Notifications, Data & Backup, Cache Control, Support and Account",
+        "IMPROVE: Friends are fetched page by page and groups in chunks, so large accounts load without hitting Zalo's rate limit. The Groups tab fills instantly from the last sync",
+        "IMPROVE: Chat photos and media are downloaded through a queue instead of all at once",
+        "IMPROVE: Smoother Chats / Contacts / Groups tabs with large friend lists: avatars are requested at a steady pace and updated without rescanning the whole list. Contact picture changes refresh everywhere",
+        "IMPROVE: Bundled OpenSSL 1.1.1w: connections to Zalo's servers now work over modern TLS (1.2 / 1.3)",
+        "IMPROVE: Redesigned call screen and simplified Hub actions",
+        "IMPROVE: Zalo10Headless updated to match: shared code with the app, bundled OpenSSL, Hub taps forwarded to the app and incoming-call launch",
+        "IMPROVE: Removed the Update button from the About sheet",
+        "IMPROVE: Various other small interface fixes",
+        "FIX: Fixed connections to Zalo servers failing on BB10's old TLS stack",
+        "FIX: Fixed older group messages not loading (Zalo removed the old group history endpoint)",
+        "FIX: Fixed chats staying unread in the official Zalo app after you read them in Zalo10",
+        "FIX: Fixed the first search in Chats showing a blank page",
+        "FIX: Fixed a pinned chat that just received a message not moving to the top of the pinned block",
+        "FIX: Fixed the app slowing down while avatars load on accounts with many contacts"
+      ]
+    },
     {
       "version": "1.5.0",
       "items": [
